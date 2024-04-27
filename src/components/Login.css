@@ -1,0 +1,73 @@
+.Login {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.left-side {
+    background-image: url('login-background.png');
+    align-items: center;
+    width: 50%;
+}
+
+.right-side {
+    align-items: center;
+    width: 50%;
+}   
+
+
+.login-header {
+    background-color: white;
+}
+
+.Headerlogo {
+    align-items: right;
+}
+
+.login-title {
+    color: #2C6B5A;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.login-button{
+    border-radius: 10px;
+    border: none;
+    color:rgb(255, 255, 255) ;
+    background-color: #74AC4C;
+    width: 100px;
+    height: 30px;
+    margin-top: 2%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.login-button:hover{
+    background-color:#2C6B5A;
+}
+
+.login-username, .login-password {
+    font-weight: bold;
+    color: #74AC4C;
+}
+
+.username-input, .password-input  {
+    margin-top: 2%;
+    border-bottom: 2px solid; 
+    padding: 10px;
+    transition: border-color 1s;
+    border-color: #74AC4C;
+    border-top-left-radius: 4px;
+    padding: 10px;
+    transition: border-color 1s;
+}
+
+.username-input:focus{
+    border-color:#74AC4C ;
+}
+
+.password-input:focus{
+    border-color:#74AC4C ;
+}
