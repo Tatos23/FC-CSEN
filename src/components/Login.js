@@ -3,7 +3,14 @@ import loginStyles from "./Login.css";
 function Login (props){
     return (
         <div className="Login" style={loginStyles}>
-            <div className="left-side"></div>
+            <div className="left-side">
+                {/* <h1 className="about-section">
+                    About Herzenbrüke:
+                </h1>
+                <h2 className="about-details">
+                    A non monetary organization that 
+                </h2> */}
+            </div>
             <div className="right-side">
                 <header className="login-header">
                     <img src="logo192.png" className="HeaderLogo"></img>

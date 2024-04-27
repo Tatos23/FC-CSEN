@@ -13,8 +13,7 @@
 .right-side {
     align-items: center;
     width: 50%;
-}   
-
+}
 
 .login-header {
     background-color: white;
@@ -27,7 +26,7 @@
 .login-title {
     color: #2C6B5A;
     margin-top: 1%;
-    margin-bottom: 1%;
+    margin-bottom: 4%;
 }
 
 .login-button{
@@ -55,6 +54,7 @@
 
 .username-input, .password-input  {
     margin-top: 2%;
+    margin-bottom: 3%;
     border-bottom: 2px solid; 
     padding: 10px;
     transition: border-color 1s;
@@ -62,6 +62,8 @@
     border-top-left-radius: 4px;
     padding: 10px;
     transition: border-color 1s;
+    width: 30%;
+    text-align: center;
 }
 
 .username-input:focus{
