@@ -1,0 +1,74 @@
+/* HomePage.css */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color variables */
+:root {
+    --casal: #2C685A;
+    --harp: #EDF6F1;
+    --chelsea-cucumber: #74AC4C;
+    --pelorous: #4185C1;
+}
+
+/* Basic styling */
+.container {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2C685A, #4185C1);
+    color: var(--harp);
+}
+
+header {
+    background-color: var(--casal);
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 400px; /* Adjust logo size */
+    height: auto;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--chelsea-cucumber);
+    padding: 10px;
+}
+
+nav li {
+    /* margin-right: 20px; */
+    margin-left: 30px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--harp);
+    font-weight: bold;
+    font-size: 20px;
+}
+nav li:not(:last-child)::after {
+    content: " ::"; /* Separator */
+    color: var(--harp);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px; /* Adjust spacing */
+    font-weight: bold; /* Match text style */
+    font-size: 15px; /* Match text size */
+}
+
+
+
+
