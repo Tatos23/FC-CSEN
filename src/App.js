@@ -5,7 +5,8 @@ import HomePage from './components/HomePage.js';
 function App() {
   return (
     <div className="App">
-      <HomePage/>
+      <Login role="Admin" />
+      {/* <HomePage /> */}
     </div>
   );
 }
