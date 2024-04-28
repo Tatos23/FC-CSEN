@@ -4,22 +4,22 @@ const logo = "logo192.png";
 const HomePage  = () => {
     return (
         <div className="container">
-            <header>
+            <header className='homepage-header'>
                 <div className="logo">
-                
+                    <h1 className='header-title'> Welcome to Herzensbrücke </h1>
                     <img src={logo} alt="HomePage Logo" />
-                    <h1> HerzensBrücke Home Page </h1>
 
                 </div>
             </header>
 
             <nav>
+                <h2> Register/Login as </h2>
                 <ul>
-                    <li><a href="#AdminSystem">Admin System</a></li>
+                    <li><a href="#Admin">Admin</a></li>
 
-                    <li><a href="#DonorSystem">Donor System</a></li>
+                    <li><a href="#Donor">Donor</a></li>
 
-                    <li><a href="#Org/RepSystem">Organization/Representative System</a></li>
+                    <li><a href="#Org/Rep">Organization/Representative</a></li>
                 </ul>
             </nav>
 
