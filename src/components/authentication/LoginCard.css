@@ -1,57 +1,4 @@
-/* Parent Component */
-.Login {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    background-color: #162D23;
-}
-
-/* Child Components */
-.left-side,
-.right-side-outer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    background-color: #162D23;
-}
-
-.left-side {
-    flex-direction: column;
-    position: relative;
-    bottom: -30px;
-}
-
-/* Grandchild Components */
-.welcome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.welcome img {
-    width: 80%;
-    height: auto;
-    object-fit: contain;
-}
-
-.welcome-text {
-    position: relative;
-    top: -35px;
-    margin-bottom: 20px;
-}
-
-.welcome-text h1 {
-    color: white;
-    font-size: 3em;
-}
-
-.welcome-text p {
-    color: whitesmoke;
-}
-
-/* Child Components */
+/* Parent Components */
 .right-side-inner {
     align-items: center;
     width: 94%;
@@ -59,13 +6,14 @@
     border-radius: 20px;
     background-color: white;
     overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
 
 .right-side-inner header {
     background-color: #2C6B5A;
 }
 
-/* Grandchild Components */
+/* Child Components */
 .login-header {
     display: flex;
     flex-direction: column;
@@ -86,7 +34,7 @@
     font-size: large;
 }
 
-/* Grandchild Components */
+/* Child Components */
 .right-side-actions {
     width: 100%;
     display: flex;
@@ -154,6 +102,14 @@
     cursor: pointer;
     font-weight: bold;
     box-shadow: none;
+}
+
+.register-redirect {
+    margin-top: 10px;
+}
+
+.register-redirect a {
+    color: blue;
 }
 
 .login-button:hover {

@@ -1,11 +1,11 @@
 import './App.css';
-import Login from './components/Login.js'
+import Authentication from './components/authentication/Authentication.js'
 import HomePage from './components/HomePage.js';
 
 function App() {
   return (
     <div className="App">
-      <Login role="Admin" />
+      <Authentication role="Admin" />
       {/* <HomePage /> */}
     </div>
   );
