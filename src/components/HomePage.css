@@ -44,7 +44,7 @@
 }
 
 nav h2 {
-    background-color: #74AC4C;
+    background-color: var(--chelsea-cucumber);
 }
 
 nav ul {
