@@ -7,7 +7,7 @@ function LoginCard({ isRegistering, toggleForm, showPassword, toggleShowPassword
         <div className="right-side-inner" style={loginStyles}>
             <div className="login-header">
                 <img src="logo2.png" alt="logo"></img>
-                <p>HERZENBRÜKE</p>
+                <p>HERZENSBRÜKE</p>
             </div>
             <div className="right-side-actions">
                 <div className="login-inputs">
