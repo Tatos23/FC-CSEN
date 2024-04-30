@@ -28,10 +28,11 @@ function LoginCard({ isRegistering, toggleForm, showPassword, toggleShowPassword
                 </div>
                 <div className="login-buttons">
                     <button className="login-button"> Login </button>
-                    <p className="register-redirect">
+                    { role != "Admin" && <p className="register-redirect">
                         Don't have an account? &nbsp;
                         <a onClick={toggleForm} style={{ cursor: 'pointer' }}>Register</a>
                     </p>
+                    }
                 </div>
             </div>
         </div>
