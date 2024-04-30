@@ -6,7 +6,7 @@ import Landing from './components/landingpage/Landing.js';
 function App() {
   return (
     <div className="App">
-      <Authentication role="Admin" />
+      <Authentication role="Donor" />
       {/* <Landing/> */}
       {/* <HomePage /> */}
       {/* <NavigationL/> */}
