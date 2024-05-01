@@ -1,5 +1,13 @@
+body {
+    background-image: url('/public/home.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    position: relative;
+    
+}
 .navbar{
-    position: absolute; 
+    position: relative; 
     top: 0;
     left: 0;
     right: 0;
@@ -7,8 +15,14 @@
     display: flex;
     justify-content: space-between;
     align-items: top;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #ffffff ;
     color: white; 
+    height: 100px;
+
+}
+.leftside{
+
+width: 400px;
 }
 .logo-navbar{
 width: 100px;
@@ -17,6 +31,7 @@ margin-top:3px ;
 object-fit: contain;
 display: block;
 margin-bottom: 0px;
+
 }
 .logo-navbar-name{
     width: 100px;
@@ -24,19 +39,23 @@ margin-bottom: 0px;
     object-fit: contain;
     margin-left: 2px;
     margin-top: 0px;
-    background-color: transparent;
+    object-position: left;
+    display: block;
 
 }
 .middleside{
 color: black;
 display: flex;
+width: 710px;
+margin-top: 15px;
 }
 .rightside{
  color: white;
  justify-content:space-between;
  display: flex;
  margin-right: 15px;
- max-width: 335px;
+ width: 400px;
+ margin-top: 15px;
 
 }
 .search-icon{
@@ -47,21 +66,27 @@ object-fit: contain;
 .searchbutton{
     background-color: transparent;
     border: none;
-    height: 62px;
+    height: 65px;
     margin-right: 30px;
+    position: absolute;
+    margin-left:   165px;
+
+    
 }
 .singin-up{
     border-radius: 15px;
     border: none;
     color:  white;
-    background-color:#74AC4C ;
+    background-color:#397d08;
     width: 150px;
     height: 40px;
     transition: background-color 1s;
     margin-top: 10px;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .singin-up:hover{
-    background-color: #397d08;
+    background-color: #265305;
     color: white;
     border:none;
 }
@@ -71,15 +96,15 @@ object-fit: contain;
 }
 .middleside-button{
    font-family: poppins, sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     border: none;
-    color: white;
+    color: #2C6B5A;
     background-color:transparent;
     width: 100px;
     height: 30px;
     transition: background-color 1s;
     margin-top: 15px;
-   
+   border-bottom: 1px solid #397e07;
     width: 100px;
 }
 .middleside-button:hover{
@@ -96,28 +121,50 @@ object-fit: contain;
     position: relative;
 }
 .search-container{
-    height: 30px;
-    margin-top: 16px;
+    height: 35px;
+    margin-top: 14px;
     width: 200px;
     border: 1px solid;
     border-color: wheat;
-    background-color: transparent ;
-    border-radius: 4px;
+    background-color: rgb(200, 190, 190) ;
+    border-radius: 15px;
+    position: relative;
+    padding: 15px;
+    box-shadow: 1px 2px  rgba(10, 187, 51, 0.2);;
 }
 .quote{
 color: white;
 position:absolute;
-top: 100px;
-left: 0;
-right: 0;
+top: 250px;
+left: 50px;
+right: 800px;
 bottom: 0;
-
+font-size: 70px;
 }
 .donate-button{
-color: white;
-position:absolute;
-top: 100px;
-left: 0;
-right: 0;
+position: relative;
+color: aliceblue;
+background-color: #397d08;
+top:400px;
+left: 300px;
+right:0px;
 bottom: 0;
+width: 200px;
+height: 50px;
+border: none;
+font-size: 25px;
+border-radius: 18px;
+}
+.donate-button:hover{
+    background-color: #2e6407;
+    color: white;
+    border:none;
+}
+.donate-button:active{
+    opacity: 0.5;
+
+}
+.nd{margin-top: 600px;
+    background-color: white;
+    height: 500px;
 }
