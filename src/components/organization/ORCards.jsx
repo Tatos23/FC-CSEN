@@ -10,7 +10,7 @@ const ORCards = () => {
           <Card bg = 'bg-gray-200'>
           <h2 class="text-2xl font-bold text-green-800">Request Section</h2>
             <p class="mt-2 mb-4 text-green-800">
-              Request Donatations For Your Organization
+              Request Donations For Your Organization
             </p>
             <a
               href="/postReq"
