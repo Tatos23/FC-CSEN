@@ -22,10 +22,15 @@
     color: var(--harp);
 }
 
-header {
-    background-color: var(--casal);
+.homepage-header {
+    background: linear-gradient(to right, #2C6B5A, white, #2C6B5A);
     padding: 20px;
     text-align: center;
+}
+
+.header-title {
+    color: var(--casal);
+    font-weight: bold;
 }
 
 .logo img {
@@ -36,6 +41,10 @@ header {
 .logo h1 {
     font-size: 24px;
     margin-top: 10px;
+}
+
+nav h2 {
+    background-color: var(--chelsea-cucumber);
 }
 
 nav ul {

@@ -1,0 +1,62 @@
+/* Parent Component */
+.Authentication {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #162D23;
+    overflow: hidden;
+}
+
+/* Child Components */
+.background,
+.right-side-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #162D23;
+    transition: transform 0.8s ease-in-out;
+}
+
+.background {
+    flex-direction: column;
+    position: relative;
+    bottom: -30px;
+}
+
+.right-side-outer.registering {
+    transform: translateX(-100%);
+}
+
+.background.registering {
+    transform: translateX(100%);
+}
+
+/* Grandchild Components */
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+.welcome-text {
+    position: relative;
+    top: -35px;
+    margin-bottom: 20px;
+}
+
+.welcome-text h1 {
+    color: white;
+    font-size: 3em;
+}
+
+.welcome-text p {
+    color: whitesmoke;
+}

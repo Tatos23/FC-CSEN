@@ -1,0 +1,255 @@
+/* Child Components */
+.register-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+
+.register-header img {
+    width: 110px;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.register-header p {
+    color: #2C6B5A;
+    font-weight: 700;
+    font-size: large;
+}
+
+/* Child Components */
+.right-side-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+
+.register-title {
+    margin-bottom: 15px;
+}
+
+.password-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 28%;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #74AC4C;
+}
+
+.register-button {
+    border-radius: 10px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #74AC4C;
+    width: 25%;
+    height: 30px;
+    margin-top: 4%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.register-button:hover {
+    background-color: #2C6B5A;
+}
+
+.register-username,
+.register-password {
+    font-weight: bold;
+    color: #74AC4C;
+}
+
+/* Parent Components */
+.right-side-inner {
+    align-items: center;
+    width: 94%;
+    height: 96%;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    overflow-y: auto;
+    max-height: 96vh;
+    padding-bottom: 20px;
+    scrollbar-width: thin; /* adjust the width of the scrollbar */
+    scrollbar-color: #74AC4C #F5F5F5; /* set the color of the scrollbar track and thumb */
+}
+
+.right-side-inner::-webkit-scrollbar {
+    
+    width: 10px; /* adjust the width of the scrollbar */
+}
+
+.right-side-inner::-webkit-scrollbar-track {
+    background-color: #F5F5F5; /* set the color of the scrollbar track */
+}
+
+.right-side-inner::-webkit-scrollbar-thumb {
+    background-color: #74AC4C; /* set the color of the scrollbar thumb */
+    border-radius: 13px; /* adjust the border-radius of the scrollbar thumb */
+}
+
+.right-side-inner header {
+    background-color: #2C6B5A;
+}
+
+/* Child Components */
+.register-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+
+.register-header img {
+    width: 110px;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.register-header p {
+    color: #2C6B5A;
+    font-weight: 700;
+    font-size: large;
+}
+
+/* Child Components */
+.right-side-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+
+.register-title {
+    margin-bottom: 15px;
+}
+
+.register-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #2C6B5A;
+    margin-top: 1%;
+    width: 100%;
+}
+
+.firstname-input,
+.lastname-input,
+.gender-input,
+.contactnumber-input,
+.email-input,
+.username-input,
+.password-input,
+.organizationName-input,
+.organizationType-input,
+.organizationAddress-input,
+.organizationArea-input,
+.organizationGovernorate-input
+ {
+    border-radius: 10px;
+    border-color: #74AC4C;
+    background-color: white;
+    width: 50%;
+    height: 35px;
+    padding-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: border-color 1s;
+    margin-top: 3%;
+}
+
+.gender-input input[type="checkbox"] {
+    accent-color: #74AC4C;
+    border: 1px solid #74AC4C;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.gender-input input[type="checkbox"]:checked {
+    accent-color: #74AC4C;
+    border: 1px solid #74AC4C;
+    background-color: #74AC4C;
+}
+
+.password-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.password-input {
+    margin-top: 0%;
+    padding-right: 30px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 28%;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #74AC4C;
+}
+
+.register-button {
+    border-radius: 10px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #74AC4C;
+    width: 25%;
+    height: 30px;
+    margin-top: 4%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.login-redirect {
+    margin-top: 10px;
+}
+
+.login-redirect a {
+    color: blue;
+}
+
+.register-button:hover {
+    background-color: #2C6B5A;
+}
+
+.register-username,
+.register-password {
+    font-weight: bold;
+    color: #74AC4C;
+}
+
+.firstname-input:focus,
+.lastname-input:focus,
+.gender-input:focus,
+.contactnumber-input:focus,
+.email-input:focus,
+.username-input:focus,
+.password-input:focus {
+    border-color: #74AC4C;
+}

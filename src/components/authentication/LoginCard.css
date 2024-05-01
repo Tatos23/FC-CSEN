@@ -1,57 +1,90 @@
-/* Parent Component */
-.Login {
-    display: flex;
+/* Parent Components */
+.right-side-inner {
     align-items: center;
-    height: 100vh;
-    background-color: #162D23;
+    width: 94%;
+    height: 96%;
+    border-radius: 20px;
+    background-color: white;
+}
+.right-side-inner header {
+    background-color: #2C6B5A;
 }
 
 /* Child Components */
-.left-side,
-.right-side-outer {
+.register-header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    background-color: #162D23;
-}
-
-.left-side {
     flex-direction: column;
-    position: relative;
-    bottom: -30px;
-}
-
-/* Grandchild Components */
-.welcome {
-    display: flex;
     justify-content: center;
     align-items: center;
+    height: 40%;
 }
 
-.welcome img {
-    width: 80%;
+.register-header img {
+    width: 110px;
     height: auto;
-    object-fit: contain;
+    padding-bottom: 10px;
 }
 
-.welcome-text {
-    position: relative;
-    top: -35px;
-    margin-bottom: 20px;
-}
-
-.welcome-text h1 {
-    color: white;
-    font-size: 3em;
-}
-
-.welcome-text p {
-    color: whitesmoke;
+.register-header p {
+    color: #2C6B5A;
+    font-weight: 700;
+    font-size: large;
 }
 
 /* Child Components */
+.right-side-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+
+.register-title {
+    margin-bottom: 15px;
+}
+
+.password-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 28%;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #74AC4C;
+}
+
+.login-button {
+    border-radius: 10px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #74AC4C;
+    width: 25%;
+    height: 30px;
+    margin-top: 4%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.register-button:hover {
+    background-color: #2C6B5A;
+}
+
+.login-username,
+.login-password {
+    font-weight: bold;
+    color: #74AC4C;
+}
+
+/* Parent Components */
 .right-side-inner {
     align-items: center;
     width: 94%;
@@ -59,13 +92,14 @@
     border-radius: 20px;
     background-color: white;
     overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
 
 .right-side-inner header {
     background-color: #2C6B5A;
 }
 
-/* Grandchild Components */
+/* Child Components */
 .login-header {
     display: flex;
     flex-direction: column;
@@ -86,7 +120,7 @@
     font-size: large;
 }
 
-/* Grandchild Components */
+/* Child Components */
 .right-side-actions {
     width: 100%;
     display: flex;
@@ -154,6 +188,14 @@
     cursor: pointer;
     font-weight: bold;
     box-shadow: none;
+}
+
+.register-redirect {
+    margin-top: 10px;
+}
+
+.register-redirect a {
+    color: blue;
 }
 
 .login-button:hover {
