@@ -12,7 +12,7 @@ function LoginCard({ isRegistering, toggleForm, showPassword, toggleShowPassword
             <div className="right-side-actions">
                 <div className="login-inputs">
                     <h1 className="login-title"> {role} Log in </h1>
-                    <input type="text" placeholder="Username" class="username-input" required></input>
+                    <input type="text" placeholder="Username" className="username-input" required></input>
                     <br />
                     <div className="password-wrapper">
                         <input
@@ -28,10 +28,11 @@ function LoginCard({ isRegistering, toggleForm, showPassword, toggleShowPassword
                 </div>
                 <div className="login-buttons">
                     <button className="login-button"> Login </button>
-                    <p className="register-redirect">
+                    { role != "Admin" && <p className="register-redirect">
                         Don't have an account? &nbsp;
                         <a onClick={toggleForm} style={{ cursor: 'pointer' }}>Register</a>
                     </p>
+                    }
                 </div>
             </div>
         </div>
