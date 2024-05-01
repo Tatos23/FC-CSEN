@@ -172,6 +172,7 @@
     position: absolute;
     right: 28%;
     top: 55%;
+    margin-top: -0.2%;
     transform: translateY(-50%);
     cursor: pointer;
     color: #74AC4C;
