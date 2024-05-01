@@ -1,4 +1,4 @@
-import './landing.css';
+import './Landing.css';
 function Landing(){
 return(
     <>
@@ -15,7 +15,7 @@ return(
         </div>
         <div className='rightside'>
         <button className='searchbutton'><img className='search-icon'src='searchicon.png' alt='logo'></img></button>
-        <button className='singin-up'>signin/up</button>
+        <button className='singin-up'>Login/Register</button>
         
         </div>
         

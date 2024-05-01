@@ -7,6 +7,7 @@ import RegisterCard from './RegisterCard';
 function Authentication(props) {
     const [showPassword, setShowPassword] = useState(false);
     const [isRegistering, setIsRegistering] = useState(false);
+    const [gender, setGender] = useState(false);
 
     const toggleForm = () => {
         setIsRegistering(!isRegistering);
@@ -16,13 +17,17 @@ function Authentication(props) {
         setShowPassword(!showPassword);
     };
 
+    const handleGenderChange = (e) => {
+        setGender(e.target.value);
+    };
+
     return (
         <div className="Authentication" style={authenticationStyles}>
             <div className={`background ${isRegistering ? 'registering' : ''}`}>
                 {isRegistering ? (
                     <div>
                         <div className="welcome-text">
-                            <h1>Register</h1>
+                            <h1>Registration</h1>
                             <p>Please fill out your information.</p>
                         </div>
                         <div className="welcome">
@@ -44,7 +49,7 @@ function Authentication(props) {
             </div>
             <div className={`right-side-outer ${isRegistering ? 'registering' : ''}`}>
                 {isRegistering ? (
-                    <RegisterCard isRegistering={isRegistering} toggleForm={toggleForm} role={props.role} />
+                    <RegisterCard isRegistering={isRegistering} toggleForm={toggleForm} showPassword={showPassword} toggleShowPassword={toggleShowPassword} role={props.role} gender = {gender} handleGenderChange = {handleGenderChange}/>
                 ) : (
                     <LoginCard isRegistering={isRegistering} toggleForm={toggleForm} showPassword={showPassword} toggleShowPassword={toggleShowPassword} role={props.role} />
                 )}
