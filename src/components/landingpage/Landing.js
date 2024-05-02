@@ -1,4 +1,6 @@
 import './landing.css';
+import { Link } from 'react-router-dom';
+
 function Landing() {
     return (
         <div className='body'>
@@ -22,7 +24,7 @@ function Landing() {
                     </div>
 
                     <button className='searchbutton'><img className='search-icon' src='searchicon.png' alt='logo'></img></button>
-                    <button className='singin-up' >Login/Register</button>
+                    <Link to={"/home"} className='singin-up' >Login/Register</Link>
                     <div className='quote'>"The best way to find yourself is to lose yourself in the service of others."
                     </div>
 
