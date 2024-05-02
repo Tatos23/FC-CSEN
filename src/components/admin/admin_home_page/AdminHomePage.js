@@ -1,5 +1,5 @@
 import './AdminHomePage.css';
-function Landing() {
+function AdminHomePage({ username }) {
     return (
         <div className='body'>
             <div className='navbar'>
@@ -44,4 +44,4 @@ function Landing() {
         </div>
     )
 }
-export default Landing;
+export default AdminHomePage;

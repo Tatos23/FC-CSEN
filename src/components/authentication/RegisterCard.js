@@ -39,22 +39,22 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, handleGend
                             {showPassword ? <FiEye /> : <FiEyeOff />}
                         </i>
                     </div>
-                    <br/>
+                    <br />
                     {role === 'Representative' &&
-                    <>
-                    <h1 className="register-title"> Organization Registration </h1>
-                    <input type="text" placeholder="Organization Name" className="organizationName-input" required></input>
-                    <input type="text" placeholder="Organization Type" className="organizationType-input" required></input>
-                    <input type="text" placeholder="Organization Address" className="organizationAddress-input" required></input>
-                    <input type="text" placeholder="Organization Area" className="organizationArea-input" required></input>
-                    <input type="text" placeholder="Organization Governorate" className="organizationGovernorate-input" required></input>
-                    </>
+                        <>
+                            <h1 className="register-title"> Organization Registration </h1>
+                            <input type="text" placeholder="Organization Name" className="organizationName-input" required></input>
+                            <input type="text" placeholder="Organization Type" className="organizationType-input" required></input>
+                            <input type="text" placeholder="Organization Address" className="organizationAddress-input" required></input>
+                            <input type="text" placeholder="Organization Area" className="organizationArea-input" required></input>
+                            <input type="text" placeholder="Organization Governorate" className="organizationGovernorate-input" required></input>
+                        </>
                     }
-                    
-                    
+
+
                 </div>
                 <div className="register-buttons">
-                    <button className="register-button"> Register </button>
+                    <button onClick={toggleForm} style={{ cursor: 'pointer' }} className="register-button"> Register </button>
                     <p className="login-redirect">
                         Already have an account? &nbsp;
                         <a onClick={toggleForm} style={{ cursor: 'pointer' }}>Login</a>
