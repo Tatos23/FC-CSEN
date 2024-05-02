@@ -12,11 +12,8 @@ import Hero from './components/Hero.jsx';
 function App() {
   return (
     <div className="App">
-
-  
-      <Hero title="Welcome to the website" subtitle="This is a subtitle" />
-      {/* <Authentication role="Admin" /> */}
-      {/* <Landing /> */}
+      {/* //   <Authentication role="Donor" /> */}
+      <Landing />
       {/* <HomePage /> */}
       {/* <NavigationL/> */}
     </div>
