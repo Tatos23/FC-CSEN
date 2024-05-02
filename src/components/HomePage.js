@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const logo = "logo192.png";
 const HomePage = () => {
     return (
-        <div className="container">
+        <div className="home-container">
             <header className='homepage-header'>
                 <div className="logo">
                     <h1 className='header-title'> Welcome to Herzensbrücke </h1>
