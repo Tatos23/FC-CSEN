@@ -21,7 +21,7 @@ const Navbar = () => {
           </a>
           
           <div className="md:ml-auto">
-            <div className="flex space-x-2">
+            <div className="flex space-x-10">
               <a
                 href='/donations'
                 className={linkClass}
