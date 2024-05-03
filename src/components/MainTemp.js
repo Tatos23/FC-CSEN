@@ -3,7 +3,7 @@ import React, { useState,useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import DropDownProfile from './DropDownProfile';
 import userEvent from '@testing-library/user-event';
-
+import ORCards from './organization/ORCards';
 function MainTemp(){
 
 
@@ -81,6 +81,8 @@ return(
            </div>
         
        <div className='main-temp-nd'>
+        <ORCards />
+
         <div className='main-temp-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
        <div className='main-temp-no'><div className='landin'><img className='main-temp-foodicon'src='healthicon.png' alt='logo'></img><span className='main-temp-title' >Medical supplies</span></div></div>
        <div className='main-temp-y'> <img className='main-temp-foodicon'src='education.png' alt='logo'></img><span className='main-temp-title' >Educaion</span></div>
