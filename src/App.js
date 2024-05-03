@@ -14,8 +14,8 @@ function App() {
     <div className="App">
 
   
-      <Hero title="Welcome to the website" subtitle="This is a subtitle" />
-      {/* <Authentication role="Admin" /> */}
+      {/* <Hero title="Welcome to the website" subtitle="This is a subtitle" /> */}
+      <Authentication role="Admin" />
       {/* <Landing /> */}
       {/* <HomePage /> */}
       {/* <NavigationL/> */}
