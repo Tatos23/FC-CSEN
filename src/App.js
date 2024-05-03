@@ -6,6 +6,7 @@ import Landing from './components/landingpage/Landing.js';
 import AdminHomePage from './components/admin/admin_home_page/AdminHomePage.js';
 import Home from './components/donor/Home.js';
 import ViewRequests from './components/donor/ViewRequests.js';
+import MainTemp from './components/MainTemp.js';
 function App() {
   return (
     <div className="App">
@@ -21,7 +22,8 @@ function App() {
         <Home/>
       </BrowserRouter> */}
       {/* <Home/> */}
-      <ViewRequests/>
+      {/* <ViewRequests/> */}
+      <MainTemp/>
 
     </div>
   );
