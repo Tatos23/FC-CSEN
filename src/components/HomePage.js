@@ -1,9 +1,10 @@
 import './HomePage.css'; // Importing CSS for styling
+import { Link } from 'react-router-dom';
 
 const logo = "logo192.png";
-const HomePage  = () => {
+const HomePage = () => {
     return (
-        <div className="container">
+        <div className="home-container">
             <header className='homepage-header'>
                 <div className="logo">
                     <h1 className='header-title'> Welcome to Herzensbrücke </h1>
@@ -15,11 +16,11 @@ const HomePage  = () => {
             <nav>
                 <h2> Register/Login as </h2>
                 <ul>
-                    <li><a href="#Admin">Admin</a></li>
+                    <li><Link to={"/admin-login"} href="#Admin">Admin</Link></li>
 
-                    <li><a href="#Donor">Donor</a></li>
+                    <li><Link to={"/donor-login"} href="#Donor">Donor</Link></li>
 
-                    <li><a href="#Org/Rep">Organization/Representative</a></li>
+                    <li><Link to={"/organization-login"} href="#Org/Rep">Organization/Representative</Link></li>
                 </ul>
             </nav>
 
@@ -27,6 +28,6 @@ const HomePage  = () => {
         </div>
     );
 }
- 
+
 export default HomePage;
 

@@ -86,9 +86,6 @@
 }
 
 .singin-up {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 15px;
     border: none;
     color: white;

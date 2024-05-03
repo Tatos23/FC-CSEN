@@ -1,11 +1,7 @@
-import './landing.css';
-import { Link } from 'react-router-dom';
-
-function Landing() {
+import './AdminHomePage.css';
+function AdminHomePage({ username }) {
     return (
         <div className='body'>
-
-
             <div className='navbar'>
                 <div className='leftside'>
                     <img className='logo-navbar' src='logo2.png' alt='logo'></img>
@@ -24,7 +20,7 @@ function Landing() {
                     </div>
 
                     <button className='searchbutton'><img className='search-icon' src='searchicon.png' alt='logo'></img></button>
-                    <Link to={"/home"} className='singin-up' >Login/Register</Link>
+                    <button className='singin-up' >Login/Register</button>
                     <div className='quote'>"The best way to find yourself is to lose yourself in the service of others."
                     </div>
 
@@ -48,4 +44,4 @@ function Landing() {
         </div>
     )
 }
-export default Landing;
+export default AdminHomePage;
