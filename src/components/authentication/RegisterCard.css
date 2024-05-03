@@ -84,22 +84,28 @@
     overflow-y: auto;
     max-height: 96vh;
     padding-bottom: 20px;
-    scrollbar-width: thin; /* adjust the width of the scrollbar */
-    scrollbar-color: #74AC4C #F5F5F5; /* set the color of the scrollbar track and thumb */
+    scrollbar-width: thin;
+    /* adjust the width of the scrollbar */
+    scrollbar-color: #74AC4C #F5F5F5;
+    /* set the color of the scrollbar track and thumb */
 }
 
 .right-side-inner::-webkit-scrollbar {
-    
-    width: 10px; /* adjust the width of the scrollbar */
+
+    width: 10px;
+    /* adjust the width of the scrollbar */
 }
 
 .right-side-inner::-webkit-scrollbar-track {
-    background-color: #F5F5F5; /* set the color of the scrollbar track */
+    background-color: #F5F5F5;
+    /* set the color of the scrollbar track */
 }
 
 .right-side-inner::-webkit-scrollbar-thumb {
-    background-color: #74AC4C; /* set the color of the scrollbar thumb */
-    border-radius: 13px; /* adjust the border-radius of the scrollbar thumb */
+    background-color: #74AC4C;
+    /* set the color of the scrollbar thumb */
+    border-radius: 13px;
+    /* adjust the border-radius of the scrollbar thumb */
 }
 
 .right-side-inner header {
@@ -137,6 +143,8 @@
 
 .register-title {
     margin-bottom: 15px;
+    font-size: xx-large;
+    font-weight: 700;
 }
 
 .register-inputs {
@@ -160,8 +168,7 @@
 .organizationType-input,
 .organizationAddress-input,
 .organizationArea-input,
-.organizationGovernorate-input
- {
+.organizationGovernorate-input {
     border-radius: 10px;
     border-color: #74AC4C;
     background-color: white;
