@@ -13,7 +13,7 @@ function App() {
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
-          <Route path="/organization-login" element={<Authentication role="organization" />} />
+          <Route path="/representative-login" element={<Authentication role="Representative"/>} />
           <Route path="home" element={<HomePage />} />
         </Routes>
       </BrowserRouter>
