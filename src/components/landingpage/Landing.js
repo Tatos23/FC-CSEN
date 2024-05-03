@@ -43,7 +43,7 @@ return(
 
             <button className='landing-searchbutton'><img className='landing-search-icon'src='searchicon.png' alt='logo'></img></button>
             
-<Link to={"/home"} className='singin-up' >Login/Register</Link>
+            <Link to={"/home"} className='singin-up' >Login/Register</Link>
             <div className='landing-quote'>"The best way to find yourself is to lose yourself in the service of others."
             </div>
 
