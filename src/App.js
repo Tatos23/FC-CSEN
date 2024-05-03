@@ -5,6 +5,8 @@ import HomePage from './components/HomePage.js';
 import Landing from './components/landingpage/Landing.js';
 import AdminHomePage from './components/admin/admin_home_page/AdminHomePage.js';
 import Home from './components/donor/Home.js';
+import ViewRequests from './components/donor/ViewRequests.js';
+import MainTemp from './components/MainTemp.js';
 function App() {
   return (
     <div className="App">
@@ -19,7 +21,9 @@ function App() {
         </Routes>
         <Home/>
       </BrowserRouter> */}
-      <Home/>
+      {/* <Home/> */}
+      {/* <ViewRequests/> */}
+      <MainTemp/>
 
     </div>
   );

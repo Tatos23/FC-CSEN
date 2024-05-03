@@ -1,0 +1,254 @@
+.main-temp-main {
+    /* background-image: url('/public/home.jpg'); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    position: relative;
+    
+}
+.main-temp-navbar{
+    position: relative; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    background-color: #ffffff ;
+    color: white; 
+    height: 100px;
+
+}
+.main-temp-leftside{
+
+width: 400px;
+}
+.main-temp-logo-navbar{
+width: 100px;
+height: 70px;
+margin-top:3px ;
+object-fit: contain;
+display: block;
+margin-bottom: 0px;
+
+}
+.main-temp-logo-navbar-name{
+    width: 100px;
+    height: 20px;
+    object-fit: contain;
+    margin-left: 2px;
+    margin-top: 0px;
+    object-position: left;
+    display: block;
+
+}
+.main-temp-middleside{
+color: black;
+display: flex;
+width: 710px;
+margin-top: 15px;
+}
+.main-temp-rightside{
+ color: white;
+ justify-content:space-between;
+ display: flex;
+ margin-right: 15px;
+ width: 400px;
+ margin-top: 15px;
+
+}
+.main-temp-search-icon{
+width: 30px;
+height: 30px;
+object-fit: contain;
+}
+.main-temp-searchbutton{
+    background-color: transparent;
+    border: none;
+    height: 65px;
+    margin-right: 30px;
+    position: absolute;
+    margin-left:   165px;
+
+    
+}
+.main-temp-singin-up{
+    border-radius: 15px;
+    border: none;
+    color:  white;
+    background-color:#397d08;
+    width: 150px;
+    height: 40px;
+    transition: background-color 1s;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-temp-singin-up:hover{
+    background-color: #265305;
+    color: white;
+    border:none;
+}
+.main-temp-singin-up:active{
+    opacity: 0.5;
+
+}
+.main-temp-middleside-button{
+   font-family: poppins, sans-serif;
+    font-size: 18px;
+    border: none;
+    color: #2C6B5A;
+    background-color:transparent;
+    width: 100px;
+    height: 30px;
+    transition: background-color 1s;
+    margin-top: 15px;
+   border-bottom: 1px solid #397e07;
+    width: 100px;
+}
+.main-temp-middleside-button:hover{
+    color: #74AC4C;
+
+}
+.main-temp-homephoto{
+    display: block; 
+    width: 100%;
+    height: auto; 
+
+}
+.main-temp-background-container {
+    position: relative;
+}
+.main-temp-search-container{
+    height: 35px;
+    color :black;
+    margin-top: 14px;
+    width: 200px;
+    border: 1px solid;
+    border-color: white;
+    background-color: white ;
+    border-radius: 15px;
+    position: relative;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(10, 187, 51, 0.4);;
+}
+.main-temp-quote{
+color: white;
+position:absolute;
+top: 250px;
+left: 50px;
+right: 800px;
+bottom: 0;
+font-size: 300%;
+}
+.main-temp-donate-button{
+position: relative;
+color: aliceblue;
+background-color: #397d08;
+top:400px;
+left: 300px;
+right:0px;
+bottom: 0;
+width: 200px;
+height: 50px;
+border: none;
+font-size: 25px;
+border-radius: 18px;
+}
+.main-temp-donate-button:hover{
+    background-color: #2e6407;
+    color: white;
+    border:none;
+}
+.main-temp-donate-button:active{
+    opacity: 0.5;
+
+}
+.main-temp-nd{margin-top: 600px;
+    background-color:white;
+    height: 500px;
+    display: grid;
+    grid-template-columns: auto auto  auto auto;
+}
+.main-temp-foodicon{
+    width: 100px;
+
+    top: 100px;
+    left: 100px;
+
+
+}
+
+.main-temp-dropdown {
+    position: relative;
+    font-family: poppins, sans-serif;
+    font-size: 18px;
+    border: none;
+    color: #2C6B5A;
+    background-color:white;
+    width: 100px;
+    height: 30px;
+    transition: background-color 1s;
+    margin-top: 15px;
+    border-bottom: 1px solid #397e07;
+    width: 100px;
+    margin-left: 10%;
+}
+
+.main-temp-dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: none;
+}
+
+.main-temp-dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+.main-temp-action-button{
+    border:none;
+}
+.main-temp-action-button:hover{
+border-bottom:1px solid #74AC4C;
+}
+.main-temp-words{
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.main-temp-title{
+    font-size: 20px;
+    position: relative;
+    bottom: 80px;
+    color: black;
+    right:60px;
+    font-family:  Arial, sans-serif;
+}
+.main-temp-saying{
+    font-size: 12px;
+    position: relative;
+    bottom: 30px;
+    color: grey;
+    right:20px;
+    left: 80px;
+    font-family:  Arial, sans-serif;
+    width: 280px;
+    display: block;
+    
+}
+
+
+.main-temp-profilebutton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px; /* Adjust the size as needed */
+    height: 70px;
+    border-radius: 50%; /* Makes it circular */
+    overflow: hidden; /* Clip the image to the circular shape */
+    object-fit: cover;
+    margin-right: 2%;
+}
+
