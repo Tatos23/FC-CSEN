@@ -1,19 +1,33 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Authentication from './components/authentication/Authentication.js'
 import HomePage from './components/HomePage.js';
-import NavigationL from './components/NavigationL.js';
 import Landing from './components/landingpage/Landing.js';
 import ORHome from './components/organization/ORHome.js';
 import RequestPost from './components/organization/RequestPost.js';
+import AdminHomePage from './components/admin/admin_home_page/AdminHomePage.js';
+import Home from './components/donor/Home.js';
+import ViewRequests from './components/donor/ViewRequests.js';
+import MainTemp from './components/MainTemp.js';
 function App() {
   return (
     <div className="App">
-      <RequestPost />
-      {/*<ORHome user = "Adham" role = "Rep"/>*/}
-      {/* <Authentication role="Admin" /> */}
-      {/* <Landing /> */}
-      {/* <HomePage /> */}
-      {/* <NavigationL/> */}
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/admin-home" element={<AdminHomePage />} />
+          <Route path="/admin-login" element={<Authentication role="Admin" />} />
+          <Route path="/donor-login" element={<Authentication role="Donor" />} />
+          <Route path="/organization-login" element={<Authentication role="organization" />} />
+          <Route path="home" element={<HomePage />} />
+        </Routes>
+        <Home/>
+      </BrowserRouter> */}
+      {/* <Home/> */}
+      {/* <ViewRequests/> */}
+      <MainTemp/>
+
+
     </div>
   );
 }

@@ -60,3 +60,11 @@
 .welcome-text p {
     color: whitesmoke;
 }
+
+input {
+    border-radius: 10px;
+    border-color: #74AC4C;
+    border: #74AC4C solid 1px;
+    background-color: white;
+    width: 50%;
+}

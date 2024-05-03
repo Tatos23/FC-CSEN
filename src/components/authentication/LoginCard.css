@@ -6,6 +6,7 @@
     border-radius: 20px;
     background-color: white;
 }
+
 .right-side-inner header {
     background-color: #2C6B5A;
 }
@@ -130,6 +131,8 @@
 
 .login-title {
     margin-bottom: 15px;
+    font-size: xx-large;
+    font-weight: 700;
 }
 
 .login-inputs {
@@ -171,6 +174,7 @@
     position: absolute;
     right: 28%;
     top: 55%;
+    margin-top: -0.2%;
     transform: translateY(-50%);
     cursor: pointer;
     color: #74AC4C;
