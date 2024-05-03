@@ -3,12 +3,13 @@ import Authentication from './components/authentication/Authentication.js'
 import HomePage from './components/HomePage.js';
 import NavigationL from './components/NavigationL.js';
 import Landing from './components/landingpage/Landing.js';
-import Hero from './components/Hero.jsx';
 import ORHome from './components/organization/ORHome.js';
+import RequestPost from './components/organization/RequestPost.js';
 function App() {
   return (
     <div className="App">
-      <ORHome user = "Adham" role = "Rep"/>
+      <RequestPost />
+      {/*<ORHome user = "Adham" role = "Rep"/>*/}
       {/* <Authentication role="Admin" /> */}
       {/* <Landing /> */}
       {/* <HomePage /> */}
