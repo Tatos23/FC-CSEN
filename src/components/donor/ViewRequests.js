@@ -3,6 +3,7 @@ import React, { useState,useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
+import ORCardsVR from './OrCardsVR';
 
 function ViewRequests(){
 
@@ -24,9 +25,7 @@ function ViewRequests(){
     const handleClickOutside = (e) => {
         if(!refOne.current.contains(e.target)){
             console.log("Clicked outside");
-            if(openProfile){
-                //TODO
-            }
+
         }
         else{
             console.log("Clicked inside Div");
@@ -72,14 +71,14 @@ return(
             <button className='view-requests-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='view-requests-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
             
 
-            <div className='view-requests-quote'>"The best way to find yourself is to lose yourself in the service of others."
-            </div>
+            {/* <div className='view-requests-quote'>"The best way to find yourself is to lose yourself in the service of others."
+            </div> */}
 
             
             </div>
-
            </div>
-        
+           <ORCardsVR/>
+
        <div className='view-requests-nd'>
         <div className='view-requests-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
        <div className='view-requests-no'><div className='landin'><img className='view-requests-foodicon'src='healthicon.png' alt='logo'></img><span className='view-requests-title' >Medical supplies</span></div></div>
