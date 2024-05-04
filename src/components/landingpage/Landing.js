@@ -54,12 +54,17 @@ return(
         
        <div className='landing-nd'>
         <div className='landing-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
-       <div className='landing-no'><div className='landin'><img className='landing-foodicon'src='healthicon.png' alt='logo'></img><span className='landing-title' >Medical supplies</span></div></div>
-       <div className='landing-y'> <img className='landing-foodicon'src='education.png' alt='logo'></img><span className='landing-title' >Educaion</span></div>
-       <div className='landing-f'><img className='landing-foodicon'src='foodicon.png' alt='logo'></img><span className='landing-title' >Food</span> <span className='landing-saying' >Every plate shared is a gift of hope and nourishment. Your food donation can make a difference in someone's life. Give generously, 
-       and let's share the blessings of good food together.</span></div>
-       
-       </div>
+
+       <div className='landing-no'><div className='landing-icon-title'><img className='landing-foodicon'src='healthicon.png' alt='logo'></img><span className='landing-title' >Medical supplies</span></div>
+       <div className='landing-saying'>Access to medical supplies is a basic human right. Your donation can bridge the gap between illness and recovery
+       . Join us in providing essential care to those in need.</div></div>
+       <div className='landing-no'><div className='landing-icon-title'><img className='landing-foodicon'src='foodicon.png' alt='logo'></img><span className='landing-title' >Food&amp;Nutrition</span></div>
+       <div className='landing-saying'>Every plate shared is a gift of hope and nourishment. Your food donation can make a difference in someone's life. Give generously, and let's share the blessings of good food together.</div></div>
+       <div className='landing-no'><div className='landing-icon-title'><img className='landing-foodicon'src='education.png' alt='logo'></img><span className='landing-title'style={{ marginRight: '12%' }} >Education</span></div>
+       <div className='landing-saying'>Empowering minds through education. Support a child's future with your donation today.</div></div>
+       {/* pnad */}
+       </footer>
+
        </div>
 
        
