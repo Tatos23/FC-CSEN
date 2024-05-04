@@ -73,7 +73,7 @@ return(
             <button className='view-requests-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='view-requests-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
             
 
-            {/* <div className='view-requests-quote'>"The best way to find yourself is to lose yourself in the service of others." */}
+            <div className='view-requests-quote'>"The best way to find yourself is to lose yourself in the service of others."
             </div>
 
             
