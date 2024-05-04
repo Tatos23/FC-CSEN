@@ -80,14 +80,14 @@ return(
 
            </div>
         
-       <div className='home-nd'>
+       <footer className='home-nd'>
         <div className='home-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
        <div className='home-no'><div className='landin'><img className='home-foodicon'src='healthicon.png' alt='logo'></img><span className='home-title' >Medical supplies</span></div></div>
        <div className='home-y'> <img className='home-foodicon'src='education.png' alt='logo'></img><span className='home-title' >Educaion</span></div>
        <div className='home-f'><img className='home-foodicon'src='foodicon.png' alt='logo'></img><span className='home-title' >Food</span> <span className='home-saying' >Every plate shared is a gift of hope and nourishment. Your food donation can make a difference in someone's life. Give generously, 
        and let's share the blessings of good food together.</span></div>
        
-       </div>
+       </footer>
        </div>
 
     {/* tatos */}

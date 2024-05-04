@@ -55,7 +55,7 @@ return(
 
            </div>
         
-       <div className='landing-nd'>
+       <footer className='landing-nd'>
         <div className='landing-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
        <div className='landing-no'><div className='landing-icon-title'><img className='landing-foodicon'src='healthicon.png' alt='logo'></img><span className='landing-title' >Medical supplies</span></div>
        <div className='landing-saying'>Access to medical supplies is a basic human right. Your donation can bridge the gap between illness and recovery
@@ -65,7 +65,7 @@ return(
        <div className='landing-no'><div className='landing-icon-title'><img className='landing-foodicon'src='education.png' alt='logo'></img><span className='landing-title'style={{ marginRight: '12%' }} >Education</span></div>
        <div className='landing-saying'>Empowering minds through education. Support a child's future with your donation today.</div></div>
        
-       </div>
+       </footer>
        </div>
 
        
