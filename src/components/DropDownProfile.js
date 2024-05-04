@@ -1,16 +1,26 @@
 import { Link } from 'react-router-dom';
 import './DropDownProfile.css';
-
+import React, { useRef } from 'react';
 const DropDownProfile = () => {
-    const handleButtonClickProfile = () => {
-        console.log('dfdf');
-      };
-    const handleButtonClickSettings = () => {
-        console.log('dfdf');
-      };const handleButtonClickLogout = () => {
-        console.log('dfdf');
-      };
+
+    const refOne = useRef();
+
 //TODO: functionality of the buttons
+const handleButtonClickLogout = (e) => {
+    if(!refOne.current.contains(e.target)){
+        console.log("Clicked outside");
+            //TODO
+    }
+    else{
+        console.log("Clicked inside Div");
+    }
+}
+const handleButtonClickProfile = (action) => {
+    // Your implementation here
+  };
+  const handleButtonClickSettings = (action) => {
+    // Your implementation here
+  };
     return ( 
         <div className = 'flex flex-col DropDownProfile'>
             <ul className = 'flex flex-col gap-4'>
