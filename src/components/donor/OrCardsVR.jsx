@@ -1,36 +1,25 @@
 import React from 'react'
-import Card from '../Card'
+import CardDonor from './CardDonor'
 
 
 const ORCardsVR = () => {
   return (
     <section class="py-4">
       <div class="container-xl lg:container m-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
-          <Card bg = 'bg-gray-200'>
+        <div class="grid grid-cols-1 rounded-lg">
+          <CardDonor bg = 'bg-gray-200'>
           <h2 class="text-2xl font-bold text-green-800">Request Section</h2>
             <p class="mt-2 mb-4 text-green-800">
-              Request Donations For Your Organization
+              Request 1
             </p>
             <a
-              href="/RequestCards.js"
+              href="/RequestCardsDonor.js"
               class="inline-block bg-cyan-500 text-white rounded-lg px-4 py-2 hover:bg-cyan-700"
             >
-              Post Requests
+              View Request
             </a>
-         </Card>   
-        <Card bg = 'bg-gray-200'>
-          <h2 class="text-2xl font-bold text-green-800">Notifications Section</h2>
-            <p class="mt-2 mb-4 text-green-800">
-              See Your Notifications On Previous Requests
-            </p>
-            <a
-              href="/notifications"
-              class="inline-block bg-cyan-500 text-white rounded-lg px-4 py-2 hover:bg-cyan-700"
-            >
-              Check Notifications
-            </a>
-          </Card>  
+         </CardDonor>   
+        
         </div>
       </div>
     </section>
