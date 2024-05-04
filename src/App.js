@@ -23,12 +23,12 @@ function App() {
         </Routes>
         <Home/>
       </BrowserRouter> */}
-      <Home/>
+      <MainTemp/>
       {/* <ViewRequests/> */}
       {/*<MainTemp/>*/}
       {/* <ORHome /> */}
 
-{/* <Landing/> */}
+      {/* <Landing/> */}
 
     </div>
   );
