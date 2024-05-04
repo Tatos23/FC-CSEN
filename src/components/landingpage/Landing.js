@@ -50,9 +50,8 @@ return(
             
             </div>
 
-           </div>
-        
-       <div className='landing-nd'>
+           </div> 
+       <footer className='landing-nd'>
         <div className='landing-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
 
        <div className='landing-no'><div className='landing-icon-title'><img className='landing-foodicon'src='healthicon.png' alt='logo'></img><span className='landing-title' >Medical supplies</span></div>
