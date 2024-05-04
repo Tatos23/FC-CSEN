@@ -20,7 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route path="/" element={<Header loggedIn={false}/>} />
+          <Route path="/" element={<Landing />} />
           <Route path="/" element={<Donationselect />} />
 
           <Route path="/admin-home" element={<AdminHomePage />} />
