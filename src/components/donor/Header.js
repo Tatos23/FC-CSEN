@@ -4,7 +4,7 @@ import React, { useState,useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
-function Donationselect(){
+function Header(){
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -14,22 +14,7 @@ function Donationselect(){
     };
 
     const[openProfile, setOpenProfile] = useState(false);
-    const refOne = useRef(null); //used to mark a DOM element
-    useEffect(() => {
-        document.addEventListener("click",handleClickOutside, true)
-    },[])
 
-    const handleClickOutside = (e) => {
-        if(!refOne.current.contains(e.target)){
-            console.log("Clicked outside");
-            if(openProfile){
-                //TODO
-            }
-        }
-        else{
-            console.log("Clicked inside Div");
-        }
-    }
 
 return(<>
 
@@ -63,14 +48,18 @@ return(<>
             
             {/* <Link to={"/home"} className='singin-up' >Login/Register</Link> */}
 {/* tatos */}
-            <button className='home-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='home-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
+<button className='main-temp-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}>
+                <img className='main-temp-profile-icon'src='profileEnhanced.png' alt='logo'></img></button>
             
 
             
             </div>
 
-           </div>
+           </div>       {
+        openProfile && <DropDownProfile/> 
+       
+       }
 </>);
 
 }
-export default Donationselect;
+export default Header;

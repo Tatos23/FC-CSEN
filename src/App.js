@@ -9,13 +9,13 @@ import AdminHomePage from './components/admin/admin_home_page/AdminHomePage.js';
 import Home from './components/donor/Home.js';
 import ViewRequests from './components/donor/ViewRequests.js';
 import MainTemp from './components/MainTemp.js';
-import Donationselect from './components/donor/Donationselect.js';
+import Header from './components/donor/Header.js';
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainTemp />} />
+          <Route path="/" element={<Header />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
@@ -24,8 +24,7 @@ function App() {
           <Route path="/home-donor" element={<Home />} />
         </Routes>
       </BrowserRouter>
-{/* 
-      <Donationselect/> */}
+
     </div>
   );
 }
