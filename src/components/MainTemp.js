@@ -51,16 +51,7 @@ return(
                 <button className='main-temp-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
                 <button className='main-temp-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
                 <button className='main-temp-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-                <div className="main-temp-dropdown">
-            <button onClick={toggleVisibility}>Categories</button>
-            {isVisible && (
-                <div className="main-temp-dropdown-content">
-                    <button className='main-temp-action-button'>Action 1</button>
-                    <button className='main-temp-action-button'>Action 2</button>
-                    <button className='main-temp-action-button'>Action 3</button>
-                </div>
-            )}
-        </div>
+               
             </div>
             <div className='main-temp-rightside'>
                 <div >
@@ -85,17 +76,11 @@ return(
            </div>
         
        <div className='main-temp-nd'>
-        <ORCards />
+        
 
-        <div className='main-temp-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
-       <div className='main-temp-no'><div className='landin'><img className='main-temp-foodicon'src='healthicon.png' alt='logo'></img><span className='main-temp-title' >Medical supplies</span></div></div>
-       <div className='main-temp-y'> <img className='main-temp-foodicon'src='education.png' alt='logo'></img><span className='main-temp-title' >Educaion</span></div>
-       <div className='main-temp-f'><img className='main-temp-foodicon'src='foodicon.png' alt='logo'></img><span className='main-temp-title' >Food</span> <span className='main-temp-saying' >Every plate shared is a gift of hope and nourishment. Your food donation can make a difference in someone's life. Give generously, 
-       and let's share the blessings of good food together.</span></div>
-       
        </div>
        </div>
-
+    <ORCards />
 
     {/* tatos */}
        {
