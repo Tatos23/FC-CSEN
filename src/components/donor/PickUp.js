@@ -1,10 +1,11 @@
 import React from 'react'
 import './PickUp.css'
+import Header from './Header'
 
 function PickUp (){
     return (
         <div className="PickUp">
-            <h1 className="PickUp-Title-Section">Schedule PickUp Information:</h1>
+            <Header loggedIn={true}/>
         </div>
     )
 }
