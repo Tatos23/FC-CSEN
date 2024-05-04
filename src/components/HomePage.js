@@ -20,7 +20,7 @@ const HomePage = () => {
 
                     <li><Link to={"/donor-login"} href="#Donor">Donor</Link></li>
 
-                    <li><Link to={"/organization-login"} href="#Org/Rep">Organization/Representative</Link></li>
+                    <li><Link to={"/organization-login"} href="#Org/Rep">Organization Representative</Link></li>
                 </ul>
             </nav>
 

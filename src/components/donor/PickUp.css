@@ -1,0 +1,8 @@
+.PickUp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Add this line */
+}
+
+.PickUp-Title-Section {
+}

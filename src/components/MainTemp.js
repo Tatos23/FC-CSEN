@@ -63,7 +63,8 @@ return(
             
             {/* <Link to={"/home"} className='singin-up' >Login/Register</Link> */}
 {/* tatos */}
-            <button className='main-temp-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='main-temp-profile-icon'src='profileEnhanced.png' alt='logo'></img></button>
+            <button className='main-temp-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}>
+                <img className='main-temp-profile-icon'src='profileEnhanced.png' alt='logo'></img></button>
             
 
             <div className='main-temp-quote'>"The best way to find yourself is to lose yourself in the service of others."

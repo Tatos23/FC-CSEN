@@ -249,10 +249,10 @@ border-bottom:1px solid #74AC4C;
 
 .home-profilebutton{
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 10px;
-    width: 70px; /* Adjust the size as needed */
-    height: 70px;
+    width: 50px; /* Adjust the size as needed */
+    height: 50px;
     border-radius: 50%; /* Makes it circular */
     overflow: hidden; /* Clip the image to the circular shape */
     object-fit: cover;
