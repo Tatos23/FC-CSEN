@@ -9,12 +9,15 @@ import AdminHomePage from './components/admin/admin_home_page/AdminHomePage.js';
 import Home from './components/donor/Home.js';
 import ViewRequests from './components/donor/ViewRequests.js';
 import MainTemp from './components/MainTemp.js';
+import PickUp from './components/donor/PickUp.js';
+
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainTemp />} />
+          <Route path="/" element={<PickUp />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
