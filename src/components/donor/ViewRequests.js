@@ -3,7 +3,7 @@ import React, { useState,useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
-import ORCardsVR from './OrCardsVR';
+
 
 function ViewRequests(){
 
@@ -78,7 +78,6 @@ return(
             </div>
            </div>
            
-           <ORCardsVR/>
 
        <div className='view-requests-nd'>
         <div className='view-requests-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
