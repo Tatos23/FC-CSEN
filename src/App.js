@@ -9,6 +9,7 @@ import AdminHomePage from './components/admin/admin_home_page/AdminHomePage.js';
 import Home from './components/donor/Home.js';
 import ViewRequests from './components/donor/ViewRequests.js';
 import MainTemp from './components/MainTemp.js';
+import Donationselect from './components/donor/Donationselect.js';
 import Header from './components/donor/Header.js';
 import PickUp from './components/donor/PickUp.js';
 
