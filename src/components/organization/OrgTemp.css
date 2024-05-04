@@ -1,14 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-.main-temp-main {
-    background-image: url('/public/home.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
-    position: relative;
-    
-}
-.main-temp-navbar{
+
+.org-temp-navbar{
     position: relative; 
     top: 0;
     left: 0;
@@ -22,20 +15,18 @@
     height: 100px;
 
 }
-.main-temp-leftside{
-
+.org-temp-leftside{
 width: 400px;
 }
-.main-temp-logo-navbar{
+.org-temp-logo-navbar{
 width: 100px;
 height: 70px;
 margin-top:3px ;
 object-fit: contain;
 display: block;
 margin-bottom: 0px;
-
 }
-.main-temp-logo-navbar-name{
+.org-temp-logo-navbar-name{
     width: 100px;
     height: 20px;
     object-fit: contain;
@@ -43,15 +34,14 @@ margin-bottom: 0px;
     margin-top: 0px;
     object-position: left;
     display: block;
-
 }
-.main-temp-middleside{
+.org-temp-middleside{
 color: black;
 display: flex;
 width: 710px;
 margin-top: 15px;
 }
-.main-temp-rightside{
+.org-temp-rightside{
  color: white;
  justify-content:space-between;
  display: flex;
@@ -60,12 +50,12 @@ margin-top: 15px;
  margin-top: 15px;
 
 }
-.main-temp-search-icon{
+.org-temp-search-icon{
 width: 30px;
 height: 30px;
 object-fit: contain;
 }
-.main-temp-searchbutton{
+.org-temp-searchbutton{
     background-color: transparent;
     border: none;
     height: 65px;
@@ -73,7 +63,7 @@ object-fit: contain;
     position: absolute;
     margin-left:   165px;
 }
-.main-temp-singin-up{
+.org-temp-singin-up{
     border-radius: 15px;
     border: none;
     color:  white;
@@ -86,16 +76,16 @@ object-fit: contain;
     font-family:Roboto;
     padding-top: 5px;
 }
-.main-temp-singin-up:hover{
+.org-temp-singin-up:hover{
     background-color: #265305;
     color: white;
     border:none;
 }
-.main-temp-singin-up:active{
+.org-temp-singin-up:active{
     opacity: 0.5;
 
 }
-.main-temp-middleside-button{
+.org-temp-middleside-button{
     font-family: poppins, sans-serif;
     font-size: 18px;
     border: none;
@@ -107,20 +97,10 @@ object-fit: contain;
     margin-top: 15px;
     width: 100px;
 }
-.main-temp-middleside-button:hover{
+.org-temp-middleside-button:hover{
     color: #74AC4C;
-
 }
-.main-temp-homephoto{
-    display: block; 
-    width: 100%;
-    height: auto; 
-
-}
-.main-temp-background-container {
-    position: relative;
-}
-.main-temp-search-container{
+.org-temp-search-container{
     height: 35px;
     color :black;
     margin-top: 14px;
@@ -133,7 +113,7 @@ object-fit: contain;
     padding: 15px;
     box-shadow: 0px 0px 10px rgba(10, 187, 51, 0.4);;
 }
-.main-temp-quote{
+.org-temp-quote{
 color: white;
 position:absolute;
 top: 250px;
@@ -141,9 +121,8 @@ left: 50px;
 right: 800px;
 bottom: 0;
 font-size: 400%;
-
 }
-.main-temp-donate-button{
+.org-temp-donate-button{
 position: relative;
 color: aliceblue;
 background-color: #397d08;
@@ -157,31 +136,27 @@ border: none;
 font-size: 25px;
 border-radius: 18px;
 }
-.main-temp-donate-button:hover{
+.org-temp-donate-button:hover{
     background-color: #2e6407;
     color: white;
     border:none;
 }
-.main-temp-donate-button:active{
+.org-temp-donate-button:active{
     opacity: 0.5;
-
 }
-.main-temp-nd{margin-top: 600px;
+.org-temp-nd{margin-top: 600px;
     background-color:white;
-    height: 40px;
-    display: grid;
+    height: 0px;
+    display:contents;
     grid-template-columns: auto auto  auto auto;
 }
-.main-temp-foodicon{
+.org-temp-foodicon{
     width: 100px;
-
     top: 100px;
     left: 100px;
-
-
 }
 
-.main-temp-dropdown {
+.org-temp-dropdown {
     position: relative;
     font-family: poppins, sans-serif;
     font-size: 18px;
@@ -197,30 +172,30 @@ border-radius: 18px;
     margin-left: 10%;
 }
 
-.main-temp-dropdown-content {
+.org-temp-dropdown-content {
     position: absolute;
     background-color: #f9f9f9;
     padding: 10px;
     border: none;
 }
 
-.main-temp-dropdown:hover .dropdown-content {
+.org-temp-dropdown:hover .dropdown-content {
     display: block;
     
 }
-.main-temp-action-button{
+.org-temp-action-button{
     border:none;
 }
-.main-temp-action-button:hover{
+.org-temp-action-button:hover{
 border-bottom:1px solid #74AC4C;
 }
-.main-temp-words{
+.org-temp-words{
     font-size: 30px;
     font-family:Roboto;
     font-weight: 500;
     margin-top: 15px;
 }
-.main-temp-title{
+.org-temp-title{
     font-size: 23px;
     position: relative;
     bottom: 75px;
@@ -230,7 +205,7 @@ border-bottom:1px solid #74AC4C;
     font-weight: 400;
     display: inline;
 }
-.main-temp-saying{
+.org-temp-saying{
     font-size: 15px;
     position: relative;
     bottom: 40px;
@@ -243,9 +218,7 @@ border-bottom:1px solid #74AC4C;
     display: block;
     
 }
-
-
-.main-temp-profilebutton{
+.org-temp-profilebutton{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -256,3 +229,4 @@ border-bottom:1px solid #74AC4C;
     object-fit: cover;
     margin-right: 2%;
 }
+

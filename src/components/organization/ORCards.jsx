@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '../Card'
+import { Link } from 'react-router-dom'
 
 
 const ORCards = () => {
@@ -12,24 +13,24 @@ const ORCards = () => {
             <p class="mt-2 mb-4 text-green-800">
               Request Donations For Your Organization
             </p>
-            <a
-              href="/RequestCards.js"
+            <Link
+              to="/RequestCards.js"
               class="inline-block bg-cyan-500 text-white rounded-lg px-4 py-2 hover:bg-cyan-700"
             >
               Post Requests
-            </a>
+            </Link>
          </Card>   
         <Card bg = 'bg-gray-200'>
           <h2 class="text-2xl font-bold text-green-800">Notifications Section</h2>
             <p class="mt-2 mb-4 text-green-800">
               See Your Notifications On Previous Requests
             </p>
-            <a
-              href="/notifications"
+            <Link
+              to="/notifications"
               class="inline-block bg-cyan-500 text-white rounded-lg px-4 py-2 hover:bg-cyan-700"
             >
               Check Notifications
-            </a>
+            </Link>
           </Card>  
         </div>
       </div>
