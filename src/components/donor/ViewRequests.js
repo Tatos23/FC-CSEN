@@ -3,7 +3,7 @@ import React, { useState,useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
-import ORCardsVR from './OrCardsVR';
+
 
 function ViewRequests(){
 
@@ -15,22 +15,27 @@ function ViewRequests(){
         setIsVisible(!isVisible);
     };
 
-//tatos
+//tatos 
     const[openProfile, setOpenProfile] = useState(false);
-    const refOne = useRef(null); //used to mark a DOM element
-    useEffect(() => {
-        document.addEventListener("click",handleClickOutside, true)
-    },[])
 
-    const handleClickOutside = (e) => {
-        if(!refOne.current.contains(e.target)){
-            console.log("Clicked outside");
+    //TODO: handle click outside
 
-        }
-        else{
-            console.log("Clicked inside Div");
-        }
-    }
+    // const refOne = useRef(null); //used to mark a DOM element
+    // useEffect(() => {
+    //     document.addEventListener("click",handleClickOutside, true)
+    // },[])
+
+    // const handleClickOutside = (e) => {
+    //     if(!refOne.current.contains(e.target)){
+    //         console.log("Clicked outside");
+    //     }
+    //     else{
+    //         console.log("Clicked inside Div");
+    //     }
+    // }
+
+    //REPLACE THE LINE AT THE BOTTOM WITH THIS: <button className='home-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='home-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
+
 
 
 
@@ -68,7 +73,7 @@ return(
             
             {/* <Link to={"/home"} className='singin-up' >Login/Register</Link> */}
 {/* tatos */}
-            <button className='view-requests-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='view-requests-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
+            <button className='view-requests-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='view-requests-profile-icon'src='profileEnhanced.png' alt='logo'></img></button>
 
             
             {/* <div className='view-requests-quote'>"The best way to find yourself is to lose yourself in the service of others."
@@ -78,7 +83,6 @@ return(
             </div>
            </div>
            
-           <ORCardsVR/>
 
        <div className='view-requests-nd'>
         <div className='view-requests-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>

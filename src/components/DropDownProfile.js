@@ -1,35 +1,36 @@
 import { Link } from 'react-router-dom';
 import './DropDownProfile.css';
-import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const DropDownProfile = () => {
 
-    const refOne = useRef();
+    const navigate = useNavigate();
 
-//TODO: functionality of the buttons
-const handleButtonClickLogout = (e) => {
-    if(!refOne.current.contains(e.target)){
-        console.log("Clicked outside");
-            //TODO
+
+
+    //TODO: functionality of the buttons
+
+    const handleButtonClickProfile = () => {
+        navigate('/profile');       //TODO: navigate to the correct pages
     }
-    else{
-        console.log("Clicked inside Div");
+
+    const handleButtonClickSettings = () => {
+        navigate('/settings');      //TODO: navigate to the correct pages
     }
-}
-const handleButtonClickProfile = (action) => {
-    // Your implementation here
-  };
-  const handleButtonClickSettings = (action) => {
-    // Your implementation here
-  };
-    return ( 
-        <div className = 'flex flex-col DropDownProfile'>
-            <ul className = 'flex flex-col gap-4'>
+
+    const handleButtonClickLogout = () => {
+        navigate('/home');     
+    }
+
+    return (
+        <div className='flex flex-col DropDownProfile'>
+            <ul className='flex flex-col gap-4'>
                 <button onClick={() => handleButtonClickProfile('Profile')}>Profile</button>
                 <button onClick={() => handleButtonClickSettings('Settings')}>Settings</button>
                 <button onClick={() => handleButtonClickLogout('Logout')}>Logout</button>
             </ul>
         </div>
-     );
+    );
 }
- 
+
 export default DropDownProfile;

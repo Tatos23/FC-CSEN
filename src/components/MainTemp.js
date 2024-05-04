@@ -14,24 +14,27 @@ function MainTemp(){
         setIsVisible(!isVisible);
     };
 
-//tatos
-    const[openProfile, setOpenProfile] = useState(false);
-    const refOne = useRef(null); //used to mark a DOM element
-    useEffect(() => {
-        document.addEventListener("click",handleClickOutside, true)
-    },[])
+//tatos:
+ 
+const[openProfile, setOpenProfile] = useState(false);
 
-    const handleClickOutside = (e) => {
-        if(!refOne.current.contains(e.target)){
-            console.log("Clicked outside");
-            if(openProfile){
-                //TODO
-            }
-        }
-        else{
-            console.log("Clicked inside Div");
-        }
-    }
+//TODO: handle click outside
+
+    // const refOne = useRef(null); //used to mark a DOM element
+    // useEffect(() => {
+    //     document.addEventListener("click",handleClickOutside, true)
+    // },[])
+
+    // const handleClickOutside = (e) => {
+    //     if(!refOne.current.contains(e.target)){
+    //         console.log("Clicked outside");
+    //     }
+    //     else{
+    //         console.log("Clicked inside Div");
+    //     }
+    // }
+
+    //REPLACE THE LINE AT THE BOTTOM WITH THIS: <button className='home-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='home-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
 
 
 
@@ -69,7 +72,8 @@ return(
             
             {/* <Link to={"/home"} className='singin-up' >Login/Register</Link> */}
 {/* tatos */}
-            <button className='main-temp-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='main-temp-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
+            <button className='main-temp-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}>
+                <img className='main-temp-profile-icon'src='profileEnhanced.png' alt='logo'></img></button>
             
 
             <div className='main-temp-quote'>"The best way to find yourself is to lose yourself in the service of others."
