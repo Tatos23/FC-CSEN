@@ -11,15 +11,23 @@ import ViewRequests from './components/donor/ViewRequests.js';
 import MainTemp from './components/MainTemp.js';
 import Donationselect from './components/donor/Donationselect.js';
 import Header from './components/donor/Header.js';
+import PickUp from './components/donor/PickUp.js';
+
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Landing />} />
+
+          <Route path="/" element={<Header loggedIn={false}/>} />
+          <Route path="/" element={<Donationselect />} />
+
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
+          <Route path="/representative-login" element={<Authentication role="Representative"/>} />
+          <Route path="home" element={<HomePage />} />
           <Route path="/organization-login" element={<Authentication role="organization" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
