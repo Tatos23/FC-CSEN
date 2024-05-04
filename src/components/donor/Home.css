@@ -169,7 +169,9 @@ border-radius: 18px;
     background-color:white;
     height: 500px;
     display: grid;
+
     grid-template-columns: auto auto  auto auto;
+    width: 100%;
 }
 .home-foodicon{
     width: 100px;
