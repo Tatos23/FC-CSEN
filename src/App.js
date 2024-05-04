@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Donationselect />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
