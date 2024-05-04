@@ -12,13 +12,13 @@ import MainTemp from './components/MainTemp.js';
 import Donationselect from './components/donor/Donationselect.js';
 import Header from './components/donor/Header.js';
 import PickUp from './components/donor/PickUp.js';
+import DocUpload from './components/authentication/DocUpload.js';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-
           <Route path="/" element={<Landing />} />
           <Route path="/" element={<Donationselect />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
