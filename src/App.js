@@ -24,9 +24,9 @@ function App() {
         <Home/>
       </BrowserRouter> */}
       {/* <Home/> */}
-      {/* <ViewRequests/> */}
+      <ViewRequests/>
       {/*<MainTemp/>*/}
-      <ORHome />
+      {/* <ORHome /> */}
 
 
     </div>

@@ -25,9 +25,7 @@ function ViewRequests(){
     const handleClickOutside = (e) => {
         if(!refOne.current.contains(e.target)){
             console.log("Clicked outside");
-            if(openProfile){
-                //TODO
-            }
+
         }
         else{
             console.log("Clicked inside Div");
@@ -73,8 +71,8 @@ return(
             <button className='view-requests-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='view-requests-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
             
 
-            <div className='view-requests-quote'>"The best way to find yourself is to lose yourself in the service of others."
-            </div>
+            {/* <div className='view-requests-quote'>"The best way to find yourself is to lose yourself in the service of others."
+            </div> */}
 
             
             </div>
