@@ -9,16 +9,17 @@ const DropDownProfile = () => {
 
 
     //TODO: functionality of the buttons
-    const handleButtonClickLogout = (e) => {
-        if (!refOne.current.contains(e.target)) {
-            console.log("Clicked outside");
-            //TODO
-        }
-        else {
-            console.log("Clicked inside Div");
-        }
 
-        navigate('/home');
+    const handleButtonClickProfile = () => {
+        navigate('/profile');       //TODO: navigate to the correct pages
+    }
+
+    const handleButtonClickSettings = () => {
+        navigate('/settings');      //TODO: navigate to the correct pages
+    }
+
+    const handleButtonClickLogout = () => {
+        navigate('/home');     
     }
 
     return (
