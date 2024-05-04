@@ -98,7 +98,7 @@ object-fit: contain;
 
 }
 .home-middleside-button{
-   font-family: poppins, sans-serif;
+    font-family:Roboto;
     font-size: 18px;
     border: none;
     color: #2C6B5A;
@@ -109,6 +109,7 @@ object-fit: contain;
     margin-top: 15px;
    border-bottom: 1px solid #397e07;
     width: 100px;
+    font-weight: bold;
 }
 .home-middleside-button:hover{
     color: #74AC4C;
@@ -186,7 +187,7 @@ border-radius: 18px;
 
 .home-dropdown {
     position: relative;
-    font-family: poppins, sans-serif;
+    font-family:Roboto;
     font-size: 18px;
     border: none;
     color: #2C6B5A;
@@ -198,6 +199,7 @@ border-radius: 18px;
     border-bottom: 1px solid #397e07;
     width: 100px;
     margin-left: 10%;
+    font-weight: bold;
 }
 
 .home-dropdown-content {
@@ -240,7 +242,7 @@ border-bottom:1px solid #74AC4C;
     color: grey;
     right:20px;
     left: 90px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Roboto;
     width: 255px;
     text-align:left;
     display: block;
