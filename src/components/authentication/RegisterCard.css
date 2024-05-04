@@ -60,6 +60,7 @@
     cursor: pointer;
     font-weight: bold;
     box-shadow: none;
+    margin-bottom: 2%;
 }
 
 .register-button:hover {
@@ -159,6 +160,7 @@
 
 .firstname-input,
 .lastname-input,
+.donorRole-input,
 .gender-input,
 .contactnumber-input,
 .email-input,
@@ -181,6 +183,7 @@
     margin-top: 3%;
 }
 
+.donorRole-input input[type="checkbox"],
 .gender-input input[type="checkbox"] {
     accent-color: #74AC4C;
     border: 1px solid #74AC4C;
@@ -191,6 +194,7 @@
     height: 20px;
 }
 
+.donorRole-input input,
 .gender-input input[type="checkbox"]:checked {
     accent-color: #74AC4C;
     border: 1px solid #74AC4C;
@@ -259,4 +263,9 @@
 .username-input:focus,
 .password-input:focus {
     border-color: #74AC4C;
+}
+
+.RegisterCard-verification,
+.login-redirect {
+    font-weight: bold;
 }
