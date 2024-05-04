@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .view-requests-main {
     /* background-image: url('/public/home.jpg'); */
     background-repeat: no-repeat;
@@ -83,7 +85,8 @@ object-fit: contain;
     transition: background-color 1s;
     margin-top: 10px;
     font-size: 18px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Roboto;
+    padding-top: 5px;
 }
 .view-requests-singin-up:hover{
     background-color: #265305;
@@ -140,7 +143,8 @@ top: 250px;
 left: 50px;
 right: 800px;
 bottom: 0;
-font-size: 300%;
+font-size: 400%;
+
 }
 .view-requests-donate-button{
 position: relative;
@@ -165,8 +169,13 @@ border-radius: 18px;
     opacity: 0.5;
 
 }
-.view-requests-nd{margin-top: 600px;
-    background-color:white;
+
+.view-requests-nd{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin-top: 600px;
+    background-color: white;
     height: 500px;
     display: grid;
     grid-template-columns: auto auto  auto auto;
@@ -215,30 +224,33 @@ border-bottom:1px solid #74AC4C;
 }
 .view-requests-words{
     font-size: 30px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
+    font-family:Roboto;
+    font-weight: 500;
+    margin-top: 15px;
 }
 .view-requests-title{
-    font-size: 20px;
+    font-size: 23px;
     position: relative;
-    bottom: 80px;
+    bottom: 75px;
     color: black;
-    right:60px;
-    font-family:  Arial, sans-serif;
+    right:50px;
+    font-family:  Roboto;
+    font-weight: 400;
+    display: inline;
 }
 .view-requests-saying{
-    font-size: 12px;
+    font-size: 15px;
     position: relative;
-    bottom: 30px;
+    bottom: 40px;
     color: grey;
     right:20px;
-    left: 80px;
-    font-family:  Arial, sans-serif;
-    width: 280px;
+    left: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 255px;
+    text-align:left;
     display: block;
     
 }
-
 
 .view-requests-profilebutton{
     position: absolute;
