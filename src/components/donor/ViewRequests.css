@@ -266,6 +266,15 @@ border-bottom:1px solid #74AC4C;
     object-fit: cover;
     margin-right: 2%;
 }
+.view-requests-category-button {
+    border: 1.5px solid #000; /* Add your desired border color */
+    padding: 5px 10px; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Set a background color */
+    cursor: pointer; /* Show pointer cursor on hover */
+    border-radius: 10px;
+    position: absolute;
+    right: 24rem;
+  }
 
 
 /*Donation cards styles*/
