@@ -4,7 +4,7 @@ import { Link , useNavigate} from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
 import DonationsList from './DonationsList';
-
+import DropDownCategory from './DropDownCategory';
 
 
 
@@ -40,6 +40,8 @@ function ViewRequests(){
 
 //tatos 
     const[openProfile, setOpenProfile] = useState(false);
+    const[openCategory, setOpenCategory] = useState(false);
+    
 
     //TODO: handle click outside
 
@@ -106,7 +108,9 @@ return(
             </div>
            </div>
            {/* //title="Donation Requests" */}
+           {/* onClick = {() => setOpenCategory((prev) => !prev)} */}
     <div className="donations-title">Donation Requests</div>
+    <div> <button className='view-requests-category-button' onClick={() => setOpenCategory((prev) => !prev)}>Category ▼</button> </div>
     <div className="donations-home">
       <DonationsList donations={donations} handleView={handleView}/>
       {/* <button onClick={() => setName('luigi')}>change name</button> */}
@@ -128,6 +132,10 @@ return(
         openProfile && <DropDownProfile/> 
        
        }
+       {
+        openCategory && <DropDownCategory/> 
+       }
+        
     
        
     
