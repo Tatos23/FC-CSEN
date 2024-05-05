@@ -1,4 +1,6 @@
+
 const DonationsList = ({donations, title, handleView }) => {
+  
     return (
       <div className="donations-list">
         <h2>{ title }</h2>
@@ -6,10 +8,12 @@ const DonationsList = ({donations, title, handleView }) => {
           <div className="donation-preview" key={donation.id} >
             <h2>{ donation.title }</h2>
             <div className="donation-details">
-            <p>Posted by {donation.author}</p>
-            <p>Category: {donation.category}</p>
-            <p>Quantity: {donation.quantity}</p>
-          </div>
+            <p>
+            Posted by {donation.author} | Category: {donation.category} | Quantity: {donation.quantity}
+            </p>
+            </div>
+            {/* <p>Category: {donation.category}</p>
+            <p>Quantity: {donation.quantity}</p> */}
             {/* <button className="view-button" onClick={() => handleDelete(blog.id)}>delete request</button> */}
             <button className="view-button" onClick={() => handleView(donation.id)}>view request</button>
           </div>

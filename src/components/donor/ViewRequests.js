@@ -1,10 +1,10 @@
 import './ViewRequests.css';
 import React, { useState,useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
 import DonationsList from './DonationsList';
-import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -17,9 +17,12 @@ function ViewRequests(){
         {title: 'Toys Donation', quantity: '3', age: 'null', category: 'toys', author: 'luigi', id: 3}
 
     ])
+    const navigate=useNavigate();
 
     const handleView = (id) => {
-        navigate('/donations-select');     
+        // const tempDonations = donations.filter(donations => donations.id == id);
+        // setDonatation(tempDonations);
+        navigate('/donation-select');    
     }
 
     // const handleDelete = (id) => {
@@ -105,7 +108,7 @@ return(
            {/* //title="Donation Requests" */}
     <div className="donations-title">Donation Requests</div>
     <div className="donations-home">
-      <DonationsList donations={donations} handleView={handleView} category />
+      <DonationsList donations={donations} handleView={handleView}/>
       {/* <button onClick={() => setName('luigi')}>change name</button> */}
     </div>
            
