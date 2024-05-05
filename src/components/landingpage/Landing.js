@@ -43,7 +43,7 @@ return(
 
             <button className='landing-searchbutton'><img className='landing-search-icon'src='searchicon.png' alt='logo'></img></button>
             
-<Link to={"/home"} className='singin-up' >Login/Register</Link>
+<Link to={"/home"} className='landing-singin-up' >Login/Register</Link>
             <div className='landing-quote'>"The best way to find yourself is to lose yourself in the service of others."
             </div>
 
@@ -61,7 +61,6 @@ return(
        <div className='landing-saying'>Every plate shared is a gift of hope and nourishment. Your food donation can make a difference in someone's life. Give generously, and let's share the blessings of good food together.</div></div>
        <div className='landing-no'><div className='landing-icon-title'><img className='landing-foodicon'src='education.png' alt='logo'></img><span className='landing-title'style={{ marginRight: '12%' }} >Education</span></div>
        <div className='landing-saying'>Empowering minds through education. Support a child's future with your donation today.</div></div>
-       {/* pnad */}
        </footer>
 
        </div>

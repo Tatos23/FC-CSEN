@@ -8,6 +8,7 @@ function Authentication(props) {
     const [showPassword, setShowPassword] = useState(false);
     const [isRegistering, setIsRegistering] = useState(false);
     const [gender, setGender] = useState(false);
+    const [donorRole, setDonorRole] = useState("");
 
     const toggleForm = () => {
         setIsRegistering(!isRegistering);
@@ -19,6 +20,10 @@ function Authentication(props) {
 
     const handleGenderChange = (e) => {
         setGender(e.target.value);
+    };
+
+    const handleDonorRole = (e) => {
+        setDonorRole(e.target.value);
     };
 
     return (
@@ -49,7 +54,7 @@ function Authentication(props) {
             </div>
             <div className={`right-side-outer ${isRegistering ? 'registering' : ''}`}>
                 {isRegistering ? (
-                    <RegisterCard isRegistering={isRegistering} toggleForm={toggleForm} showPassword={showPassword} toggleShowPassword={toggleShowPassword} role={props.role} gender = {gender} handleGenderChange = {handleGenderChange}/>
+                    <RegisterCard isRegistering={isRegistering} toggleForm={toggleForm} showPassword={showPassword} toggleShowPassword={toggleShowPassword} role={props.role} donorRole={donorRole} gender = {gender} handleGenderChange = {handleGenderChange} handleDonorRole = {handleDonorRole}/>
                 ) : (
                     <LoginCard isRegistering={isRegistering} toggleForm={toggleForm} showPassword={showPassword} toggleShowPassword={toggleShowPassword} role={props.role} />
                 )}
