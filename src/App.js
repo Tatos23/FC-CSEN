@@ -29,6 +29,7 @@ function App() {
           <Route path="/organization-login" element={<Authentication role="organization" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
+          <Route path="/donation-select" element={<Donationselect />} />
         </Routes>
       </BrowserRouter>
 
