@@ -1,14 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-.landing-main {
-    background-image: url('/public/home.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
-    position: relative;
-    
-}
-.landing-navbar{
+
+.org-temp-navbar{
     position: relative; 
     top: 0;
     left: 0;
@@ -22,20 +15,18 @@
     height: 100px;
 
 }
-.landing-leftside{
-
+.org-temp-leftside{
 width: 400px;
 }
-.landing-logo-navbar{
+.org-temp-logo-navbar{
 width: 100px;
 height: 70px;
 margin-top:3px ;
 object-fit: contain;
 display: block;
 margin-bottom: 0px;
-
 }
-.landing-logo-navbar-name{
+.org-temp-logo-navbar-name{
     width: 100px;
     height: 20px;
     object-fit: contain;
@@ -43,15 +34,14 @@ margin-bottom: 0px;
     margin-top: 0px;
     object-position: left;
     display: block;
-
 }
-.landing-middleside{
+.org-temp-middleside{
 color: black;
 display: flex;
 width: 710px;
 margin-top: 15px;
 }
-.landing-rightside{
+.org-temp-rightside{
  color: white;
  justify-content:space-between;
  display: flex;
@@ -60,27 +50,25 @@ margin-top: 15px;
  margin-top: 15px;
 
 }
-.landing-search-icon{
+.org-temp-search-icon{
 width: 30px;
 height: 30px;
 object-fit: contain;
 }
-.landing-searchbutton{
+.org-temp-searchbutton{
     background-color: transparent;
     border: none;
     height: 65px;
     margin-right: 30px;
     position: absolute;
     margin-left:   165px;
-
-    
 }
-.landing-singin-up{
+.org-temp-singin-up{
     border-radius: 15px;
     border: none;
     color:  white;
     background-color:#397d08;
-    width: 140px;
+    width: 150px;
     height: 40px;
     transition: background-color 1s;
     margin-top: 10px;
@@ -88,17 +76,17 @@ object-fit: contain;
     font-family:Roboto;
     padding-top: 5px;
 }
-.landing-singin-up:hover{
+.org-temp-singin-up:hover{
     background-color: #265305;
     color: white;
     border:none;
 }
-.landing-singin-up:active{
+.org-temp-singin-up:active{
     opacity: 0.5;
 
 }
-.landing-middleside-button{
-   font-family: poppins, sans-serif;
+.org-temp-middleside-button{
+    font-family: poppins, sans-serif;
     font-size: 18px;
     border: none;
     color: #2C6B5A;
@@ -107,23 +95,12 @@ object-fit: contain;
     height: 30px;
     transition: background-color 1s;
     margin-top: 15px;
-   border-bottom: 1px solid #397e07;
     width: 100px;
 }
-.landing-middleside-button:hover{
+.org-temp-middleside-button:hover{
     color: #74AC4C;
-
 }
-.landing-homephoto{
-    display: block; 
-    width: 100%;
-    height: auto; 
-
-}
-.landing-background-container {
-    position: relative;
-}
-.landing-search-container{
+.org-temp-search-container{
     height: 35px;
     color :black;
     margin-top: 14px;
@@ -136,7 +113,7 @@ object-fit: contain;
     padding: 15px;
     box-shadow: 0px 0px 10px rgba(10, 187, 51, 0.4);;
 }
-.landing-quote{
+.org-temp-quote{
 color: white;
 position:absolute;
 top: 250px;
@@ -144,9 +121,8 @@ left: 50px;
 right: 800px;
 bottom: 0;
 font-size: 400%;
-
 }
-.landing-donate-button{
+.org-temp-donate-button{
 position: relative;
 color: aliceblue;
 background-color: #397d08;
@@ -160,31 +136,27 @@ border: none;
 font-size: 25px;
 border-radius: 18px;
 }
-.landing-donate-button:hover{
+.org-temp-donate-button:hover{
     background-color: #2e6407;
     color: white;
     border:none;
 }
-.landing-donate-button:active{
+.org-temp-donate-button:active{
     opacity: 0.5;
-
 }
-.landing-nd{margin-top: 600px;
+.org-temp-nd{margin-top: 600px;
     background-color:white;
-    height: 500px;
-    display: grid;
+    height: 0px;
+    display:contents;
     grid-template-columns: auto auto  auto auto;
 }
-.landing-foodicon{
+.org-temp-foodicon{
     width: 100px;
-
     top: 100px;
     left: 100px;
-
-
 }
 
-.landing-dropdown {
+.org-temp-dropdown {
     position: relative;
     font-family: poppins, sans-serif;
     font-size: 18px;
@@ -200,30 +172,30 @@ border-radius: 18px;
     margin-left: 10%;
 }
 
-.landing-dropdown-content {
+.org-temp-dropdown-content {
     position: absolute;
     background-color: #f9f9f9;
     padding: 10px;
     border: none;
 }
 
-.landing-dropdown:hover .dropdown-content {
+.org-temp-dropdown:hover .dropdown-content {
     display: block;
     
 }
-.landing-action-button{
+.org-temp-action-button{
     border:none;
 }
-.landing-action-button:hover{
+.org-temp-action-button:hover{
 border-bottom:1px solid #74AC4C;
 }
-.landing-words{
+.org-temp-words{
     font-size: 30px;
     font-family:Roboto;
     font-weight: 500;
     margin-top: 15px;
 }
-.landing-title{
+.org-temp-title{
     font-size: 23px;
     position: relative;
     bottom: 75px;
@@ -233,7 +205,7 @@ border-bottom:1px solid #74AC4C;
     font-weight: 400;
     display: inline;
 }
-.landing-saying{
+.org-temp-saying{
     font-size: 15px;
     position: relative;
     bottom: 40px;
@@ -246,3 +218,15 @@ border-bottom:1px solid #74AC4C;
     display: block;
     
 }
+.org-temp-profilebutton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px; /* Adjust the size as needed */
+    height: 70px;
+    border-radius: 50%; /* Makes it circular */
+    overflow: hidden; /* Clip the image to the circular shape */
+    object-fit: cover;
+    margin-right: 2%;
+}
+

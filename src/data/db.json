@@ -1,0 +1,20 @@
+{
+    "donations": [
+      {
+        "title": "Clothes Donation",
+        "quantity": "5",
+        "age": "2 to 3 years",
+        "category": "clothes",
+        "author": "mario",
+        "id": 1
+      },
+      {
+        "title": "Food Donation",
+        "quantity": "2",
+        "age": "null",
+        "category": "food",
+        "author": "tatos",
+        "id": 2
+      }
+    ]
+  }

@@ -2,7 +2,7 @@ import React from 'react';
 import registerStyles from "./RegisterCard.css";
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 
-function RegisterCard({ toggleForm, showPassword, toggleShowPassword, handleGenderChange, gender, role }) {
+function RegisterCard({ toggleForm, showPassword, toggleShowPassword, handleGenderChange, gender, donorRole, handleDonorRole, role }) {
     return (
         <div className="right-side-inner" style={registerStyles}>
             <div className="register-header">
@@ -39,6 +39,24 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, handleGend
                             {showPassword ? <FiEye /> : <FiEyeOff />}
                         </i>
                     </div>
+                    {role === 'Donor' &&
+                    (
+                        <div className="donorRole-input">
+                            <label htmlFor="Regular">
+                                <input type="checkbox" id="Regular" name="donorRole" value="Regular" checked={donorRole === "Regular"} onChange={handleDonorRole} />
+                                Regular
+                            </label>
+                            <label htmlFor="Teacher">
+                                <input type="checkbox" id="Teacher" name="donorRole" value="Teacher" checked={donorRole === "Teacher"} onChange={handleDonorRole} />
+                                Teacher
+                            </label>
+                            <label htmlFor="Doctor">
+                                <input type="checkbox" id="Doctor" name="donorRole" value="Doctor" checked={donorRole === "Doctor"} onChange={handleDonorRole} />
+                                Doctor
+                            </label>
+                        </div>
+                    )
+                    }
                     <br />
                     {role === 'Representative' &&
                         <>
@@ -55,6 +73,8 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, handleGend
                 </div>
                 <div className="register-buttons">
                     <button onClick={toggleForm} style={{ cursor: 'pointer' }} className="register-button"> Register </button>
+                    <br />
+                    <label className="RegisterCard-verification">You will be redirected to upload verification documents</label>
                     <p className="login-redirect">
                         Already have an account? &nbsp;
                         <a onClick={toggleForm} style={{ cursor: 'pointer' }}>Login</a>

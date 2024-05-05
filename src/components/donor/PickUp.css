@@ -1,0 +1,80 @@
+.PickUp {
+    background-color: #2C6B5A;
+    height: 100vh;
+}
+
+.PickUp-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.PickUp-Title,
+.PickUp-SubTitle {
+    
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 40px;
+    color: #2C6B5A;
+    margin-left : 4%;
+}
+
+.PickUp-Title {
+    margin-top: 3%;
+}
+
+.PickUp-SubTitle {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.PickUp-transportation-select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: #162D23;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border: 2px solid #74AC4C;
+    align-self: flex-start;
+    margin-left: 5%;
+}
+
+.PickUp-transportation-select:hover,
+.PickUp-transportation-select:focus {
+    border-color: #162D23;
+    box-shadow: 0px 0px 10px #162D23;
+    outline: none;
+}
+
+.PickUp-DateEntry-label {
+    color: #2C6B5A;
+    align-self: self-start;
+    margin-left: 5%
+}
+
+.PickUp-Submit {
+    background-color: #74AC4C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.PickUp-Submit:hover {
+    background-color: #2C6B5A;
+}
