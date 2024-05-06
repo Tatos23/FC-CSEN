@@ -11,18 +11,116 @@ import { PiButterflyDuotone } from 'react-icons/pi';
 
 function ViewRequests(){
 
-
-    const [donations, setDonation] = useState([
+    /* [
         {title: 'Clothes Donation', quantity: '5', age: '2 to 3 years', category: 'clothes', author: 'tatos', id: 1},
         {title: 'Food Donation', quantity: '2', age: 'null', category: 'food', author: 'mario', id: 2},
         {title: 'Toys Donation', quantity: '3', age: 'null', category: 'toys', author: 'luigi', id: 3}
 
-    ])
+    ] */
+
+    const [donations, setDonation] = useState(null);
+    
+    useEffect(() =>{
+        fetch('http://localhost:8000/donations')
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            setDonation(data)
+        })
+    }, []);
+
+
+
     const navigate=useNavigate();
 
     const resetState = () =>{
-        console.log();
+        fetch('http://localhost:8000/donations')
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            setDonation(data)
+        })
     }
+    //clothes category button
+    const resetStateClothes = () =>{
+        fetch('http://localhost:8000/donations')
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            setDonation(data)
+            const newDonations = data.filter(donations => donations.category == 'clothes');
+            setDonation(newDonations);
+        })
+    }
+
+    // toys category button
+    const resetStateToys = () =>{
+        fetch('http://localhost:8000/donations')
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            setDonation(data)
+            const newDonations = data.filter(donations => donations.category == 'toys');
+            setDonation(newDonations);
+        })
+    }
+
+    // food category button
+    const resetStateFood = () =>{
+        fetch('http://localhost:8000/donations')
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            setDonation(data)
+            const newDonations = data.filter(donations => donations.category == 'food');
+            setDonation(newDonations);
+        })
+    }
+
+    // medical supplies category button
+    const resetStateMedical = () =>{
+        fetch('http://localhost:8000/donations')
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            setDonation(data)
+            const newDonations = data.filter(donations => donations.category == 'medical supplies');
+            setDonation(newDonations);
+        })
+    }
+
+    // school supplies category button
+    const resetStateSchool = () =>{
+        fetch('http://localhost:8000/donations')
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            setDonation(data)
+            const newDonations = data.filter(donations => donations.category == 'school supplies');
+            setDonation(newDonations);
+        })
+    }
+    // blood donations category button
+    const resetStateBlood = () =>{
+        fetch('http://localhost:8000/donations')
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            const newDonations = data.filter(donations => donations.category == 'blood donations');
+            setDonation(newDonations);
+        })
+    }
+
+    
+
 
 
 
@@ -119,7 +217,7 @@ return(
     <div className="donations-title">Donation Requests</div>
     <div> <button className='view-requests-category-button' onClick={() => setOpenCategory((prev) => !prev)}>Category ▼</button> </div>
     <div className="donations-home">
-      <DonationsList donations={donations} handleView={handleView}/>
+      {donations && <DonationsList donations={donations} handleView={handleView}/>}
       {/* <button onClick={() => setName('luigi')}>change name</button> */}
     </div>
            
@@ -140,7 +238,7 @@ return(
        
        }
        {
-        openCategory && <DropDownCategory donations = {donations} setDonation = {setDonation} resetState={resetState}/> 
+        openCategory && <DropDownCategory resetState={resetState} resetStateClothes={resetStateClothes} resetStateToys={resetStateToys} resetStateFood={resetStateFood} resetStateMedical={resetStateMedical} resetStateSchool={resetStateSchool} resetStateBlood={resetStateBlood}/> 
        }
 
     

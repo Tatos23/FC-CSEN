@@ -5,7 +5,7 @@ import ViewRequests from './ViewRequests';
 import DonationsList from './DonationsList';
 
 
-const DropDownCategory = ({donations,setDonation,resetState}) => {
+const DropDownCategory = ({resetState,resetStateClothes,resetStateToys,resetStateFood,resetStateMedical,resetStateSchool,resetStateBlood}) => {
 
     const navigate = useNavigate();
 
@@ -13,33 +13,27 @@ const DropDownCategory = ({donations,setDonation,resetState}) => {
     
    
     const handleButtonClickClothes = () => {
-        const newDonations = donations.filter(donations => donations.category == 'clothes');
-        setDonation(newDonations);
+        resetStateClothes();
     }
 
-    const handleButtonClickToys = () => {      
-        const newDonations = donations.filter(donations => donations.category == 'toys');
-        setDonation(newDonations);
+    const handleButtonClickToys = () => {    
+        resetStateToys();
     }
 
     const handleButtonClickFood = () => {
-        const newDonations = donations.filter(donations => donations.category == 'food');
-        setDonation(newDonations);
+        resetStateFood();
     }
 
     const handleButtonClickMSupplies = () => {
-        const newDonations = donations.filter(donations => donations.category == 'medical supplies');
-        setDonation(newDonations);
+        resetStateMedical();
     }
 
     const handleButtonClickSSupplies = () => {
-        const newDonations = donations.filter(donations => donations.category == 'school supplies');
-        setDonation(newDonations);
+        resetStateSchool();
     }
 
     const handleButtonClickBDonations = () => {
-        const newDonations = donations.filter(donations => donations.category == 'blood donations');
-        setDonation(newDonations);
+        resetStateBlood();
     }
     const handleButtonClickAll = () => {
         resetState();
