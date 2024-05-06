@@ -19,13 +19,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ViewRequests />} />
-          <Route path="/" element={<Donationselect />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
-          <Route path="/representative-login" element={<Authentication role="Representative"/>} />
-          <Route path="home" element={<HomePage />} />
+          <Route path="/representative-login" element={<Authentication role="Representative" />} />
           <Route path="/organization-login" element={<Authentication role="organization" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
