@@ -10,8 +10,9 @@
     margin-top: 20px;
     background-color: white;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 80%;
 }
 .PickUp-Title,
 .PickUp-SubTitle {
