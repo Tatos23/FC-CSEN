@@ -3,11 +3,13 @@ import React, { useState,useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
+import { useNavigate } from 'react-router-dom';
 
 function Home(){
 
 
     const [isVisible, setIsVisible] = useState(false);
+    
 
 
 //tatos
@@ -32,8 +34,10 @@ function Home(){
     // }
 
     //REPLACE THE LINE AT THE BOTTOM WITH THIS: <button className='home-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='home-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
-
-
+    const navigate = useNavigate();
+    const handleButtonClickNotifications1 = () => {
+        navigate('/notifications');
+    }
 
 
 return(
@@ -49,7 +53,7 @@ return(
                 <button className='home-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
                 <button className='home-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
                 <button className='home-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-                <button className='home-middleside-button'style={{ marginLeft: '10%' }}>Notifications</button>
+                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications1('Notifications')}style={{ marginLeft: '10%' } }>Notifications</button>
  
 
             </div>
