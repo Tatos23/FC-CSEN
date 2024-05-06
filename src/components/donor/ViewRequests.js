@@ -5,13 +5,14 @@ import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
 import DonationsList from './DonationsList';
 import DropDownCategory from './DropDownCategory';
+import { PiButterflyDuotone } from 'react-icons/pi';
 
 
 
 function ViewRequests(){
 
 
-    const [donations, setDonatation] = useState([
+    const [donations, setDonation] = useState([
         {title: 'Clothes Donation', quantity: '5', age: '2 to 3 years', category: 'clothes', author: 'tatos', id: 1},
         {title: 'Food Donation', quantity: '2', age: 'null', category: 'food', author: 'mario', id: 2},
         {title: 'Toys Donation', quantity: '3', age: 'null', category: 'toys', author: 'luigi', id: 3}
@@ -19,11 +20,18 @@ function ViewRequests(){
     ])
     const navigate=useNavigate();
 
-    const handleView = (id) => {
-        // const tempDonations = donations.filter(donations => donations.id == id);
-        // setDonatation(tempDonations);
-        navigate('/donation-select');    
+    const resetState = () =>{
+        console.log();
     }
+
+
+
+    const handleView = (id) => {
+        // const tempDonations = donations.filter(donations => donations.id !== id);
+        // setDonation(tempDonations);
+        navigate('/donation-select');
+    }
+
 
     // const handleDelete = (id) => {
     //     const newBlogs = blogs.filter(blog => blog.id !== id);
@@ -107,7 +115,6 @@ return(
             
             </div>
            </div>
-           {/* //title="Donation Requests" */}
            {/* onClick = {() => setOpenCategory((prev) => !prev)} */}
     <div className="donations-title">Donation Requests</div>
     <div> <button className='view-requests-category-button' onClick={() => setOpenCategory((prev) => !prev)}>Category ▼</button> </div>
@@ -133,11 +140,9 @@ return(
        
        }
        {
-        openCategory && <DropDownCategory/> 
+        openCategory && <DropDownCategory donations = {donations} setDonation = {setDonation} resetState={resetState}/> 
        }
-        
-    
-       
+
     
     </>
 )
