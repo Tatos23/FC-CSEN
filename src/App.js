@@ -13,25 +13,16 @@ import Donationselect from './components/donor/Donationselect.js';
 import Header from './components/donor/Header.js';
 import PickUp from './components/donor/PickUp.js';
 import { useEffect } from 'react';
+import DocUpload from './components/authentication/DocUpload.js';
+import DonationsList from './components/donor/DonationsList.js';
 function App() {
-  useEffect(()=>{
-    fetch('http://localhost:8000/donations')
-    .then(res =>{
-      return res.json();
-      
-    })
-    .then(data =>{
-      
-      console.log(data);
-    });
-  }, [])
+  
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-
-          <Route path="/" element={<Landing />} />
-          <Route path="/" element={<Donationselect />} />
+          <Route path="/" element={<ViewRequests />} />
+          <Route path="/" element={<DonationsList />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
@@ -40,6 +31,7 @@ function App() {
           <Route path="/organization-login" element={<Authentication role="organization" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
+          <Route path="/donation-select" element={<Donationselect />} />
         </Routes>
       </BrowserRouter>
 

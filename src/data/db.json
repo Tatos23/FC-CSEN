@@ -1,19 +1,76 @@
 {
     "donations": [
       {
-        "title": "Clothes Donation",
+        "title": "Clothes-Donation",
         "quantity": "5",
         "age": "2 to 3 years",
         "category": "clothes",
         "author": "mario",
-        "id": 1
+        "id": 1,
+        "gender":"male",
+        "season":"summer",
+        "material":"t-shirt"
       },
       {
-        "title": "Food Donation",
+        "title": "School-supplies",
+        "category": "School-supplies",
+        "subcategory": "Book",
+        "picture":"book.png",
+        "name": "the book",
+        "author": "School-supplies",
+        "language": "English",
+        "edition": "first-edition",
+        "summary": "this is a summary of the book",
+        "quantity": "5",
+        "id": 2
+      },
+      {
+        "title": "school supplies",
+        "subcategory": "Stationary",
         "quantity": "2",
         "age": "null",
-        "category": "food",
+        "category": "school",
         "author": "tatos",
+        "id": 2
+      },
+      {
+        "title": "school supplies",  
+        "category": "school",
+        "subcategory": "Stationary",
+        "quantity": "2",
+        "age": "12",
+        "type": "tatos",
+        "gender": "tatos",
+        "picture of the toy": "toy.png",
+        "toycategory": "school",
+        "id": 2
+      },
+      {
+        "title": "i am hungry",  
+        "category": "food",
+        "subcategory": "Stationary",
+        "quantity": "2",
+        "name": "fruits",
+        "id": 2
+      },
+      {
+        "title": "medical supplies",  
+        "category": "medical supplies",
+        "subcategory": "Stationary",
+        "quantity": "2",
+        "type": "MRI",
+        "use": "produce images  of bones on a computer of bones",
+        "picture of the toy": "mri.png",
+        "id": 2
+      },
+      {
+        "title": "blood Donation",  
+        "category": "blood Donation",
+        "subcategory": "Stationary",
+        "quantity": "2",
+        "type": "MRI",
+        "use": "produce images  of bones on a computer of bones",
+        "picture of the toy": "mri.png",
         "id": 2
       }
     ]

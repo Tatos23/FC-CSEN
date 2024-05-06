@@ -1,12 +1,59 @@
-body {
+.DocUpload {
+    background-color: #2C6B5A;
+    height: 100vh;
+}
+
+.DocUpload-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.DocUpload-Title {
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 40px;
+    color: #2C6B5A;
+    margin-left : 4%;
+    margin-top : 2%;
+}
+
+.DocUpload-Upload {
+    background-color: #74AC4C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.DocUpload-Upload:hover {
     background-color: #2C6B5A;
 }
-    
-.DocUpload {
-    margin: 20%;
-    background-color: white;
+
+.DocUpload-document-input {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #74AC4C;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
 }
 
-.DocUpload-title {
-
+.DocUpload-message {
+    color: #2C6B5A;
+    font-weight: bold;
+    margin-bottom: 2%;
 }

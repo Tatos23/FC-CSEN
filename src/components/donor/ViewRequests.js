@@ -1,12 +1,35 @@
 import './ViewRequests.css';
 import React, { useState,useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
+import DonationsList from './DonationsList';
+import DropDownCategory from './DropDownCategory';
+
 
 
 function ViewRequests(){
 
+
+    const [donations, setDonatation] = useState([
+        {title: 'Clothes Donation', quantity: '5', age: '2 to 3 years', category: 'clothes', author: 'tatos', id: 1},
+        {title: 'Food Donation', quantity: '2', age: 'null', category: 'food', author: 'mario', id: 2},
+        {title: 'Toys Donation', quantity: '3', age: 'null', category: 'toys', author: 'luigi', id: 3}
+
+    ])
+    const navigate=useNavigate();
+
+    const handleView = (id) => {
+        // const tempDonations = donations.filter(donations => donations.id == id);
+        // setDonatation(tempDonations);
+        navigate('/donation-select');    
+    }
+
+    // const handleDelete = (id) => {
+    //     const newBlogs = blogs.filter(blog => blog.id !== id);
+    //     setBlogs(newBlogs);
+    // }
+    
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -17,6 +40,8 @@ function ViewRequests(){
 
 //tatos 
     const[openProfile, setOpenProfile] = useState(false);
+    const[openCategory, setOpenCategory] = useState(false);
+    
 
     //TODO: handle click outside
 
@@ -82,6 +107,14 @@ return(
             
             </div>
            </div>
+           {/* //title="Donation Requests" */}
+           {/* onClick = {() => setOpenCategory((prev) => !prev)} */}
+    <div className="donations-title">Donation Requests</div>
+    <div> <button className='view-requests-category-button' onClick={() => setOpenCategory((prev) => !prev)}>Category ▼</button> </div>
+    <div className="donations-home">
+      <DonationsList donations={donations} handleView={handleView}/>
+      {/* <button onClick={() => setName('luigi')}>change name</button> */}
+    </div>
            
 
        <div className='view-requests-nd'>
@@ -99,6 +132,10 @@ return(
         openProfile && <DropDownProfile/> 
        
        }
+       {
+        openCategory && <DropDownCategory/> 
+       }
+        
     
        
     

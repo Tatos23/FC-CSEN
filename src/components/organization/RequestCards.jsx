@@ -9,7 +9,7 @@ const RequestCards = ({}) => {
     <div>
         <section className="py-4">
          <div className="container-md lg:container m-auto">
-             <Card bg='bg-gray-100'>
+             <form className='bg-gray-200 rounded-lg'>
              
                 <h2 className='text-2xl text-green-500'>Request Form </h2>
                 <br/>
@@ -47,7 +47,7 @@ const RequestCards = ({}) => {
                   <br />
                   <button className='bg-green-300 rounded-lg px-4 py-2 text-white text-3xl mt-2 mb-4 hover:bg-green-700 '>Submit Request</button>
                   
-             </Card>
+             </form>
          </div>
         </section>
     </div>
