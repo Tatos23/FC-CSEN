@@ -119,6 +119,9 @@ function ViewRequests(){
         })
     }
 
+    const handleButtonClickNotifications = () => {
+        navigate('/notifications');
+    }
     
 
 
@@ -181,7 +184,7 @@ return(
                 <button className='view-requests-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
                 <button className='view-requests-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
                 <button className='view-requests-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-                <button className='view-requests-middleside-button'style={{ marginLeft: '10%' }}>Notifications</button>
+                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%' } }>Notifications</button>
  
             </div>
             <div className='view-requests-rightside'>
