@@ -21,27 +21,12 @@ function AdminHomePage() {
                     <img className='admin-home-logo-navbar-name' src='name.png' alt='logo'></img>
                 </div>
                 <div className='admin-home-middleside'>
-                    <button className='admin-home-middleside-button' style={{ marginRight: '10%' }}>Home</button>
-                    <button className='admin-home-middleside-button' style={{ marginRight: '1%' }}>Donations</button>
-                    <button className='admin-home-middleside-button' style={{ marginLeft: '10%' }}>About Us</button>
-                    <div className="admin-home-dropdown">
-                        <button onClick={toggleVisibility}>Categories</button>
-                        {isVisible && (
-                            <div className="admin-home-dropdown-content">
-                                <button className='admin-home-action-button'>Action 1</button>
-                                <button className='admin-home-action-button'>Action 2</button>
-                                <button className='admin-home-action-button'>Action 3</button>
-                            </div>
-                        )}
-                    </div>
+                    <button className='admin-home-middleside--selected-button' style={{ marginRight: '4%', color: '#397d08' }}>Home</button>
+                    <button className='admin-home-middleside-button' style={{ marginRight: '4%' }}>System Users</button>
+                    <button className='admin-home-middleside-button' style={{ marginRight: '4%' }}>User Submissions</button>
+                    <button className='admin-home-middleside-button' style={{ marginRight: '4%' }}>Requests</button>
                 </div>
                 <div className='admin-home-rightside'>
-                    <div className="admin-home-search-container">
-                        <input type="text" placeholder="Search..." />
-                        <button className='admin-home-searchbutton'>
-                            <img className='admin-home-search-icon' src='searchicon.png' alt='logo' />
-                        </button>
-                    </div>
                     <button className='admin-home-profilebutton' onClick={() => setOpenProfile((prev) => !prev)}><img className='home-profile-icon' src='profileEnhanced.png' alt='logo'></img></button>
                 </div>
 
@@ -49,7 +34,6 @@ function AdminHomePage() {
             <div className='admin-home-middle-body'>
                 <div className='admin-home-quote'>"The best way to find yourself is to lose yourself in the service of others."
                 </div>
-                <button className='admin-home-donate-button' >Donate</button>
             </div>
             <footer className='admin-home-nd'>
                 <div className='admin-home-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
