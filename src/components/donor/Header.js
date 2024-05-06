@@ -4,17 +4,19 @@ import React, { useState,useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
+import { useNavigate } from 'react-router-dom';
 
 function Header({loggedIn}){
 
     const [isVisible, setIsVisible] = useState(false);
+    const navigate = useNavigate();
 
-    const toggleVisibility = () => {
-        console.log(isVisible);
-        setIsVisible(!isVisible);
-    };
+
 
     const[openProfile, setOpenProfile] = useState(false);
+    const handleButtonClickNotifications = () => {
+        navigate('/notifications');
+    }
 
 
     return(
@@ -28,16 +30,8 @@ function Header({loggedIn}){
                 <button className='home-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
                 <button className='home-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
                 <button className='home-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-                <div className="home-dropdown">
-                <button onClick={toggleVisibility}>Categories</button>
-                {isVisible && (
-                    <div className="home-dropdown-content">
-                        <button className='home-action-button'>Action 1</button>
-                        <button className='home-action-button'>Action 2</button>
-                        <button className='home-action-button'>Action 3</button>
-                    </div>
-                )}
-                </div>
+                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%' } }>Notifications</button>
+
             </div>
             <div className='home-rightside'>
                 <div>

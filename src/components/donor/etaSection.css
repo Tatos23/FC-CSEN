@@ -1,33 +1,25 @@
-.eta-container {
-    /* Add your styles here */
+.EtaSection {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #2C6B5A;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-/* Title for the ETA section */
-.eta-title {
-    /* Add your styles here */
-    font-size: 24px;
+.EtaSection-title {
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color: #333;
+    margin-top: 1%;
+    font-size: 150%;
+    color: white;
 }
 
-/* ETA value */
-.eta-value {
-    /* Add your styles here */
-    font-size: 18px;
-    color: #666;
+.EtaSection-eta {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1%;
+    font-size: 150%;
+    color: white;
 }
-
-/* ETA label */
-.eta-label {
-    /* Add your styles here */
-    font-size: 14px;
-    color: #999;
-}
-
-/* Additional styles for the ETA section */
-/* Add your styles here */
