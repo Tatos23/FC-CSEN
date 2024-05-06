@@ -30,6 +30,9 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
           <Route path="/donation-select" element={<Donationselect />} />
+          <Route path="/blood" element={<Blood />} />
+          <Route path="/book" element={<Book />} />
+
         </Routes>
       </BrowserRouter>
 
