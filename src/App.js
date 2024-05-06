@@ -16,7 +16,7 @@ import DocUpload from './components/authentication/DocUpload.js';
 import Blood from './components/organization/Blood.jsx';
 import RequestButtons from './components/organization/RequestButtons.jsx';
 import Book from './components/organization/Book.jsx';
-
+import Clothes from './components/organization/Clothes.jsx';
 function App() {
   return (
     <div className="App">
@@ -35,6 +35,7 @@ function App() {
           <Route path="/donation-select" element={<Donationselect />} />
           <Route path="/blood" element={<Blood />} />
           <Route path="/book" element={<Book />} />
+          <Route path="/clothes" element={<Clothes />} />
 
         </Routes>
       </BrowserRouter>

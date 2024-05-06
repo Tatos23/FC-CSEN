@@ -11,7 +11,7 @@ const Book = () => {
   return (
     <div>
         <OrgTemp />
-        <form className='bg-gray-200 rounded-lg'>
+        <form className='bg-gray-200 rounded-lg mr-20 ml-20'>
         <h2 className='text-2xl text-green-500'>Book Request Form </h2>
                 <br/>
                 <div style={{ display:'block', alignItems: 'center' }}>
