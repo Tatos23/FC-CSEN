@@ -14,7 +14,7 @@ const ORCards = () => {
               Request Donations For Your Organization
             </p>
             <Link
-              to="/RequestCards.js"
+              to="/RequestCards"
               class="inline-block bg-cyan-500 text-white rounded-lg px-4 py-2 hover:bg-cyan-700"
             >
               Post Requests
