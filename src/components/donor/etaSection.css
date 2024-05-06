@@ -1,0 +1,33 @@
+.eta-container {
+    /* Add your styles here */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Title for the ETA section */
+.eta-title {
+    /* Add your styles here */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ETA value */
+.eta-value {
+    /* Add your styles here */
+    font-size: 18px;
+    color: #666;
+}
+
+/* ETA label */
+.eta-label {
+    /* Add your styles here */
+    font-size: 14px;
+    color: #999;
+}
+
+/* Additional styles for the ETA section */
+/* Add your styles here */
