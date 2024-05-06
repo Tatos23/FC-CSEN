@@ -13,14 +13,15 @@ import Donationselect from './components/donor/Donationselect.js';
 import Header from './components/donor/Header.js';
 import PickUp from './components/donor/PickUp.js';
 import DocUpload from './components/authentication/DocUpload.js';
+import EtaSection from './components/donor/EtaSection.js';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<DocUpload role="Donor" type="Doctor"/>} />
-          <Route path="/" element={<Donationselect />} />
+          {/* <Route path="/" element={<EtaSection eta = "12 Hours and 12 Minutes"/>} /> */}
+          <Route path="/" element={<Landing />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
