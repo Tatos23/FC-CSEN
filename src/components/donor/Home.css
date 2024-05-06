@@ -60,6 +60,17 @@ margin-top: 15px;
  margin-top: 15px;
 
 }
+.home-profilebutton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px; /* Adjust the size as needed */
+    height: 70px;
+    border-radius: 50%; /* Makes it circular */
+    overflow: hidden; /* Clip the image to the circular shape */
+    object-fit: cover;
+    margin-right: 2%;
+}
 .home-search-icon{
 width: 30px;
 height: 30px;
@@ -80,7 +91,7 @@ object-fit: contain;
     border: none;
     color:  white;
     background-color:#397d08;
-    width: 150px;
+    width: 140px;
     height: 40px;
     transition: background-color 1s;
     margin-top: 10px;
@@ -98,7 +109,8 @@ object-fit: contain;
 
 }
 .home-middleside-button{
-    font-family:Roboto;
+   font-family: 'Roboto';
+   font-weight: 400;
     font-size: 18px;
     border: none;
     color: #2C6B5A;
@@ -109,7 +121,6 @@ object-fit: contain;
     margin-top: 15px;
    border-bottom: 1px solid #397e07;
     width: 100px;
-    font-weight: bold;
 }
 .home-middleside-button:hover{
     color: #74AC4C;
@@ -140,11 +151,11 @@ object-fit: contain;
 .home-quote{
 color: white;
 position:absolute;
-top: 250px;
-left: 50px;
-right: 800px;
+top: 300%;
+right: 40%;
+left: 0%;
 bottom: 0;
-font-size: 400%;
+font-size: 300%;
 
 }
 .home-donate-button{
@@ -175,6 +186,7 @@ border-radius: 18px;
     height: 500px;
     display: grid;
     grid-template-columns: auto auto  auto auto;
+    
 }
 .home-foodicon{
     width: 100px;
@@ -187,7 +199,8 @@ border-radius: 18px;
 
 .home-dropdown {
     position: relative;
-    font-family:Roboto;
+    font-family: 'Roboto';
+   font-weight: 400;
     font-size: 18px;
     border: none;
     color: #2C6B5A;
@@ -199,7 +212,6 @@ border-radius: 18px;
     border-bottom: 1px solid #397e07;
     width: 100px;
     margin-left: 10%;
-    font-weight: bold;
 }
 
 .home-dropdown-content {
@@ -230,7 +242,8 @@ border-bottom:1px solid #74AC4C;
     position: relative;
     bottom: 75px;
     color: black;
-    right:50px;
+    right: 0%;
+    left: 5%;
     font-family:  Roboto;
     font-weight: 400;
     display: inline;
@@ -242,22 +255,9 @@ border-bottom:1px solid #74AC4C;
     color: grey;
     right:20px;
     left: 90px;
-    font-family:Roboto;
+    font-family: Arial, Helvetica, sans-serif;
     width: 255px;
     text-align:left;
     display: block;
     
 }
-
-.home-profilebutton{
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    width: 50px; /* Adjust the size as needed */
-    height: 50px;
-    border-radius: 50%; /* Makes it circular */
-    overflow: hidden; /* Clip the image to the circular shape */
-    object-fit: cover;
-    margin-right: 2%;
-}
-

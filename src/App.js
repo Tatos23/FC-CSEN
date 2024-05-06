@@ -23,8 +23,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<RequestPost />} />
-          <Route path="/" element={<Donationselect />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
@@ -36,6 +35,7 @@ function App() {
           <Route path="/donation-select" element={<Donationselect />} />
           <Route path="/blood" element={<Blood />} />
           <Route path="/book" element={<Book />} />
+          <Route path="/view-requests" element={<ViewRequests/>} />
 
         </Routes>
       </BrowserRouter>
