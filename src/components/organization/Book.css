@@ -1,9 +1,9 @@
-.DocUpload {
+.Book-Img {
     background-color: #2C6B5A;
     height: 100vh;
 }
 
-.DocUpload-Container {
+.Book-Img-Container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
     margin-right: 30%;
 }
 
-.DocUpload-Title {
+.Book-Img-Title {
     align-self: flex-start;
     font-weight: bold;
     font-size: 40px;
@@ -23,7 +23,7 @@
     margin-top : 2%;
 }
 
-.DocUpload-Upload {
+.Book-Img-Upload {
     background-color: #74AC4C;
     color: white;
     padding: 10px 20px;
@@ -37,11 +37,11 @@
     margin-bottom: 5%;
 }
 
-.DocUpload-Upload:hover {
+.Book-Img-Upload:hover {
     background-color: #2C6B5A;
 }
 
-.DocUpload-document-input {
+.Book-Img-document-input {
     width: 50%;
     padding: 10px;
     margin: 10px 0;
@@ -53,7 +53,7 @@
     color:#2C6B5A
 }
 
-.DocUpload-document-input::-webkit-file-upload-button {
+.Book-Img-document-input::-webkit-file-upload-button {
     background-color: #74AC4C;
     color: white;
     padding: 10px 20px;
@@ -66,11 +66,11 @@
     margin-right: 5%;
 }
 
-.DocUpload-document-input::-webkit-file-upload-button:hover {
+.Book-Img-document-input::-webkit-file-upload-button:hover {
     background-color: #2C6B5A;
 }
 
-.DocUpload-message {
+.Book-Img-message {
     color: #2C6B5A;
     font-weight: bold;
     margin-bottom: 2%;

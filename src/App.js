@@ -14,6 +14,9 @@ import Header from './components/donor/Header.js';
 import PickUp from './components/donor/PickUp.js';
 import { useEffect } from 'react';
 import DocUpload from './components/authentication/DocUpload.js';
+import Blood from './components/organization/Blood.jsx';
+import RequestButtons from './components/organization/RequestButtons.jsx';
+import Book from './components/organization/Book.jsx';
 import DonationsList from './components/donor/DonationsList.js';
 function App() {
   
@@ -21,8 +24,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ViewRequests />} />
-          <Route path="/" element={<DonationsList />} />
+          <Route path="/" element={<RequestPost />} />
+          <Route path="/" element={<Donationselect />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
@@ -32,6 +35,9 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
           <Route path="/donation-select" element={<Donationselect />} />
+          <Route path="/blood" element={<Blood />} />
+          <Route path="/book" element={<Book />} />
+
         </Routes>
       </BrowserRouter>
 

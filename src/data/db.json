@@ -2,9 +2,10 @@
     "donations": [
       {
         "title": "Clothes-Donation",
+        "category": "clothes",
+        "subcategory": "clothes",
         "quantity": "5",
         "age": "2 to 3 years",
-        "category": "clothes",
         "author": "mario",
         "id": 1,
         "gender":"male",
@@ -26,52 +27,82 @@
       },
       {
         "title": "school supplies",
+        "category": "school supplies",
         "subcategory": "Stationary",
         "quantity": "2",
         "age": "null",
-        "category": "school",
         "author": "tatos",
-        "id": 2
+        "id": 3
       },
       {
-        "title": "school supplies",  
-        "category": "school",
-        "subcategory": "Stationary",
+        "title": "Toys",  
+        "category": "toy",
+        "subcategory": "toy",
         "quantity": "2",
         "age": "12",
         "type": "tatos",
         "gender": "tatos",
         "picture of the toy": "toy.png",
         "toycategory": "school",
-        "id": 2
+        "id": 4
       },
       {
         "title": "i am hungry",  
         "category": "food",
-        "subcategory": "Stationary",
+        "subcategory": "fruits",
         "quantity": "2",
         "name": "fruits",
-        "id": 2
+        "id": 5
       },
       {
         "title": "medical supplies",  
         "category": "medical supplies",
-        "subcategory": "Stationary",
+        "subcategory": "medical supplies",
         "quantity": "2",
         "type": "MRI",
         "use": "produce images  of bones on a computer of bones",
-        "picture of the toy": "mri.png",
-        "id": 2
+        "picture-of-the-supply": "mri.png",
+        "id": 6
       },
       {
         "title": "blood Donation",  
         "category": "blood Donation",
-        "subcategory": "Stationary",
-        "quantity": "2",
-        "type": "MRI",
-        "use": "produce images  of bones on a computer of bones",
-        "picture of the toy": "mri.png",
-        "id": 2
+        "subcategory": "blood Donation",
+        "name": "shandawely",
+        "hospital-name": "MRI",
+        "blood-type": "A+",
+        "hospital-area": "maadi",
+        "hospital-address": "maadi----",
+        "governorate": "cairo",
+        "hospital-location": "googlemarker.png",
+        "id": 7
+      },
+      {
+        "title": "teaching posts",  
+        "category": "teaching posts",
+        "subcategory": "teaching posts",
+        "number-of-students": "2",
+        "address": "share3 9",
+        "subject": "produce images  of bones on a computer of bones",
+        "location": "googlemarker.png",
+        "id": 8
+      },
+      {
+        "title": "Medical Cases",  
+        "category": "Medical Cases",
+        "subcategory": "teaching posts",
+        "name": "2",
+        "age": "2",
+        "gender": "male",
+        "weight": 2,
+        "address": "maadi",
+        "organization-name": "maadi",
+        "medical-specialty": "surgent",
+        "case-description": "produce images  of bones on a computer of bones",
+        "location": "googlemarker.png",
+        "id": 9
       }
+
+
     ]
   }
