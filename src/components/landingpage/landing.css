@@ -140,11 +140,11 @@ object-fit: contain;
 .landing-quote{
 color: white;
 position:absolute;
-top: 250px;
-left: 50px;
-right: 800px;
+top: 300%;
+right: 40%;
+left: 0%;
 bottom: 0;
-font-size: 400%;
+font-size: 300%;
 
 }
 .landing-donate-button{
@@ -175,6 +175,7 @@ border-radius: 18px;
     height: 500px;
     display: grid;
     grid-template-columns: auto auto  auto auto;
+    
 }
 .landing-foodicon{
     width: 100px;
@@ -230,7 +231,8 @@ border-bottom:1px solid #74AC4C;
     position: relative;
     bottom: 75px;
     color: black;
-    right:50px;
+    right: 0%;
+    left: 5%;
     font-family:  Roboto;
     font-weight: 400;
     display: inline;

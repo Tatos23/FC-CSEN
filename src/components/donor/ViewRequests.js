@@ -127,6 +127,7 @@ function ViewRequests(){
     const handleView = (id) => {
         // const tempDonations = donations.filter(donations => donations.id !== id);
         // setDonation(tempDonations);
+        
         navigate('/donation-select');
     }
 
@@ -222,15 +223,19 @@ return(
     </div>
            
 
-       <div className='view-requests-nd'>
+    <footer className='view-requests-nd'>
         <div className='view-requests-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
-       <div className='view-requests-no'><div className='landin'><img className='view-requests-foodicon'src='healthicon.png' alt='logo'></img><span className='view-requests-title' >Medical supplies</span></div></div>
-       <div className='view-requests-y'> <img className='view-requests-foodicon'src='education.png' alt='logo'></img><span className='view-requests-title' >Educaion</span></div>
-       <div className='view-requests-f'><img className='view-requests-foodicon'src='foodicon.png' alt='logo'></img><span className='view-requests-title' >Food</span> <span className='view-requests-saying' >Every plate shared is a gift of hope and nourishment. Your food donation can make a difference in someone's life. Give generously, 
-       and let's share the blessings of good food together.</span></div>
-       
+
+       <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon'src='healthicon.png' alt='logo'></img><span className='view-requests-title' >Medical supplies</span></div>
+       <div className='view-requests-saying'>Access to medical supplies is a basic human right. Your donation can bridge the gap between illness and recovery
+       . Join us in providing essential care to those in need.</div></div>
+       <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon'src='foodicon.png' alt='logo'></img><span className='view-requests-title' >Food&amp;Nutrition</span></div>
+       <div className='view-requests-saying'>Every plate shared is a gift of hope and nourishment. Your food donation can make a difference in someone's life. Give generously, and let's share the blessings of good food together.</div></div>
+       <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon'src='education.png' alt='logo'></img><span className='view-requests-title'style={{ marginRight: '6%' }} >Education</span></div>
+       <div className='view-requests-saying'>Empowering minds through education. Support a child's future with your donation today.</div></div>
+       </footer>
        </div>
-       </div>
+
 
     {/* tatos */}
        {
