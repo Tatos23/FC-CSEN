@@ -13,13 +13,16 @@ import Donationselect from './components/donor/Donationselect.js';
 import Header from './components/donor/Header.js';
 import PickUp from './components/donor/PickUp.js';
 import DocUpload from './components/authentication/DocUpload.js';
+import Blood from './components/organization/Blood.jsx';
+import RequestButtons from './components/organization/RequestButtons.jsx';
+import Book from './components/organization/Book.jsx';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<DocUpload role="Donor" type="Doctor"/>} />
+          <Route path="/" element={<RequestPost />} />
           <Route path="/" element={<Donationselect />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
