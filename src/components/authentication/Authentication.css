@@ -50,6 +50,7 @@
     position: relative;
     top: -35px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .welcome-text h1 {

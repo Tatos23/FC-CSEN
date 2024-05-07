@@ -8,6 +8,7 @@ function RequestPost(){
     return(
         <div>
             <OrgTemp/>
+            <Hero  title={"What Would Like to Request?"} size={"py-2"}/>
             <RequestButtons />
             <Hero subtitle={""} size={"py-2"}/>
         </div>

@@ -8,7 +8,7 @@ const Hero = ({ title, subtitle , size}) => {
             >
                 <div class="text-center">
                     <h1
-                        class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl"
+                        class="text-2xl font-extrabold text-black sm:text-4xl md:text-5xl"
                     >
                         {title}
                     </h1>
