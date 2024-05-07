@@ -20,8 +20,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<EtaSection eta = "12 Hours and 12 Minutes"/>} /> */}
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<EtaSection timeToMeet="2024-05-10T14:48:00" />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
