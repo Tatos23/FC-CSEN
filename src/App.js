@@ -3,16 +3,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Authentication from './components/authentication/Authentication.js'
 import HomePage from './components/HomePage.js';
 import Landing from './components/landingpage/Landing.js';
-import ORHome from './components/organization/ORHome.js';
-import RequestPost from './components/organization/RequestPost.js';
 import AdminHomePage from './components/admin/admin_home_page/AdminHomePage.js';
 import Home from './components/donor/Home.js';
-import ViewRequests from './components/donor/ViewRequests.js';
-import MainTemp from './components/MainTemp.js';
 import Donationselect from './components/donor/Donationselect.js';
-import Header from './components/donor/Header.js';
-import PickUp from './components/donor/PickUp.js';
-import DocUpload from './components/authentication/DocUpload.js';
+import AdminDashBoard from './components/admin/admin-dashboard/AdminDashBoard.js';
+import AdminUsers from './components/admin/admin-users/AdminUsers';
+import Requests from './components/admin/requests/Requests.js';
+import UserSubmissions from './components/admin/user-submissions/UserSubmissions.js';
 
 function App() {
   return (
@@ -20,7 +17,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/admin-home" element={<AdminHomePage />} />
+          <Route path="/admin-dashboard" element={<AdminDashBoard />} >
+            <Route index element={<AdminHomePage />} />
+            <Route path="system-users" element={<AdminUsers />} />
+            <Route path="user-submissions" element={<UserSubmissions />} />
+            <Route path="requests" element={<Requests />} />
+          </Route>
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
           <Route path="/representative-login" element={<Authentication role="Representative" />} />
