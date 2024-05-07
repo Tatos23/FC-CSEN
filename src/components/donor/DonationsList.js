@@ -1,6 +1,5 @@
 
 const DonationsList = ({donations, title, handleView }) => {
-  
     return (
       <div className="donations-list">
         <h2>{ title }</h2>
