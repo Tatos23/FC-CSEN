@@ -18,7 +18,7 @@ function LoginCard({ isRegistering, toggleForm, showPassword, toggleShowPassword
             if (user.username === username && user.password === password) {
                 console.log('Login successful');
                 if (role === 'Admin') {
-                    navigate('/admin-home');
+                    navigate('/admin-dashboard');
                     return;
                 }
                 // else if (role === 'Donor') {
