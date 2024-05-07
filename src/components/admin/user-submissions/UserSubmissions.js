@@ -1,4 +1,4 @@
-import React from 'react';
+import './UserSubmissions.css';
 
 function UserSubmissions() {
     return (

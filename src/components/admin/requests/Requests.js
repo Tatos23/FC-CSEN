@@ -1,4 +1,4 @@
-import React from 'react';
+import './Requests.css';
 
 function Requests() {
     return (

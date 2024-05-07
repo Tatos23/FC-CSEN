@@ -1,9 +1,11 @@
-import React from 'react';
+import './AdminUsers.css'
+import UserCard from '../components/user_card/UserCard';
+
 
 function AdminUsers() {
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-            <h1>Admin Users</h1>
+        <div className='admin-users'>
+            <UserCard type='Donor' name='abdullah' />
         </div>
     );
 }
