@@ -19,6 +19,9 @@ function ViewRequests(){
     ] */
 
     const [donations, setDonation] = useState(null);
+
+    const [selectedCategory, setSelectedCategory] = useState('Select Category ▼'); // Initialize with default text
+
     
     useEffect(() =>{
         fetch('http://localhost:8000/donations')
@@ -31,7 +34,6 @@ function ViewRequests(){
     }, []);
 
 
-
     const navigate=useNavigate();
 
     const resetState = () =>{
@@ -42,6 +44,7 @@ function ViewRequests(){
         .then(data => {
             setDonation(data)
         })
+        setSelectedCategory("Select Category ▼")
     }
     //clothes category button
     const resetStateClothes = () =>{
@@ -54,6 +57,7 @@ function ViewRequests(){
             const newDonations = data.filter(donations => donations.category == 'clothes');
             setDonation(newDonations);
         })
+        setSelectedCategory("Clothes Category")
     }
 
     // toys category button
@@ -67,6 +71,8 @@ function ViewRequests(){
             const newDonations = data.filter(donations => donations.category == 'toys');
             setDonation(newDonations);
         })
+        setSelectedCategory("Toys Category")
+
     }
 
     // food category button
@@ -80,6 +86,8 @@ function ViewRequests(){
             const newDonations = data.filter(donations => donations.category == 'food');
             setDonation(newDonations);
         })
+        setSelectedCategory("Food Category")
+
     }
 
     // medical supplies category button
@@ -93,6 +101,8 @@ function ViewRequests(){
             const newDonations = data.filter(donations => donations.category == 'medical supplies');
             setDonation(newDonations);
         })
+        setSelectedCategory("Medical Supplies Category")
+
     }
 
     // school supplies category button
@@ -106,6 +116,8 @@ function ViewRequests(){
             const newDonations = data.filter(donations => donations.category == 'school supplies');
             setDonation(newDonations);
         })
+        setSelectedCategory("School Supplies Category")
+
     }
     // blood donations category button
     const resetStateBlood = () =>{
@@ -117,7 +129,35 @@ function ViewRequests(){
             const newDonations = data.filter(donations => donations.category == 'blood donations');
             setDonation(newDonations);
         })
+        setSelectedCategory("Blood Donations Category")
+
     }
+        // teaching posts category button
+        const resetStateTPosts = () =>{
+            fetch('http://localhost:8000/donations')
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                const newDonations = data.filter(donations => donations.category == 'teaching posts');
+                setDonation(newDonations);
+            })
+            setSelectedCategory("Teaching Posts Category")
+
+        }
+            // medical cases category button
+        const resetStateMCases = () =>{
+            fetch('http://localhost:8000/donations')
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                const newDonations = data.filter(donations => donations.category == 'medical cases');
+                setDonation(newDonations);
+            })
+            setSelectedCategory("Medical Cases Category")
+
+        }
 
     const handleButtonClickNotifications = () => {
         navigate('/notifications');
@@ -207,12 +247,17 @@ return(
             </div>
            </div>
            {/* onClick = {() => setOpenCategory((prev) => !prev)} */}
+
     <div className="donations-title">Donation Requests</div>
-    <div> <button className='view-requests-category-button' onClick={() => setOpenCategory((prev) => !prev)}>Category ▼</button> </div>
+    <div> <button className='view-requests-category-button'  value={selectedCategory}
+                    onChange={e => setSelectedCategory(e.target.value)}
+                    onClick={() => setOpenCategory((prev) => !prev)}>{selectedCategory}</button> </div>
+
     <div className="donations-home">
       {donations && <DonationsList donations={donations} handleView={handleView}/>}
       {/* <button onClick={() => setName('luigi')}>change name</button> */}
     </div>
+
            
 
     <footer className='view-requests-nd'>
@@ -235,7 +280,7 @@ return(
        
        }
        {
-        openCategory && <DropDownCategory resetState={resetState} resetStateClothes={resetStateClothes} resetStateToys={resetStateToys} resetStateFood={resetStateFood} resetStateMedical={resetStateMedical} resetStateSchool={resetStateSchool} resetStateBlood={resetStateBlood}/> 
+        openCategory && <DropDownCategory resetState={resetState} resetStateClothes={resetStateClothes} resetStateToys={resetStateToys} resetStateFood={resetStateFood} resetStateMedical={resetStateMedical} resetStateSchool={resetStateSchool} resetStateBlood={resetStateBlood} resetStateTPosts = {resetStateTPosts} resetStateMCases = {resetStateMCases}/> 
        }
 
     
