@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Authentication from './components/authentication/Authentication.js'
+import Authentication from './components/authentication/Authentication.js';
 import HomePage from './components/HomePage.js';
 import Landing from './components/landingpage/Landing.js';
 import ORHome from './components/organization/ORHome.js';
@@ -42,8 +42,6 @@ function App() {
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests/>} />
           <Route path="/notifications" element={<Notifications/>} />
-
-
         </Routes>
       </BrowserRouter>
 

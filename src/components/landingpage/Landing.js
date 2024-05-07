@@ -1,9 +1,14 @@
 import './landing.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaArrowDown } from 'react-icons/fa';
 
 function Landing(){
-
+    const scrollToBottom = () => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth', // Add smooth scrolling animation
+        })};
     const [isVisible, setIsVisible] = useState(false);
 
 
@@ -20,7 +25,7 @@ return(
             <div className='landing-middleside'>
                 <button className='landing-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
                 <button className='landing-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
-                <button className='landing-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
+                <button className='landing-middleside-button'style={{ marginLeft: '10%' }} onClick={scrollToBottom}>About Us</button>
 
             </div>
             <div className='landing-rightside'>
@@ -39,7 +44,7 @@ return(
 
            </div> 
        <footer className='landing-nd'>
-        <div className='landing-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
+        <div className='landing-words'>We connect Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
 
        <div className='landing-no'><div className='landing-icon-title'><img className='landing-foodicon'src='healthicon.png' alt='logo'></img><span className='landing-title' >Medical supplies</span></div>
        <div className='landing-saying'>Access to medical supplies is a basic human right. Your donation can bridge the gap between illness and recovery
