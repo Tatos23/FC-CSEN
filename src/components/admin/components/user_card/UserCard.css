@@ -1,16 +1,27 @@
 .user-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
     width: 30vw;
-    height: 10vh;
+    height: 17vh;
     background-color: white;
     border-radius: 10px;
     border: 2px solid #397e07;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     padding-left: 1vw;
-    padding-top: 1.5vh;
+    padding-top: 1.25vh;
     padding-bottom: 1.5vh;
-    gap: 1vh;
+    gap: 0.75vh;
+}
+
+.user-card-type {
+    font-size: 1.75vw;
+    font-weight: 700;
+}
+
+.user-card-name {
+    padding-left: 0.5vw;
+    font-size: 1.15vw;
+    font-weight: 400;
 }
