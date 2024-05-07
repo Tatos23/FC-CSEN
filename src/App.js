@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Authentication from './components/authentication/Authentication.js'
+import Authentication from './components/authentication/Authentication.js';
 import HomePage from './components/HomePage.js';
 import Landing from './components/landingpage/Landing.js';
 import AdminHomePage from './components/admin/admin_home_page/AdminHomePage.js';
@@ -10,8 +10,19 @@ import AdminDashBoard from './components/admin/admin-dashboard/AdminDashBoard.js
 import AdminUsers from './components/admin/admin-users/AdminUsers';
 import Requests from './components/admin/requests/Requests.js';
 import UserSubmissions from './components/admin/user-submissions/UserSubmissions.js';
+import Header from './components/donor/Header.js';
+import PickUp from './components/donor/PickUp.js';
+import { useEffect } from 'react';
+import DocUpload from './components/authentication/DocUpload.js';
+import EtaSection from './components/donor/EtaSection.js';
+import Blood from './components/organization/Blood.jsx';
+import RequestButtons from './components/organization/RequestButtons.jsx';
+import Book from './components/organization/Book.jsx';
+import Notifications from './components/Notifications.js';
+import DonationsList from './components/donor/DonationsList.js';
 
 function App() {
+  
   return (
     <div className="App">
       <BrowserRouter>
@@ -30,6 +41,10 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
           <Route path="/donation-select" element={<Donationselect />} />
+          <Route path="/blood" element={<Blood />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/view-requests" element={<ViewRequests/>} />
+          <Route path="/notifications" element={<Notifications/>} />
         </Routes>
       </BrowserRouter>
 

@@ -1,36 +1,44 @@
 import { Link } from 'react-router-dom';
 import './DropDownCategory.css';
 import { useNavigate } from 'react-router-dom';
+import ViewRequests from './ViewRequests';
+import DonationsList from './DonationsList';
 
-const DropDownCategory = () => {
+
+const DropDownCategory = ({resetState,resetStateClothes,resetStateToys,resetStateFood,resetStateMedical,resetStateSchool,resetStateBlood}) => {
 
     const navigate = useNavigate();
 
-
+    
+    
    
     const handleButtonClickClothes = () => {
-        console.log('sdf');
+        resetStateClothes();
     }
 
-    const handleButtonClickToys = () => {
-        console.log('sdf');      
+    const handleButtonClickToys = () => {    
+        resetStateToys();
     }
 
     const handleButtonClickFood = () => {
-        console.log('sdf');
+        resetStateFood();
     }
 
     const handleButtonClickMSupplies = () => {
-        console.log('sdf');
+        resetStateMedical();
     }
 
     const handleButtonClickSSupplies = () => {
-        console.log('sdf');      
+        resetStateSchool();
     }
 
     const handleButtonClickBDonations = () => {
-        console.log('sdf');
+        resetStateBlood();
     }
+    const handleButtonClickAll = () => {
+        resetState();
+    }
+    
 
     return (
         <div className='flex flex-col DropDownCategory'>
@@ -41,6 +49,7 @@ const DropDownCategory = () => {
                 <button onClick={() => handleButtonClickMSupplies('Medical Supplies')}>Medical Supplies</button>
                 <button onClick={() => handleButtonClickSSupplies('School Supplies')}>School Supplies</button>
                 <button onClick={() => handleButtonClickBDonations('Blood Donations')}>Blood Donations</button>
+                <button onClick={() => handleButtonClickAll('Blood Donations')}>All</button>
 
             </ul>
         </div>

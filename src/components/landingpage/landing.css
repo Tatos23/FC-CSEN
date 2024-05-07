@@ -50,6 +50,8 @@ color: black;
 display: flex;
 width: 710px;
 margin-top: 15px;
+margin-left: 12%;
+
 }
 .landing-rightside{
  color: white;
@@ -98,7 +100,8 @@ object-fit: contain;
 
 }
 .landing-middleside-button{
-   font-family: poppins, sans-serif;
+   font-family: 'Roboto';
+   font-weight: 400;
     font-size: 18px;
     border: none;
     color: #2C6B5A;
@@ -139,11 +142,11 @@ object-fit: contain;
 .landing-quote{
 color: white;
 position:absolute;
-top: 250px;
-left: 50px;
-right: 800px;
+top: 300%;
+right: 40%;
+left: 0%;
 bottom: 0;
-font-size: 400%;
+font-size: 300%;
 
 }
 .landing-donate-button{
@@ -174,6 +177,7 @@ border-radius: 18px;
     height: 500px;
     display: grid;
     grid-template-columns: auto auto  auto auto;
+    
 }
 .landing-foodicon{
     width: 100px;
@@ -186,7 +190,8 @@ border-radius: 18px;
 
 .landing-dropdown {
     position: relative;
-    font-family: poppins, sans-serif;
+    font-family: 'Roboto';
+   font-weight: 400;
     font-size: 18px;
     border: none;
     color: #2C6B5A;
@@ -228,7 +233,8 @@ border-bottom:1px solid #74AC4C;
     position: relative;
     bottom: 75px;
     color: black;
-    right:50px;
+    right: 0%;
+    left: 5%;
     font-family:  Roboto;
     font-weight: 400;
     display: inline;

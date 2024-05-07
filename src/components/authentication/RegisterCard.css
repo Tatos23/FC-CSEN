@@ -27,9 +27,6 @@
     justify-self: start;
 }
 
-.register-title {
-    margin-bottom: 15px;
-}
 
 .password-wrapper {
     display: flex;
@@ -143,6 +140,7 @@
 }
 
 .register-title {
+    color: #2C6B5A;
     margin-bottom: 15px;
     font-size: xx-large;
     font-weight: 700;
@@ -166,6 +164,7 @@
 .email-input,
 .username-input,
 .password-input,
+.address-input,
 .organizationName-input,
 .organizationType-input,
 .organizationAddress-input,

@@ -51,6 +51,7 @@ color: black;
 display: flex;
 width: 710px;
 margin-top: 15px;
+margin-right: 20%;
 }
 .view-requests-rightside{
  color: white;
@@ -190,6 +191,7 @@ border-radius: 18px;
     left: 100px;
 
 
+
 }
 
 .view-requests-dropdown {
@@ -236,10 +238,13 @@ border-bottom:1px solid #74AC4C;
     position: relative;
     bottom: 75px;
     color: black;
-    right:50px;
+    right: 0%;
+    left: 5%;
     font-family:  Roboto;
     font-weight: 400;
     display: inline;
+    margin-left: auto;
+    margin-right: 0;
 }
 .view-requests-saying{
     font-size: 15px;
