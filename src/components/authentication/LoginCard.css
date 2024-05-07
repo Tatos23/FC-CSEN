@@ -30,6 +30,7 @@
     color: #2C6B5A;
     font-weight: 700;
     font-size: large;
+    font-weight: bold;
 }
 
 /* Child Components */
@@ -41,7 +42,10 @@
 }
 
 .register-title {
+    color: #2C6B5A;
     margin-bottom: 15px;
+    font-size: xx-large;
+    font-weight: 700;
 }
 
 .password-wrapper {
@@ -130,6 +134,7 @@
 }
 
 .login-title {
+    color: #2C6B5A;
     margin-bottom: 15px;
     font-size: xx-large;
     font-weight: 700;

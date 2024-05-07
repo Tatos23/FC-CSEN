@@ -1,0 +1,9 @@
+.admin-users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+    margin-left: 3vw;
+    position: fixed;
+}
