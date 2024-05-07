@@ -1,46 +1,45 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import OrgTemp from './OrgTemp';
-import { useNavigate } from 'react-router-dom';
-const Book = () => {
+import { useState } from 'react';
+const Toy = () => {
   const navigate = useNavigate();
     const handleButtonSubmitted = () =>{
         navigate('/submitted');
       }
-  const handleFileChange = (e) => {
+    const [selectedGender, setSelectedGender] = useState("");
+    const handleChange = (event) => {
+    setSelectedGender(event.target.value);
+    };
+    const handleFileChange = (e) => {
     if (e.target.files[0] && e.target.files[0].type !== 'image/*') {
         alert('Only images are allowed');
         e.target.value = ''; 
     }
-};
+}
   return (
     <div>
-        <OrgTemp />
+        <OrgTemp/>
         <form className='bg-gray-200 rounded-lg mr-20 ml-20'>
-        <h2 className='text-2xl text-green-500'>Book Request Form </h2>
+        <h2 className='text-2xl text-green-500'>Toy Request Form </h2>
                 <br/>
                 <div style={{ display:'block', alignItems: 'center' }}>
-                <label className='text-2xl text-green-800'>Book Name: </label>
+                <label className='text-2xl text-green-800'>Type of Toy: </label>
                 <input type="text"  style={{ maxWidth: '200px', maxHeight: '30px', textAlign:'center' }} required/>
                 </div>
                 <br/>
                 <div style={{ display:'block', alignItems: 'center' }}>
-                <label className='text-2xl text-green-800'>Author: </label>
-                <input type="text"  style={{ maxWidth: '200px', maxHeight: '30px', textAlign:'center' }} required/>
+                <label className='text-2xl text-green-800'>Suitable for age(s): </label>
+                <input type="text"  style={{ maxWidth: '200px', maxHeight: '30px', textAlign:'center' }} placeholder='1 to 3/ 2 to 5/... etc.' required/>
                 </div>
-                <br/>
+                <br />
+                <label style={{alignItems:'center'}} className='text-2xl text-green-800'> State the Gender:</label>
+                  <br />
+                    <label style={{display:'inline-table', alignItems:'center'}} className='text-2xl text-green-800 mr-20'>Male<input type="radio" id="male" value="male"  checked= {selectedGender === "male"} onChange={handleChange} /></label>
+                    <label style={{display:'inline-table', alignItems:'center'}} className='text-2xl text-green-800'>Female<input type="radio" id="female" value="female" checked= {selectedGender === "female"} onChange={handleChange}/></label>    
+                <br />
                 <div style={{ display:'block', alignItems: 'center' }}>
-                <label className='text-2xl text-green-800'>Language: </label>
-                <input type="text"  style={{ maxWidth: '200px', maxHeight: '30px', textAlign:'center' }} required/>
-                </div>
-                <br/>
-                <div style={{ display:'block', alignItems: 'center' }}>
-                <label className='text-2xl text-green-800'>Book Edition: </label>
-                <input type="text"  style={{ maxWidth: '200px', maxHeight: '30px', textAlign:'center' }} required/>
-                </div>
-                <br/>
-                <div style={{ display:'block', alignItems: 'center' }}>
-                <label className='text-2xl text-green-800'>Short Summary: </label>
+                <label className='text-2xl text-green-800'>Category: </label>
                 <input type="text"  style={{ maxWidth: '2000px', maxHeight: '3000px', textAlign:'center' }}/>
                 </div>
                 <br />
@@ -52,7 +51,7 @@ const Book = () => {
                 <br />
                 <div className="Book-Img">
             <div className='Book-Img-Container'>
-                <h1 className="Book-Img-Title">Upload an image of the book cover(if possible)</h1>
+                <h1 className="Book-Img-Title">Upload an image of the toy(if possible)</h1>
                 <input type="file" name="file"  className='Book-Img-document-input' onChange={handleFileChange}/>
             </div>
         </div>
@@ -65,4 +64,4 @@ const Book = () => {
   )
 }
 
-export default Book
+export default Toy

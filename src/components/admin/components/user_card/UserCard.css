@@ -1,0 +1,16 @@
+.user-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 30vw;
+    height: 10vh;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #397e07;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    padding-left: 1vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    gap: 1vh;
+}
