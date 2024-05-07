@@ -18,9 +18,19 @@ import EtaSection from './components/donor/EtaSection.js';
 import Blood from './components/organization/Blood.jsx';
 import RequestButtons from './components/organization/RequestButtons.jsx';
 import Book from './components/organization/Book.jsx';
-
+import Clothes from './components/organization/Clothes.jsx';
+import Toy from './components/organization/Toy.jsx';
+import Stationary from './components/organization/Stationary.jsx';
+import MedicalSupplies from './components/organization/MedicalSupplies.jsx';  
+import MedicalAssist from './components/organization/MedicalAssist.jsx';
+import Tutorials from './components/organization/Tutorials.jsx';
+import Submitted from './components/organization/Submitted.jsx';
+import OrgTemp from './components/organization/OrgTemp.js';
 import Notifications from './components/Notifications.js';
 import DonationsList from './components/donor/DonationsList.js';
+import RepDon from './components/organization/RepDon.jsx';
+import RepNot from './components/organization/RepNot.jsx';
+import Food from './components/organization/Food.jsx';
 
 function App() {
   
@@ -29,7 +39,7 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route path="/" element={<Landing/>} />
+          <Route path="/" element={<RepDon/>} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
@@ -43,7 +53,6 @@ function App() {
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests/>} />
           <Route path="/notifications" element={<Notifications/>} />
-
           <Route path="/clothes" element={<Clothes />} />
           <Route path="/toy" element={<Toy />} />
           <Route path="/station" element={<Stationary />} />
@@ -52,6 +61,9 @@ function App() {
           <Route path="/tut" element={<Tutorials />} />
           <Route path="/request-post" element={<RequestPost />} /> 
           <Route path="/submitted" element={<Submitted/>}/>
+          <Route path="/org-home" element={<ORHome />} />
+          <Route path="/rep-don" element={<RepDon />} />
+          <Route path="/rep-notifications" element={<RepNot />} />
 
 
 
