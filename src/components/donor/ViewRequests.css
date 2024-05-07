@@ -271,6 +271,15 @@ border-bottom:1px solid #74AC4C;
     object-fit: cover;
     margin-right: 2%;
 }
+.view-requests-vertical-rectangle {
+        width: 20px; /* Set your desired width */
+        height: 100px; /* Set your desired height */
+        background-color: #ff0000; /* Set your desired background color */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
 .view-requests-category-button {
     border: 1.5px solid #000; /* Add your desired border color */
     padding: 5px 10px; /* Adjust padding as needed */
