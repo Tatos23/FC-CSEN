@@ -119,6 +119,9 @@ function ViewRequests(){
         })
     }
 
+    const handleButtonClickNotifications = () => {
+        navigate('/notifications');
+    }
     
 
 
@@ -140,10 +143,7 @@ function ViewRequests(){
 
     const [isVisible, setIsVisible] = useState(false);
 
-    const toggleVisibility = () => {
-        console.log(isVisible);
-        setIsVisible(!isVisible);
-    };
+
 
 //tatos 
     const[openProfile, setOpenProfile] = useState(false);
@@ -184,16 +184,8 @@ return(
                 <button className='view-requests-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
                 <button className='view-requests-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
                 <button className='view-requests-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-                <div className="view-requests-dropdown">
-            <button onClick={toggleVisibility}>Categories</button>
-            {isVisible && (
-                <div className="view-requests-dropdown-content">
-                    <button className='view-requests-action-button'>Action 1</button>
-                    <button className='view-requests-action-button'>Action 2</button>
-                    <button className='view-requests-action-button'>Action 3</button>
-                </div>
-            )}
-        </div>
+                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%' } }>Notifications</button>
+ 
             </div>
             <div className='view-requests-rightside'>
                 <div >

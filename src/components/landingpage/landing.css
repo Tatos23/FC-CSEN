@@ -98,7 +98,8 @@ object-fit: contain;
 
 }
 .landing-middleside-button{
-   font-family: poppins, sans-serif;
+   font-family: 'Roboto';
+   font-weight: 400;
     font-size: 18px;
     border: none;
     color: #2C6B5A;
@@ -187,7 +188,8 @@ border-radius: 18px;
 
 .landing-dropdown {
     position: relative;
-    font-family: poppins, sans-serif;
+    font-family: 'Roboto';
+   font-weight: 400;
     font-size: 18px;
     border: none;
     color: #2C6B5A;

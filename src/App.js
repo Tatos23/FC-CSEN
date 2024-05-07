@@ -12,24 +12,23 @@ import MainTemp from './components/MainTemp.js';
 import Donationselect from './components/donor/Donationselect.js';
 import Header from './components/donor/Header.js';
 import PickUp from './components/donor/PickUp.js';
+import { useEffect } from 'react';
 import DocUpload from './components/authentication/DocUpload.js';
+import EtaSection from './components/donor/EtaSection.js';
 import Blood from './components/organization/Blood.jsx';
 import RequestButtons from './components/organization/RequestButtons.jsx';
 import Book from './components/organization/Book.jsx';
-import Clothes from './components/organization/Clothes.jsx';
-import Toy from './components/organization/Toy.jsx';
-import Stationary from './components/organization/Stationary.jsx';
-import MedicalAssist from './components/organization/MedicalAssist.jsx';
-import Tutorials from './components/organization/Tutorials.jsx';
-import MedicalSupplies from './components/organization/MedicalSupplies.jsx';
-import Submitted from './components/organization/Submitted.jsx';
+import Notifications from './components/Notifications.js';
+import DonationsList from './components/donor/DonationsList.js';
+
 function App() {
+  
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ORHome />} />
-          <Route path="/" element={<Donationselect />} />
+
+          <Route path="/" element={<Landing/>} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
@@ -41,14 +40,8 @@ function App() {
           <Route path="/donation-select" element={<Donationselect />} />
           <Route path="/blood" element={<Blood />} />
           <Route path="/book" element={<Book />} />
-          <Route path="/clothes" element={<Clothes />} />
-          <Route path="/toy" element={<Toy />} />
-          <Route path="/station" element={<Stationary />} />
-          <Route path="/med" element={<MedicalSupplies />} />
-          <Route path="/assist" element={<MedicalAssist />} />
-          <Route path="/tut" element={<Tutorials />} />
-          <Route path="/request-post" element={<RequestPost />} /> 
-          <Route path="/submitted" element={<Submitted/>}/>
+          <Route path="/view-requests" element={<ViewRequests/>} />
+          <Route path="/notifications" element={<Notifications/>} />
 
 
         </Routes>
