@@ -35,7 +35,6 @@ function App() {
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
           <Route path="/representative-login" element={<Authentication role="Representative" />} />
-          <Route path="/organization-login" element={<Authentication role="organization" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
           <Route path="/donation-select" element={<Donationselect />} />
@@ -43,6 +42,8 @@ function App() {
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/Donor-document-upload" element={<DocUpload role={"Donor"} />} />
+          <Route path="/Representative-document-upload" element={<DocUpload role={"Representative"} />} />
         </Routes>
       </BrowserRouter>
 

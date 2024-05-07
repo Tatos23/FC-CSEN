@@ -14,13 +14,13 @@ const HomePage = () => {
             </header>
 
             <nav>
-                <h2> Register/Login as </h2>
+                <h2 style={{color: '#EDF6F1', fontWeight: 'bold',}}> Register/Login as </h2>
                 <ul>
                     <li><Link to={"/admin-login"} href="#Admin">Admin</Link></li>
 
                     <li><Link to={"/donor-login"} href="#Donor">Donor</Link></li>
 
-                    <li><Link to={"/organization-login"} href="#Org/Rep">Organization Representative</Link></li>
+                    <li><Link to={"/representative-login"} href="#Org/Rep">Organization Representative</Link></li>
                 </ul>
             </nav>
 
