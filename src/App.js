@@ -20,12 +20,14 @@ import RequestButtons from './components/organization/RequestButtons.jsx';
 import Book from './components/organization/Book.jsx';
 import Notifications from './components/Notifications.js';
 import DonationsList from './components/donor/DonationsList.js';
+
 function App() {
   
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
+
           <Route path="/" element={<Landing/>} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
@@ -40,6 +42,7 @@ function App() {
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests/>} />
           <Route path="/notifications" element={<Notifications/>} />
+
 
         </Routes>
       </BrowserRouter>
