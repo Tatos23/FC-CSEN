@@ -40,7 +40,7 @@ function Header({loggedIn}){
                 <button className='home-searchbutton'><img className='home-search-icon'src='searchicon.png' alt='logo'></img></button>
                 { loggedIn ? 
                     (<button className='main-temp-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}>
-                    <img className='main-temp-profile-icon'src='profileEnhanced.png' alt='logo'></img></button>)
+                    <img className='home-profilebutton'src='profileEnhanced.png' alt='logo'></img></button>)
                     :
                     (<Link to={"/home"} className='home-singin-up' >Login/Register</Link>)
                 }
