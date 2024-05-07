@@ -17,12 +17,18 @@ import Blood from './components/organization/Blood.jsx';
 import RequestButtons from './components/organization/RequestButtons.jsx';
 import Book from './components/organization/Book.jsx';
 import Clothes from './components/organization/Clothes.jsx';
+import Toy from './components/organization/Toy.jsx';
+import Stationary from './components/organization/Stationary.jsx';
+import MedicalAssist from './components/organization/MedicalAssist.jsx';
+import Tutorials from './components/organization/Tutorials.jsx';
+import MedicalSupplies from './components/organization/MedicalSupplies.jsx';
+import Submitted from './components/organization/Submitted.jsx';
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<RequestPost />} />
+          <Route path="/" element={<ORHome />} />
           <Route path="/" element={<Donationselect />} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
@@ -36,6 +42,14 @@ function App() {
           <Route path="/blood" element={<Blood />} />
           <Route path="/book" element={<Book />} />
           <Route path="/clothes" element={<Clothes />} />
+          <Route path="/toy" element={<Toy />} />
+          <Route path="/station" element={<Stationary />} />
+          <Route path="/med" element={<MedicalSupplies />} />
+          <Route path="/assist" element={<MedicalAssist />} />
+          <Route path="/tut" element={<Tutorials />} />
+          <Route path="/request-post" element={<RequestPost />} /> 
+          <Route path="/submitted" element={<Submitted/>}/>
+
 
         </Routes>
       </BrowserRouter>

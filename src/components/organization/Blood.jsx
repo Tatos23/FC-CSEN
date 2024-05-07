@@ -1,8 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import OrgTemp from './OrgTemp';
 const Blood = () => {
+  const navigate = useNavigate();
+    const handleButtonSubmitted = () =>{
+        navigate('/submitted');
+      }
     const [selectedOption, setSelectedOption,] = useState('');
     const handleSelectChange = (event)=> {setSelectedOption (event.target.option)};
   return (
@@ -59,8 +64,7 @@ const Blood = () => {
                 </div>
                   <br />
                   <br />
-                  <button className='bg-green-500 rounded-lg px-4 py-2 text-white text-3xl mt-2 mb-4 hover:bg-green-700 '>Submit For Approval</button>
-
+                  <button className='bg-green-500 rounded-lg px-4 py-2 text-white text-3xl mt-2 mb-4 hover:bg-green-700' key={'submitted'} onClick={() => handleButtonSubmitted('submitted')}>Submit For Approval</button>
         </form>
     </div>
   )

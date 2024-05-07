@@ -1,13 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import OrgTemp from './OrgTemp';
 import { useState } from 'react';
 
 const Clothes = () => {
+  
+const navigate = useNavigate();
+const handleButtonSubmitted = () =>{
+    navigate('/submitted');
+  }
+
     const [selectedOption, setSelectedOption,] = useState('');
     const handleSelectChange = (event)=> {setSelectedOption (event.target.option)};
-    const [selectedGender, setSelectedGender] = useState("");
 
+    const [selectedGender, setSelectedGender] = useState("");
     const handleChange = (event) => {
     setSelectedGender(event.target.value);
   };
@@ -57,7 +63,6 @@ const Clothes = () => {
                       <option value = "spring">Spring</option>
                       <option value = "summer">Summer</option>
                       <option value = "winter">Winter</option>
-                      
                     </select>
                 </label>
                 </div>
@@ -68,8 +73,7 @@ const Clothes = () => {
                 </div>
                 <br />
                 <br />
-                  <button className='bg-green-500 rounded-lg px-4 py-2 text-white text-3xl mt-2 mb-4 hover:bg-green-700 '>Submit For Approval</button>
-
+                <button className='bg-green-500 rounded-lg px-4 py-2 text-white text-3xl mt-2 mb-4 hover:bg-green-700' key={'submitted'} onClick={() => handleButtonSubmitted('submitted')}>Submit For Approval</button>
         </form>
     </div>
   )
