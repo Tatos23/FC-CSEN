@@ -18,7 +18,7 @@ import EtaSection from './components/donor/EtaSection.js';
 import Blood from './components/organization/Blood.jsx';
 import RequestButtons from './components/organization/RequestButtons.jsx';
 import Book from './components/organization/Book.jsx';
-<<<<<<<<< Temporary merge branch 1
+
 import Notifications from './components/Notifications.js';
 import DonationsList from './components/donor/DonationsList.js';
 
@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-<<<<<<<<< Temporary merge branch 1
+
           <Route path="/" element={<Landing/>} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
@@ -43,7 +43,7 @@ function App() {
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests/>} />
           <Route path="/notifications" element={<Notifications/>} />
-=========
+
           <Route path="/clothes" element={<Clothes />} />
           <Route path="/toy" element={<Toy />} />
           <Route path="/station" element={<Stationary />} />
@@ -53,7 +53,7 @@ function App() {
           <Route path="/request-post" element={<RequestPost />} /> 
           <Route path="/submitted" element={<Submitted/>}/>
 
->>>>>>>>> Temporary merge branch 2
+
 
         </Routes>
       </BrowserRouter>
