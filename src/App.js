@@ -14,7 +14,7 @@ import Header from './components/donor/Header.js';
 import PickUp from './components/donor/PickUp.js';
 import { useEffect } from 'react';
 import DocUpload from './components/authentication/DocUpload.js';
-import EtaaaSSSection from './components/donor/EtaaaSSSection.js';
+import EtaSection from './components/donor/EtaSection.js';
 import Blood from './components/organization/Blood.jsx';
 import Book from './components/organization/Book.jsx';
 import Notifications from './components/Notifications.js';
