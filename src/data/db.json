@@ -8,6 +8,7 @@
         "age": 8,
         "id": 1,
         "gender":"male",
+        "picture": "medication.png",
         "season":"summer",
         "material":"t-shirt"
       },    
@@ -119,7 +120,7 @@
         "quantity": 2,
         "type": "Panadol",
         "use": "stress-relief",
-        "picture-of-the-supply": "medication.png",
+        "picture": "medication.png",
         "id": 12
       },
       {
