@@ -10,6 +10,10 @@ import AdminDashBoard from './components/admin/admin-dashboard/AdminDashBoard.js
 import AdminUsers from './components/admin/admin-users/AdminUsers';
 import Requests from './components/admin/requests/Requests.js';
 import UserSubmissions from './components/admin/user-submissions/UserSubmissions.js';
+import Header from './components/donor/Header.js';
+import PickUp from './components/donor/PickUp.js';
+import DocUpload from './components/authentication/DocUpload.js';
+import EtaSection from './components/donor/EtaSection.js';
 import Blood from './components/organization/Blood.jsx';
 import Book from './components/organization/Book.jsx';
 import Notifications from './components/Notifications.js';
@@ -21,7 +25,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<PickUp />} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
