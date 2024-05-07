@@ -1,6 +1,7 @@
 import React from 'react';
 import registerStyles from "./RegisterCard.css";
 import { FiEye, FiEyeOff } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 function RegisterCard({ toggleForm, showPassword, toggleShowPassword, handleGenderChange, gender, donorRole, handleDonorRole, role }) {
     return (
@@ -67,14 +68,15 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, handleGend
                             <input type="text" placeholder="Organization Address" className="organizationAddress-input" required></input>
                             <input type="text" placeholder="Organization Area" className="organizationArea-input" required></input>
                             <input type="text" placeholder="Organization Governorate" className="organizationGovernorate-input" required></input>
+                            <br/><br/>
                         </>
                     }
 
 
                 </div>
                 <div className="register-buttons">
-                    <button onClick={toggleForm} style={{ cursor: 'pointer' }} className="register-button"> Register </button>
-                    <br />
+                    <Link to={`/${role}-document-upload`} className='register-button' >Register</Link>
+                    <br /><br />
                     <label className="RegisterCard-verification">You will be redirected to upload verification documents</label>
                     <p className="login-redirect">
                         Already have an account? &nbsp;

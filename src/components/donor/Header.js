@@ -30,7 +30,7 @@ function Header({loggedIn}){
                 <button className='home-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
                 <button className='home-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
                 <button className='home-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%' } }>Notifications</button>
+                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%', fontFamily: 'Roboto' } }>Notifications</button>
 
             </div>
             <div className='home-rightside'>
