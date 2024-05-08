@@ -217,7 +217,6 @@ function ViewRequests(){
 
 return(
     <>
-    <div className='view-requests-main'>
         <div className='view-requests-navbar'>
             <div className='view-requests-leftside'>
                 <img className='view-requests-logo-navbar'src='logo2.png' alt='logo'></img>
@@ -260,15 +259,18 @@ return(
     <div className="donations-home">
       {donations && <DonationsList donations={donations} handleView={handleView}/>}
       </div>
+      
+      </div>
 
       <div className='view-requests-right'>
+
       <div className="filter-title">Filter and Search</div>
         <div> <button className='view-requests-category-button'  value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}
                     onClick={() => setOpenCategory((prev) => !prev)}>{selectedCategory}</button> </div>
       </div>
 
-      </div>
+      
       
       
     </div>
@@ -289,7 +291,7 @@ return(
        <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon'src='education.png' alt='logo'></img><span className='view-requests-title'style={{ marginRight: '6%' }} >Education</span></div>
        <div className='view-requests-saying'>Empowering minds through education. Support a child's future with your donation today.</div></div>
        </footer>
-       </div>
+  
 
 
     {/* tatos */}

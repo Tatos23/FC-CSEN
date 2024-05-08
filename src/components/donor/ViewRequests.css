@@ -1,14 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-.view-requests-main {
-    /* background-image: url('/public/home.jpg'); */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
-    position: relative;
-    
-}
 .view-requests-navbar{
     position: relative; 
     top: 0;
@@ -271,14 +263,6 @@ border-bottom:1px solid #74AC4C;
     object-fit: cover;
     margin-right: 2%;
 }
-.view-requests-vertical-rectangle {
-        width: 20px; /* Set your desired width */
-        height: 100px; /* Set your desired height */
-        background-color: #ff0000; /* Set your desired background color */
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
 
 .view-requests-category-button {
     border: 1.5px solid #000; /* Add your desired border color */
@@ -286,9 +270,6 @@ border-bottom:1px solid #74AC4C;
     background-color: #f9f9f9; /* Set a background color */
     cursor: pointer; /* Show pointer cursor on hover */
     border-radius: 10px;
-    position: absolute;
-    right: 15rem;
-    top: 10rem;
 }
 
 .view-requests-body{
@@ -306,6 +287,7 @@ border-bottom:1px solid #74AC4C;
 .view-requests-right{
     display: flex;
     flex-direction: column;
+    width: 20%;
 }
 
 
@@ -349,6 +331,8 @@ border-bottom:1px solid #74AC4C;
   color: #265305;
 }
 
+
+/*styles of the cards*/
 .content {
   max-width: 600px;
   margin: 40px auto;
@@ -363,7 +347,6 @@ border-bottom:1px solid #74AC4C;
   padding: 1.5rem; /* Equivalent to p-6 */
   border-radius: 1rem; /* Equivalent to rounded-lg */
   background-color: rgba(226, 232, 240, 0.8);
-  width: 60%;
   margin-left: 5%;
   margin-top: 3%;
   
