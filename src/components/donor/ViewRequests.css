@@ -287,35 +287,56 @@ border-bottom:1px solid #74AC4C;
     cursor: pointer; /* Show pointer cursor on hover */
     border-radius: 10px;
     position: absolute;
-    right: 24rem;
-  }
+    right: 15rem;
+    top: 10rem;
+}
+
+.view-requests-body{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.view-requests-left{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+}
+.view-requests-right{
+    display: flex;
+    flex-direction: column;
+}
 
 
-/*Donation cards styles*/
-.donations-title{
+  /*Filter item styles*/
+
+
+.filter-title{
     font-weight: bold;
     font-size: x-large;
     position: absolute;
-    align-items: center;
-    margin-left: 27%;
+    align-items: right;
+    font-family: "Quicksand";
+    color: #265305;
 }
-/* .donations-author{
-    position: relative;
-    top: 10px;
-    margin-right: 10px;
+
+
+/*Donation cards styles*/
+.donations-home{
+    width: 100%;
 }
-.donations-category{
-    position: relative;
-    left: -200px;
-    top: -15px;
-    margin-right: 10px;
+.donations-list{
+    width: 100%;
 }
-.donations-quantity{
-    position: relative;
-    right: -200px;
-    top: -37px;
-    margin-right: 10px;
-} */
+.donations-title{
+    font-weight: bold;
+    font-size: x-large;
+    /* position: absolute; */
+    /* align-items: center; */
+    /* margin-left: 27%; */
+}
+
 
 .donation-details{
     
@@ -325,7 +346,7 @@ border-bottom:1px solid #74AC4C;
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #333;
+  color: #265305;
 }
 
 .content {
@@ -375,4 +396,6 @@ border-bottom:1px solid #74AC4C;
 .view-button:hover {
   background-color: #0097a7; 
 }
+
+
 

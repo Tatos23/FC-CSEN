@@ -21,7 +21,11 @@ function ViewRequests(){
     const [donations, setDonation] = useState(null);
 
     const [selectedCategory, setSelectedCategory] = useState('Select Category ▼'); // Initialize with default text
+    const [selectedGender, setSelectedGender] = useState('');
 
+    const handleGenderChange = (event) => {
+        setSelectedGender(event.target.value);
+      };
     
     useEffect(() =>{
         fetch('http://localhost:8000/donations')
@@ -247,16 +251,30 @@ return(
             </div>
            </div>
            {/* onClick = {() => setOpenCategory((prev) => !prev)} */}
+    <div className="view-requests-body">
 
+    
+    <div className="view-requests-left">   
     <div className="donations-title">Donation Requests</div>
-    <div> <button className='view-requests-category-button'  value={selectedCategory}
-                    onChange={e => setSelectedCategory(e.target.value)}
-                    onClick={() => setOpenCategory((prev) => !prev)}>{selectedCategory}</button> </div>
-
+              
     <div className="donations-home">
       {donations && <DonationsList donations={donations} handleView={handleView}/>}
-      {/* <button onClick={() => setName('luigi')}>change name</button> */}
+      </div>
+
+      <div className='view-requests-right'>
+      <div className="filter-title">Filter and Search</div>
+        <div> <button className='view-requests-category-button'  value={selectedCategory}
+                    onChange={e => setSelectedCategory(e.target.value)}
+                    onClick={() => setOpenCategory((prev) => !prev)}>{selectedCategory}</button> </div>
+      </div>
+
+      </div>
+      
+      
     </div>
+
+      {/* <button onClick={() => setName('luigi')}>change name</button> */}
+    
 
            
 

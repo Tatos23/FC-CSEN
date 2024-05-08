@@ -18,6 +18,8 @@ import Blood from './components/organization/Blood.jsx';
 import Book from './components/organization/Book.jsx';
 import Notifications from './components/Notifications.js';
 import ViewRequests from './components/donor/ViewRequests.js';
+import Filter from './components/donor/Filter.js';
+import RegisterCard from './components/authentication/RegisterCard.js';
 
 function App() {
 
@@ -25,7 +27,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ViewRequests />} />
+          <Route path="/" element={<ViewRequests/>} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
