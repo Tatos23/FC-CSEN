@@ -1,6 +1,6 @@
 import './ViewRequests.css';
-import React, { useState,useEffect, useRef } from 'react';
-import { Link , useNavigate} from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
 import DonationsList from './DonationsList';
@@ -9,7 +9,7 @@ import { PiButterflyDuotone } from 'react-icons/pi';
 
 
 
-function ViewRequests(){
+function ViewRequests() {
 
     /* [
         {title: 'Clothes Donation', quantity: '5', age: '2 to 3 years', category: 'clothes', author: 'tatos', id: 1},
@@ -25,120 +25,120 @@ function ViewRequests(){
 
     const handleGenderChange = (event) => {
         setSelectedGender(event.target.value);
-      };
-    
-    useEffect(() =>{
+    };
+
+    useEffect(() => {
         fetch('http://localhost:8000/donations')
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            setDonation(data)
-        })
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setDonation(data)
+            })
     }, []);
 
 
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
-    const resetState = () =>{
+    const resetState = () => {
         fetch('http://localhost:8000/donations')
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            setDonation(data)
-        })
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setDonation(data)
+            })
         setSelectedCategory("Select Category ▼")
     }
     //clothes category button
-    const resetStateClothes = () =>{
+    const resetStateClothes = () => {
         fetch('http://localhost:8000/donations')
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            setDonation(data)
-            const newDonations = data.filter(donations => donations.category == 'clothes');
-            setDonation(newDonations);
-        })
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setDonation(data)
+                const newDonations = data.filter(donations => donations.category == 'clothes');
+                setDonation(newDonations);
+            })
         setSelectedCategory("Clothes Category")
     }
 
     // toys category button
-    const resetStateToys = () =>{
+    const resetStateToys = () => {
         fetch('http://localhost:8000/donations')
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            setDonation(data)
-            const newDonations = data.filter(donations => donations.category == 'toys');
-            setDonation(newDonations);
-        })
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setDonation(data)
+                const newDonations = data.filter(donations => donations.category == 'toys');
+                setDonation(newDonations);
+            })
         setSelectedCategory("Toys Category")
 
     }
 
     // food category button
-    const resetStateFood = () =>{
+    const resetStateFood = () => {
         fetch('http://localhost:8000/donations')
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            setDonation(data)
-            const newDonations = data.filter(donations => donations.category == 'food');
-            setDonation(newDonations);
-        })
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setDonation(data)
+                const newDonations = data.filter(donations => donations.category == 'food');
+                setDonation(newDonations);
+            })
         setSelectedCategory("Food Category")
 
     }
 
     // medical supplies category button
-    const resetStateMedical = () =>{
+    const resetStateMedical = () => {
         fetch('http://localhost:8000/donations')
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            setDonation(data)
-            const newDonations = data.filter(donations => donations.category == 'medical supplies');
-            setDonation(newDonations);
-        })
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setDonation(data)
+                const newDonations = data.filter(donations => donations.category == 'medical supplies');
+                setDonation(newDonations);
+            })
         setSelectedCategory("Medical Supplies Category")
 
     }
 
     // school supplies category button
-    const resetStateSchool = () =>{
+    const resetStateSchool = () => {
         fetch('http://localhost:8000/donations')
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            setDonation(data)
-            const newDonations = data.filter(donations => donations.category == 'school supplies');
-            setDonation(newDonations);
-        })
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setDonation(data)
+                const newDonations = data.filter(donations => donations.category == 'school supplies');
+                setDonation(newDonations);
+            })
         setSelectedCategory("School Supplies Category")
 
     }
     // blood donations category button
-    const resetStateBlood = () =>{
+    const resetStateBlood = () => {
         fetch('http://localhost:8000/donations')
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            const newDonations = data.filter(donations => donations.category == 'blood donations');
-            setDonation(newDonations);
-        })
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                const newDonations = data.filter(donations => donations.category == 'blood donations');
+                setDonation(newDonations);
+            })
         setSelectedCategory("Blood Donations Category")
 
     }
-        // teaching posts category button
-        const resetStateTPosts = () =>{
-            fetch('http://localhost:8000/donations')
+    // teaching posts category button
+    const resetStateTPosts = () => {
+        fetch('http://localhost:8000/donations')
             .then(res => {
                 return res.json()
             })
@@ -146,12 +146,12 @@ function ViewRequests(){
                 const newDonations = data.filter(donations => donations.category == 'teaching posts');
                 setDonation(newDonations);
             })
-            setSelectedCategory("Teaching Posts Category")
+        setSelectedCategory("Teaching Posts Category")
 
-        }
-            // medical cases category button
-        const resetStateMCases = () =>{
-            fetch('http://localhost:8000/donations')
+    }
+    // medical cases category button
+    const resetStateMCases = () => {
+        fetch('http://localhost:8000/donations')
             .then(res => {
                 return res.json()
             })
@@ -159,14 +159,14 @@ function ViewRequests(){
                 const newDonations = data.filter(donations => donations.category == 'medical cases');
                 setDonation(newDonations);
             })
-            setSelectedCategory("Medical Cases Category")
+        setSelectedCategory("Medical Cases Category")
 
-        }
+    }
 
     const handleButtonClickNotifications = () => {
         navigate('/notifications');
     }
-    
+
 
 
 
@@ -174,7 +174,7 @@ function ViewRequests(){
     const handleView = (id) => {
         // const tempDonations = donations.filter(donations => donations.id !== id);
         // setDonation(tempDonations);
-        
+
         navigate('/donation-select');
     }
 
@@ -183,16 +183,16 @@ function ViewRequests(){
     //     const newBlogs = blogs.filter(blog => blog.id !== id);
     //     setBlogs(newBlogs);
     // }
-    
+
 
     const [isVisible, setIsVisible] = useState(false);
 
 
 
-//tatos 
-    const[openProfile, setOpenProfile] = useState(false);
-    const[openCategory, setOpenCategory] = useState(false);
-    
+    //tatos 
+    const [openProfile, setOpenProfile] = useState(false);
+    const [openCategory, setOpenCategory] = useState(false);
+
 
     //TODO: handle click outside
 
@@ -215,95 +215,94 @@ function ViewRequests(){
 
 
 
-return(
-    <>
-    <div className='view-requests-main'>
-        <div className='view-requests-navbar'>
-            <div className='view-requests-leftside'>
-                <img className='view-requests-logo-navbar'src='logo2.png' alt='logo'></img>
-                <img className='view-requests-logo-navbar-name'src='name.png' alt='logo'></img>
-                {/* <button className='view-requests-donate-button' >Donate</button> */}
-            </div>
-            <div className='view-requests-middleside'>
-                <button className='view-requests-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
-                <button className='view-requests-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
-                <button className='view-requests-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%' } }>Notifications</button>
- 
-            </div>
-            <div className='view-requests-rightside'>
-                <div >
-                <input  className="view-requests-search-container" type="text" placeholder="Search..."></input>
+    return (
+        <>
+            <div className='view-requests-main'>
+                <div className='view-requests-navbar'>
+                    <div className='view-requests-leftside'>
+                        <img className='view-requests-logo-navbar' src='logo2.png' alt='logo'></img>
+                        <img className='view-requests-logo-navbar-name' src='name.png' alt='logo'></img>
+                        {/* <button className='view-requests-donate-button' >Donate</button> */}
+                    </div>
+                    <div className='view-requests-middleside'>
+                        <button className='view-requests-middleside-button' style={{ marginRight: '10%' }}>Home</button>
+                        <button className='view-requests-middleside-button' style={{ marginRight: '1%' }}>Donations</button>
+                        <button className='view-requests-middleside-button' style={{ marginLeft: '10%' }}>About Us</button>
+                        <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')} style={{ marginLeft: '10%' }}>Notifications</button>
+
+                    </div>
+                    <div className='view-requests-rightside'>
+                        <div >
+                            <input className="view-requests-search-container" type="text" placeholder="Search..."></input>
+                        </div>
+
+                        <button className='view-requests-searchbutton'><img className='view-requests-search-icon' src='searchicon.png' alt='logo'></img></button>
+
+
+                        {/* <Link to={"/home"} className='singin-up' >Login/Register</Link> */}
+                        {/* tatos */}
+                        <button className='view-requests-profilebutton' onClick={() => setOpenProfile((prev) => !prev)}><img className='view-requests-profile-icon' src='profileEnhanced.png' alt='logo'></img></button>
+
+
+                        {/* <div className='view-requests-quote'>"The best way to find yourself is to lose yourself in the service of others."
+                        </div> */}
+
+
+                    </div>
+                </div>
+                {/* onClick = {() => setOpenCategory((prev) => !prev)} */}
+                <div className="view-requests-body">
+
+
+                    <div className="view-requests-left">
+                        <div className="donations-title">Donation Requests</div>
+
+                        <div className="donations-home">
+                            {donations && <DonationsList donations={donations} handleView={handleView} />}
+                        </div>
+                    </div>
+
+                    <div className='view-requests-right'>
+                        <div className="filter-title">Filter and Search</div>
+                        <div> <button className='view-requests-category-button' value={selectedCategory}
+                            onChange={e => setSelectedCategory(e.target.value)}
+                            onClick={() => setOpenCategory((prev) => !prev)}>{selectedCategory}</button> </div>
+                    </div>
+
+
                 </div>
 
-            <button className='view-requests-searchbutton'><img className='view-requests-search-icon'src='searchicon.png' alt='logo'></img></button>
-            
-            
-            {/* <Link to={"/home"} className='singin-up' >Login/Register</Link> */}
-{/* tatos */}
-            <button className='view-requests-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='view-requests-profile-icon'src='profileEnhanced.png' alt='logo'></img></button>
+                {/* <button onClick={() => setName('luigi')}>change name</button> */}
 
-            
-            {/* <div className='view-requests-quote'>"The best way to find yourself is to lose yourself in the service of others."
-            </div> */}
 
-            
+
+
+                <footer className='view-requests-nd'>
+                    <div className='view-requests-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
+
+                    <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon' src='healthicon.png' alt='logo'></img><span className='view-requests-title' >Medical supplies</span></div>
+                        <div className='view-requests-saying'>Access to medical supplies is a basic human right. Your donation can bridge the gap between illness and recovery
+                            . Join us in providing essential care to those in need.</div></div>
+                    <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon' src='foodicon.png' alt='logo'></img><span className='view-requests-title' >Food&amp;Nutrition</span></div>
+                        <div className='view-requests-saying'>Every plate shared is a gift of hope and nourishment. Your food donation can make a difference in someone's life. Give generously, and let's share the blessings of good food together.</div></div>
+                    <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon' src='education.png' alt='logo'></img><span className='view-requests-title' style={{ marginRight: '6%' }} >Education</span></div>
+                        <div className='view-requests-saying'>Empowering minds through education. Support a child's future with your donation today.</div></div>
+                </footer>
             </div>
-           </div>
-           {/* onClick = {() => setOpenCategory((prev) => !prev)} */}
-    <div className="view-requests-body">
-
-    
-    <div className="view-requests-left">   
-    <div className="donations-title">Donation Requests</div>
-              
-    <div className="donations-home">
-      {donations && <DonationsList donations={donations} handleView={handleView}/>}
-      </div>
-
-      <div className='view-requests-right'>
-      <div className="filter-title">Filter and Search</div>
-        <div> <button className='view-requests-category-button'  value={selectedCategory}
-                    onChange={e => setSelectedCategory(e.target.value)}
-                    onClick={() => setOpenCategory((prev) => !prev)}>{selectedCategory}</button> </div>
-      </div>
-
-      </div>
-      
-      
-    </div>
-
-      {/* <button onClick={() => setName('luigi')}>change name</button> */}
-    
-
-           
-
-    <footer className='view-requests-nd'>
-        <div className='view-requests-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
-
-       <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon'src='healthicon.png' alt='logo'></img><span className='view-requests-title' >Medical supplies</span></div>
-       <div className='view-requests-saying'>Access to medical supplies is a basic human right. Your donation can bridge the gap between illness and recovery
-       . Join us in providing essential care to those in need.</div></div>
-       <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon'src='foodicon.png' alt='logo'></img><span className='view-requests-title' >Food&amp;Nutrition</span></div>
-       <div className='view-requests-saying'>Every plate shared is a gift of hope and nourishment. Your food donation can make a difference in someone's life. Give generously, and let's share the blessings of good food together.</div></div>
-       <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon'src='education.png' alt='logo'></img><span className='view-requests-title'style={{ marginRight: '6%' }} >Education</span></div>
-       <div className='view-requests-saying'>Empowering minds through education. Support a child's future with your donation today.</div></div>
-       </footer>
-       </div>
 
 
-    {/* tatos */}
-       {
-        openProfile && <DropDownProfile/> 
-       
-       }
-       {
-        openCategory && <DropDownCategory resetState={resetState} resetStateClothes={resetStateClothes} resetStateToys={resetStateToys} resetStateFood={resetStateFood} resetStateMedical={resetStateMedical} resetStateSchool={resetStateSchool} resetStateBlood={resetStateBlood} resetStateTPosts = {resetStateTPosts} resetStateMCases = {resetStateMCases}/> 
-       }
+            {/* tatos */}
+            {
+                openProfile && <DropDownProfile />
 
-    
-    </>
-)
+            }
+            {
+                openCategory && <DropDownCategory resetState={resetState} resetStateClothes={resetStateClothes} resetStateToys={resetStateToys} resetStateFood={resetStateFood} resetStateMedical={resetStateMedical} resetStateSchool={resetStateSchool} resetStateBlood={resetStateBlood} resetStateTPosts={resetStateTPosts} resetStateMCases={resetStateMCases} />
+            }
+
+
+        </>
+    )
 }
 export default ViewRequests;
 
