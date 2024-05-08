@@ -7,19 +7,38 @@ function AdminUsers() {
     const users = mockUsers;
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(9);
+    const [filter, setFilter] = useState('All');
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const filteredUsers = users.filter(user => {
+        const matchesFilter = filter === 'All' || user.type === 'Organization';
+        const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            (user.organizationType && user.organizationType.toLowerCase().includes(searchTerm.toLowerCase()));
+        return matchesFilter && matchesSearch;
+    });
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = users.slice(indexOfFirstItem, indexOfLastItem);
+    const currentItems = filteredUsers.slice(indexOfFirstItem, indexOfLastItem);
 
-    const totalPages = Math.ceil(users.length / itemsPerPage);
+    const totalPages = Math.ceil(filteredUsers.length / itemsPerPage);
 
     const handleClick = (pageNumber) => {
         setCurrentPage(pageNumber);
     }
 
+
     return (
         <div className='admin-users'>
+            <div className='admin-users-top-bar'>
+                <div className='admin-users-showing'>
+                    <span>Show: </span>
+                    <button className={filter === 'All' ? 'admin-users-selected' : ''} onClick={() => setFilter('All')}>All</button>
+                    <button className={filter === 'Organization' ? 'admin-users-selected' : ''} onClick={() => setFilter('Organization')}>Organizations</button>
+                </div>
+                <input type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)} />
+            </div>
+
             <div className='admin-users-grid'>
                 {currentItems.map((user, index) => {
                     if (user.type === 'Donor') {
@@ -31,7 +50,7 @@ function AdminUsers() {
                     }
                 })}
             </div>
-            <div className='pagination'>
+            <div className='admin-users-pagination'>
                 {currentPage > 3 && <button onClick={() => handleClick(1)}>1</button>}
                 {currentPage > 4 && <span>...</span>}
                 {[...Array(5)].map((page, i) =>

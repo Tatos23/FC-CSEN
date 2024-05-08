@@ -9,7 +9,7 @@
 }
 
 .admin-users-grid {
-    margin-top: 10vh;
+    margin-top: 3vh;
     padding-left: 3vw;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -18,7 +18,7 @@
     column-gap: 2vw;
 }
 
-.pagination {
+.admin-users-pagination {
     width: 100vw;
     margin-top: 5vh;
     display: flex;
@@ -27,7 +27,7 @@
     padding: 1em;
 }
 
-.pagination button {
+.admin-users-pagination button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,11 +41,72 @@
     height: 2em;
 }
 
-.pagination button:hover {
+.admin-users-pagination button:hover {
     background-color: rgba(57, 126, 7, 0.5);
     cursor: pointer;
 }
 
-.pagination span {
+.admin-users-pagination span {
     margin: 0 0.5em;
+}
+
+.admin-users-top-bar {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.admin-users-top-bar input {
+    width: 20vw;
+    height: 3.6vh;
+    padding: 0 1vw;
+    border: 2px solid #397e07;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1vw;
+    background: url('/public/searchicon.png') no-repeat right center;
+    background-size: 1.5vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.admin-users-showing {
+    padding-left: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.admin-users-showing span {
+    margin-right: 1vw;
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+.admin-users-showing button {
+    width: 7.5vw;
+    height: 3.6vh;
+    margin-right: 1vw;
+    border: 2px solid #397e07;
+    border-radius: 10px;
+    background-color: white;
+    color: #397e07;
+    cursor: pointer;
+    outline: none;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.admin-users-showing button:hover {
+    background-color: #397e07;
+    color: white;
+}
+
+.admin-users-showing .admin-users-selected {
+    background-color: #397e07;
+    color: white;
 }
