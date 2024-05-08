@@ -50,6 +50,11 @@
     margin: 0 0.5em;
 }
 
+.admin-users-pagination .admin-users-selected {
+    background-color: #397e07;
+    color: white;
+}
+
 .admin-users-top-bar {
     display: flex;
     width: 100vw;
@@ -109,4 +114,106 @@
 .admin-users-showing .admin-users-selected {
     background-color: #397e07;
     color: white;
+}
+
+.admin-users-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 61.55%;
+}
+
+.admin-users-dropdown .admin-users-dropdown-button {
+    width: 7.5vw;
+    height: 3.6vh;
+    border: 2px solid #397e07;
+    color: #397e07;
+    border-radius: 10px;
+    font-size: 1vw;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.admin-users-dropdown .admin-users-dropdown-selected {
+    width: 7.5vw;
+    height: 3.6vh;
+    border: 2px solid #397e07;
+    border-radius: 10px;
+    font-size: 1vw;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #397e07;
+    color: white;
+}
+
+.admin-users-dropdown button:hover {
+    background-color: #4CAF50;
+}
+
+.admin-users-dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 12vw;
+    height: 30vh;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transform: translateX(-15%);
+    border-radius: 10px;
+    /* padding-bottom: 1vh; */
+}
+
+.admin-users-dropdown-menu-types {
+    padding-top: 1.5vh;
+    padding-left: 1vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.admin-users-dropdown-menu-type {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+}
+
+.admin-users-dropdown-menu-type label {
+    font-size: 0.9vw;
+    font-weight: 500;
+}
+
+.admin-users-dropdown-menu button:hover {
+    background-color: #4CAF50;
+}
+
+.admin-users-dropdown-menu-buttons {
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 10vh; */
+}
+
+.admin-users-dropdown-menu-buttons-1 {
+    height: 3.6vh;
+    background-color: #397e07;
+    color: white;
+    font-size: 1.1vw;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-bottom-left-radius: 10px;
+}
+
+.admin-users-dropdown-menu-buttons-2 {
+    height: 3.6vh;
+    background-color: #397e07;
+    color: white;
+    font-size: 1.1vw;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-bottom-right-radius: 10px;
 }
