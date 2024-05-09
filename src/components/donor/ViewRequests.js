@@ -25,11 +25,7 @@ function ViewRequests() {
 
 
 
-    const handleGenderChange = (event) => {
-        const newValue = event.target.value;
-        // If the checkbox was already checked, uncheck it; otherwise, set the new value
-        setGender((prevGender) => (prevGender === newValue ? '' : newValue));
-    };
+
 
     useEffect(() => {
         fetch('http://localhost:8000/donations')
@@ -230,6 +226,19 @@ function ViewRequests() {
     const [selectedCategoryX, setSelectedCategoryX] = useState(''); // Initialize with an empty string
     const [selectedSubcategory, setSelectedSubcategory] = useState('');
 
+    const handleGenderChange = (event) => {
+        const newValue = event.target.value;
+        const isChecked = event.target.checked;
+    
+        // If the checkbox was already checked, uncheck it; otherwise, set the new value
+        setGender((prevGender) => (prevGender === newValue ? '' : newValue));
+    
+        // Assign the value to the 'gender' variable
+        const gender = isChecked ? newValue : '';
+    
+        console.log(gender);
+    };
+
     const handleCategoryChangeX = (event) => {
         setSelectedCategoryX(event.target.value);
         setSelectedSubcategory(''); // Reset subcategory when category changes
@@ -243,6 +252,7 @@ function ViewRequests() {
     const schoolSubcategories = ['books', 'stationary','none'];
     const toySubcategories = ['board games', 'stuffed toys', 'dolls','sports','cars','outdoor','none'];
     const medicalSubcategories = ['medical devices', 'medical equipment', 'medication','none'];
+    const foodSubCategories = ['fruits','vegetable','canned foods','fresh meal','baked goods'];
     
 
 
@@ -250,8 +260,8 @@ function ViewRequests() {
 
 
     function handleSeasonChange(e) {
-        const selectedSeason = e.target.value;
-
+        const selectedSeason = e.target.value
+        console.log(selectedSeason.toLowerCase());
         // Custom logic based on the selected season
         switch (selectedSeason) {
             case 'Winter':
@@ -316,6 +326,7 @@ function ViewRequests() {
         }
 
         setSelectedFruitType(selectedFruitType);
+        setSelectedSubcategory(selectedFruitType);
     }
     
     function handleGovernorateChange(e) {
@@ -571,24 +582,86 @@ function ViewRequests() {
     
     function handleButtonClickRemoveFilters() {
         setGender('');
+        setHospitalName('');
         setSelectedSeason('None');
         setSelectedFruitType('None');
-        setHospitalName('');
         setSelectedGovernorate('None');
         setSelectedArea('None');
+        setMedicalSpeciality('');
+        setOrganizationName('');
         setSubject('');
         setSelectedCategoryX('None');
         setSelectedSubcategory('None');
+        fetch('http://localhost:8000/donations')
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setDonation(data)
+            })
 
     }
+    
 
     function handleButtonClickApplyFilters() {
-        console.log('apply filters')
+        console.log('apply filters');
+        fetch('http://localhost:8000/donations')
+            .then(res => res.json())
+            .then(data => {
+                setDonation(data);
+    
+                // Apply filters based on selected values
+                let filteredDonations = data;
+    
+                // if (selectedSeason !== 'None') {
+                //     filteredDonations = filteredDonations.filter(donation => donation.season === selectedSeason);
+                // }
+    
+                // if (gender !== '') {
+                //     filteredDonations = filteredDonations.filter(donation => donation.gender === gender);
+                // }
+    
+                // if (hospitalName !== '') {
+                //     filteredDonations = filteredDonations.filter(donation => donation.hospitalName === hospitalName);
+                // }
+    
+                // if (selectedGovernorate !== 'None') {
+                //     filteredDonations = filteredDonations.filter(donation => donation.governorate === selectedGovernorate);
+                // }
+    
+                // if (selectedArea !== 'None') {
+                //     filteredDonations = filteredDonations.filter(donation => donation.area === selectedArea);
+                // }
+    
+                // if (medicalSpeciality !== '') {
+                //     filteredDonations = filteredDonations.filter(donation => donation.medicalSpecialty === medicalSpeciality);
+                // }
+    
+                // if (organizationName !== '') {
+                //     filteredDonations = filteredDonations.filter(donation => donation.organizationName === organizationName);
+                // }
+    
+                // if (subject !== '') {
+                //     filteredDonations = filteredDonations.filter(donation => donation.subject === subject);
+                // }
+    
+                // if (selectedCategoryX !== 'None') {
+                //     filteredDonations = filteredDonations.filter(donation => donation.category === selectedCategoryX);
+                // }
+    
+                // if (selectedSubcategory !== 'None') {
+                //     filteredDonations = filteredDonations.filter(donation => donation.subcategory === selectedSubcategory);
+                // }
+    
+                
+    
+                // Update the state with the filtered donations
+                setDonation(filteredDonations);
+                console.log('Filtered donations:', filteredDonations);
+            });
     }
-
-
-
-   
+    
+    
 
 
 
@@ -808,6 +881,11 @@ function ViewRequests() {
                                                     </option>
                                                 ))}
                                                 {selectedCategoryX === 'school supplies' && schoolSubcategories.map((subcategory) => (
+                                                    <option key={subcategory} value={subcategory}>
+                                                        {subcategory}
+                                                    </option>
+                                                ))}
+                                                {selectedCategoryX === 'food' && foodSubCategories.map((subcategory) => (
                                                     <option key={subcategory} value={subcategory}>
                                                         {subcategory}
                                                     </option>
