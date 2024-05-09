@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './AdminUsers.css'
 import UserCard from '../components/user_card/UserCard';
 import { mockUsers } from '../admin-users-data.js';
+import OrganizationDetailCard from '../components/organization-detail-card/OrganizationDetailCard.js';
 
 function AdminUsers() {
     const users = mockUsers.slice();
@@ -16,14 +17,14 @@ function AdminUsers() {
     const [selectedTypes, setSelectedTypes] = useState([]);
     const [selectedArea, setSelectedArea] = useState('');
     const [selectedGovernorate, setSelectedGovernorate] = useState('');
+    const [selectedUser, setSelectedUser] = useState(null);
 
     const filteredUsers = usersData.filter(user => {
         const matchesFilter = filter === 'All' ||
             (user.type === 'Organization' && (selectedTypes.length === 0 || selectedTypes.includes(user.organizationType)) &&
                 (selectedArea === '' || user.organizationArea === selectedArea) &&
                 (selectedGovernorate === '' || user.organizationGovernorate === selectedGovernorate));
-        const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            (user.organizationType && user.organizationType.toLowerCase().includes(searchTerm.toLowerCase()));
+        const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesFilter && matchesSearch;
     });
 
@@ -58,6 +59,14 @@ function AdminUsers() {
         setDropdownOpenGovernorate(false);
         setDropdownOpenType(false);
     }
+
+    const handleUserClick = (user) => {
+        setSelectedUser(user);
+    };
+
+    const handleCloseDialog = () => {
+        setSelectedUser(null);
+    };
 
     return (
         <div className='admin-users'>
@@ -140,9 +149,9 @@ function AdminUsers() {
             <div className='admin-users-grid'>
                 {currentItems.map((user, index) => {
                     if (user.type === 'Donor') {
-                        return <UserCard key={index} usersData={usersData} setUsersData={setUsersData} type='Donor' name={user.name} />;
+                        return <UserCard key={index} usersData={usersData} setUsersData={setUsersData} type='Donor' name={user.username} />;
                     } else if (user.type === 'Organization') {
-                        return <UserCard key={index} usersData={usersData} setUsersData={setUsersData} type='Organization' name={user.name} organizationType={user.organizationType} />;
+                        return <UserCard key={index} usersData={usersData} setUsersData={setUsersData} type='Organization' name={user.name} organizationType={user.organizationType} onClick={() => handleUserClick(user)} />;
                     } else {
                         return null;
                     }
@@ -164,6 +173,11 @@ function AdminUsers() {
                 {currentPage < totalPages - 3 && <span>...</span>}
                 {currentPage < totalPages - 2 && <button onClick={() => handleClick(totalPages)}>{totalPages}</button>}
             </div>
+            {selectedUser &&
+                <div className="overlay">
+                    <OrganizationDetailCard onClose={handleCloseDialog} user={selectedUser} />
+                </div>
+            }
         </div>
     );
 }
