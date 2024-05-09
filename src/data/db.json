@@ -75,7 +75,8 @@
         "title": "Food Donation",  
         "category": "food",
         "subcategory": "fruits",
-        "quantity": "2 KG",
+        "quantitykg": "2 KG",
+        "quantity": 2 ,
         "name": "Apple",
         "picture": "apple.jpeg",
         "id": 7
@@ -84,9 +85,10 @@
         "title": "Food Donation",  
         "category": "food",
         "subcategory": "vegetables",
-        "quantity": "8 KG",
+        "quantitykg": "8 KG",
         "name": "carrot",
         "picture": "carrots.png",
+        "quantity": 8 ,
         "id": 8
       },
       {
@@ -104,7 +106,7 @@
         "subcategory": "medical equipment",
         "quantity": 2,
         "type": "MRI",
-        "use": "produce images  of bones on a computer of bones",
+        "use": "produce images  of bones on a computer",
         "picture": "MRI-machine.jpg",
         "id": 10
       },
