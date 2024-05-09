@@ -343,10 +343,25 @@
     /* overflow-y: auto; Make the dropdown scrollable */
     height: 80%;
 }
-.view-requests-select-season{
-    margin-right: 13rem;
-    margin-top: 2rem;
+.LR-subSection{
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    align-items: left;
+    padding-left: 5%;
+    margin-top: 10%;
+    
 }
+
+.RR-subSection{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+
+.selectSeason{
+}
+
 
 /* .gender-input */
 

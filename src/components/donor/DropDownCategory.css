@@ -9,7 +9,7 @@
     background-color: white;
     border: 1px solid grey;
     overflow-y: auto; /* Make the dropdown scrollable */
-    max-height: 300px; /* Set a maximum height for the dropdown */
+    max-height: 250px; /* Set a maximum height for the dropdown */
 }
 
 .DropDownCategory::before{

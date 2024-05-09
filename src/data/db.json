@@ -193,7 +193,7 @@
         "medical-specialty": "surgent",
         "case-description": "very urgent heart surgery",
         "location": "googlemarker.png",
-        "area": "maadi",
+        "area": "Maadi",
         "governorate": "Cairo",
         "id": 17
       },
@@ -210,7 +210,7 @@
         "medical-specialty": "Psychiatry",
         "case-description": "Traumatized Gucian",
         "location": "googlemarker.png",
-        "area": "Naser-city",
+        "area": "Nasr-city",
         "governorate": "Giza",
         "id": 18
       }
