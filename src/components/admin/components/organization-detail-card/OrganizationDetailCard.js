@@ -7,6 +7,8 @@ export default function OrganizationDetailCard({ onClose, user }) {
         onClose();
     };
 
+    const googleMapsUrl = user.googleMapsUrl;
+
     return (
         <div className="organization-detail-card">
             <div className='organization-detail-card-left'>
@@ -20,6 +22,11 @@ export default function OrganizationDetailCard({ onClose, user }) {
                 <p className="organization-detail-card-info">Organization Area: {user.organizationArea}</p>
                 <p className="organization-detail-card-info">Organization Governorate: {user.organizationGovernorate}</p>
             </div>
+            <iframe
+                className="organization-detail-card-map"
+                src={googleMapsUrl}
+                allowFullScreen
+            />
             <button className='organization-detail-card-close' onClick={handleCloseClick}>X</button>
         </div>
     )

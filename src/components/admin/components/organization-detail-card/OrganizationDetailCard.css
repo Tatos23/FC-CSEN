@@ -66,3 +66,12 @@
     font-size: 1.9em;
     cursor: pointer;
 }
+
+.organization-detail-card-map {
+    position: absolute;
+    top: 15vh;
+    right: 2vw;
+    width: 40%;
+    height: 50%;
+    border: 0;
+}

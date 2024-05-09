@@ -20,10 +20,10 @@ function AdminUsers() {
     const [selectedUser, setSelectedUser] = useState(null);
 
     const filteredUsers = usersData.filter(user => {
-        const matchesFilter = filter === 'All' ||
-            (user.type === 'Organization' && (selectedTypes.length === 0 || selectedTypes.includes(user.organizationType)) &&
+        const matchesFilter = filter === 'All' || (filter === 'Teachers/Doctors' && user.type === 'Donor' && (user.donorRole === 'Teacher' || user.donorRole === 'Doctor')) ||
+            (filter === 'Organization' && (user.type === 'Organization' && (selectedTypes.length === 0 || selectedTypes.includes(user.organizationType)) &&
                 (selectedArea === '' || user.organizationArea === selectedArea) &&
-                (selectedGovernorate === '' || user.organizationGovernorate === selectedGovernorate));
+                (selectedGovernorate === '' || user.organizationGovernorate === selectedGovernorate)));
         const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesFilter && matchesSearch;
     });
@@ -74,7 +74,8 @@ function AdminUsers() {
                 <div className='admin-users-showing'>
                     <span>Show: </span>
                     <button className={filter === 'All' ? 'admin-users-selected' : ''} onClick={() => setFilter('All')}>All</button>
-                    <button className={filter !== 'All' ? 'admin-users-selected' : ''} onClick={() => setFilter('Organization')}>Organizations</button>
+                    <button className={filter === 'Teachers/Doctors' ? 'admin-users-selected' : ''} onClick={() => setFilter('Teachers/Doctors')}>Teachers/Doctors</button>
+                    <button className={filter === 'Organization' ? 'admin-users-selected' : ''} onClick={() => setFilter('Organization')}>Organizations</button>
                 </div>
                 <input type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)} />
                 <div className='admin-users-dropdowns'>
