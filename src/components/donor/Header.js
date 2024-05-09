@@ -30,7 +30,7 @@ function Header({loggedIn}){
                 <button className='home-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
                 <button className='home-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
                 <button className='home-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%' } }>Notifications</button>
+                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%', fontFamily: 'Roboto' } }>Notifications</button>
 
             </div>
             <div className='home-rightside'>
@@ -40,9 +40,9 @@ function Header({loggedIn}){
                 <button className='home-searchbutton'><img className='home-search-icon'src='searchicon.png' alt='logo'></img></button>
                 { loggedIn ? 
                     (<button className='main-temp-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}>
-                    <img className='main-temp-profile-icon'src='profileEnhanced.png' alt='logo'></img></button>)
+                    <img className='home-profilebutton'src='profileEnhanced.png' alt='logo'></img></button>)
                     :
-                    (<Link to={"/home"} className='singin-up' >Login/Register</Link>)
+                    (<Link to={"/home"} className='home-singin-up' >Login/Register</Link>)
                 }
             </div>
 

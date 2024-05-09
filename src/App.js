@@ -39,7 +39,7 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route path="/" element={<RepDon/>} />
+          <Route path="/" element={<Landing/>} />
           <Route path="/admin-home" element={<AdminHomePage />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
@@ -56,6 +56,7 @@ function App() {
           <Route path="/clothes" element={<Clothes />} />
           <Route path="/toy" element={<Toy />} />
           <Route path="/station" element={<Stationary />} />
+          <Route path="/food" element={<Food />} />
           <Route path="/med" element={<MedicalSupplies />} />
           <Route path="/assist" element={<MedicalAssist />} />
           <Route path="/tut" element={<Tutorials />} />

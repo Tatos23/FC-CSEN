@@ -1,0 +1,68 @@
+.organization-detail-card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 70vw;
+    height: 65vh;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #397e07;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2.5vh;
+    padding-bottom: 3vh;
+    gap: 1.5vh;
+}
+
+.organization-detail-card-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1vw;
+}
+
+.organization-detail-card-right {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.organization-detail-card-right button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.organization-detail-card-type {
+    font-size: 2.5vw;
+    font-weight: 700;
+}
+
+.organization-detail-card-name {
+    padding-left: 2vw;
+    font-size: 1.6vw;
+    font-weight: 400;
+}
+
+.organization-detail-card-info {
+    padding-left: 2vw;
+    font-size: 1.6vw;
+    font-weight: 400;
+}
+
+.organization-detail-card-close {
+    position: absolute;
+    top: 2.5vh;
+    right: 2vw;
+    background: none;
+    border: none;
+    font-size: 1.9em;
+    cursor: pointer;
+}
