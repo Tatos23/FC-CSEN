@@ -4,7 +4,8 @@ import UserCard from '../components/user_card/UserCard';
 import { mockUsers } from '../admin-users-data.js';
 
 function AdminUsers() {
-    const users = mockUsers;
+    const users = mockUsers.slice();
+    const [usersData, setUsersData] = useState(users);
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(9);
     const [filter, setFilter] = useState('All');
@@ -16,7 +17,7 @@ function AdminUsers() {
     const [selectedArea, setSelectedArea] = useState('');
     const [selectedGovernorate, setSelectedGovernorate] = useState('');
 
-    const filteredUsers = users.filter(user => {
+    const filteredUsers = usersData.filter(user => {
         const matchesFilter = filter === 'All' ||
             (user.type === 'Organization' && (selectedTypes.length === 0 || selectedTypes.includes(user.organizationType)) &&
                 (selectedArea === '' || user.organizationArea === selectedArea) &&
@@ -139,9 +140,9 @@ function AdminUsers() {
             <div className='admin-users-grid'>
                 {currentItems.map((user, index) => {
                     if (user.type === 'Donor') {
-                        return <UserCard key={index} type='Donor' name={user.name} />;
+                        return <UserCard key={index} usersData={usersData} setUsersData={setUsersData} type='Donor' name={user.name} />;
                     } else if (user.type === 'Organization') {
-                        return <UserCard key={index} type='Organization' name={user.name} organizationType={user.organizationType} />;
+                        return <UserCard key={index} usersData={usersData} setUsersData={setUsersData} type='Organization' name={user.name} organizationType={user.organizationType} />;
                     } else {
                         return null;
                     }
