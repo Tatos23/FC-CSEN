@@ -28,6 +28,12 @@ const RepNot = () => {
   const handleButton = (url) => {
     navigate(url);
   }
+  const handleButtonIg = (id) =>{
+      if (window.confirm("You will be redirected to the home page as you have no more notifications to view")) {
+        setLiner(liner.filter(liner => liner.id !== id));
+        navigate('/org-home');
+      }
+  }
   
   function Liner ({id, text1, text2}) {
     return (
@@ -38,7 +44,8 @@ const RepNot = () => {
         <br />
         <button className="inline-block bg-cyan-500 text-white rounded-lg px-4 py-2 hover:bg-cyan-700 mb-2 " onClick={()=>handleButtonDon()} >View Donor Details</button> 
         <br />
-        <button className="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-700 mr-4 ml-4 mb-2" onClick={handleForm}>{showForm ? 'Close Schedule Form' : 'Schedule'}</button>
+        <button className="inline-block bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-700 mb-2 " onClick={()=>handleButtonIg()} >Ignore & Delete</button> 
+        <button className="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-700 mr-4 ml-2 mb-2" onClick={handleForm}>{showForm ? 'Close Schedule Form' : 'Schedule'}</button>
         {showForm && (
         <div className="floating-form">
           <form>
@@ -78,4 +85,4 @@ const RepNot = () => {
   )
 }
 
-export default RepNot
+export default RepNot;
