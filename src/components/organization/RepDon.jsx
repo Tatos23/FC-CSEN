@@ -8,7 +8,7 @@ import Tab from './Tab'
 import Labe from './Labe'
 import Label from './Label'
 
-const RepDon = ({children}) => {
+const RepDon = () => {
     const navigate = useNavigate();
     const handleButtonReq = () =>{
         navigate('/request-post');
@@ -19,12 +19,9 @@ const RepDon = ({children}) => {
         { id: 1, text1: 'Stationary Request', text2:'Type: Pens Quantity: 20 ' ,url:'/station' },
         { id: 2, text1: 'Blood Request', text2: 'Name: Ali Type: O+ Hospital: El Nozha Area: Sheraton Gov: Cairo Quantity: 6', url:'/blood' },
         { id: 3, text1: 'Tutor Request' ,text2:'Students: 50 Addres: 6th of October City Subjects: Math' ,url:'/tut' },
-        // Add more labels as needed
       ]);
       const [label, setLabel] = useState([
-        { id: 1, text1: 'Stationary Request', text2:'Type: Pens   Quantity: 20 '},
-        
-        // Add more labels as needed
+        { id: 1, text1: 'Stationary Request', text2:'Type: Pens   Quantity: 20 '},        
       ]);
    
       const handleDelete = (id) => {
