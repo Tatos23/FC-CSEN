@@ -50,7 +50,7 @@
       {
         "title": "Toys Donation",  
         "category": "toys",
-        "subcategory": "toy",
+        "subcategory": "stuffed toys",
         "quantity":2,
         "age": 12,
         "type": "hello kitty",
@@ -62,7 +62,7 @@
       {
         "title": "Toys Donation",  
         "category": "toys",
-        "subcategory": "toy",
+        "subcategory": "cars",
         "quantity": 2,
         "age": 12,
         "type": "cars",
