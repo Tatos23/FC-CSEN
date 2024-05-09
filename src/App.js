@@ -18,6 +18,7 @@ import Blood from './components/organization/Blood.jsx';
 import Book from './components/organization/Book.jsx';
 import Notifications from './components/Notifications.js';
 import ViewRequests from './components/donor/ViewRequests.js';
+import RegisterCard from './components/authentication/RegisterCard.js';
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<ViewRequests/>} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
@@ -35,7 +36,6 @@ function App() {
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
           <Route path="/representative-login" element={<Authentication role="Representative" />} />
-          <Route path="/organization-login" element={<Authentication role="organization" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
           <Route path="/donation-select" element={<Donationselect />} />
@@ -43,6 +43,8 @@ function App() {
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/Donor-document-upload" element={<DocUpload role={"Donor"} />} />
+          <Route path="/Representative-document-upload" element={<DocUpload role={"Representative"} />} />
         </Routes>
       </BrowserRouter>
 

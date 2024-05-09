@@ -57,7 +57,7 @@
     cursor: pointer;
     font-weight: bold;
     box-shadow: none;
-    margin-bottom: 2%;
+    padding: 1% 13% 1% 13%;
 }
 
 .register-button:hover {

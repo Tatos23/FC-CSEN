@@ -1,7 +1,7 @@
 {
     "donations": [
       {
-        "title": "Clothes-Donation",
+        "title": "Clothes Donation",
         "category": "clothes",
         "subcategory": "clothes",
         "quantity": 9,
@@ -13,7 +13,7 @@
         "material":"t-shirt"
       },    
       {
-        "title": "Clothes-Donation2",
+        "title": "Clothes Donation",
         "category": "clothes",
         "subcategory": "clothes",
         "quantity": 5,
@@ -26,8 +26,8 @@
         "material":"sweatshirt"
       },
       {
-        "title": "School-supplies",
-        "category": "school-supplies",
+        "title": "School Supplies Donation",
+        "category": "school supplies",
         "subcategory": "book",
         "picture":"book.png",
         "name": "the book",
@@ -39,7 +39,7 @@
         "id": 3
       },
       {
-        "title": "School supplies",
+        "title": "School Supplies Donation",
         "category": "school supplies",
         "subcategory": "stationary",
         "quantity": 2,
@@ -48,9 +48,9 @@
         "id": 4
       },
       {
-        "title": "Toys",  
-        "category": "toy",
-        "subcategory": "toy",
+        "title": "Toys Donation",  
+        "category": "toys",
+        "subcategory": "stuffed toys",
         "quantity":2,
         "age": 12,
         "type": "hello kitty",
@@ -60,9 +60,9 @@
         "id": 5
       },
       {
-        "title": "Toys",  
-        "category": "toy",
-        "subcategory": "toy",
+        "title": "Toys Donation",  
+        "category": "toys",
+        "subcategory": "cars",
         "quantity": 2,
         "age": 12,
         "type": "cars",
@@ -72,7 +72,7 @@
         "id": 6
       },
       {
-        "title": "Food donation",  
+        "title": "Food Donation",  
         "category": "food",
         "subcategory": "fruits",
         "quantity": "2 KG",
@@ -81,7 +81,7 @@
         "id": 7
       },
       {
-        "title": "Food donation",  
+        "title": "Food Donation",  
         "category": "food",
         "subcategory": "vegetables",
         "quantity": "8 KG",
@@ -90,7 +90,7 @@
         "id": 8
       },
       {
-        "title": "Food donation",  
+        "title": "Food Donation",  
         "category": "food",
         "subcategory": "canned foods",
         "quantity": 7,
@@ -99,7 +99,7 @@
         "id": 9
       },
       {
-        "title": "medical supplies",  
+        "title": "Medical Supplies Donation",  
         "category": "medical supplies",
         "subcategory": "medical equipment",
         "quantity": 2,
@@ -109,7 +109,7 @@
         "id": 10
       },
       {
-        "title": "medical supplies",  
+        "title": "Medical Supplies Donation",  
         "category": "medical supplies",
         "subcategory": "medication",
         "quantity": 2,
@@ -119,7 +119,7 @@
         "id": 11
       },
       {
-        "title": "medical supplies",  
+        "title": "Medical Supplies Donation",  
         "category": "medical supplies",
         "subcategory": "medication",
         "quantity": 2,
@@ -129,8 +129,8 @@
         "id": 12
       },
       {
-        "title": "blood Donation",  
-        "category": "blood Donation",
+        "title": "Blood Donation",  
+        "category": "blood donations",
         "subcategory": "blood Donation",
         "name": "shandawely",
         "hospital-name": "Alnakhel",
@@ -143,8 +143,8 @@
         "id": 13
       },
       {
-        "title": "blood Donation",  
-        "category": "blood Donation",
+        "title": "Blood Donation",  
+        "category": "blood donations",
         "subcategory": "blood Donation",
         "name": "7amada",
         "hospital-name": "Almanara",
@@ -157,7 +157,7 @@
         "id": 14
       },
       {
-        "title": "teaching posts",  
+        "title": "Teaching Post",  
         "category": "teaching posts",
         "subcategory": "teaching posts",
         "number-of-students": 2,
@@ -169,7 +169,7 @@
         "id": 15
       },
       {
-        "title": "teaching posts",  
+        "title": "Teaching Post",  
         "category": "teaching posts",
         "subcategory": "teaching posts",
         "number-of-students": 9,
@@ -181,8 +181,8 @@
         "id": 16
       },
       {
-        "title": "Medical Cases",  
-        "category": "Medical Cases",
+        "title": "Medical Case",  
+        "category": "medical cases",
         "subcategory": "Medical Cases",
         "name": "Badawy",
         "age": 20,
@@ -193,13 +193,13 @@
         "medical-specialty": "surgent",
         "case-description": "very urgent heart surgery",
         "location": "googlemarker.png",
-        "area": "maadi",
+        "area": "Maadi",
         "governorate": "Cairo",
         "id": 17
       },
       {
-        "title": "Medical Cases",  
-        "category": "Medical Cases",
+        "title": "Medical Case",  
+        "category": "medical cases",
         "subcategory": "Medical Cases",
         "name": "Ramy",
         "age": 70,
@@ -210,7 +210,7 @@
         "medical-specialty": "Psychiatry",
         "case-description": "Traumatized Gucian",
         "location": "googlemarker.png",
-        "area": "Naser-city",
+        "area": "Nasr-city",
         "governorate": "Giza",
         "id": 18
       }
