@@ -1,5 +1,6 @@
 .Donationselect-main{
-    height: 100vh;
+    height: 100vb;
+    position: relative;
     background-color: #2C6B5A;
 }
 .Donationselect-container{
@@ -35,6 +36,10 @@ font-size: 20px;
 text-align: left;
 margin-top: 5px;
 margin-left: 2%;
+
+position: relative;
+
+;
 }
 .Donationselect-Quantity{
     color: aliceblue;
@@ -85,4 +90,9 @@ margin-bottom: 20px;
 .Donationselect-Donate:active{
     opacity: 0.5;
 
+}
+.Donationselect-map{
+    margin-left: 50%;
+    position: relative;
+    bottom: 80px;
 }
