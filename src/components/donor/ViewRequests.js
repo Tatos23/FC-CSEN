@@ -582,6 +582,10 @@ function ViewRequests() {
 
     }
 
+    function handleButtonClickApplyFilters() {
+        console.log('apply filters')
+    }
+
 
 
    
@@ -820,7 +824,7 @@ function ViewRequests() {
 
                             </div>
 
-                            <button className='view-button'>Apply Filter</button>
+                            <button className='view-button' onClick={() => handleButtonClickApplyFilters('Apply Filters')}>Apply Filters</button>
                             <button className='view-button' onClick={() => handleButtonClickRemoveFilters('Remove Filters')}>Remove Filters</button>
 
                         </div>
