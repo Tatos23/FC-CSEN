@@ -39,8 +39,12 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route path="/" element={<Landing/>} />
-          <Route path="/admin-home" element={<AdminHomePage />} />
+          <Route path="/" element={<Donationselect id={18}/>} />
+          <Route path="/admin-dashboard" element={<AdminDashBoard />} >
+            <Route index element={<AdminHomePage />} />
+            <Route path="system-users" element={<AdminUsers />} />
+            <Route path="user-submissions" element={<UserSubmissions />} />
+            <Route path="requests" element={<Requests />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
           <Route path="/representative-login" element={<Authentication role="Representative"/>} />
