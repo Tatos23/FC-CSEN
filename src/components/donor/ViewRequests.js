@@ -239,10 +239,10 @@ function ViewRequests() {
         setSelectedSubcategory(event.target.value);
     };
 
-    const categoryOptions = ['clothes','school supplies','toys', 'food', 'medical supplies','blood donations','teaching posts','medical cases'];
-    const schoolSubcategories = ['books', 'stationary'];
-    const toySubcategories = ['board games', 'stuffed toys', 'dolls','sports','cars','outdoor'];
-    const medicalSubcategories = ['medical devices', 'medical equipment', 'medication'];
+    const categoryOptions = ['clothes','school supplies','toys', 'food', 'medical supplies','blood donations','teaching posts','medical cases','none'];
+    const schoolSubcategories = ['books', 'stationary','none'];
+    const toySubcategories = ['board games', 'stuffed toys', 'dolls','sports','cars','outdoor','none'];
+    const medicalSubcategories = ['medical devices', 'medical equipment', 'medication','none'];
     
 
 
@@ -568,6 +568,20 @@ function ViewRequests() {
         setSelectedArea(selectedArea);
     }
 
+    
+    function handleButtonClickRemoveFilters() {
+        setGender('');
+        setSelectedSeason('None');
+        setSelectedFruitType('None');
+        setHospitalName('');
+        setSelectedGovernorate('None');
+        setSelectedArea('None');
+        setSubject('');
+        setSelectedCategoryX('None');
+        setSelectedSubcategory('None');
+
+    }
+
 
 
    
@@ -641,9 +655,9 @@ function ViewRequests() {
 
                             <div className="RR-subSection">
 
-                                <div> <button className='view-requests-category-button' value={selectedCategory}
+                                {/* <div> <button className='view-requests-category-button' value={selectedCategory}
                                 onChange={e => setSelectedCategory(e.target.value)}
-                                onClick={() => setOpenCategory((prev) => !prev)}>{selectedCategory}</button> </div>
+                                onClick={() => setOpenCategory((prev) => !prev)}>{selectedCategory}</button> </div> */}
 
                                 <div className="view-requests-gender-input">
                                     <label htmlFor="male" style={{color: '#2C6B5A'}}>
@@ -807,8 +821,7 @@ function ViewRequests() {
                             </div>
 
                             <button className='view-button'>Apply Filter</button>
-                            <button className='view-button'>Remove Filters</button>
-
+                            <button className='view-button' onClick={() => handleButtonClickRemoveFilters('Remove Filters')}>Remove Filters</button>
 
                         </div>
                     </div>
@@ -838,9 +851,9 @@ function ViewRequests() {
                 openProfile && <DropDownProfile />
 
             }
-            {
+            {/* {
                 openCategory && <DropDownCategory resetStateCategory={resetStateCategory} resetStateClothes={resetStateClothes} resetStateToys={resetStateToys} resetStateFood={resetStateFood} resetStateMedical={resetStateMedical} resetStateSchool={resetStateSchool} resetStateBlood={resetStateBlood} resetStateTPosts={resetStateTPosts} resetStateMCases={resetStateMCases} />
-            }
+            } */}
  
 
 
