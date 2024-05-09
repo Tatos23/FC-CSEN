@@ -9,11 +9,18 @@ function AdminUsers() {
     const [itemsPerPage, setItemsPerPage] = useState(9);
     const [filter, setFilter] = useState('All');
     const [searchTerm, setSearchTerm] = useState('');
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [dropdownOpenArea, setDropdownOpenArea] = useState(false);
+    const [dropdownOpenGovernorate, setDropdownOpenGovernorate] = useState(false);
+    const [dropdownOpenType, setDropdownOpenType] = useState(false);
     const [selectedTypes, setSelectedTypes] = useState([]);
+    const [selectedArea, setSelectedArea] = useState('');
+    const [selectedGovernorate, setSelectedGovernorate] = useState('');
 
     const filteredUsers = users.filter(user => {
-        const matchesFilter = filter === 'All' || (selectedTypes.length === 0 && user.type === 'Organization') || (user.type === 'Organization' && selectedTypes.includes(user.organizationType));
+        const matchesFilter = filter === 'All' ||
+            (user.type === 'Organization' && (selectedTypes.length === 0 || selectedTypes.includes(user.organizationType)) &&
+                (selectedArea === '' || user.organizationArea === selectedArea) &&
+                (selectedGovernorate === '' || user.organizationGovernorate === selectedGovernorate));
         const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             (user.organizationType && user.organizationType.toLowerCase().includes(searchTerm.toLowerCase()));
         return matchesFilter && matchesSearch;
@@ -37,13 +44,18 @@ function AdminUsers() {
 
     const handleDone = () => {
         setFilter(selectedTypes);
-        setDropdownOpen(false);
+        setDropdownOpenArea(false);
+        setDropdownOpenGovernorate(false);
+        setDropdownOpenType(false);
     }
 
     const handleClear = () => {
         setSelectedTypes([]);
-        setFilter('All');
-        setDropdownOpen(false);
+        setSelectedArea('');
+        setSelectedGovernorate('');
+        setDropdownOpenArea(false);
+        setDropdownOpenGovernorate(false);
+        setDropdownOpenType(false);
     }
 
     return (
@@ -55,31 +67,75 @@ function AdminUsers() {
                     <button className={filter !== 'All' ? 'admin-users-selected' : ''} onClick={() => setFilter('Organization')}>Organizations</button>
                 </div>
                 <input type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)} />
-                <div className='admin-users-dropdown'>
-                    <button className={selectedTypes.length !== 0 ? 'admin-users-dropdown-selected' : 'admin-users-dropdown-button'} onClick={() => setDropdownOpen(!dropdownOpen)}>Filter by Type</button>
-                    {dropdownOpen && (
-                        <div className='admin-users-dropdown-menu'>
-                            <div className='admin-users-dropdown-menu-types'>
-                                {['Health', 'Blood'].map(type => (
-                                    <div className='admin-users-dropdown-menu-type' key={type}>
-                                        <label>{type}</label>
-                                        <input
-                                            type='checkbox'
-                                            checked={selectedTypes.includes(type)}
-                                            onChange={() => handleTypeSelect(type)}
-                                        />
-                                    </div>
-                                ))}
+                <div className='admin-users-dropdowns'>
+                    <div className='admin-users-dropdown'>
+                        <button className={selectedArea !== '' ? 'admin-users-dropdown-selected' : 'admin-users-dropdown-button'} onClick={() => setDropdownOpenArea(!dropdownOpenArea)}>Filter by Area</button>
+                        {dropdownOpenArea && (
+                            <div className='admin-users-dropdown-menu'>
+                                <div className='admin-users-dropdown-menu-types'>
+                                    {['Area1', 'Area2', 'Area3'].map(area => (
+                                        <button
+                                            key={area}
+                                            className={`admin-users-dropdown-menu-type ${selectedArea === area ? 'admin-users-selected' : ''}`}
+                                            onClick={() => setSelectedArea(area)}
+                                        >
+                                            {area}
+                                        </button>
+                                    ))}
+                                </div>
+                                <div className='admin-users-dropdown-menu-buttons'>
+                                    <button className='admin-users-dropdown-menu-buttons-1' onClick={handleDone}>Done</button>
+                                    <button className='admin-users-dropdown-menu-buttons-2' onClick={handleClear}>Clear All</button>
+                                </div>
                             </div>
-                            <div className='admin-users-dropdown-menu-buttons'>
-                                <button className='admin-users-dropdown-menu-buttons-1' onClick={handleDone}>Done</button>
-                                <button className='admin-users-dropdown-menu-buttons-2' onClick={handleClear}>Clear All</button>
+                        )}
+                    </div>
+                    <div className='admin-users-dropdown'>
+                        <button className={selectedGovernorate !== '' ? 'admin-users-dropdown-selected' : 'admin-users-dropdown-button'} onClick={() => setDropdownOpenGovernorate(!dropdownOpenGovernorate)}>Filter by Governorate</button>
+                        {dropdownOpenGovernorate && (
+                            <div className='admin-users-dropdown-menu'>
+                                <div className='admin-users-dropdown-menu-types'>
+                                    {['G1', 'G2', 'G3'].map(governorate => (
+                                        <button
+                                            key={governorate}
+                                            className={`admin-users-dropdown-menu-type ${selectedGovernorate === governorate ? 'admin-users-selected' : ''}`}
+                                            onClick={() => setSelectedGovernorate(governorate)}
+                                        >
+                                            {governorate}
+                                        </button>
+                                    ))}
+                                </div>
+                                <div className='admin-users-dropdown-menu-buttons'>
+                                    <button className='admin-users-dropdown-menu-buttons-1' onClick={handleDone}>Done</button>
+                                    <button className='admin-users-dropdown-menu-buttons-2' onClick={handleClear}>Clear All</button>
+                                </div>
                             </div>
-                        </div>
-                    )}
+                        )}
+                    </div>
+                    <div className='admin-users-dropdown'>
+                        <button className={selectedTypes.length !== 0 ? 'admin-users-dropdown-selected' : 'admin-users-dropdown-button'} onClick={() => setDropdownOpenType(!dropdownOpenType)}>Filter by Type</button>
+                        {dropdownOpenType && (
+                            <div className='admin-users-dropdown-menu'>
+                                <div className='admin-users-dropdown-menu-types'>
+                                    {['Health', 'Blood', '1', '2', '3', '4', '5'].map(type => (
+                                        <button
+                                            key={type}
+                                            className={`admin-users-dropdown-menu-type ${selectedTypes.includes(type) ? 'admin-users-selected' : ''}`}
+                                            onClick={() => handleTypeSelect(type)}
+                                        >
+                                            {type}
+                                        </button>
+                                    ))}
+                                </div>
+                                <div className='admin-users-dropdown-menu-buttons'>
+                                    <button className='admin-users-dropdown-menu-buttons-1' onClick={handleDone}>Done</button>
+                                    <button className='admin-users-dropdown-menu-buttons-2' onClick={handleClear}>Clear All</button>
+                                </div>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
-
             <div className='admin-users-grid'>
                 {currentItems.map((user, index) => {
                     if (user.type === 'Donor') {
