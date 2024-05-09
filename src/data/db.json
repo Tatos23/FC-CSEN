@@ -75,7 +75,8 @@
         "title": "Food Donation",  
         "category": "food",
         "subcategory": "fruits",
-        "quantity": "2 KG",
+        "quantitykg": "2 KG",
+        "quantity": 2 ,
         "name": "Apple",
         "picture": "apple.jpeg",
         "id": 7
@@ -84,9 +85,10 @@
         "title": "Food Donation",  
         "category": "food",
         "subcategory": "vegetables",
-        "quantity": "8 KG",
+        "quantitykg": "8 KG",
         "name": "carrot",
         "picture": "carrots.png",
+        "quantity": 8 ,
         "id": 8
       },
       {
@@ -104,7 +106,7 @@
         "subcategory": "medical equipment",
         "quantity": 2,
         "type": "MRI",
-        "use": "produce images  of bones on a computer of bones",
+        "use": "produce images  of bones on a computer",
         "picture": "MRI-machine.jpg",
         "id": 10
       },
@@ -147,7 +149,7 @@
         "category": "blood donations",
         "subcategory": "blood Donation",
         "name": "7amada",
-        "hospitalName": "Almanara",
+        "hospitalName": "Naser City Hospital",
         "bloodType": "A-",
         "hospitalArea": "Naser-city",
         "hospitalAddress": "Naser-city----",
@@ -165,6 +167,7 @@
         "subject": "Maths",
         "area": "Agouza",
         "governorate": "Giza",
+        "picture": "maths.jpg",
         "location": "googlemarker.png",
         "id": 15
       },
@@ -177,6 +180,7 @@
         "address": "New cairo",
         "subject": "Arabic",
         "governorate": "Cairo",
+        "picture": "Arabic.jpeg",
         "location": "googlemarker.png",
         "id": 16
       },
@@ -190,10 +194,11 @@
         "weight": "90 KG",
         "address": "Alnasr street",
         "organizationName": "help1",
-        "medicalSpecialty": "Surgent",
+        "medicalSpecialty": "Surgery",
         "caseDescription": "very urgent heart surgery",
         "location": "googlemarker.png",
         "area": "Maadi",
+        "picture": "heartsergeon.jpg",
         "governorate": "Cairo",
         "id": 17
       },
@@ -202,7 +207,7 @@
         "category": "medical cases",
         "subcategory": "Medical Cases",
         "name": "Ramy",
-        "age": 70,
+        "age": 21,
         "gender": "male",
         "weight": "60 KG",
         "address": "Alnasr street",
@@ -211,6 +216,7 @@
         "caseDescription": "Traumatized Gucian",
         "location": "googlemarker.png",
         "area": "Nasr-city",
+        "picture": "pshy.png",
         "governorate": "Giza",
         "id": 18
       }
