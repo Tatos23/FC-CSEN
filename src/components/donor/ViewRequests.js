@@ -644,7 +644,6 @@ function ViewRequests() {
                         <div className="right-subSection">
 
                             <div className="LR-subSection">
-                                <label htmlFor="Category" style={{ display: 'block' }}>Category:</label>
                                 <label htmlFor="Gender" style={{ display: 'block' }}>Gender:</label>
                                 <label htmlFor="Season" style={{ display: 'block' }}>Season:</label>
                                 <label htmlFor="Fruit Type" style={{ display: 'block' }}>Fruit Type:</label>
