@@ -25,6 +25,9 @@ const RequestButtons = () => {
   const handleButtonClothes = () =>{
     navigate('/clothes');
   }
+  const handleButtonFood = () =>{
+    navigate('/food');
+  }
   const handleButtonAssist = () =>{
     navigate('/assist');
   }
@@ -50,6 +53,7 @@ const RequestButtons = () => {
       <button className='mb-5 ml-20 mr-20 bg-green-500 w-40 text-white rounded-lg hover:bg-green-700' key={'blood'} onClick={() => handleButtonBlood('blood')}>Blood</button>
       <button className='mb-5 ml-20 mr-20 bg-green-500 w-40 text-white rounded-lg hover:bg-green-700' key={'book'} onClick={() => handleButtonBook('book')}>Book</button>
       <button className='mb-5 ml-20 mr-20 bg-green-500 w-40 text-white rounded-lg hover:bg-green-700' key={'clothes'} onClick={() => handleButtonClothes('clothes')}>Clothes</button>
+      <button className='mb-5 ml-20 mr-20 bg-green-500 w-40 text-white rounded-lg hover:bg-green-700' key={'food'} onClick={() => handleButtonFood('food')}>Food</button>
       <button className='mb-5 ml-20 mr-20 bg-green-500 w-40 text-white rounded-lg hover:bg-green-700' key={'medical-assistance'} onClick={() => handleButtonAssist('assist')}>Medical Assistance</button>
       <button className='mb-5 ml-20 mr-20 bg-green-500 w-40 text-white rounded-lg hover:bg-green-700' key={'medical-supplies'} onClick={() => handleButtonMed('supp')}>Medical Supplies</button>
       <button className='mb-5 ml-20 mr-20 bg-green-500 w-40 text-white rounded-lg hover:bg-green-700' key={'stationary'} onClick={() => handleButtonStat('station')}>Stationary</button>
