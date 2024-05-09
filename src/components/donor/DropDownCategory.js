@@ -5,7 +5,7 @@ import ViewRequests from './ViewRequests';
 import DonationsList from './DonationsList';
 
 
-const DropDownCategory = ({resetState,resetStateClothes,resetStateToys,resetStateFood,resetStateMedical,resetStateSchool,resetStateBlood,resetStateTPosts,resetStateMCases}) => {
+const DropDownCategory = ({resetStateCategory,resetStateClothes,resetStateToys,resetStateFood,resetStateMedical,resetStateSchool,resetStateBlood,resetStateTPosts,resetStateMCases}) => {
 
     const navigate = useNavigate();
     
@@ -39,7 +39,7 @@ const DropDownCategory = ({resetState,resetStateClothes,resetStateToys,resetStat
         resetStateMCases();
     }
     const handleButtonClickAll = () => {
-        resetState();
+        resetStateCategory();
     }
     
 

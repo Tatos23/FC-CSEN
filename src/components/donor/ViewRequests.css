@@ -343,9 +343,19 @@
     /* overflow-y: auto; Make the dropdown scrollable */
     height: 80%;
 }
-.view-requests-select-season{
-    margin-right: 13rem;
-    margin-top: 2rem;
+.view-requests-selected-season-button{
+    border: 1.5px solid #000;
+    /* Add your desired border color */
+    padding: 5px 10px;
+    /* Adjust padding as needed */
+    background-color: #f9f9f9;
+    /* Set a background color */
+    cursor: pointer;
+    /* Show pointer cursor on hover */
+    border-radius: 10px;
+    position: absolute;
+    right: 20rem;
+    top: 18rem;
 }
 
 /* .gender-input */

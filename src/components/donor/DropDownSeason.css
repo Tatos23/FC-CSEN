@@ -1,5 +1,5 @@
 
-.DropDownCategory{
+.DropDownSeason{
     position: absolute;
     top: 15rem;
     right: 5rem;
@@ -12,7 +12,7 @@
     max-height: 250px; /* Set a maximum height for the dropdown */
 }
 
-.DropDownCategory::before{
+.DropDownSeason::before{
     content: '';
     position: absolute;
     top: -0.7rem;  /*top arrow location -- up/down*/
@@ -26,7 +26,7 @@
 
 }
 
-.DropDownCategory button {
+.DropDownSeason button {
     background-color: white;
     padding: 10px; /* Adjust padding as needed */
     border-radius: 4px;
@@ -34,6 +34,6 @@
 }
 
 /* Darker grey shade on hover */
-.DropDownCategory button:hover {
+.DropDownSeason button:hover {
     background-color: #ccc; /* Change to your desired darker grey color */
 }

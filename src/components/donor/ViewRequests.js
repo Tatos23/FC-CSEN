@@ -6,6 +6,7 @@ import userEvent from '@testing-library/user-event';
 import DonationsList from './DonationsList';
 import DropDownCategory from './DropDownCategory';
 import { PiButterflyDuotone } from 'react-icons/pi';
+import DropDownSeason from './DropDownSeason';
 
 
 
@@ -44,7 +45,7 @@ function ViewRequests() {
 
     const navigate = useNavigate();
 
-    const resetState = () => {
+    const resetStateCategory = () => {
         fetch('http://localhost:8000/donations')
             .then(res => {
                 return res.json()
@@ -216,9 +217,16 @@ function ViewRequests() {
 
     //REPLACE THE LINE AT THE BOTTOM WITH THIS: <button className='home-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='home-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
 
-
+    
     const [gender, setGender] = useState('');
+
+    const [openSeason, setOpenSeason] = useState(false);
     const [season, setSeason] = useState('');
+    const [selectedSeason, setSelectedSeason] = useState('Select Season ▼'); // Initialize with default text
+
+   
+
+
 
     return (
         <>
@@ -287,17 +295,10 @@ function ViewRequests() {
                             </div>
 
 
-                            <div className="view-requests-select-season">
-                            <select
-                                value={season}
-                                onChange={(e) => setSeason(e.target.value)}
-                                >
-                                <option value="Winter Season">Winter Season</option>
-                                <option value="Spring Season">Spring Season</option>
-                                <option value="Summer Season">Summer Season</option>
-                                <option value="Fall Season">Fall Season</option>
-                                <option value="Select Season">Select Season</option>
-                            </select>
+                            <div className="view-requests-selected-season-button">
+                                <div> <button value={selectedSeason}
+                                onChange={e => setSelectedSeason(e.target.value)}
+                                onClick={() => setOpenSeason((prev) => !prev)}>{selectedSeason}</button> </div>
                             </div>
                             
 
@@ -330,7 +331,10 @@ function ViewRequests() {
 
             }
             {
-                openCategory && <DropDownCategory resetState={resetState} resetStateClothes={resetStateClothes} resetStateToys={resetStateToys} resetStateFood={resetStateFood} resetStateMedical={resetStateMedical} resetStateSchool={resetStateSchool} resetStateBlood={resetStateBlood} resetStateTPosts={resetStateTPosts} resetStateMCases={resetStateMCases} />
+                openCategory && <DropDownCategory resetStateCategory={resetStateCategory} resetStateClothes={resetStateClothes} resetStateToys={resetStateToys} resetStateFood={resetStateFood} resetStateMedical={resetStateMedical} resetStateSchool={resetStateSchool} resetStateBlood={resetStateBlood} resetStateTPosts={resetStateTPosts} resetStateMCases={resetStateMCases} />
+            }
+            {
+                openSeason && <DropDownSeason resetStateSeason = {resetStateSeason} resetStateWinter = {resetStateWinter} resetStateSpring = {resetStateSpring} resetStateSummer = {resetStateSummer} resetStateFall = {resetStateFall}/>
             }
 
 
