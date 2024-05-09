@@ -21,10 +21,14 @@ function ViewRequests() {
     const [donations, setDonation] = useState(null);
 
     const [selectedCategory, setSelectedCategory] = useState('Select Category ▼'); // Initialize with default text
-    const [selectedGender, setSelectedGender] = useState('');
+
+
+
 
     const handleGenderChange = (event) => {
-        setSelectedGender(event.target.value);
+        const newValue = event.target.value;
+        // If the checkbox was already checked, uncheck it; otherwise, set the new value
+        setGender((prevGender) => (prevGender === newValue ? '' : newValue));
     };
 
     useEffect(() => {
@@ -213,7 +217,8 @@ function ViewRequests() {
     //REPLACE THE LINE AT THE BOTTOM WITH THIS: <button className='home-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='home-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
 
 
-
+    const [gender, setGender] = useState('');
+    const [season, setSeason] = useState('');
 
     return (
         <>
@@ -262,14 +267,42 @@ function ViewRequests() {
                         </div>
                     </div>
 
-                    <div className='view-requests-right'>
-                        <div className="filter-title">Filter and Search</div>
-                        <div> <button className='view-requests-category-button' value={selectedCategory}
+                <div className='view-requests-right'>
+                    <div className="filter-title">Filter and Search</div>
+                        <div className="right-subSection">
+                            
+                            <div> <button className='view-requests-category-button' value={selectedCategory}
                             onChange={e => setSelectedCategory(e.target.value)}
                             onClick={() => setOpenCategory((prev) => !prev)}>{selectedCategory}</button> </div>
+
+                            <div className="view-requests-gender-input">
+                                <label htmlFor="male" style={{color: '#2C6B5A'}}>
+                                    <input type="checkbox" id="male" name="gender" value="male" checked={gender === 'male'} onChange={handleGenderChange}/>
+                                    Male
+                                </label>
+                                <label htmlFor="female" style={{color: '#2C6B5A'}}>
+                                    <input type="checkbox" id="female" name="gender" value="female" checked={gender === 'female'} onChange={handleGenderChange} />
+                                    Female
+                                </label>
+                            </div>
+
+
+                            <div className="view-requests-select-season">
+                            <select
+                                value={season}
+                                onChange={(e) => setSeason(e.target.value)}
+                                >
+                                <option value="Winter Season">Winter Season</option>
+                                <option value="Spring Season">Spring Season</option>
+                                <option value="Summer Season">Summer Season</option>
+                                <option value="Fall Season">Fall Season</option>
+                                <option value="Select Season">Select Season</option>
+                            </select>
+                            </div>
+                            
+
+                        </div>
                     </div>
-
-
                 </div>
 
                 {/* <button onClick={() => setName('luigi')}>change name</button> */}

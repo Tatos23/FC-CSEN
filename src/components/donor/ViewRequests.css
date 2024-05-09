@@ -301,17 +301,6 @@
     margin-right: 2%;
 }
 
-.view-requests-vertical-rectangle {
-    width: 20px;
-    /* Set your desired width */
-    height: 100px;
-    /* Set your desired height */
-    background-color: #ff0000;
-    /* Set your desired background color */
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
 .view-requests-category-button {
     border: 1.5px solid #000;
@@ -323,9 +312,9 @@
     cursor: pointer;
     /* Show pointer cursor on hover */
     border-radius: 10px;
-    /* position: absolute;
-    right: 15rem;
-    top: 10rem; */
+    position: absolute;
+    right: 5rem;
+    top: 12rem;
 }
 
 .view-requests-body {
@@ -339,12 +328,56 @@
     flex-direction: column;
     width: 60vw;
     align-items: center;
+    padding-left: 5%;
 }
 
 .view-requests-right {
     display: flex;
     flex-direction: column;
     width: 40vw;
+    align-items: center;
+}
+.right-subSection{
+    width: 80%;
+    border: 1px solid #265305;
+    /* overflow-y: auto; Make the dropdown scrollable */
+    height: 80%;
+}
+.view-requests-select-season{
+    margin-right: 13rem;
+    margin-top: 2rem;
+}
+
+/* .gender-input */
+
+.view-requests-gender-input {
+    border-radius: 10px;
+    border-color: #74AC4C;
+    background-color: white;
+    width: 50%;
+    height: 35px;
+    padding-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: border-color 1s;
+    margin-top: 12%;
+}
+.view-requests-gender-input input[type="checkbox"] {
+    accent-color: #74AC4C;
+    border: 1px solid #74AC4C;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+.view-requests-gender-input input[type="checkbox"]:checked {
+    accent-color: #74AC4C;
+    border: 1px solid #74AC4C;
+    background-color: #74AC4C;
+}
+.view-requests-gender-input:focus {
+    border-color: #74AC4C;
 }
 
 
@@ -407,7 +440,6 @@
     border-radius: 1rem;
     /* Equivalent to rounded-lg */
     background-color: rgba(226, 232, 240, 0.8);
-    margin-left: 5%;
     margin-top: 3%;
 
 
