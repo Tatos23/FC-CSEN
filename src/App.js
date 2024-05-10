@@ -46,7 +46,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
-          <Route index element={<ViewRequests/>} />
+          <Route index element={<Notifications role="Representative"/>} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} />
           <Route path="system-users" element={<AdminUsers />} />
           <Route path="user-submissions" element={<UserSubmissions />} />
