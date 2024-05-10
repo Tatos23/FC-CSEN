@@ -38,8 +38,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-
-          <Route path="/" element={<Donationselect id={18}/>} />
+          <Route path="/" element={<ViewRequests/>} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />

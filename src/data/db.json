@@ -9,7 +9,7 @@
         "id": 1,
         "gender":"male",
         "picture": "tshirt.jpeg",
-        "season":"Summer",
+        "season":"Winter",
         "material":"t-shirt"
       },    
       {
@@ -18,11 +18,11 @@
         "subcategory": "clothes",
         "quantity": 5,
         "age": 10,
-        "author": "mario",
+        "author": "maria",
         "picture": "sweatshirt.webp",
         "id": 2,
         "gender":"female",
-        "season":"Winter",
+        "season":"Summer",
         "material":"sweatshirt"
       },
       {
@@ -133,7 +133,7 @@
       {
         "title": "Blood Donation",  
         "category": "blood donations",
-        "subcategory": "blood Donation",
+        "subcategory": "blood donations",
         "name": "shandawely",
         "hospitalName": "Alnakhel",
         "bloodType": "A+",
@@ -147,7 +147,7 @@
       {
         "title": "Blood Donation",  
         "category": "blood donations",
-        "subcategory": "blood Donation",
+        "subcategory": "blood donations",
         "name": "7amada",
         "hospitalName": "Naser City Hospital",
         "bloodType": "A-",
@@ -187,7 +187,7 @@
       {
         "title": "Medical Case",  
         "category": "medical cases",
-        "subcategory": "Medical Cases",
+        "subcategory": "medical cases",
         "name": "Badawy",
         "age": 20,
         "gender": "male",
@@ -205,7 +205,7 @@
       {
         "title": "Medical Case",  
         "category": "medical cases",
-        "subcategory": "Medical Cases",
+        "subcategory": "medical cases",
         "name": "Ramy",
         "age": 21,
         "gender": "male",
