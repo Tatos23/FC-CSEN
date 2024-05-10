@@ -31,6 +31,13 @@ import DonationsList from './components/donor/DonationsList.js';
 import RepDon from './components/organization/RepDon.jsx';
 import RepNot from './components/organization/RepNot.jsx';
 import Food from './components/organization/Food.jsx';
+import AdminDashBoard from './components/admin/admin-dashboard/AdminDashBoard.js';
+import AdminUsers from './components/admin/admin-users/AdminUsers.js';
+import UserSubmissions from './components/admin/user-submissions/UserSubmissions.js';
+import Requests from './components/admin/requests/Requests.js';
+
+
+
 
 function App() {
   
@@ -38,12 +45,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ViewRequests/>} />
-          <Route path="/admin-dashboard" element={<AdminDashBoard />} >
-            <Route index element={<AdminHomePage />} />
-            <Route path="system-users" element={<AdminUsers />} />
-            <Route path="user-submissions" element={<UserSubmissions />} />
-            <Route path="requests" element={<Requests />} />
+          {/* <Route path="/" element={<Requests/>} /> */}
+          <Route index element={<ViewRequests/>} />
+          <Route path="/admin-dashboard" element={<AdminDashBoard />} />
+          <Route path="system-users" element={<AdminUsers />} />
+          <Route path="user-submissions" element={<UserSubmissions />} />
+          <Route path="requests" element={<Requests />} />
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
           <Route path="/representative-login" element={<Authentication role="Representative"/>} />
