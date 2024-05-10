@@ -466,7 +466,7 @@
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.donation-preview h2 {
+.DonationsList-donation-preview-title {
     color: green;
     margin-bottom: 8px;
     font-size: 1.5rem;

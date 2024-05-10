@@ -1,10 +1,16 @@
+import DonorNot from "./donor/DonorNot";
 import Header from "./donor/Header";
+import RepNot from "./organization/RepNot";
 
-const Notifications = () => {
-    return ( 
-        <div className="Notifications">
-            <Header loggedIn={true}/>
+function Notifications({ role }) {
+    return (
+        <div>
+            {role === "Donor" ? (
+                <DonorNot />
+            ) : (
+                <RepNot />
+            )}
         </div>
-     );
+    );
 }
 export default Notifications;
