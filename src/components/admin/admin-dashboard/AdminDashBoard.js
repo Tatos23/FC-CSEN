@@ -1,12 +1,15 @@
 import './AdminDashBoard.css';
 import { useLocation, Link, Outlet } from 'react-router-dom';
 import { useState } from 'react';
+import { mockUsers } from '../admin-users-data.js';
 
 function AdminDashBoard() {
     const [isVisible, setIsVisible] = useState(false);
     const [openProfile, setOpenProfile] = useState(false);
 
     const location = useLocation();
+
+    const users = mockUsers;
 
     const toggleVisibility = () => {
         console.log(isVisible);
