@@ -453,16 +453,6 @@ function Donationselect({ id }) {
                   Blood type: {donation.bloodType} <br></br> Hospital Name : {donation.hospitalName}
                   <iframe className="Donationselect-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.2137924485046!2d31.27919757555103!3d29.973285274959583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583943bf2cc69b%3A0x9332e195d7e8ee57!2sAndalusia%20Hospital!5e0!3m2!1sen!2seg!4v1715277428174!5m2!1sen!2seg" ></iframe>
                 </div>
-                <div className="Donationselect-counter">
-                  <span className="Donationselect-label" style={{marginTop:"5px"}}>Quantity:</span>
-                  <button className="Donationselect-increment" onClick={handleDecrement}>
-                    -
-                  </button>
-                  <span>{quantity}</span>
-                  <button className="Donationselect-increment" onClick={handleIncrement}>
-                    +
-                  </button>
-                </div>
                 <button className="Donationselect-Donate">Donate</button>
               </>
             )}
@@ -486,16 +476,7 @@ function Donationselect({ id }) {
                   Blood type: {donation.bloodType} <br></br> Hospital Name : {donation.hospitalName}
                   <iframe className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13810.761829307892!2d31.29768368715819!3d30.074406100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e362a73caf5%3A0xeef97f1d9f5d705!2sNasr%20City%20Hospital!5e0!3m2!1sen!2seg!4v1715282793293!5m2!1sen!2seg" ></iframe>
                 </div>
-                <div className="Donationselect-counter">
-                  <span className="Donationselect-label" style={{marginTop:"5px"}}>Quantity:</span>
-                  <button className="Donationselect-increment" onClick={handleDecrement}>
-                    -
-                  </button>
-                  <span>{quantity}</span>
-                  <button className="Donationselect-increment" onClick={handleIncrement}>
-                    +
-                  </button>
-                </div>
+               
                 <button className="Donationselect-Donate">Donate</button>
               </>
             )}
