@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import DropDownProfile from './DropDownProfile';
 import userEvent from '@testing-library/user-event';
 import ORCards from './organization/ORCards';
+import { useNavigate } from 'react-router-dom';
 function MainTemp(){
 
 
@@ -36,7 +37,16 @@ const[openProfile, setOpenProfile] = useState(false);
 
     //REPLACE THE LINE AT THE BOTTOM WITH THIS: <button className='home-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='home-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
 
-
+    const navigate = useNavigate();
+    const handleButtonHome = () =>{
+    navigate('/org-home');
+    }
+    const handleButtonDon = () =>{
+    navigate('/rep-don');
+    }
+    const handleButtonNot = () =>{
+    navigate('/rep-notifications');
+    }
 
 return(
     <>
@@ -48,10 +58,11 @@ return(
                 {/* <button className='main-temp-donate-button' >Donate</button> */}
             </div>
             <div className='main-temp-middleside'>
-                <button className='main-temp-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
-                <button className='main-temp-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
-                <button className='main-temp-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-               
+            <button className='org-temp-middleside-button'style={{ marginRight: '10%' }}key={'org-home'} onClick={()=>handleButtonHome('org-home')}>Home</button>   
+                <button className='org-temp-middleside-button'style={{ marginRight: '1%' }}key={'rep-don'} onClick={()=>handleButtonDon('rep-don')}>Donations</button>
+                <button className='org-temp-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
+                <button className='org-temp-middleside-button'style={{ marginLeft: '10%' }} key={'rep-notifications'} onClick={()=>handleButtonNot('rep-notifications')}>Notifications</button>
+                
             </div>
             <div className='main-temp-rightside'>
                 <div >
