@@ -6,7 +6,7 @@
     background-attachment: fixed;
     background-size: cover; 
     position: relative;
-    
+    font-family: Roboto;
 }
 .home-navbar{
     position: relative; 
@@ -50,14 +50,16 @@ color: black;
 display: flex;
 width: 710px;
 margin-top: 15px;
+margin-left: auto;
+margin-right: auto;
 }
 .home-rightside{
  color: white;
- justify-content:space-between;
  display: flex;
  margin-right: 15px;
- width: 400px;
+ width: 250px;
  margin-top: 15px;
+
 
 }
 .home-profilebutton{
@@ -91,13 +93,16 @@ object-fit: contain;
     border: none;
     color:  white;
     background-color:#397d08;
-    width: 140px;
-    height: 40px;
+    width: 200px;
+    height: 50px;
     transition: background-color 1s;
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 25px;
     font-family:Roboto;
-    padding-top: 5px;
+    padding-top: 6px;
+    position: relative;
+    right: 0;
+    left: 20%;
 }
 .home-singin-up:hover{
     background-color: #265305;

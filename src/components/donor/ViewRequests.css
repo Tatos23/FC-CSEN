@@ -7,6 +7,7 @@
     background-attachment: fixed;
     background-size: cover;
     position: relative;
+    font-family: Roboto;
 
 }
 
@@ -56,16 +57,17 @@
     display: flex;
     width: 710px;
     margin-top: 15px;
-    margin-right: 20%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .view-requests-rightside {
     color: white;
-    justify-content: space-between;
     display: flex;
     margin-right: 15px;
-    width: 400px;
+    width: 250px;
     margin-top: 15px;
+   
 
 }
 
@@ -211,8 +213,6 @@
     top: 100px;
     left: 100px;
 
-
-
 }
 
 .view-requests-dropdown {
@@ -337,34 +337,84 @@
     width: 40vw;
     align-items: center;
 }
+
 .right-subSection{
     width: 80%;
     border: 1px solid #265305;
-    /* overflow-y: auto; Make the dropdown scrollable */
-    height: 80%;
+    overflow-y: auto;
+    height: 15%;
 }
+
 .LR-subSection{
     display: flex;
     flex-direction: column;
-    width: 10vw;
     align-items: left;
-    padding-left: 5%;
-    margin-top: 10%;
-    
+    margin-top: 5%;
+    height: fit-content;
+    align-items: center;
 }
 
 .RR-subSection{
     display: flex;
     flex-direction: column;
-    align-items: right;
+    align-items: center;
+    height: fit-content;
 }
 
-.selectSeason{
+.categories,
+.subCategories,
+.setSubject,
+.setOrganizationName,
+.setMedicalSpeciality,
+.selectArea,
+.selectGovernorate,
+.view-requests-hospitalName-textarea,
+.selectSeason {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #265305;
+    margin-bottom: 20px;
+    border: 2px solid #4F4F4F;
+    align-self: center;
 }
 
+.categories:hover,
+.subCategories:hover,
+.categories:focus,
+.subCategories:focus,
+.setSubject:hover,
+.setSubject:focus,
+.setOrganizationName:hover,
+.setOrganizationName:focus,
+.setMedicalSpeciality:hover,
+.setMedicalSpeciality:focus,
+.selectArea:hover,
+.selectArea:focus,
+.selectGovernorate:hover,
+.selectGovernorate:focus,
+.view-requests-hospitalName-textarea:hover,
+.view-requests-hospitalName-textarea:focus,
+.selectSeason:hover,
+.selectSeason:focus {
+    border-color: #162D23;
+    box-shadow: 0px 0px 10px #162D23;
+    outline: none;
+}
+
+.categories select,
+.subCategories select,
+.setSubject select,
+.setMedicalSpeciality select,
+.selectArea select,
+.selectGovernorate select,
+.selectSeason select
+{
+    outline: none;
+    box-shadow: none;
+}
 
 /* .gender-input */
-
 .view-requests-gender-input {
     border-radius: 10px;
     border-color: #74AC4C;
@@ -375,14 +425,14 @@
     cursor: pointer;
     font-weight: bold;
     transition: border-color 1s;
-    margin-top: 12%;
+    margin-top: 1%;
+    align-self: center;
 }
 .view-requests-gender-input input[type="checkbox"] {
     accent-color: #74AC4C;
     border: 1px solid #74AC4C;
     margin-left: 5%;
     margin-right: 2%;
-    margin-top: 5px;
     width: 20px;
     height: 20px;
 }
@@ -394,9 +444,6 @@
 .view-requests-gender-input:focus {
     border-color: #74AC4C;
 }
-
-
-
 
 /*Filter item styles*/
 
@@ -489,6 +536,9 @@
     border-radius: 10px;
     /* Add rounded corners */
     cursor: pointer;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
 }
 
 .view-button:hover {
