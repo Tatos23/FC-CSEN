@@ -37,7 +37,7 @@ const RepNot = () => {
   
   function Liner ({id, text1, text2}) {
     return (
-      <div className='bg-gray-200 mr-20 ml-20 rounded-md'>
+      <div style={{width:520}} className='bg-gray-200 mr-20 ml-20 rounded-md'>
         <h2 class="text-2xl font-bold text-green-800">{text1}</h2>
         <br />
         <p class="mt-2 mb-4 text-green-800"> {text2}</p>
@@ -49,27 +49,29 @@ const RepNot = () => {
         {showForm && (
         <div className="floating-form">
           <form>
+            <h1 class="text-2xl font-bold text-green-800">Schedule Drop-off</h1>
             <label>
               Location:
-              <input type="url" style={{width:300, alignContent:'center' }} name="url-drop-off" placeholder='Enter your google maps location' />
+              <input type="url" style={{width:300, alignContent:'center' }} name="url-drop-off" placeholder='Enter your google maps location' required/>
             </label>
             <br />
             <label>
               Enter Date of Drop-off:
-              <input type="Date" style={{width:300, alignContent:'center' }} name="date-drop-off" placeholder='Enter your google maps location' />
+              <input type="Date" style={{width:300, alignContent:'center' }} name="date-drop-off" placeholder='Enter your google maps location' required/>
             </label>
             <br />
             <label>
               Enter Time of Drop-off:
-              <input type="Time" style={{width:300, alignContent:'center' }} name="time-drop-off" placeholder='Enter your google maps location' />
+              <input type="Time" style={{width:300, alignContent:'center', marginBottom: 5}} name="time-drop-off" placeholder='Enter your google maps location' required/>
             </label>
+            <br />
             <button className="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-700 mr-4 ml-4" onClick={()=>handleConfirmation(id)}>Confirm</button>
           </form>
           </div>
-      )} 
-      
+      )}
       </div>
-    );
+    
+  );
   }
   return (
     <div>
@@ -79,6 +81,9 @@ const RepNot = () => {
                 {liner.map(liner => (
                 <Liner key={liner.id} id={liner.id} text1={liner.text1} text2={liner.text2} handleButton={handleForm}/>
                  ))}
+                 <h2 style={{position:'fixed', right:'15%', top:'20%'}} className="text-3xl font-bold text-green-800">This is your notification section </h2> 
+                 <h2 style={{position:'fixed', right:'20%', top:'30%'}} className="text-xl font-bold text-green-800">You will get updates here </h2> 
+
             </div>
         </div>
     </div>

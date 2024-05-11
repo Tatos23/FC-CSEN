@@ -16,7 +16,7 @@ const RepDon = () => {
 
 
     const [labe, setLabe] = useState([
-        { id: 1, text1: 'Stationary Request', text2:'Type: Pens Quantity: 20 ' ,url:'/station' },
+        { id: 1, text1: 'Food Request', text2:'Item: Carrots Quantity: 10kgs ' ,url:'/food' },
         { id: 2, text1: 'Blood Request', text2: 'Name: Ali Type: O+ Hospital: El Nozha Area: Sheraton Gov: Cairo Quantity: 6', url:'/blood' },
         { id: 3, text1: 'Tutor Request' ,text2:'Students: 50 Addres: 6th of October City Subjects: Math' ,url:'/tut' },
       ]);
@@ -35,7 +35,7 @@ const RepDon = () => {
           }
           };
     const handleButton = (url) => {
-        if(url==='/station')
+        if(url==='/food')
         navigate(url);
         else if(url==='/blood')
         navigate('/blood');
