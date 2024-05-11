@@ -35,6 +35,7 @@ import AdminDashBoard from './components/admin/admin-dashboard/AdminDashBoard.js
 import AdminUsers from './components/admin/admin-users/AdminUsers.js';
 import UserSubmissions from './components/admin/user-submissions/UserSubmissions.js';
 import Requests from './components/admin/requests/Requests.js';
+import RegisterCard from './components/authentication/RegisterCard.js';
 import Profile from './components/donor/Profile.js';
 import ViewRegisteredOrganizations from './components/donor/ViewRegisteredOrganizations.js';
 
@@ -46,7 +47,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
-          <Route index element={<Profile />} />
+          <Route index element={<Authentication role="Representative" />} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
@@ -60,7 +61,7 @@ function App() {
           <Route path="/organization-login" element={<Authentication role="organization" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
-          <Route path="/donation-select" element={<Donationselect />} />
+          <Route path="/donation-select/:id" element={<Donationselect />} />
           <Route path="/blood" element={<Blood />} />
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests />} />
