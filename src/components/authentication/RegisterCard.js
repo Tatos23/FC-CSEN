@@ -1,9 +1,24 @@
-import React from 'react';
+import {React, useState }from 'react';
 import registerStyles from "./RegisterCard.css";
 import { FiEye, FiEyeOff } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
-function RegisterCard({ toggleForm, showPassword, toggleShowPassword, handleGenderChange, gender, donorRole, handleDonorRole, role }) {
+
+function RegisterCard({ toggleForm, showPassword, toggleShowPassword, donorRole, handleDonorRole, role }) {
+
+    const [gender, setGender] = useState('');
+    const handleGenderChange = (event) => {
+        const newValue = event.target.value;
+        const isChecked = event.target.checked;
+    
+        // If the checkbox was already checked, uncheck it; otherwise, set the new value
+        setGender((prevGender) => (prevGender === newValue ? '' : newValue));
+    
+        // Assign the value to the 'gender' variable
+        const gender = isChecked ? newValue : '';
+    
+        console.log(gender);
+    };
     return (
         <div className="right-side-inner" style={registerStyles}>
             <div className="register-header">
@@ -15,16 +30,16 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, handleGend
                     <h1 className="register-title"> {role} Registration </h1>
                     <input type="text" placeholder="First Name" className="firstname-input" required></input>
                     <input type="text" placeholder="Last Name" className="lastname-input" required></input>
-                    <div className="gender-input">
-                        <label htmlFor="male" style={{color: '#2C6B5A'}}>
-                            <input type="checkbox" id="male" name="gender" value="male" checked={gender === 'male'} onChange={handleGenderChange}/>
-                            Male
-                        </label>
-                        <label htmlFor="female" style={{color: '#2C6B5A'}}>
-                            <input type="checkbox" id="female" name="gender" value="female" checked={gender === 'female'} onChange={handleGenderChange} />
-                            Female
-                        </label>
-                    </div>
+                                <div className="gender-input">
+                                    <label htmlFor="male" style={{color: '#2C6B5A'}}>
+                                        <input type="checkbox" id="male" name="gender" value="male" checked={gender === 'male'} onChange={handleGenderChange}/>
+                                        Male
+                                    </label>
+                                    <label htmlFor="female" style={{color: '#2C6B5A'}}>
+                                        <input type="checkbox" id="female" name="gender" value="female" checked={gender === 'female'} onChange={handleGenderChange} />
+                                        Female
+                                    </label>
+                                </div>
                     {role === 'Donor' && <input type="text" placeholder="Address link from google maps" className="address-input" required></input>}
                     <input type="text" placeholder="Contact Number" className="contactnumber-input" required></input>
                     <input type="text" placeholder="Email" className="email-input" required></input>

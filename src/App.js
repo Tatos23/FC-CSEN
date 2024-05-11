@@ -35,6 +35,7 @@ import AdminDashBoard from './components/admin/admin-dashboard/AdminDashBoard.js
 import AdminUsers from './components/admin/admin-users/AdminUsers.js';
 import UserSubmissions from './components/admin/user-submissions/UserSubmissions.js';
 import Requests from './components/admin/requests/Requests.js';
+import RegisterCard from './components/authentication/RegisterCard.js';
 
 
 
@@ -46,7 +47,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
-          <Route index element={<PickUp />} />
+          <Route index element={<Authentication role="Representative" />} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
