@@ -21,13 +21,13 @@ function LoginCard({ isRegistering, toggleForm, showPassword, toggleShowPassword
                     navigate('/admin-dashboard');
                     return;
                 }
-                else if (role === 'Donor') {
-                    navigate('/donor-home');
-                    return;
-                } else if (role === 'Organization') {
-                    navigate('/org-home');
-                    return;
-                }
+                // else if (role === 'Donor') {
+                //     navigate('/donor-home');
+                //     return;
+                // } else if (role === 'Organization') {
+                //     navigate('/organization-home');
+                //     return;
+                // }
             }
         }
         console.log('Invalid username or password');
