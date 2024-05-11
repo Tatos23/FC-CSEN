@@ -60,7 +60,7 @@ function App() {
           <Route path="/organization-login" element={<Authentication role="organization" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
-          <Route path="/donation-select" element={<Donationselect />} />
+          <Route path="/donation-select/:id" element={<Donationselect />} />
           <Route path="/blood" element={<Blood />} />
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests />} />

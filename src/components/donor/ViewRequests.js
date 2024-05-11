@@ -1,11 +1,12 @@
 import './ViewRequests.css';
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
 import DonationsList from './DonationsList';
 import DropDownCategory from './DropDownCategory';
 import { PiButterflyDuotone } from 'react-icons/pi';
+import Donationselect from './Donationselect';
 
 
 
@@ -170,12 +171,13 @@ function ViewRequests() {
 
 
 
-
     const handleView = (id) => {
+        let myId = id;
         // const tempDonations = donations.filter(donations => donations.id !== id);
         // setDonation(tempDonations);
-
-        navigate('/donation-select');
+        navigate(`/donation-select/${myId}`);
+        
+        // navigate('/donation-select');
     }
 
 
