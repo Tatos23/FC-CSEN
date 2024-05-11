@@ -36,6 +36,8 @@ import AdminUsers from './components/admin/admin-users/AdminUsers.js';
 import UserSubmissions from './components/admin/user-submissions/UserSubmissions.js';
 import Requests from './components/admin/requests/Requests.js';
 import RegisterCard from './components/authentication/RegisterCard.js';
+import Profile from './components/Profile.jsx';
+import OrgProfile from './components/organization/OrgProfile.js';
 
 
 
@@ -47,7 +49,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
-          <Route index element={<Authentication role="Representative" />} />
+          <Route index element={<OrgProfile />} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
@@ -78,6 +80,8 @@ function App() {
           <Route path="/org-home" element={<ORHome />} />
           <Route path="/rep-don" element={<RepDon />} />
           <Route path="/rep-notifications" element={<RepNot />} />
+          <Route path="/profile" element={<OrgProfile />} />
+          
 
 
 

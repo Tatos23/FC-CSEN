@@ -46,10 +46,11 @@ margin-bottom: 0px;
 
 }
 .main-temp-middleside{
-color: black;
-display: flex;
-width: 710px;
-margin-top: 15px;
+    color: black;
+    display: flex;
+    width: 710px;
+    margin-top: 15px;
+    margin-right: 20%;
 }
 .main-temp-rightside{
  color: white;
@@ -100,11 +101,12 @@ object-fit: contain;
     font-size: 18px;
     border: none;
     color: #2C6B5A;
-    background-color:transparent;
+    background-color: transparent;
     width: 100px;
     height: 30px;
     transition: background-color 1s;
     margin-top: 15px;
+    border-bottom: 1px solid #397e07;
     width: 100px;
 }
 .main-temp-middleside-button:hover{
