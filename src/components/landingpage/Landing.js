@@ -29,9 +29,6 @@ return(
 
             </div>
             <div className='landing-rightside'>
-                <div >
-                <input  className="landing-search-container" type="text" placeholder="Search..."></input>
-                </div>
 
             <button className='landing-searchbutton'><img className='landing-search-icon'src='searchicon.png' alt='logo'></img></button>
             

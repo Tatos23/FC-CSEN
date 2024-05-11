@@ -172,12 +172,9 @@ function ViewRequests() {
 
 
     const handleView = (id) => {
-        let myId = id;
-        // const tempDonations = donations.filter(donations => donations.id !== id);
-        // setDonation(tempDonations);
-        navigate(`/donation-select/${myId}`);
-        
-        // navigate('/donation-select');
+        navigate(`/donation-select/${id}`);
+
+
     }
 
 
@@ -687,11 +684,8 @@ function ViewRequests() {
 
                     </div>
                     <div className='view-requests-rightside'>
-                        <div >
-                            <input className="view-requests-search-container" type="text" placeholder="Search..."></input>
-                        </div>
 
-                        <button className='view-requests-searchbutton'><img className='view-requests-search-icon' src='searchicon.png' alt='logo'></img></button>
+                        
 
 
                         {/* <Link to={"/home"} className='singin-up' >Login/Register</Link> */}

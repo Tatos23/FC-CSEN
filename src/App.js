@@ -36,8 +36,8 @@ import AdminUsers from './components/admin/admin-users/AdminUsers.js';
 import UserSubmissions from './components/admin/user-submissions/UserSubmissions.js';
 import Requests from './components/admin/requests/Requests.js';
 import RegisterCard from './components/authentication/RegisterCard.js';
-
-
+import Profile from './components/donor/Profile.js';
+import ViewRegisteredOrganizations from './components/donor/ViewRegisteredOrganizations.js';
 
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
-          <Route index element={<Authentication role="Representative" />} />
+          <Route index element={<ViewRequests/>} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
