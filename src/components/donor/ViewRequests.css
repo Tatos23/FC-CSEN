@@ -7,6 +7,7 @@
     background-attachment: fixed;
     background-size: cover;
     position: relative;
+    font-family: Roboto;
 
 }
 
@@ -56,16 +57,17 @@
     display: flex;
     width: 710px;
     margin-top: 15px;
-    margin-right: 20%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .view-requests-rightside {
     color: white;
-    justify-content: space-between;
     display: flex;
     margin-right: 15px;
-    width: 400px;
+    width: 250px;
     margin-top: 15px;
+   
 
 }
 

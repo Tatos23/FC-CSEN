@@ -8,9 +8,10 @@
         "age": 8,
         "id": 1,
         "gender":"male",
-        "picture": "tshirt.jpeg",
+        "picture": "./tshirt.jpeg",
         "season":"Winter",
         "material":"t-shirt"
+        
       },    
       {
         "title": "Clothes Donation",

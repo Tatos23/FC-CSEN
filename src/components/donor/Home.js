@@ -58,9 +58,6 @@ return(
 
             </div>
             <div className='home-rightside'>
-                <div >
-                <input  className="home-search-container" type="text" placeholder="Search..."></input>
-                </div>
 
             <button className='home-searchbutton'><img className='home-search-icon'src='searchicon.png' alt='logo'></img></button>
             

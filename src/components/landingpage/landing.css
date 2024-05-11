@@ -54,13 +54,12 @@ margin-left: 12%;
 
 }
 .landing-rightside{
- color: white;
- justify-content:space-between;
- display: flex;
- margin-right: 15px;
- width: 400px;
- margin-top: 15px;
-
+    color: white;
+    display: flex;
+    margin-right: 15px;
+    width: 250px;
+    margin-top: 15px;
+   
 }
 .landing-search-icon{
 width: 30px;
@@ -82,13 +81,16 @@ object-fit: contain;
     border: none;
     color:  white;
     background-color:#397d08;
-    width: 140px;
-    height: 40px;
+    width: 200px;
+    height: 50px;
     transition: background-color 1s;
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 25px;
     font-family:Roboto;
-    padding-top: 5px;
+    padding-top: 6px;
+    position: relative;
+    right: 0;
+    left: 20%;
 }
 .landing-singin-up:hover{
     background-color: #265305;
@@ -100,18 +102,18 @@ object-fit: contain;
 
 }
 .landing-middleside-button{
-   font-family: 'Roboto';
-   font-weight: 400;
-    font-size: 18px;
-    border: none;
-    color: #2C6B5A;
-    background-color:transparent;
-    width: 100px;
-    height: 30px;
-    transition: background-color 1s;
-    margin-top: 15px;
-   border-bottom: 1px solid #397e07;
-    width: 100px;
+    font-family: 'Roboto';
+    font-weight: 400;
+     font-size: 18px;
+     border: none;
+     color: #2C6B5A;
+     background-color:transparent;
+     width: 100px;
+     height: 30px;
+     transition: background-color 1s;
+     margin-top: 15px;
+    border-bottom: 1px solid #397e07;
+     width: 100px;
 }
 .landing-middleside-button:hover{
     color: #74AC4C;

@@ -1,32 +1,15 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './Header'; // Import the Header component
 import './Donationselect.css';
 import { useParams } from 'react-router-dom';
-
 function Donationselect() {
+  
   let { id } = useParams();
   const varID = parseInt(id);
   console.log(id);
-
-
   const [donations, setDonations] = useState([]);
   const [donation, setDonation] = useState({}); // Initialize donation state with an empty object
   const [quantity, setQuantity] = useState(1);
-
-
-
-  useEffect(() => {
-    fetch('http://localhost:8000/donations')
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setDonations(data);
-        filterItems(data);
-        
-      });
-
-  },[id]);
 
   const handleIncrement = () => {
     if (quantity < donation.quantity) {
@@ -47,7 +30,20 @@ function Donationselect() {
 
   };
 
-  switch (varID) {
+  useEffect(() => {
+    fetch('http://localhost:8000/donations')
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setDonations(data);
+        filterItems(data);
+        setQuantity(1);
+        
+      });
+  },[id]);
+
+  switch (parseInt(id)) {
     case 1:
       return (
         <div className="Donationselect-main">
@@ -58,10 +54,9 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src= {donation.picture}
+                  src={donation.picture}
                   alt="Book"
                 />
-                {console.log(donation.picture)}
                 <div className="Donationselect-description">
                   Age: {donation.age} <br></br> Gender : {donation.gender}
                   <br></br> Season : {donation.season}<br></br> Material : {donation.material}
@@ -462,6 +457,7 @@ function Donationselect() {
                   Blood type: {donation.bloodType} <br></br> Hospital Name : {donation.hospitalName}
                   <iframe className="Donationselect-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.2137924485046!2d31.27919757555103!3d29.973285274959583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583943bf2cc69b%3A0x9332e195d7e8ee57!2sAndalusia%20Hospital!5e0!3m2!1sen!2seg!4v1715277428174!5m2!1sen!2seg" ></iframe>
                 </div>
+               
                 <button className="Donationselect-Donate">Donate</button>
               </>
             )}
@@ -556,7 +552,7 @@ function Donationselect() {
                 <br></br> Case Description : {donation.caseDescription}
                 <iframe style={{left:"10%",bottom:"150px"}} className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.768218997515!2d31.284885075550434!3d29.957344874967596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458383f12be6d3d%3A0x3aa0984dd84f3330!2sEl-Nasr%20Rd%2C%20Maadi%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715285509655!5m2!1sen!2seg"></iframe>
                 </div>
-                
+
                 <button className="Donationselect-Donate">Donate</button>
               </>
             )}
@@ -582,7 +578,7 @@ function Donationselect() {
                 <br></br> Case Description : {donation.caseDescription}
                 <iframe style={{left:"10%",bottom:"150px"}} className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.768218997515!2d31.284885075550434!3d29.957344874967596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458383f12be6d3d%3A0x3aa0984dd84f3330!2sEl-Nasr%20Rd%2C%20Maadi%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715285509655!5m2!1sen!2seg"></iframe>
                 </div>
-                
+
                 <button className="Donationselect-Donate">Donate</button>
               </>
             )}
