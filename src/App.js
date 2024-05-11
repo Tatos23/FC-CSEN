@@ -21,7 +21,7 @@ import Book from './components/organization/Book.jsx';
 import Clothes from './components/organization/Clothes.jsx';
 import Toy from './components/organization/Toy.jsx';
 import Stationary from './components/organization/Stationary.jsx';
-import MedicalSupplies from './components/organization/MedicalSupplies.jsx';  
+import MedicalSupplies from './components/organization/MedicalSupplies.jsx';
 import MedicalAssist from './components/organization/MedicalAssist.jsx';
 import Tutorials from './components/organization/Tutorials.jsx';
 import Submitted from './components/organization/Submitted.jsx';
@@ -40,20 +40,22 @@ import Requests from './components/admin/requests/Requests.js';
 
 
 function App() {
-  
+
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
-          <Route index element={<Notifications role="Representative"/>} />
-          <Route path="/admin-dashboard" element={<AdminDashBoard />} />
-          <Route path="system-users" element={<AdminUsers />} />
-          <Route path="user-submissions" element={<UserSubmissions />} />
-          <Route path="requests" element={<Requests />} />
+          <Route index element={<Notifications role="Representative" />} />
+          <Route path="/admin-dashboard" element={<AdminDashBoard />} >
+            <Route index element={<AdminHomePage />} />
+            <Route path="system-users" element={<AdminUsers />} />
+            <Route path="user-submissions" element={<UserSubmissions />} />
+            <Route path="requests" element={<Requests />} />
+          </Route>
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
-          <Route path="/representative-login" element={<Authentication role="Representative"/>} />
+          <Route path="/representative-login" element={<Authentication role="Representative" />} />
           <Route path="home" element={<HomePage />} />
           <Route path="/organization-login" element={<Authentication role="organization" />} />
           <Route path="/home" element={<HomePage />} />
@@ -61,8 +63,8 @@ function App() {
           <Route path="/donation-select" element={<Donationselect />} />
           <Route path="/blood" element={<Blood />} />
           <Route path="/book" element={<Book />} />
-          <Route path="/view-requests" element={<ViewRequests/>} />
-          <Route path="/notifications" element={<Notifications/>} />
+          <Route path="/view-requests" element={<ViewRequests />} />
+          <Route path="/notifications" element={<Notifications />} />
           <Route path="/clothes" element={<Clothes />} />
           <Route path="/toy" element={<Toy />} />
           <Route path="/station" element={<Stationary />} />
@@ -70,8 +72,8 @@ function App() {
           <Route path="/med" element={<MedicalSupplies />} />
           <Route path="/assist" element={<MedicalAssist />} />
           <Route path="/tut" element={<Tutorials />} />
-          <Route path="/request-post" element={<RequestPost />} /> 
-          <Route path="/submitted" element={<Submitted/>}/>
+          <Route path="/request-post" element={<RequestPost />} />
+          <Route path="/submitted" element={<Submitted />} />
           <Route path="/org-home" element={<ORHome />} />
           <Route path="/rep-don" element={<RepDon />} />
           <Route path="/rep-notifications" element={<RepNot />} />
