@@ -1,12 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import Header from './Header'; // Import the Header component
 import './Donationselect.css';
+import { useParams } from 'react-router-dom';
 
-function Donationselect({ id }) {
+function Donationselect() {
+  let { id } = useParams();
+  const varID = parseInt(id);
+  console.log(id);
+
 
   const [donations, setDonations] = useState([]);
   const [donation, setDonation] = useState({}); // Initialize donation state with an empty object
   const [quantity, setQuantity] = useState(1);
+
+
+
+  useEffect(() => {
+    fetch('http://localhost:8000/donations')
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setDonations(data);
+        filterItems(data);
+        
+      });
+
+  },[id]);
 
   const handleIncrement = () => {
     if (quantity < donation.quantity) {
@@ -27,19 +47,7 @@ function Donationselect({ id }) {
 
   };
 
-  useEffect(() => {
-    fetch('http://localhost:8000/donations')
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setDonations(data);
-        filterItems(data);
-        
-      });
-  },[id]);
-
-  switch (id) {
+  switch (varID) {
     case 1:
       return (
         <div className="Donationselect-main">
@@ -50,9 +58,10 @@ function Donationselect({ id }) {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src= {donation.picture}
                   alt="Book"
                 />
+                {console.log(donation.picture)}
                 <div className="Donationselect-description">
                   Age: {donation.age} <br></br> Gender : {donation.gender}
                   <br></br> Season : {donation.season}<br></br> Material : {donation.material}
