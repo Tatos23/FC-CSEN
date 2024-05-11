@@ -26,7 +26,7 @@ const Tutorials = () => {
                 </div>
                 <br/>
                 <div style={{ display:'block', alignItems: 'center' }}>
-                <label className='text-2xl text-green-800'>Map Marker: </label>
+                <label className='text-2xl text-green-800'>Location: </label>
                 <input type='url'  style={{ maxWidth: '400px', maxHeight: '30px', textAlign:'center' }} placeholder='insert your google maps location' required/>
                 </div>
                 <br/>

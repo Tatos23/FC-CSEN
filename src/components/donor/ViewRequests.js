@@ -25,11 +25,7 @@ function ViewRequests() {
 
 
 
-    const handleGenderChange = (event) => {
-        const newValue = event.target.value;
-        // If the checkbox was already checked, uncheck it; otherwise, set the new value
-        setGender((prevGender) => (prevGender === newValue ? '' : newValue));
-    };
+
 
     useEffect(() => {
         fetch('http://localhost:8000/donations')
@@ -219,16 +215,29 @@ function ViewRequests() {
     //filter states to use 
     const [gender, setGender] = useState('');
     const [hospitalName, setHospitalName] = useState('');
-    const [selectedSeason, setSelectedSeason] = useState('');
-    const [selectedFruitType, setSelectedFruitType] = useState('');
-    const [selectedGovernorate, setSelectedGovernorate] = useState('');
-    const [selectedArea, setSelectedArea] = useState('');
+    const [selectedSeason, setSelectedSeason] = useState('None');
+    const [selectedFruitType, setSelectedFruitType] = useState('None');
+    const [selectedGovernorate, setSelectedGovernorate] = useState('None');
+    const [selectedArea, setSelectedArea] = useState('None');
     const [medicalSpeciality, setMedicalSpeciality] = useState('');
     const [organizationName, setOrganizationName] = useState('');
     const [subject, setSubject] = useState('');
 
     const [selectedCategoryX, setSelectedCategoryX] = useState(''); // Initialize with an empty string
     const [selectedSubcategory, setSelectedSubcategory] = useState('');
+
+    const handleGenderChange = (event) => {
+        const newValue = event.target.value;
+        const isChecked = event.target.checked;
+    
+        // If the checkbox was already checked, uncheck it; otherwise, set the new value
+        setGender((prevGender) => (prevGender === newValue ? '' : newValue));
+    
+        // Assign the value to the 'gender' variable
+        const gender = isChecked ? newValue : '';
+    
+        console.log(gender);
+    };
 
     const handleCategoryChangeX = (event) => {
         setSelectedCategoryX(event.target.value);
@@ -239,10 +248,11 @@ function ViewRequests() {
         setSelectedSubcategory(event.target.value);
     };
 
-    const categoryOptions = ['clothes','school supplies','toys', 'food', 'medical supplies','blood donations','teaching posts','medical cases','none'];
-    const schoolSubcategories = ['books', 'stationary','none'];
-    const toySubcategories = ['board games', 'stuffed toys', 'dolls','sports','cars','outdoor','none'];
-    const medicalSubcategories = ['medical devices', 'medical equipment', 'medication','none'];
+    const categoryOptions = ['clothes','school supplies','toys', 'food', 'medical supplies','blood donations','teaching posts','medical cases','None'];
+    const schoolSubcategories = ['book', 'stationary','None'];
+    const toySubcategories = ['board games', 'stuffed toys', 'dolls','sports','cars','outdoor','None'];
+    const medicalSubcategories = ['medical devices', 'medical equipment', 'medication','None'];
+    const foodSubCategories = ['fruits','vegetables','canned foods','fresh meal','baked goods','None'];
     
 
 
@@ -250,8 +260,8 @@ function ViewRequests() {
 
 
     function handleSeasonChange(e) {
-        const selectedSeason = e.target.value;
-
+        const selectedSeason = e.target.value
+        console.log(selectedSeason.toLowerCase());
         // Custom logic based on the selected season
         switch (selectedSeason) {
             case 'Winter':
@@ -316,6 +326,7 @@ function ViewRequests() {
         }
 
         setSelectedFruitType(selectedFruitType);
+        setSelectedSubcategory(selectedFruitType);
     }
     
     function handleGovernorateChange(e) {
@@ -571,24 +582,89 @@ function ViewRequests() {
     
     function handleButtonClickRemoveFilters() {
         setGender('');
+        setHospitalName('');
         setSelectedSeason('None');
         setSelectedFruitType('None');
-        setHospitalName('');
         setSelectedGovernorate('None');
         setSelectedArea('None');
+        setMedicalSpeciality('');
+        setOrganizationName('');
         setSubject('');
         setSelectedCategoryX('None');
         setSelectedSubcategory('None');
+        fetch('http://localhost:8000/donations')
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setDonation(data)
+            })
 
     }
+    
 
     function handleButtonClickApplyFilters() {
-        console.log('apply filters')
+        console.log('apply filters');
+        fetch('http://localhost:8000/donations')
+            .then(res => res.json())
+            .then(data => {
+                setDonation(data);
+    
+                // Apply filters based on selected values
+                let filteredDonations = data;
+    
+                if (selectedSeason !== 'None') {
+                    filteredDonations = filteredDonations.filter(donation => donation.season === selectedSeason);
+                    console.log('season filtered donations: ',filteredDonations);
+                }
+    
+                if (gender !== '') {
+                    filteredDonations = filteredDonations.filter(donation => donation.gender === gender);
+                    console.log('gender filtered donations: ',filteredDonations);
+                }
+    
+                if (hospitalName !== '') {
+                    filteredDonations = filteredDonations.filter(donation => donation.hospitalName === hospitalName);
+                }
+    
+                if (selectedGovernorate !== 'None') {
+                    filteredDonations = filteredDonations.filter(donation => donation.governorate === selectedGovernorate);
+                }
+    
+                if (selectedArea !== 'None') {
+                    filteredDonations = filteredDonations.filter(donation => donation.area === selectedArea);
+                }
+    
+                if (medicalSpeciality !== '') {
+                    filteredDonations = filteredDonations.filter(donation => donation.medicalSpecialty === medicalSpeciality);
+                }
+    
+                if (organizationName !== '') {
+                    filteredDonations = filteredDonations.filter(donation => donation.organizationName === organizationName);
+                }
+    
+                if (subject !== '') {
+                    filteredDonations = filteredDonations.filter(donation => donation.subject === subject);
+                }
+
+                if (selectedCategoryX !== 'None') {
+                    if (selectedSubcategory && selectedSubcategory !== 'None') {
+                        // Both category and subcategory are selected
+                        filteredDonations = filteredDonations.filter(donation => donation.category === selectedCategoryX && donation.subcategory === selectedSubcategory);
+                    } else {
+                        // Only category is selected
+                        filteredDonations = filteredDonations.filter(donation => donation.category === selectedCategoryX);
+                    }
+                }
+
+    
+                // Update the state with the filtered donations
+                setDonation(filteredDonations);
+                console.log('Filtered donations final:', filteredDonations);
+            });
     }
-
-
-
-   
+    
+    
 
 
 
@@ -646,10 +722,12 @@ function ViewRequests() {
                             <div className="LR-subSection">
                                 <label htmlFor="Gender" style={{ display: 'block' }}>Gender:</label>
                                 <label htmlFor="Season" style={{ display: 'block' }}>Season:</label>
-                                <label htmlFor="Fruit Type" style={{ display: 'block' }}>Fruit Type:</label>
+                                {/* <label htmlFor="Fruit Type" style={{ display: 'block' }}>Fruit Type:</label> */}
                                 <label htmlFor="Hospital Name" style={{ display: 'block' }}>Hospital Name:</label>
                                 <label htmlFor="Governorate" style={{ display: 'block' }}>Governorate:</label>
                                 <label htmlFor="Area" style={{ display: 'block' }}>Area:</label>
+                                <label htmlFor="Medical Specialty" style={{ display: 'block' }}>Medical Specialty:</label>
+                                <label htmlFor="Organization Name" style={{ display: 'block' }}>Organization Name:</label>
                                 <label htmlFor="Subject" style={{ display: 'block' }}>Subject:</label>
                                 <label htmlFor="Category" style={{ display: 'block' }}>Category:</label>
                                 <label htmlFor="Sub-Category" style={{ display: 'block' }}>Sub-Category:</label>
@@ -683,7 +761,7 @@ function ViewRequests() {
                                 </select>
                                 </div>
 
-                                <div className="selectFruitType">
+                                {/* <div className="selectFruitType">
                                 <select value={selectedFruitType} onChange={handleFruitTypeChange}>
                                     <option value="Fruits">Fruits</option>
                                     <option value="Vegetables">Vegetables</option>
@@ -692,7 +770,7 @@ function ViewRequests() {
                                     <option value="Baked Goods">Baked Goods</option>
                                     <option value="None">None</option>
                                 </select>
-                                </div>
+                                </div> */}
 
                                 <div className="setHospitalName">
                                 <textarea required value={hospitalName} onChange={(e) => setHospitalName(e.target.value)}></textarea>
@@ -808,6 +886,11 @@ function ViewRequests() {
                                                     </option>
                                                 ))}
                                                 {selectedCategoryX === 'school supplies' && schoolSubcategories.map((subcategory) => (
+                                                    <option key={subcategory} value={subcategory}>
+                                                        {subcategory}
+                                                    </option>
+                                                ))}
+                                                {selectedCategoryX === 'food' && foodSubCategories.map((subcategory) => (
                                                     <option key={subcategory} value={subcategory}>
                                                         {subcategory}
                                                     </option>
