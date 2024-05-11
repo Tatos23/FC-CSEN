@@ -211,8 +211,6 @@
     top: 100px;
     left: 100px;
 
-
-
 }
 
 .view-requests-dropdown {
@@ -342,7 +340,7 @@
     width: 80%;
     border: 1px solid #265305;
     overflow-y: auto;
-    height: 20%;
+    height: 15%;
 }
 
 .LR-subSection{

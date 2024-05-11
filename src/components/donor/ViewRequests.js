@@ -722,6 +722,58 @@ function ViewRequests() {
                         <div className="right-subSection">
 
                             <div className="LR-subSection">
+                            <label htmlFor='Category' style={{ display: 'block' }}>
+                                        Category:
+                                    </label>
+                                    <div className='categories'>
+                                        <select value={selectedCategoryX} onChange={handleCategoryChangeX}>
+                                            <option value=''>Select...</option>
+                                            {categoryOptions.map((categoryX) => (
+                                                <option key={categoryX} value={categoryX}>
+                                                    {categoryX}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                    {selectedCategoryX && (
+                                        ['toys', 'medical supplies', 'school supplies', 'food'].includes(selectedCategoryX) && (
+                                            <>
+                                            <label htmlFor='Sub-Category' style={{ display: 'block' }}>
+                                                    Sub-Category:
+                                                </label>
+                                            <div className='subCategories'>
+                                                
+                                                <select value={selectedSubcategory} onChange={handleSubcategoryChange}>
+                                                    <option value=''>Select...</option>
+                                                    {selectedCategoryX === 'toys' &&
+                                                        toySubcategories.map((subcategory) => (
+                                                            <option key={subcategory} value={subcategory}>
+                                                                {subcategory}
+                                                            </option>
+                                                        ))}
+                                                    {selectedCategoryX === 'medical supplies' &&
+                                                        medicalSubcategories.map((subcategory) => (
+                                                            <option key={subcategory} value={subcategory}>
+                                                                {subcategory}
+                                                            </option>
+                                                        ))}
+                                                    {selectedCategoryX === 'school supplies' &&
+                                                        schoolSubcategories.map((subcategory) => (
+                                                            <option key={subcategory} value={subcategory}>
+                                                                {subcategory}
+                                                            </option>
+                                                        ))}
+                                                    {selectedCategoryX === 'food' &&
+                                                        foodSubCategories.map((subcategory) => (
+                                                            <option key={subcategory} value={subcategory}>
+                                                                {subcategory}
+                                                            </option>
+                                                        ))}
+                                                </select>
+                                            </div>
+                                            </>
+                                        )
+                                    )}
                                 
                                 <label htmlFor="Gender" style={{ display: 'block', color: '#265305', fontWeight: 'bold'}}>Gender:</label>
                                 <div className="view-requests-gender-input">
@@ -818,77 +870,28 @@ function ViewRequests() {
                                     </select>
                                 </div>
 
-                                                                        <label htmlFor='Medical Specialty' style={{ display: 'block' }}>
-                                                                            Medical Specialty:
-                                                                        </label>
-                                                                        <div className='setMedicalSpeciality'>
-                                                                            <textarea required value={medicalSpeciality} onChange={(e) => setMedicalSpeciality(e.target.value)}></textarea>
-                                                                        </div>
+                                    <label htmlFor='Medical Specialty' style={{ display: 'block' }}>
+                                        Medical Specialty:
+                                    </label>
+                                    <div className='setMedicalSpeciality'>
+                                        <textarea required value={medicalSpeciality} onChange={(e) => setMedicalSpeciality(e.target.value)}></textarea>
+                                    </div>
 
-                                                                        <label htmlFor='Organization Name' style={{ display: 'block' }}>
-                                                                            Organization Name:
-                                                                        </label>
-                                                                        <div className='setOrganizationName'>
-                                                                            <textarea required value={organizationName} onChange={(e) => setOrganizationName(e.target.value)}></textarea>
-                                                                        </div>
+                                    <label htmlFor='Organization Name' style={{ display: 'block' }}>
+                                        Organization Name:
+                                    </label>
+                                    <div className='setOrganizationName'>
+                                        <textarea required value={organizationName} onChange={(e) => setOrganizationName(e.target.value)}></textarea>
+                                    </div>
 
-                                                                        <label htmlFor='Subject' style={{ display: 'block' }}>
-                                                                            Subject:
-                                                                        </label>
-                                                                        <div className='setSubject'>
-                                                                            <textarea required value={subject} onChange={(e) => setSubject(e.target.value)}></textarea>
-                                                                        </div>
+                                    <label htmlFor='Subject' style={{ display: 'block' }}>
+                                        Subject:
+                                    </label>
+                                    <div className='setSubject'>
+                                        <textarea required value={subject} onChange={(e) => setSubject(e.target.value)}></textarea>
+                                    </div>
 
-                                                                        <label htmlFor='Category' style={{ display: 'block' }}>
-                                                                            Category:
-                                                                        </label>
-                                                                        <div className='categories'>
-                                                                            <select value={selectedCategoryX} onChange={handleCategoryChangeX}>
-                                                                                <option value=''>Select...</option>
-                                                                                {categoryOptions.map((categoryX) => (
-                                                                                    <option key={categoryX} value={categoryX}>
-                                                                                        {categoryX}
-                                                                                    </option>
-                                                                                ))}
-                                                                            </select>
-                                                                        </div>
-                                                                        {selectedCategoryX && (
-                                                                            ['toys', 'medical supplies', 'school supplies', 'food'].includes(selectedCategoryX) && (
-                                                                                <div className='subCategories'>
-                                                                                    <label htmlFor='Sub-Category' style={{ display: 'block' }}>
-                                                                                        Sub-Category:
-                                                                                    </label>
-                                                                                    <select value={selectedSubcategory} onChange={handleSubcategoryChange}>
-                                                                                        <option value=''>Select...</option>
-                                                                                        {selectedCategoryX === 'toys' &&
-                                                                                            toySubcategories.map((subcategory) => (
-                                                                                                <option key={subcategory} value={subcategory}>
-                                                                                                    {subcategory}
-                                                                                                </option>
-                                                                                            ))}
-                                                                                        {selectedCategoryX === 'medical supplies' &&
-                                                                                            medicalSubcategories.map((subcategory) => (
-                                                                                                <option key={subcategory} value={subcategory}>
-                                                                                                    {subcategory}
-                                                                                                </option>
-                                                                                            ))}
-                                                                                        {selectedCategoryX === 'school supplies' &&
-                                                                                            schoolSubcategories.map((subcategory) => (
-                                                                                                <option key={subcategory} value={subcategory}>
-                                                                                                    {subcategory}
-                                                                                                </option>
-                                                                                            ))}
-                                                                                        {selectedCategoryX === 'food' &&
-                                                                                            foodSubCategories.map((subcategory) => (
-                                                                                                <option key={subcategory} value={subcategory}>
-                                                                                                    {subcategory}
-                                                                                                </option>
-                                                                                            ))}
-                                                                                    </select>
-                                                                                </div>
-                                                                            )
-                                                                        )}
-                                                                    </div>
+                                </div>
 
 
                             </div>
