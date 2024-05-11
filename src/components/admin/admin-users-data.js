@@ -27,8 +27,8 @@ export const mockUsers = [
         username: 'orgone',
         organizationType: 'Blood',
         organizationAddress: '789 Main St',
-        organizationArea: 'Area One',
-        organizationGovernorate: 'Governorate One',
+        organizationArea: 'A1',
+        organizationGovernorate: 'G1',
         googleMapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.009030397567!2d31.13162967547679!3d29.979170474956497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584587ac8f291b%3A0x810c2f3fa2a52424!2sThe%20Great%20Pyramid%20of%20Giza!5e0!3m2!1sen!2sus!4v1715269195183!5m2!1sen!2sus"
     },
     {
@@ -59,8 +59,8 @@ export const mockUsers = [
         username: 'orgtwo',
         organizationType: 'Education',
         organizationAddress: '131415 Fourth St',
-        organizationArea: 'Area Two',
-        organizationGovernorate: 'Governorate Two',
+        organizationArea: 'A2',
+        organizationGovernorate: 'G2',
         googleMapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.600516430828!2d31.231092475479524!3d30.04831667492167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458b14d72adf029%3A0x9a38f9bbb6edbfe4!2sThe%20Egyptian%20Museum%20in%20Cairo!5e0!3m2!1sen!2sus!4v1715269334795!5m2!1sen!2sus"
     },
     {
@@ -81,8 +81,8 @@ export const mockUsers = [
         username: 'orgthree',
         organizationType: 'Health',
         organizationAddress: '192021 Sixth St',
-        organizationArea: 'Area Three',
-        organizationGovernorate: 'Governorate Three',
+        organizationArea: 'A3',
+        organizationGovernorate: 'G3',
         googleMapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.564645918216!2d32.65469537532155!3d25.71883457737884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1449159228fec0cd%3A0xc71ae8c008c259d8!2sKarnak!5e0!3m2!1sen!2sus!4v1715269375143!5m2!1sen!2sus"
     },
     {
@@ -113,8 +113,8 @@ export const mockUsers = [
         username: 'orgfour',
         organizationType: 'Food',
         organizationAddress: '2627 Ninth St',
-        organizationArea: 'Area Four',
-        organizationGovernorate: 'Governorate Four',
+        organizationArea: 'A4',
+        organizationGovernorate: 'G4',
         googleMapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.4341047259927!2d31.623224075214182!3d22.337231879660028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x143aa988b126055b%3A0xa7d3cc6618f898d2!2sAbu%20Simbel%20Temples!5e0!3m2!1sen!2sus!4v1715269405398!5m2!1sen!2sus"
     },
     {

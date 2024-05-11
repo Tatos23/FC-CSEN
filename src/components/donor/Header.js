@@ -34,10 +34,7 @@ function Header({loggedIn}){
 
             </div>
             <div className='home-rightside'>
-                <div>
-                    <input  className="home-search-container" type="text" placeholder="Search..."></input>
-                </div>
-                <button className='home-searchbutton'><img className='home-search-icon'src='searchicon.png' alt='logo'></img></button>
+               
                 { loggedIn ? 
                     (<button className='main-temp-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}>
                     <img className='home-profilebutton'src='profileEnhanced.png' alt='logo'></img></button>)

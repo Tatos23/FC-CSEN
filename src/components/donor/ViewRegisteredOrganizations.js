@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import './AdminUsers.css'
-import UserCard from '../components/user_card/UserCard';
-import { mockUsers } from '../admin-users-data.js';
-import OrganizationDetailCard from '../components/organization-detail-card/OrganizationDetailCard.js';
-
-function AdminUsers() {
+import './ViewRegisteredOrganizations.css'
+import { mockUsers } from '../admin/admin-users-data.js';
+import UserSubmissionCard2 from './UserSubmissionCard2.js';
+import Header from './Header.js';
+function ViewRegisteredOrganizations() {
     const users = mockUsers.slice();
     const [usersData, setUsersData] = useState(users);
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(9);
-    const [filter, setFilter] = useState('All');
+    const [itemsPerPage, setItemsPerPage] = useState(6);
+    const [filter, setFilter] = useState('Organization');
     const [searchTerm, setSearchTerm] = useState('');
     const [dropdownOpenArea, setDropdownOpenArea] = useState(false);
     const [dropdownOpenGovernorate, setDropdownOpenGovernorate] = useState(false);
@@ -20,7 +19,7 @@ function AdminUsers() {
     const [selectedUser, setSelectedUser] = useState(null);
 
     const filteredUsers = usersData.filter(user => {
-        const matchesFilter = filter === 'All' || (filter === 'Teachers/Doctors' && user.type === 'Donor' && (user.donorRole === 'Teacher' || user.donorRole === 'Doctor')) ||
+        const matchesFilter = 
             (filter === 'Organization' && (user.type === 'Organization' && (selectedTypes.length === 0 || selectedTypes.includes(user.organizationType)) &&
                 (selectedArea.length === 0 || selectedArea.includes(user.organizationArea)) &&
                 (selectedGovernorate.length === 0 || selectedGovernorate.includes(user.organizationGovernorate))));
@@ -60,6 +59,7 @@ function AdminUsers() {
         setDropdownOpenType(false);
         setFilter('Organization');
     }
+
     const handleUserClick = (user) => {
         setSelectedUser(user);
     };
@@ -68,22 +68,21 @@ function AdminUsers() {
         setSelectedUser(null);
     };
 
-    return (
-        <div className='admin-users'>
-            <div className='admin-users-top-bar'>
-                <div className='admin-users-showing'>
+    return (   <> <Header></Header>
+        <div className='user-submissions' style={{marginTop:"0px"}}>
+
+            <div className='user-submissions-top-bar'>
+                <div className='user-submissions-showing'>
                     <span>Show: </span>
-                    <button className={filter === 'All' ? 'admin-users-selected' : ''} onClick={() => { setFilter('All'); setCurrentPage(1); }}>All</button>
-                    <button className={filter === 'Teachers/Doctors' ? 'admin-users-selected' : ''} onClick={() => { setFilter('Teachers/Doctors'); setCurrentPage(1); }}>Teachers/Doctors</button>
-                    <button className={filter === 'Organization' ? 'admin-users-selected' : ''} onClick={() => { setFilter('Organization'); setCurrentPage(1); }}>Organizations</button>
+                     <button className={filter === 'Organization' ? 'user-submissions-selected' : ''} onClick={() => { setFilter('Organization'); setCurrentPage(1); }}>Organizations</button>
                 </div>
                 <input type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)} />
-                <div className='admin-users-dropdowns'>
-                    <div className='admin-users-dropdown'>
-                        <button className={selectedArea.length !== 0 ? 'admin-users-dropdown-selected' : 'admin-users-dropdown-button'} onClick={() => setDropdownOpenArea(!dropdownOpenArea)}>Filter by Area</button>
+                <div className='user-submissions-dropdowns'>
+                    <div className='user-submissions-dropdown'>
+                        <button className={selectedArea.length !== 0 ? 'user-submissions-dropdown-selected' : 'user-submissions-dropdown-button'} onClick={() => setDropdownOpenArea(!dropdownOpenArea)}>Filter by Area</button>
                         {dropdownOpenArea && (
-                            <div className='admin-users-dropdown-menu'>
-                                <div className='admin-users-dropdown-menu-types'>
+                            <div className='user-submissions-dropdown-menu'>
+                                <div className='user-submissions-dropdown-menu-types'>
                                     {['A1', 'A2', 'A3', 'A4'].map(area => (
                                         <button
                                             key={area}
@@ -94,18 +93,18 @@ function AdminUsers() {
                                         </button>
                                     ))}
                                 </div>
-                                <div className='admin-users-dropdown-menu-buttons'>
-                                    <button className='admin-users-dropdown-menu-buttons-1' onClick={handleDone}>Done</button>
-                                    <button className='admin-users-dropdown-menu-buttons-2' onClick={handleClear}>Clear All</button>
+                                <div className='user-submissions-dropdown-menu-buttons'>
+                                    <button className='user-submissions-dropdown-menu-buttons-1' onClick={handleDone}>Done</button>
+                                    <button className='user-submissions-dropdown-menu-buttons-2' onClick={handleClear}>Clear All</button>
                                 </div>
                             </div>
                         )}
                     </div>
-                    <div className='admin-users-dropdown'>
-                        <button className={selectedGovernorate.length !== 0 ? 'admin-users-dropdown-selected' : 'admin-users-dropdown-button'} onClick={() => setDropdownOpenGovernorate(!dropdownOpenGovernorate)}>Filter by Governorate</button>
+                    <div className='user-submissions-dropdown'>
+                        <button className={selectedGovernorate.length !== 0 ? 'user-submissions-dropdown-selected' : 'user-submissions-dropdown-button'} onClick={() => setDropdownOpenGovernorate(!dropdownOpenGovernorate)}>Filter by Governorate</button>
                         {dropdownOpenGovernorate && (
-                            <div className='admin-users-dropdown-menu'>
-                                <div className='admin-users-dropdown-menu-types'>
+                            <div className='user-submissions-dropdown-menu'>
+                                <div className='user-submissions-dropdown-menu-types'>
                                     {['G1', 'G2', 'G3', 'G4'].map(governorate => (
                                         <button
                                             key={governorate}
@@ -116,49 +115,49 @@ function AdminUsers() {
                                         </button>
                                     ))}
                                 </div>
-                                <div className='admin-users-dropdown-menu-buttons'>
-                                    <button className='admin-users-dropdown-menu-buttons-1' onClick={handleDone}>Done</button>
-                                    <button className='admin-users-dropdown-menu-buttons-2' onClick={handleClear}>Clear All</button>
+                                <div className='user-submissions-dropdown-menu-buttons'>
+                                    <button className='user-submissions-dropdown-menu-buttons-1' onClick={handleDone}>Done</button>
+                                    <button className='user-submissions-dropdown-menu-buttons-2' onClick={handleClear}>Clear All</button>
                                 </div>
                             </div>
                         )}
                     </div>
-                    <div className='admin-users-dropdown'>
-                        <button className={selectedTypes.length !== 0 ? 'admin-users-dropdown-selected' : 'admin-users-dropdown-button'} onClick={() => setDropdownOpenType(!dropdownOpenType)}>Filter by Type</button>
+                    <div className='user-submissions-dropdown'>
+                        <button className={selectedTypes.length !== 0 ? 'user-submissions-dropdown-selected' : 'user-submissions-dropdown-button'} onClick={() => setDropdownOpenType(!dropdownOpenType)}>Filter by Type</button>
                         {dropdownOpenType && (
-                            <div className='admin-users-dropdown-menu'>
-                                <div className='admin-users-dropdown-menu-types'>
+                            <div className='user-submissions-dropdown-menu'>
+                                <div className='user-submissions-dropdown-menu-types'>
                                     {['Health', 'Blood', 'Education', 'Orphanage', 'Food', 'Clothing', 'Shelter'].map(type => (
                                         <button
                                             key={type}
-                                            className={`admin-users-dropdown-menu-type ${selectedTypes.includes(type) ? 'admin-users-selected' : ''}`}
+                                            className={`user-submissions-dropdown-menu-type ${selectedTypes.includes(type) ? 'user-submissions-selected' : ''}`}
                                             onClick={() => handleTypeSelect(type)}
                                         >
                                             {type}
                                         </button>
                                     ))}
                                 </div>
-                                <div className='admin-users-dropdown-menu-buttons'>
-                                    <button className='admin-users-dropdown-menu-buttons-1' onClick={handleDone}>Done</button>
-                                    <button className='admin-users-dropdown-menu-buttons-2' onClick={handleClear}>Clear All</button>
+                                <div className='user-submissions-dropdown-menu-buttons'>
+                                    <button className='user-submissions-dropdown-menu-buttons-1' onClick={handleDone}>Done</button>
+                                    <button className='user-submissions-dropdown-menu-buttons-2' onClick={handleClear}>Clear All</button>
                                 </div>
                             </div>
                         )}
                     </div>
                 </div>
             </div>
-            <div className='admin-users-grid'>
+            <div className='user-submissions-grid'>
                 {currentItems.map((user, index) => {
                     if (user.type === 'Donor') {
-                        return <UserCard key={index} usersData={usersData} setUsersData={setUsersData} type='Donor' name={user.username} />;
+                        return <UserSubmissionCard2 key={index} usersData={usersData} setUsersData={setUsersData} user={user} />;
                     } else if (user.type === 'Organization') {
-                        return <UserCard key={index} usersData={usersData} setUsersData={setUsersData} type='Organization' name={user.name} organizationType={user.organizationType} onClick={() => handleUserClick(user)} />;
+                        return <UserSubmissionCard2 key={index} usersData={usersData} setUsersData={setUsersData} user={user} />;
                     } else {
                         return null;
                     }
                 })}
             </div>
-            <div className='admin-users-pagination'>
+            <div className='user-submissions-pagination'>
                 {currentPage > 3 && <button onClick={() => handleClick(1)}>1</button>}
                 {currentPage > 4 && <span>...</span>}
                 {[...Array(5)].map((page, i) =>
@@ -166,7 +165,7 @@ function AdminUsers() {
                     <button
                         key={i}
                         onClick={() => handleClick(currentPage - 2 + i)}
-                        className={currentPage - 2 + i === currentPage ? 'admin-users-selected' : ''}
+                        className={currentPage - 2 + i === currentPage ? 'user-submissions-selected' : ''}
                     >
                         {currentPage - 2 + i}
                     </button>
@@ -174,13 +173,8 @@ function AdminUsers() {
                 {currentPage < totalPages - 3 && <span>...</span>}
                 {currentPage < totalPages - 2 && <button onClick={() => handleClick(totalPages)}>{totalPages}</button>}
             </div>
-            {selectedUser &&
-                <div className="overlay">
-                    <OrganizationDetailCard onClose={handleCloseDialog} user={selectedUser} />
-                </div>
-            }
         </div>
-    );
+        </> );
 }
 
-export default AdminUsers;
+export default ViewRegisteredOrganizations;
