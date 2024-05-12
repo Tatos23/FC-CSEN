@@ -40,6 +40,7 @@ import Profile from './components/Profile.jsx';
 import OrgProfile from './components/organization/OrgProfile.js';
 import ViewRegisteredOrganizations from './components/donor/ViewRegisteredOrganizations.js';
 import LoginCard from './components/authentication/LoginCard.js';
+import DonorNot from './components/donor/DonorNot.js';
 
 
 
@@ -51,7 +52,7 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
 
-          <Route index element={<ViewRegisteredOrganizations/>} />
+          <Route index element={<Landing/>} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
@@ -70,7 +71,8 @@ function App() {
           <Route path="/blood" element={<Blood />} />
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests />} />
-          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/donor-notifications" element={<DonorNot />} />
+          <Route path="/rep-notifications" element={<RepNot />} />
           <Route path="/clothes" element={<Clothes />} />
           <Route path="/toy" element={<Toy />} />
           <Route path="/station" element={<Stationary />} />

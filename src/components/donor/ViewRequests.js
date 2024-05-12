@@ -173,7 +173,7 @@ function ViewRequests() {
     }
 
     const handleButtonClickNotifications = () => {
-        navigate('/notifications');
+        navigate('/donor-notifications');
     }
 
 
