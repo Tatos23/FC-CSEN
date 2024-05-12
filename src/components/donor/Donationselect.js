@@ -49,7 +49,7 @@ function Donationselect() {
     case 1:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -83,7 +83,7 @@ function Donationselect() {
     case 2:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -118,7 +118,7 @@ function Donationselect() {
     case 3:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -152,7 +152,7 @@ function Donationselect() {
       );case 4:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -184,7 +184,7 @@ function Donationselect() {
       );case 5:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -218,7 +218,7 @@ function Donationselect() {
       );case 6:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -252,7 +252,7 @@ function Donationselect() {
       );case 7:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -284,7 +284,7 @@ function Donationselect() {
       );case 8:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -316,7 +316,7 @@ function Donationselect() {
       );case 9:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -348,7 +348,7 @@ function Donationselect() {
       );case 10:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -380,7 +380,7 @@ function Donationselect() {
       );case 11:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -412,7 +412,7 @@ function Donationselect() {
       );case 12:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -444,7 +444,7 @@ function Donationselect() {
       );case 13:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -468,7 +468,7 @@ function Donationselect() {
       );case 14:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -492,7 +492,7 @@ function Donationselect() {
       );case 15:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -515,7 +515,7 @@ function Donationselect() {
       );case 16:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -537,7 +537,7 @@ function Donationselect() {
       );case 17:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
@@ -563,7 +563,7 @@ function Donationselect() {
       );case 18:
       return (
         <div className="Donationselect-main">
-          <Header role="donor" loggedIn={true}/>
+          <Header role="Donor" loggedIn={true}/>
           <div className="Donationselect-container">
             {donation && (
               <>
