@@ -712,7 +712,11 @@ function ViewRequests() {
                     </div>
 
                 <div className='view-requests-right'>
-                    <div className="filter-title">Filter and Search</div>
+                    <div className="search-title">Search</div>
+                    <div className="right-subSection-search">
+
+                    </div>
+                    <div className="filter-title">Filter</div>
                         <div className="right-subSection">
 
                             <div className="LR-subSection">
@@ -890,8 +894,12 @@ function ViewRequests() {
 
                             </div>
 
-                            <button className='view-button' onClick={() => handleButtonClickApplyFilters('Apply Filters')}>Apply Filters</button>
-                            <button className='view-button' onClick={() => handleButtonClickRemoveFilters('Remove Filters')}>Remove Filters</button>
+                            <div className="ViewRequests-view-buttons">
+                                <button className='apply-view-button' onClick={() => handleButtonClickApplyFilters('Apply Filters')}>Apply</button>
+                                <button className='remove-view-button' onClick={() => handleButtonClickRemoveFilters('Remove Filters')}>Remove</button>
+                            </div>
+
+                            
 
                         </div>
                     </div>

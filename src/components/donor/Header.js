@@ -23,8 +23,8 @@ function Header({loggedIn}){
     <>
         <div className='home-navbar'>
             <div className='home-leftside'>
-                <img className='home-logo-navbar'src='logo2.png' alt='logo'></img>
-                <img className='home-logo-navbar-name'src='name.png' alt='logo'></img>
+                <img className='home-logo-navbar' src='/logo2.png' alt='logo'></img>
+                <img className='home-logo-navbar-name' src='/name.png' alt='logo'></img>
             </div>
             <div className='home-middleside'>
                 <button className='home-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
@@ -37,7 +37,7 @@ function Header({loggedIn}){
                
                 { loggedIn ? 
                     (<button className='main-temp-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}>
-                    <img className='home-profilebutton'src='profileEnhanced.png' alt='logo'></img></button>)
+                    <img className='home-profilebutton'src='/profileEnhanced.png' alt='logo'></img></button>)
                     :
                     (<Link to={"/home"} className='home-singin-up' >Login/Register</Link>)
                 }
