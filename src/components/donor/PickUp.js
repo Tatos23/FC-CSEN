@@ -8,7 +8,9 @@ function PickUp (){
     const [transporType, setTransporType] = useState('');
     const [date, setDate] = useState('');
     const [timeSlot, setTimeSlot] = useState('');
-
+   const onButtonClickHandler = () => {
+        window.alert('Submitted');
+      };
     return (
         <div className='PickUp'>
             <Header loggedIn={true} role="Donor"/>
@@ -48,7 +50,7 @@ function PickUp (){
                     <option value="truck">Evening (7pm : 11pm)</option>
                 </select>
 
-                <button className='PickUp-Submit'>Submit</button>
+                <button className='PickUp-Submit' onClick={onButtonClickHandler}>Submit</button>
                 
             </div>
         </div>
