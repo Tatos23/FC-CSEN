@@ -36,7 +36,7 @@ function Home(){
     //REPLACE THE LINE AT THE BOTTOM WITH THIS: <button className='home-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}><img className='home-profile-icon'src='profileEnhanced.png' alt='logo' ref = {refOne}></img></button>
     const navigate = useNavigate();
     const handleButtonClickNotifications1 = () => {
-        navigate('/notifications');
+        navigate('/donor-notifications');
     }
     const handleButtonClickHome = () => {
         navigate('/home-donor');
