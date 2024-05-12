@@ -111,6 +111,23 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, donorRole,
                             </div>
                         )
                     }
+                    {role === 'Donor' && donorRole === 'Doctor' &&
+                        <>
+                            <input type="text" placeholder="Area" className="organizationName-input" value={organizationName} onChange={e => setOrganizationName(e.target.value)} required />
+                            <input type="text" placeholder="Address" className="organizationType-input" value={organizationType} onChange={e => setOrganizationType(e.target.value)} required />
+                            <input type="text" placeholder="Governorate" className="organizationAddress-input" value={organizationAddress} onChange={e => setOrganizationAddress(e.target.value)} required />
+                            <input type="text" placeholder="Speciality" className="organizationArea-input" value={organizationArea} onChange={e => setOrganizationArea(e.target.value)} required />
+                            <input type="text" placeholder="No.of cases" className="organizationGovernorate-input" value={organizationGovernorate} onChange={e => setOrganizationGovernorate(e.target.value)} required />
+                        </>
+                    }
+                    <br />
+                    {role === 'Donor' && donorRole === 'Teacher' &&
+                        <>
+                            <input type="text" placeholder="Subjects" className="organizationName-input" value={organizationName} onChange={e => setOrganizationName(e.target.value)} required />
+                            <input type="text" placeholder="No.of classes" className="organizationType-input" value={organizationType} onChange={e => setOrganizationType(e.target.value)} required />
+                            <input type="text" placeholder="No.of students" className="organizationAddress-input" value={organizationAddress} onChange={e => setOrganizationAddress(e.target.value)} required />
+                           </>
+                    }
                     <br />
                     {role === 'Organization Representative' &&
                         <>
