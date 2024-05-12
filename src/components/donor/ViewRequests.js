@@ -163,6 +163,15 @@ function ViewRequests() {
         setSelectedCategory("Medical Cases Category")
 
     }
+    const handleButtonClickHome = () => {
+        navigate('/home-donor');
+    }
+    const handleButtonClickDonations = () => {
+        navigate('/view-requests');
+    }
+    const handleButtonClickOrganizations = () => {
+        navigate('/view-reg-org');
+    }
 
     const handleButtonClickNotifications = () => {
         navigate('/notifications');
@@ -677,9 +686,9 @@ function ViewRequests() {
                         {/* <button className='view-requests-donate-button' >Donate</button> */}
                     </div>
                     <div className='view-requests-middleside'>
-                        <button className='view-requests-middleside-button' style={{ marginRight: '10%' }}>Home</button>
-                        <button className='view-requests-middleside-button' style={{ marginRight: '1%' }}>Donations</button>
-                        <button className='view-requests-middleside-button' style={{ marginLeft: '10%' }}>About Us</button>
+                        <button className='view-requests-middleside-button' onClick={() => handleButtonClickHome('Home')} style={{ marginRight: '10%' }}>Home</button>
+                        <button className='view-requests-middleside-button' onClick={() => handleButtonClickDonations('Donations')} style={{ marginRight: '1%' }}>Donations</button>
+                        <button className='view-requests-middleside-button' onClick={() => handleButtonClickOrganizations('Organizations')} style={{ marginLeft: '10%' }}>Organizations</button>
                         <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')} style={{ marginLeft: '10%' }}>Notifications</button>
 
                     </div>

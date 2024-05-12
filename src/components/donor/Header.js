@@ -17,6 +17,16 @@ function Header({loggedIn}){
     const handleButtonClickNotifications = () => {
         navigate('/notifications');
     }
+    const handleButtonClickHome = () => {
+        navigate('/home-donor');
+    }
+    const handleButtonClickDonations = () => {
+        navigate('/view-requests');
+    }
+    const handleButtonClickOrganizations = () => {
+        navigate('/view-reg-org');
+    }
+
 
 
     return(
@@ -27,10 +37,10 @@ function Header({loggedIn}){
                 <img className='home-logo-navbar-name'src='name.png' alt='logo'></img>
             </div>
             <div className='home-middleside'>
-                <button className='home-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
-                <button className='home-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
-                <button className='home-middleside-button'style={{ marginLeft: '10%' }}>Organizations</button>
-                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%', fontFamily: 'Roboto' } }>Notifications</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickHome('Home')} style={{ marginRight: '10%' }}>Home</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickDonations('Donations')} style={{ marginRight: '1%' }}>Donations</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickOrganizations('Organizations')} style={{ marginLeft: '10%' }}>Organizations</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%', fontFamily: 'Roboto' } }>Notifications</button>
 
             </div>
             <div className='home-rightside'>
