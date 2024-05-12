@@ -12,7 +12,10 @@ function LoginCard({ isRegistering, toggleForm, showPassword, toggleShowPassword
     const users = [
         { username: 'abdullah', password: 'test', role: 'Admin'},
         { username: 'ahmed', password: 'test1', role: 'Donor' },
-        { username: 'adham', password: 'test2', role: 'Organization Representative'}
+        { username: 'adham', password: 'test2', role: 'Organization Representative'},
+        {username: 'tatos', password: '0000', role: 'Organization Representative'},
+        {username: 'tatos', password: '0000', role: 'Donor'},
+        {username: 'tatos', password: '0000', role: 'Admin'}
         // add more users as needed
     ];
 
