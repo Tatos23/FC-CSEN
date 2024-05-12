@@ -6,7 +6,7 @@ import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
 import { useNavigate } from 'react-router-dom';
 
-function Header({loggedIn}){
+function Header({loggedIn, role}){
 
     const [isVisible, setIsVisible] = useState(false);
     const navigate = useNavigate();
@@ -17,30 +17,37 @@ function Header({loggedIn}){
     const handleButtonClickNotifications = () => {
         navigate('/notifications');
     }
+    const handleButtonClickHome = () => {
+        navigate('/home-donor');
+    }
+    const handleButtonClickDonations = () => {
+        navigate('/view-requests');
+    }
+    const handleButtonClickOrganizations = () => {
+        navigate('/view-reg-org');
+    }
+
 
 
     return(
     <>
         <div className='home-navbar'>
             <div className='home-leftside'>
-                <img className='home-logo-navbar'src='logo2.png' alt='logo'></img>
-                <img className='home-logo-navbar-name'src='name.png' alt='logo'></img>
+                <img className='home-logo-navbar' src='/logo2.png' alt='logo'></img>
+                <img className='home-logo-navbar-name' src='/name.png' alt='logo'></img>
             </div>
             <div className='home-middleside'>
-                <button className='home-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
-                <button className='home-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
-                <button className='home-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-                <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%', fontFamily: 'Roboto' } }>Notifications</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickHome('Home')} style={{ marginRight: '10%' }}>Home</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickDonations('Donations')} style={{ marginRight: '1%' }}>Donations</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickOrganizations('Organizations')} style={{ marginLeft: '10%' }}>Organizations</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')}style={{ marginLeft: '10%', fontFamily: 'Roboto' } }>Notifications</button>
 
             </div>
             <div className='home-rightside'>
-                <div>
-                    <input  className="home-search-container" type="text" placeholder="Search..."></input>
-                </div>
-                <button className='home-searchbutton'><img className='home-search-icon'src='searchicon.png' alt='logo'></img></button>
+               
                 { loggedIn ? 
                     (<button className='main-temp-profilebutton' onClick = {() => setOpenProfile((prev) => !prev)}>
-                    <img className='home-profilebutton'src='profileEnhanced.png' alt='logo'></img></button>)
+                    <img className='home-profilebutton'src='/profileEnhanced.png' alt='logo'></img></button>)
                     :
                     (<Link to={"/home"} className='home-singin-up' >Login/Register</Link>)
                 }
@@ -48,7 +55,7 @@ function Header({loggedIn}){
 
         </div>
         {
-        openProfile && <DropDownProfile/> 
+        openProfile && <DropDownProfile role={role}/> 
        }
     </>
     );

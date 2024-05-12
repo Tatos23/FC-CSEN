@@ -14,14 +14,14 @@ const Food = () => {
         <h2 className='text-2xl text-green-500'>Food Request Form </h2>
                 <br/>
                 <div style={{ display:'block', alignItems: 'center' }}>
-                <label className='text-2xl text-green-800'>Food Type: </label>
+                <label className='text-2xl text-green-800'>Food Item: </label>
                 <input type="text"  style={{ maxWidth: '200px', maxHeight: '30px', textAlign:'center' }} required/>
                 </div>
                 <br/>
                 <div style={{ display:'block', alignItems: 'center' }}>
                 <label className='text-2xl text-green-800'>Quantity: </label>
                 <input type="number" max={"200"} onChange={(event)=> {const val = Math.min(event.target.value,200); event.target.value=val;
-                  }} style={{ maxWidth: '100px', maxHeight: '30px', textAlign:'center' }} placeholder='' required></input>
+                  }} style={{ maxWidth: '150px', maxHeight: '30px', textAlign:'center' }} placeholder='' required></input>
                 </div>
                 <br />
                 <br />

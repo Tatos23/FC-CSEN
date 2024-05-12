@@ -2,6 +2,8 @@ import './landing.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowDown } from 'react-icons/fa';
+import {useNavigate} from 'react-router-dom';
+
 
 function Landing(){
     const scrollToBottom = () => {
@@ -10,6 +12,18 @@ function Landing(){
           behavior: 'smooth', // Add smooth scrolling animation
         })};
     const [isVisible, setIsVisible] = useState(false);
+    const navigate = useNavigate();
+
+
+    const handleButtonClickHome = () => {
+        navigate('/hdsfdsfonor');
+    }
+    const handleButtonClickDonations = () => {
+        navigate('/viadsfdsfquests');
+    }
+    const handleButtonClickDonate = () => {
+        navigate('/home');
+    }
 
 
 return(
@@ -20,18 +34,15 @@ return(
             <div className='landing-leftside'>
                 <img className='landing-logo-navbar'src='logo2.png' alt='logo'></img>
                 <img className='landing-logo-navbar-name'src='name.png' alt='logo'></img>
-                <button className='landing-donate-button' >Donate</button>
+                <button className='landing-donate-button'onClick={() => handleButtonClickDonate('Donate')} >Donate</button>
             </div>
             <div className='landing-middleside'>
-                <button className='landing-middleside-button'style={{ marginRight: '10%' }}>Home</button>   
-                <button className='landing-middleside-button'style={{ marginRight: '1%' }}>Donations</button>
+                <button className='landing-middleside-button' onClick={() => handleButtonClickHome('Home')} style={{ marginRight: '10%' }}>Home</button>
+                <button className='landing-middleside-button' onClick={() => handleButtonClickDonations('Donations')} style={{ marginRight: '1%' }}>Donations</button>
                 <button className='landing-middleside-button'style={{ marginLeft: '10%' }} onClick={scrollToBottom}>About Us</button>
 
             </div>
             <div className='landing-rightside'>
-                <div >
-                <input  className="landing-search-container" type="text" placeholder="Search..."></input>
-                </div>
 
             <button className='landing-searchbutton'><img className='landing-search-icon'src='searchicon.png' alt='logo'></img></button>
             

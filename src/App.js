@@ -34,7 +34,11 @@ import Food from './components/organization/Food.jsx';
 import AdminDashBoard from './components/admin/admin-dashboard/AdminDashBoard.js';
 import AdminUsers from './components/admin/admin-users/AdminUsers.js';
 import RegisteringUsers from './components/admin/registering-users/RegisteringUsers.js';
+import RegisterCard from './components/authentication/RegisterCard.js';
 
+import Profile from './components/Profile.jsx';
+import OrgProfile from './components/organization/OrgProfile.js';
+import ViewRegisteredOrganizations from './components/donor/ViewRegisteredOrganizations.js';
 
 
 
@@ -58,7 +62,7 @@ function App() {
           <Route path="/organization-login" element={<Authentication role="organization" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
-          <Route path="/donation-select" element={<Donationselect />} />
+          <Route path="/donation-select/:id" element={<Donationselect />} />
           <Route path="/blood" element={<Blood />} />
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests />} />
@@ -75,9 +79,13 @@ function App() {
           <Route path="/org-home" element={<ORHome />} />
           <Route path="/rep-don" element={<RepDon />} />
           <Route path="/rep-notifications" element={<RepNot />} />
-
-
-
+          <Route path="/donor-profile" element={<Profile />} />
+          <Route path="/org-profile" element={<OrgProfile />} />
+          <Route path="/pickup" element={<PickUp />} />
+          <Route path="/Donor-document-upload" element={<DocUpload role="Donor" />} />
+          <Route path="/Representative-document-upload" element={<DocUpload role="rep" />} />
+          <Route path="/profile" element={<OrgProfile />} />
+          <Route path="/view-reg-org" element={<ViewRegisteredOrganizations />} />
         </Routes>
       </BrowserRouter>
 

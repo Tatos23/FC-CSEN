@@ -58,10 +58,10 @@ return(
                 {/* <button className='main-temp-donate-button' >Donate</button> */}
             </div>
             <div className='main-temp-middleside'>
-            <button className='org-temp-middleside-button'style={{ marginRight: '10%' }}key={'org-home'} onClick={()=>handleButtonHome('org-home')}>Home</button>   
-                <button className='org-temp-middleside-button'style={{ marginRight: '1%' }}key={'rep-don'} onClick={()=>handleButtonDon('rep-don')}>Donations</button>
-                <button className='org-temp-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
-                <button className='org-temp-middleside-button'style={{ marginLeft: '10%' }} key={'rep-notifications'} onClick={()=>handleButtonNot('rep-notifications')}>Notifications</button>
+            <button className='main-temp-middleside-button'style={{ marginRight: '10%' }}key={'org-home'} onClick={()=>handleButtonHome('org-home')}>Home</button>   
+                <button className='main-temp-middleside-button'style={{ marginRight: '1%' }}key={'rep-don'} onClick={()=>handleButtonDon('rep-don')}>Donations</button>
+                <button className='main-temp-middleside-button'style={{ marginLeft: '10%' }}>About Us</button>
+                <button className='main-temp-middleside-button'style={{ marginLeft: '10%' }} key={'rep-notifications'} onClick={()=>handleButtonNot('rep-notifications')}>Notifications</button>
                 
             </div>
             <div className='main-temp-rightside'>
@@ -95,7 +95,7 @@ return(
 
     {/* tatos */}
        {
-        openProfile && <DropDownProfile/> 
+        openProfile && <DropDownProfile role="org"/> 
        
        }
     

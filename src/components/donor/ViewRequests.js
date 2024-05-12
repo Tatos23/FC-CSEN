@@ -1,11 +1,12 @@
 import './ViewRequests.css';
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
 import DonationsList from './DonationsList';
 import DropDownCategory from './DropDownCategory';
 import { PiButterflyDuotone } from 'react-icons/pi';
+import Donationselect from './Donationselect';
 
 
 
@@ -18,14 +19,11 @@ function ViewRequests() {
 
     ] */
 
+    const [searchTerm, setSearchTerm] = useState('');
+
     const [donations, setDonation] = useState(null);
 
     const [selectedCategory, setSelectedCategory] = useState('Select Category ▼'); // Initialize with default text
-
-
-
-
-
 
     useEffect(() => {
         fetch('http://localhost:8000/donations')
@@ -162,6 +160,15 @@ function ViewRequests() {
         setSelectedCategory("Medical Cases Category")
 
     }
+    const handleButtonClickHome = () => {
+        navigate('/home-donor');
+    }
+    const handleButtonClickDonations = () => {
+        navigate('/view-requests');
+    }
+    const handleButtonClickOrganizations = () => {
+        navigate('/view-reg-org');
+    }
 
     const handleButtonClickNotifications = () => {
         navigate('/notifications');
@@ -170,12 +177,10 @@ function ViewRequests() {
 
 
 
-
     const handleView = (id) => {
-        // const tempDonations = donations.filter(donations => donations.id !== id);
-        // setDonation(tempDonations);
+        navigate(`/donation-select/${id}`);
 
-        navigate('/donation-select');
+
     }
 
 
@@ -656,8 +661,9 @@ function ViewRequests() {
                         filteredDonations = filteredDonations.filter(donation => donation.category === selectedCategoryX);
                     }
                 }
-
-    
+                if (searchTerm) {
+                    filteredDonations = filteredDonations.filter(donation => donation.category.toLowerCase().includes(searchTerm.toLowerCase()));
+                }  
                 // Update the state with the filtered donations
                 setDonation(filteredDonations);
                 console.log('Filtered donations final:', filteredDonations);
@@ -678,18 +684,15 @@ function ViewRequests() {
                         {/* <button className='view-requests-donate-button' >Donate</button> */}
                     </div>
                     <div className='view-requests-middleside'>
-                        <button className='view-requests-middleside-button' style={{ marginRight: '10%' }}>Home</button>
-                        <button className='view-requests-middleside-button' style={{ marginRight: '1%' }}>Donations</button>
-                        <button className='view-requests-middleside-button' style={{ marginLeft: '10%' }}>About Us</button>
+                        <button className='view-requests-middleside-button' onClick={() => handleButtonClickHome('Home')} style={{ marginRight: '10%' }}>Home</button>
+                        <button className='view-requests-middleside-button' onClick={() => handleButtonClickDonations('Donations')} style={{ marginRight: '1%' }}>Donations</button>
+                        <button className='view-requests-middleside-button' onClick={() => handleButtonClickOrganizations('Organizations')} style={{ marginLeft: '10%' }}>Organizations</button>
                         <button className='view-requests-middleside-button' onClick={() => handleButtonClickNotifications('Notifications')} style={{ marginLeft: '10%' }}>Notifications</button>
 
                     </div>
                     <div className='view-requests-rightside'>
-                        <div >
-                            <input className="view-requests-search-container" type="text" placeholder="Search..."></input>
-                        </div>
 
-                        <button className='view-requests-searchbutton'><img className='view-requests-search-icon' src='searchicon.png' alt='logo'></img></button>
+                        
 
 
                         {/* <Link to={"/home"} className='singin-up' >Login/Register</Link> */}
@@ -716,66 +719,94 @@ function ViewRequests() {
                     </div>
 
                 <div className='view-requests-right'>
-                    <div className="filter-title">Filter and Search</div>
+                    <div className="search-title">Search</div>
+                    <div className="right-subSection-search">
+                        <input className="ViewRequests-search-bar" type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)}/>
+                    </div>
+                    <div className="filter-title">Filter</div>
                         <div className="right-subSection">
 
                             <div className="LR-subSection">
-                                <label htmlFor="Gender" style={{ display: 'block' }}>Gender:</label>
-                                <label htmlFor="Season" style={{ display: 'block' }}>Season:</label>
-                                {/* <label htmlFor="Fruit Type" style={{ display: 'block' }}>Fruit Type:</label> */}
-                                <label htmlFor="Hospital Name" style={{ display: 'block' }}>Hospital Name:</label>
-                                <label htmlFor="Governorate" style={{ display: 'block' }}>Governorate:</label>
-                                <label htmlFor="Area" style={{ display: 'block' }}>Area:</label>
-                                <label htmlFor="Medical Specialty" style={{ display: 'block' }}>Medical Specialty:</label>
-                                <label htmlFor="Organization Name" style={{ display: 'block' }}>Organization Name:</label>
-                                <label htmlFor="Subject" style={{ display: 'block' }}>Subject:</label>
-                                <label htmlFor="Category" style={{ display: 'block' }}>Category:</label>
-                                <label htmlFor="Sub-Category" style={{ display: 'block' }}>Sub-Category:</label>
-
-                            </div>
-
-                            <div className="RR-subSection">
-
-                                {/* <div> <button className='view-requests-category-button' value={selectedCategory}
-                                onChange={e => setSelectedCategory(e.target.value)}
-                                onClick={() => setOpenCategory((prev) => !prev)}>{selectedCategory}</button> </div> */}
-
+                            <label htmlFor='Category' style={{ display: 'block', fontWeight:'bold' }}>
+                                        Category:
+                                    </label>
+                                    <div className='categories'>
+                                        <select value={selectedCategoryX} onChange={handleCategoryChangeX}>
+                                            <option value=''>Select...</option>
+                                            {categoryOptions.map((categoryX) => (
+                                                <option key={categoryX} value={categoryX}>
+                                                    {categoryX}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                    {selectedCategoryX && (
+                                        ['toys', 'medical supplies', 'school supplies', 'food'].includes(selectedCategoryX) && (
+                                            <>
+                                            <label htmlFor='Sub-Category' style={{ display: 'block', fontWeight:'bold' }}>
+                                                    Sub-Category:
+                                                </label>
+                                            <div className='subCategories'>
+                                                
+                                                <select value={selectedSubcategory} onChange={handleSubcategoryChange}>
+                                                    <option value=''>Select...</option>
+                                                    {selectedCategoryX === 'toys' &&
+                                                        toySubcategories.map((subcategory) => (
+                                                            <option key={subcategory} value={subcategory}>
+                                                                {subcategory}
+                                                            </option>
+                                                        ))}
+                                                    {selectedCategoryX === 'medical supplies' &&
+                                                        medicalSubcategories.map((subcategory) => (
+                                                            <option key={subcategory} value={subcategory}>
+                                                                {subcategory}
+                                                            </option>
+                                                        ))}
+                                                    {selectedCategoryX === 'school supplies' &&
+                                                        schoolSubcategories.map((subcategory) => (
+                                                            <option key={subcategory} value={subcategory}>
+                                                                {subcategory}
+                                                            </option>
+                                                        ))}
+                                                    {selectedCategoryX === 'food' &&
+                                                        foodSubCategories.map((subcategory) => (
+                                                            <option key={subcategory} value={subcategory}>
+                                                                {subcategory}
+                                                            </option>
+                                                        ))}
+                                                </select>
+                                            </div>
+                                            </>
+                                        )
+                                    )}
+                                
+                                <label htmlFor="Gender" style={{ display: 'block', color: '#265305', fontWeight: 'bold'}}>Gender:</label>
                                 <div className="view-requests-gender-input">
-                                    <label htmlFor="male" style={{color: '#2C6B5A'}}>
+                                    <label htmlFor="male" style={{color: '#265305', fontWeight: 'normal'}}>
                                         <input type="checkbox" id="male" name="gender" value="male" checked={gender === 'male'} onChange={handleGenderChange}/>
                                         Male
                                     </label>
-                                    <label htmlFor="female" style={{color: '#2C6B5A'}}>
+                                    <label htmlFor="female" style={{color: '#265305', fontWeight: 'normal'}}>
                                         <input type="checkbox" id="female" name="gender" value="female" checked={gender === 'female'} onChange={handleGenderChange} />
                                         Female
                                     </label>
                                 </div>
-
+                                <label htmlFor="Season" style={{ display: 'block', color: '#265305', fontWeight: 'bold' }}>Season:</label>
                                 <div className="selectSeason">
-                                <select value={selectedSeason} onChange={handleSeasonChange}>
-                                    <option value="Winter">Winter</option>
-                                    <option value="Spring">Spring</option>
-                                    <option value="Summer">Summer</option>
-                                    <option value="Fall">Fall</option>
-                                    <option value="None">None</option>
-                                </select>
+                                    <select value={selectedSeason} onChange={handleSeasonChange}>
+                                        <option value="Winter">Winter</option>
+                                        <option value="Spring">Spring</option>
+                                        <option value="Summer">Summer</option>
+                                        <option value="Fall">Fall</option>
+                                        <option value="None">None</option>
+                                    </select>
                                 </div>
-
-                                {/* <div className="selectFruitType">
-                                <select value={selectedFruitType} onChange={handleFruitTypeChange}>
-                                    <option value="Fruits">Fruits</option>
-                                    <option value="Vegetables">Vegetables</option>
-                                    <option value="Canned Foods">Canned Foods</option>
-                                    <option value="Fresh Meals">Fresh Meals</option>
-                                    <option value="Baked Goods">Baked Goods</option>
-                                    <option value="None">None</option>
-                                </select>
-                                </div> */}
-
+                                {/* <label htmlFor="Fruit Type" style={{ display: 'block' }}>Fruit Type:</label> */}
+                                <label htmlFor="Hospital Name" style={{ display: 'block', color: '#265305', fontWeight: 'bold'  }}>Hospital Name:</label>
                                 <div className="setHospitalName">
-                                <textarea required value={hospitalName} onChange={(e) => setHospitalName(e.target.value)}></textarea>
+                                <textarea className='view-requests-hospitalName-textarea' required value={hospitalName} onChange={(e) => setHospitalName(e.target.value)}></textarea>
                                 </div>
-
+                                <label htmlFor="Governorate" style={{ display: 'block', fontWeight:'bold' }}>Governorate:</label>
                                 <div className="selectGovernorate">
                                 <select value={selectedGovernorate} onChange={handleGovernorateChange}>
                                     <option value="Alexandria">Alexandria</option>
@@ -809,8 +840,8 @@ function ViewRequests() {
                                     <option value="Tanta">Tanta</option>
                                     <option value="None">None</option>
                                 </select>
-
                                 </div>
+                                <label htmlFor="Area" style={{ display: 'block', fontWeight:'bold' }}>Area:</label>
                                 <div className="selectArea">
                                     <select value={selectedArea} onChange={handleAreaChange}>
                                         <option value="Agouza">Agouza</option>
@@ -844,70 +875,38 @@ function ViewRequests() {
                                     </select>
                                 </div>
 
-                                <div className="setMedicalSpeciality">
-                                <textarea required value={medicalSpeciality} onChange={(e) => setMedicalSpeciality(e.target.value)}></textarea>
-                                </div>
+                                    <label htmlFor='Medical Specialty' style={{ display: 'block', fontWeight:'bold' }}>
+                                        Medical Specialty:
+                                    </label>
+                                    <div className='setMedicalSpeciality'>
+                                        <textarea required value={medicalSpeciality} onChange={(e) => setMedicalSpeciality(e.target.value)}></textarea>
+                                    </div>
 
-                                <div className="setOrganizationName">
-                                <textarea required value={organizationName} onChange={(e) => setOrganizationName(e.target.value)}></textarea>
-                                </div>
+                                    <label htmlFor='Organization Name' style={{ display: 'block', fontWeight:'bold' }}>
+                                        Organization Name:
+                                    </label>
+                                    <div className='setOrganizationName'>
+                                        <textarea required value={organizationName} onChange={(e) => setOrganizationName(e.target.value)}></textarea>
+                                    </div>
 
-                                <div className="setSubject">
-                                <textarea required value={subject} onChange={(e) => setSubject(e.target.value)}></textarea>
-                                </div>
-
-
-                                <div className="categories/subCategories">
-                                     
-                                    
-                                    <label>Select a category:</label>
-                                    <select value={selectedCategoryX} onChange={handleCategoryChangeX}>
-                                        <option value="">Select...</option>
-                                        {categoryOptions.map((categoryX) => (
-                                            <option key={categoryX} value={categoryX}>
-                                                {categoryX}
-                                            </option>
-                                        ))}
-                                    </select>
-
-                                    {selectedCategoryX && (
-                                        <div>
-                                            <label>Select a subcategory:</label>
-                                            <select value={selectedSubcategory} onChange={handleSubcategoryChange}>
-                                                <option value="">Select...</option>
-                                                {selectedCategoryX === 'toys' && toySubcategories.map((subcategory) => (
-                                                    <option key={subcategory} value={subcategory}>
-                                                        {subcategory}
-                                                    </option>
-                                                ))}
-                                                {selectedCategoryX === 'medical supplies' && medicalSubcategories.map((subcategory) => (
-                                                    <option key={subcategory} value={subcategory}>
-                                                        {subcategory}
-                                                    </option>
-                                                ))}
-                                                {selectedCategoryX === 'school supplies' && schoolSubcategories.map((subcategory) => (
-                                                    <option key={subcategory} value={subcategory}>
-                                                        {subcategory}
-                                                    </option>
-                                                ))}
-                                                {selectedCategoryX === 'food' && foodSubCategories.map((subcategory) => (
-                                                    <option key={subcategory} value={subcategory}>
-                                                        {subcategory}
-                                                    </option>
-                                                ))}
-                                            </select>
-                                        </div>
-                                    )}
-
-   
+                                    <label htmlFor='Subject' style={{ display: 'block', fontWeight:'bold' }}>
+                                        Subject:
+                                    </label>
+                                    <div className='setSubject'>
+                                        <textarea required value={subject} onChange={(e) => setSubject(e.target.value)}></textarea>
+                                    </div>
 
                                 </div>
 
 
                             </div>
 
-                            <button className='view-button' onClick={() => handleButtonClickApplyFilters('Apply Filters')}>Apply Filters</button>
-                            <button className='view-button' onClick={() => handleButtonClickRemoveFilters('Remove Filters')}>Remove Filters</button>
+                            <div className="ViewRequests-view-buttons">
+                                <button className='apply-view-button' onClick={() => handleButtonClickApplyFilters('Apply Filters')}>Apply</button>
+                                <button className='remove-view-button' onClick={() => handleButtonClickRemoveFilters('Remove Filters')}>Remove</button>
+                            </div>
+
+                            
 
                         </div>
                     </div>
@@ -918,7 +917,7 @@ function ViewRequests() {
 
 
 
-                <footer className='view-requests-nd'>
+                                                        <footer className='view-requests-nd'>
                     <div className='view-requests-words'>Connects Donors,Oganizations <br></br>&amp; much more in every country<br></br> around the world. </div>
 
                     <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon' src='healthicon.png' alt='logo'></img><span className='view-requests-title' >Medical supplies</span></div>
@@ -929,12 +928,11 @@ function ViewRequests() {
                     <div className='view-requests-no'><div className='view-requests-icon-title'><img className='view-requests-foodicon' src='education.png' alt='logo'></img><span className='view-requests-title' style={{ marginRight: '6%' }} >Education</span></div>
                         <div className='view-requests-saying'>Empowering minds through education. Support a child's future with your donation today.</div></div>
                 </footer>
-            </div>
 
 
             {/* tatos */}
             {
-                openProfile && <DropDownProfile />
+                openProfile && <DropDownProfile role="Donor"/>
 
             }
             {/* {
@@ -947,4 +945,3 @@ function ViewRequests() {
     )
 }
 export default ViewRequests;
-

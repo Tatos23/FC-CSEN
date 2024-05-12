@@ -7,6 +7,7 @@
     background-attachment: fixed;
     background-size: cover;
     position: relative;
+    font-family: Roboto;
 
 }
 
@@ -56,16 +57,17 @@
     display: flex;
     width: 710px;
     margin-top: 15px;
-    margin-right: 20%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .view-requests-rightside {
     color: white;
-    justify-content: space-between;
     display: flex;
     margin-right: 15px;
-    width: 400px;
+    width: 250px;
     margin-top: 15px;
+   
 
 }
 
@@ -113,7 +115,7 @@
 
 .view-requests-middleside-button {
     font-family: poppins, sans-serif;
-    font-size: 18px;
+    font-size: 100%;
     border: none;
     color: #2C6B5A;
     background-color: transparent;
@@ -210,8 +212,6 @@
 
     top: 100px;
     left: 100px;
-
-
 
 }
 
@@ -337,34 +337,100 @@
     width: 40vw;
     align-items: center;
 }
+
+.right-subSection-search{
+    width: 40%;
+    margin-bottom: 5%;
+
+}
+
 .right-subSection{
     width: 80%;
     border: 1px solid #265305;
-    /* overflow-y: auto; Make the dropdown scrollable */
-    height: 80%;
+    overflow-y: auto;
+    height: 500px;
 }
+
 .LR-subSection{
     display: flex;
     flex-direction: column;
-    width: 10vw;
     align-items: left;
-    padding-left: 5%;
-    margin-top: 10%;
-    
+    margin-top: 5%;
+    height: fit-content;
+    align-items: center;
 }
 
 .RR-subSection{
     display: flex;
     flex-direction: column;
-    align-items: right;
+    align-items: center;
+    height: fit-content;
 }
 
-.selectSeason{
+.ViewRequests-search-bar{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #265305;
+    padding-left: 10px;
+    margin-top: 1%;
+    height: 100%;
+
 }
 
+.categories,
+.subCategories,
+.setSubject,
+.setOrganizationName,
+.setMedicalSpeciality,
+.selectArea,
+.selectGovernorate,
+.view-requests-hospitalName-textarea,
+.selectSeason {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #265305;
+    margin-bottom: 20px;
+    border: 2px solid #4F4F4F;
+    align-self: center;
+}
+
+.categories:hover,
+.subCategories:hover,
+.categories:focus,
+.subCategories:focus,
+.setSubject:hover,
+.setSubject:focus,
+.setOrganizationName:hover,
+.setOrganizationName:focus,
+.setMedicalSpeciality:hover,
+.setMedicalSpeciality:focus,
+.selectArea:hover,
+.selectArea:focus,
+.selectGovernorate:hover,
+.selectGovernorate:focus,
+.view-requests-hospitalName-textarea:hover,
+.view-requests-hospitalName-textarea:focus,
+.selectSeason:hover,
+.selectSeason:focus {
+    border-color: #162D23;
+    box-shadow: 0px 0px 10px #162D23;
+    outline: none;
+}
+
+.categories select,
+.subCategories select,
+.setSubject select,
+.setMedicalSpeciality select,
+.selectArea select,
+.selectGovernorate select,
+.selectSeason select
+{
+    outline: none;
+    box-shadow: none;
+}
 
 /* .gender-input */
-
 .view-requests-gender-input {
     border-radius: 10px;
     border-color: #74AC4C;
@@ -375,14 +441,14 @@
     cursor: pointer;
     font-weight: bold;
     transition: border-color 1s;
-    margin-top: 12%;
+    margin-top: 1%;
+    align-self: center;
 }
 .view-requests-gender-input input[type="checkbox"] {
     accent-color: #74AC4C;
     border: 1px solid #74AC4C;
     margin-left: 5%;
     margin-right: 2%;
-    margin-top: 5px;
     width: 20px;
     height: 20px;
 }
@@ -395,12 +461,10 @@
     border-color: #74AC4C;
 }
 
-
-
-
 /*Filter item styles*/
 
 
+.search-title,
 .filter-title {
     font-weight: bold;
     font-size: x-large;
@@ -474,8 +538,15 @@
 
 }
 
+.ViewRequests-view-buttons
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-direction: row;
+}
+
 .view-button {
-    display: inline-block;
     background-color: #00bcd4;
     /* Cyan color */
     color: white;
@@ -489,6 +560,55 @@
     border-radius: 10px;
     /* Add rounded corners */
     cursor: pointer;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.apply-view-button {
+    background-color: #74AC4C;
+    /* Cyan color */
+    color: white;
+    border-radius: 0.25rem;
+    /* Rounded corners */
+    padding: 0.5rem 1rem;
+    /* Adjust padding as needed */
+    border: none;
+    outline: none;
+    font-weight: bold;
+    border-radius: 10px;
+    /* Add rounded corners */
+    cursor: pointer;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.apply-view-button:hover {
+    background-color: #265305;
+}
+
+.remove-view-button {
+    background-color: red;
+    /* Cyan color */
+    color: white;
+    border-radius: 0.25rem;
+    /* Rounded corners */
+    padding: 0.5rem 1rem;
+    /* Adjust padding as needed */
+    border: none;
+    outline: none;
+    font-weight: bold;
+    border-radius: 10px;
+    /* Add rounded corners */
+    cursor: pointer;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.remove-view-button:hover {
+    background-color: #550000;
 }
 
 .view-button:hover {
