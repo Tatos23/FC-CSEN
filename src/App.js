@@ -53,7 +53,7 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
           
-        <Route index element={<RepNot/>} />
+        <Route index element={<Landing/>} />
             
           <Route path="/admin-dashboard" element={<Donationselect />} >
             <Route index element={<AdminHomePage />} />
