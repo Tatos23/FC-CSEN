@@ -8,6 +8,12 @@ export default function UserCard({ usersData, setUsersData, type, name, organiza
 
     const handleDeleteClick = (event) => {
         event.stopPropagation();
+
+        const confirmDelete = window.confirm('Are you sure you want to delete this user?');
+        if (!confirmDelete) {
+            return;
+        }
+
         const updatedUsersData = type === 'Donor' ? usersData.filter(user => user.username !== name) : usersData.filter(user => user.name !== name);
         setUsersData(updatedUsersData);
     };
