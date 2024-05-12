@@ -116,7 +116,7 @@
         "subcategory": "medication",
         "quantity": 2,
         "type": "Panadol",
-        "use": "pain-killer",
+        "use": "Pain Killer",
         "picture": "panadol.jpg",
         "id": 11
       },
@@ -126,7 +126,7 @@
         "subcategory": "medication",
         "quantity": 2,
         "type": "Biogen",
-        "use": "stress-relief",
+        "use": "Stress Relief",
         "picture": "stress relief.jpg",
         "id": 12
       },

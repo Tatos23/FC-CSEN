@@ -201,7 +201,7 @@
     /* position: fixed; */
     left: 0;
     right: 0;
-    margin-top: 600px;
+    margin-top: 10%;
     background-color: white;
     height: 500px;
     display: grid;
@@ -387,6 +387,9 @@
 .selectArea,
 .selectGovernorate,
 .view-requests-hospitalName-textarea,
+.view-requests-Age-textarea,
+.view-requests-Medical-use-textarea,
+.view-requests-Blood-type-textarea,
 .selectSeason {
     padding: 10px;
     font-size: 16px;
@@ -411,8 +414,14 @@
 .selectArea:focus,
 .selectGovernorate:hover,
 .selectGovernorate:focus,
+.view-requests-Age-textarea:hover,
+.view-requests-Age-textarea:focus,
+.view-requests-Medical-use-textarea:hover,
+.view-requests-Medical-use-textarea:focus,
+.view-requests-Blood-type-textarea:hover,
+.view-requests-Blood-type-textarea:focus,
 .view-requests-hospitalName-textarea:hover,
-.view-requests-hospitalName-textarea:focus
+.view-requests-hospitalName-textarea:focus,
 .selectSeason:hover,
 .selectSeason:focus {
     border-color: #162D23;
