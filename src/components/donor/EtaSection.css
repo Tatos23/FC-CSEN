@@ -4,22 +4,21 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    background-color: #74AC4C ;
+    background-color: #E5EBF2 ;
     margin-left: 10%;
     margin-right: 10%;
 }
 
 .EtaSection-title {
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
     margin-top: 1%;
-    font-size: 150%;
-    color: white;
+    font-size: 110%;
+    color: #265305;
 }
 
 .EtaSection-eta {
     font-family: 'Roboto', sans-serif;
     margin-top: 1%;
-    font-size: 150%;
-    color: white;
+    font-size: 100%;
+    color: #265305;
 }
