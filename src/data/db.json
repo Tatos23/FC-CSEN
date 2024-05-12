@@ -10,7 +10,8 @@
         "gender":"male",
         "picture": "tshirt.jpeg",
         "season":"Winter",
-        "material":"t-shirt"
+        "material":"t-shirt",
+        "author": "Tatos"
       },    
       {
         "title": "Clothes Donation",
@@ -18,7 +19,7 @@
         "subcategory": "clothes",
         "quantity": 5,
         "age": 10,
-        "author": "maria",
+        "author": "Maria",
         "picture": "sweatshirt.webp",
         "id": 2,
         "gender":"female",
@@ -31,7 +32,7 @@
         "subcategory": "book",
         "picture":"book.png",
         "name": "the book",
-        "author": "tatos",
+        "author": "Bond",
         "language": "English",
         "edition": "first-edition",
         "summary": "this is a summary of the book",
@@ -45,6 +46,7 @@
         "quantity": 2,
         "picture":"chair.jpeg",
         "type": "chair",
+        "author": "Michael",
         "id": 4
       },
       {
@@ -57,6 +59,7 @@
         "gender": "female",
         "picture": "hello kitty.jpg",
         "toycategory": "dolls",
+        "author": "Maria",
         "id": 5
       },
       {
@@ -69,6 +72,7 @@
         "gender": "male",
         "picture": "sports car.jpg",
         "toycategory": "sports cars",
+        "author": "John",
         "id": 6
       },
       {
@@ -79,6 +83,7 @@
         "quantity": 2 ,
         "name": "Apple",
         "picture": "apple.jpeg",
+        "author": "Leo",
         "id": 7
       },
       {
@@ -89,6 +94,7 @@
         "name": "carrot",
         "picture": "carrots.png",
         "quantity": 8 ,
+        "author": "Ronaldo",
         "id": 8
       },
       {
@@ -98,6 +104,7 @@
         "quantity": 7,
         "name": "beans",
         "picture": "canned beans.webp",
+        "author": "Foden",
         "id": 9
       },
       {
@@ -108,6 +115,7 @@
         "type": "MRI",
         "use": "produce images  of bones on a computer",
         "picture": "MRI-machine.jpg",
+        "author": "Mario",
         "id": 10
       },
       {
@@ -118,6 +126,7 @@
         "type": "Panadol",
         "use": "Pain Killer",
         "picture": "panadol.jpg",
+        "author": "Luigi",
         "id": 11
       },
       {
@@ -128,6 +137,7 @@
         "type": "Biogen",
         "use": "Stress Relief",
         "picture": "stress relief.jpg",
+        "author": "Tatos",
         "id": 12
       },
       {
@@ -142,6 +152,7 @@
         "governorate": "Cairo",
         "picture": "blooddonation.jpg",
         "hospitalLocation": "googlemarker.png",
+        "author": "Messi",
         "id": 13
       },
       {
@@ -156,6 +167,7 @@
         "governorate": "Giza",
         "picture": "blooddonation.jpg",
         "hospitalLocation": "googlemarker.png",
+        "author": "Mario",
         "id": 14
       },
       {
@@ -169,6 +181,7 @@
         "governorate": "Giza",
         "picture": "maths.jpg",
         "location": "googlemarker.png",
+        "author": "Michael",
         "id": 15
       },
       {
@@ -182,6 +195,7 @@
         "governorate": "Cairo",
         "picture": "Arabic.jpeg",
         "location": "googlemarker.png",
+        "author": "Leo",
         "id": 16
       },
       {
@@ -200,6 +214,7 @@
         "area": "Maadi",
         "picture": "heartsergeon.jpg",
         "governorate": "Cairo",
+        "author": "Scott",
         "id": 17
       },
       {
@@ -218,6 +233,7 @@
         "area": "Nasr City",
         "picture": "pshy.png",
         "governorate": "Giza",
+        "author": "Harvey",
         "id": 18
       }
 
