@@ -222,3 +222,9 @@
 .password-input:focus {
     border-color: #74AC4C;
 }
+
+.LoginCard-error-msg{
+    color: red;
+    font-weight: normal;
+    margin-bottom: 2%;
+}
