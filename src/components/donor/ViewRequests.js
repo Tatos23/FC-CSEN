@@ -23,11 +23,6 @@ function ViewRequests() {
 
     const [selectedCategory, setSelectedCategory] = useState('Select Category ▼'); // Initialize with default text
 
-
-
-
-
-
     useEffect(() => {
         fetch('http://localhost:8000/donations')
             .then(res => {
@@ -714,13 +709,13 @@ function ViewRequests() {
                 <div className='view-requests-right'>
                     <div className="search-title">Search</div>
                     <div className="right-subSection-search">
-
+                        <input className="ViewRequests-search-bar" type="text" placeholder="Search..."/>
                     </div>
                     <div className="filter-title">Filter</div>
                         <div className="right-subSection">
 
                             <div className="LR-subSection">
-                            <label htmlFor='Category' style={{ display: 'block' }}>
+                            <label htmlFor='Category' style={{ display: 'block', fontWeight:'bold' }}>
                                         Category:
                                     </label>
                                     <div className='categories'>
@@ -736,7 +731,7 @@ function ViewRequests() {
                                     {selectedCategoryX && (
                                         ['toys', 'medical supplies', 'school supplies', 'food'].includes(selectedCategoryX) && (
                                             <>
-                                            <label htmlFor='Sub-Category' style={{ display: 'block' }}>
+                                            <label htmlFor='Sub-Category' style={{ display: 'block', fontWeight:'bold' }}>
                                                     Sub-Category:
                                                 </label>
                                             <div className='subCategories'>
@@ -799,7 +794,7 @@ function ViewRequests() {
                                 <div className="setHospitalName">
                                 <textarea className='view-requests-hospitalName-textarea' required value={hospitalName} onChange={(e) => setHospitalName(e.target.value)}></textarea>
                                 </div>
-                                <label htmlFor="Governorate" style={{ display: 'block' }}>Governorate:</label>
+                                <label htmlFor="Governorate" style={{ display: 'block', fontWeight:'bold' }}>Governorate:</label>
                                 <div className="selectGovernorate">
                                 <select value={selectedGovernorate} onChange={handleGovernorateChange}>
                                     <option value="Alexandria">Alexandria</option>
@@ -834,7 +829,7 @@ function ViewRequests() {
                                     <option value="None">None</option>
                                 </select>
                                 </div>
-                                <label htmlFor="Area" style={{ display: 'block' }}>Area:</label>
+                                <label htmlFor="Area" style={{ display: 'block', fontWeight:'bold' }}>Area:</label>
                                 <div className="selectArea">
                                     <select value={selectedArea} onChange={handleAreaChange}>
                                         <option value="Agouza">Agouza</option>
@@ -868,21 +863,21 @@ function ViewRequests() {
                                     </select>
                                 </div>
 
-                                    <label htmlFor='Medical Specialty' style={{ display: 'block' }}>
+                                    <label htmlFor='Medical Specialty' style={{ display: 'block', fontWeight:'bold' }}>
                                         Medical Specialty:
                                     </label>
                                     <div className='setMedicalSpeciality'>
                                         <textarea required value={medicalSpeciality} onChange={(e) => setMedicalSpeciality(e.target.value)}></textarea>
                                     </div>
 
-                                    <label htmlFor='Organization Name' style={{ display: 'block' }}>
+                                    <label htmlFor='Organization Name' style={{ display: 'block', fontWeight:'bold' }}>
                                         Organization Name:
                                     </label>
                                     <div className='setOrganizationName'>
                                         <textarea required value={organizationName} onChange={(e) => setOrganizationName(e.target.value)}></textarea>
                                     </div>
 
-                                    <label htmlFor='Subject' style={{ display: 'block' }}>
+                                    <label htmlFor='Subject' style={{ display: 'block', fontWeight:'bold' }}>
                                         Subject:
                                     </label>
                                     <div className='setSubject'>
