@@ -18,7 +18,12 @@ const DonorNot = () => {
             title: 'Driver Arrived!',
             description: `The driver has arriced to pick up your dontion id 2 at the specified location.
             Please hand over the donation to the driver. `,
-            TimeToMeet: '2024-05-31T23:59:59.999Z',
+        },
+        {
+            id: 3,
+            title: 'Driver Arrived!',
+            description: `The driver has arriced to pick up your dontion id 2 at the specified location.
+            Please hand over the donation to the driver. `,
         },
     ]);
 
