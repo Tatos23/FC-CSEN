@@ -21,6 +21,7 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, donorRole,
     const [gender, setGender] = useState('');
     const navigate = useNavigate();
 
+
     const validateForm = () => {
         if (!firstName || !lastName || !contactNumber || !email || !username || !password || !gender) {
             return false;

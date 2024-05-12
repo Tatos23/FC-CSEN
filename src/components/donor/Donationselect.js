@@ -4,14 +4,14 @@ import './Donationselect.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
 function Donationselect({role}) {
-  const Role =role;
   const navigate = useNavigate();
   let { id } = useParams();
   const varID = parseInt(id);
-  console.log(id);
   const [donations, setDonations] = useState([]);
   const [donation, setDonation] = useState({}); // Initialize donation state with an empty object
   const [quantity, setQuantity] = useState(1);
+  const [message, setMessage] = useState(false);
+  const [user, setUser] = useState(null);
 
   const handleIncrement = () => {
     if (quantity < donation.quantity) {
@@ -64,6 +64,36 @@ function Donationselect({role}) {
 
       });
   },[id]);
+
+//   const resetStateClothes = () => {
+//     fetch('http://localhost:8000/donations')
+//         .then(res => {
+//             return res.json()
+//         })
+//         .then(data => {
+//             setDonation(data)
+//             const newDonations = data.filter(donations => donations.category == 'clothes');
+//             setDonation(newDonations);
+//         })
+//     setSelectedCategory("Clothes Category")
+// }
+
+  const fetchUser = (id) => {
+    return new Promise ((resolved) => fetch('http://localhost:8001/users')
+      .then(res => {
+        return res.json()
+      })
+      .then(data => {
+        const newUsers = data.filter(users => parseInt(users.id) == id);
+        setUser(newUsers);
+        if (newUsers.length > 0) {
+          resolved(newUsers[0].type);
+        } else {
+          throw new Error('User not found');
+        }
+      })
+    )
+  }
 
 
 
@@ -531,7 +561,19 @@ function Donationselect({role}) {
                   Address: {donation.address} <br></br> Number of students : {donation.numberOfStudents}
                   <iframe  className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.547319159817!2d31.4223650755529!3d30.021152074935387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583cde1a6c16cb%3A0x11d5349a2107f195!2sN%2090th%20Street%20-%20Service%20Ln%2C%20New%20Cairo%201%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715284527316!5m2!1sen!2seg" ></iframe>
                 </div>
-                <button className="Donationselect-Donate" style={{marginTop:"0px"}} >Donate</button>
+                <button className="Donationselect-Donate" onClick={async () => {
+                  const userType = await fetchUser(18);
+                  if (userType == "Teacher") {
+                    navigate('/pickup');
+                  } else {
+                    setMessage(true);
+                  }
+                }}>
+                  Donate
+                </button>
+                {message && <div className="Donationselect-message-div">
+                  <p className="Donationselect-message"> Cannot donate to this request. Only a teacher is allowed</p>
+                </div>}
               </>
             )}
           </div>
@@ -553,7 +595,19 @@ function Donationselect({role}) {
                   Subject: {donation.subject} <br></br>
                   Address: {donation.address} <br></br> Number of students : {donation.numberOfStudents}
                   <iframe className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d442166.9370651346!2d31.224348593880425!3d30.024542353658386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145822cffcd270e7%3A0x98b73d687889fd8!2sNew%20Cairo%20City%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715285127497!5m2!1sen!2seg"></iframe>                </div>
-                <button className="Donationselect-Donate"  style={{marginTop:"0px"}}>Donate</button>
+                  <button className="Donationselect-Donate" onClick={async () => {
+                  const userType = await fetchUser(16);
+                  if (userType == "Doctor") {
+                    navigate('/pickup');
+                  } else {
+                    setMessage(true);
+                  }
+                }}>
+                  Donate
+                </button>
+                {message && <div className="Donationselect-message-div">
+                  <p className="Donationselect-message"> Cannot donate to this request. Only a teacher is allowed</p>
+                </div>}
               </>
             )}
           </div>
@@ -579,7 +633,19 @@ function Donationselect({role}) {
                 <iframe style={{left:"10%",bottom:"150px"}} className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.768218997515!2d31.284885075550434!3d29.957344874967596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458383f12be6d3d%3A0x3aa0984dd84f3330!2sEl-Nasr%20Rd%2C%20Maadi%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715285509655!5m2!1sen!2seg"></iframe>
                 </div>
 
-                <button className="Donationselect-Donate" >Donate</button>
+                <button className="Donationselect-Donate" onClick={async () => {
+                  const userType = await fetchUser(17);
+                  if (userType == "Teacher") {
+                    navigate('/pickup');
+                  } else {
+                    setMessage(true);
+                  }
+                }}>
+                  Donate
+                </button>
+                {message && <div className="Donationselect-message-div">
+                  <p className="Donationselect-message"> Cannot donate to this request. Only a doctor is allowed</p>
+                </div>}
               </>
             )}
           </div>
@@ -598,14 +664,27 @@ function Donationselect({role}) {
                   alt="Book"
                 />
                 <div className="Donationselect-description"style={{height:"200px"}}>
-                Patient name: {donation.name} <br></br>
-                Age: {donation.age} <br></br> Gender : {donation.gender}
-                <br></br> Weight : {donation.weight}<br></br> Medical Speciality : {donation.medicalSpecialty}
-                <br></br> Case Description : {donation.caseDescription}
-                <iframe style={{left:"10%",bottom:"150px"}} className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.768218997515!2d31.284885075550434!3d29.957344874967596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458383f12be6d3d%3A0x3aa0984dd84f3330!2sEl-Nasr%20Rd%2C%20Maadi%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715285509655!5m2!1sen!2seg"></iframe>
+                  Patient name: {donation.name} <br></br>
+                  Age: {donation.age} <br></br> Gender : {donation.gender}
+                  <br></br> Weight : {donation.weight}<br></br> Medical Speciality : {donation.medicalSpecialty}
+                  <br></br> Case Description : {donation.caseDescription}
+                  <iframe style={{left:"10%",bottom:"150px"}} className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.768218997515!2d31.284885075550434!3d29.957344874967596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458383f12be6d3d%3A0x3aa0984dd84f3330!2sEl-Nasr%20Rd%2C%20Maadi%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715285509655!5m2!1sen!2seg"></iframe>
                 </div>
 
-                <button className="Donationselect-Donate" onClick={(Role)=>Role==='Doctor'?<>hi</>:console.log("no")} >Donate</button>
+                <button className="Donationselect-Donate" onClick={async () => {
+                  const userType = await fetchUser(18);
+                  if (userType == "Doctor") {
+                    navigate('/pickup');
+                  } else {
+                    setMessage(true);
+                  }
+                }}>
+                  Donate
+                </button>
+                {message && <div className="Donationselect-message-div">
+                  <p className="Donationselect-message"> Cannot donate to this request. Only a doctor is allowed</p>
+                </div>}
+
               </>
             )}
           </div>
