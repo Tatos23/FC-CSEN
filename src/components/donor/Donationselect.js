@@ -3,8 +3,8 @@ import Header from './Header'; // Import the Header component
 import './Donationselect.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
-function Donationselect() {
-  
+function Donationselect({role}) {
+  const Role =role;
   const navigate = useNavigate();
   let { id } = useParams();
   const varID = parseInt(id);
@@ -28,6 +28,12 @@ function Donationselect() {
   const filterItems = (data) => {
     const filteredData = data.find((item) => parseInt(item.id) === parseInt(id));
     setDonation(filteredData);
+
+
+  };
+  const Rolecheck = (data) => {
+  
+   
 
 
   };
@@ -581,7 +587,7 @@ function Donationselect() {
                 <iframe style={{left:"10%",bottom:"150px"}} className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.768218997515!2d31.284885075550434!3d29.957344874967596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458383f12be6d3d%3A0x3aa0984dd84f3330!2sEl-Nasr%20Rd%2C%20Maadi%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715285509655!5m2!1sen!2seg"></iframe>
                 </div>
 
-                <button className="Donationselect-Donate" >Donate</button>
+                <button className="Donationselect-Donate" onClick={(Role)=>Role==='Doctor'?<>hi</>:console.log("no")} >Donate</button>
               </>
             )}
           </div>

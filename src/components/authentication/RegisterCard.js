@@ -118,6 +118,7 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, donorRole,
                             <input type="text" placeholder="Governorate" className="organizationAddress-input" value={organizationAddress} onChange={e => setOrganizationAddress(e.target.value)} required />
                             <input type="text" placeholder="Speciality" className="organizationArea-input" value={organizationArea} onChange={e => setOrganizationArea(e.target.value)} required />
                             <input type="text" placeholder="No.of cases" className="organizationGovernorate-input" value={organizationGovernorate} onChange={e => setOrganizationGovernorate(e.target.value)} required />
+                            {address && <iframe src={address} style={{width:"400px",height:"300px",marginTop:"10px"}} allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>}
                         </>
                     }
                     <br />
