@@ -16,10 +16,10 @@ function Landing(){
 
 
     const handleButtonClickHome = () => {
-        navigate('/hdsfdsfonor');
+        navigate('/landing');
     }
     const handleButtonClickDonations = () => {
-        navigate('/viadsfdsfquests');
+        navigate('/home');
     }
     const handleButtonClickDonate = () => {
         navigate('/home');
