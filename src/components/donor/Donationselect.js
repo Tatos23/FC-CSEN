@@ -10,6 +10,7 @@ function Donationselect({role}) {
   const [donations, setDonations] = useState([]);
   const [donation, setDonation] = useState({}); // Initialize donation state with an empty object
   const [quantity, setQuantity] = useState(1);
+  const [errmessage, setErrMessage] = useState(false);
   const [message, setMessage] = useState(false);
   const [user, setUser] = useState(null);
 
@@ -562,18 +563,24 @@ function Donationselect({role}) {
                   <iframe  className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.547319159817!2d31.4223650755529!3d30.021152074935387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583cde1a6c16cb%3A0x11d5349a2107f195!2sN%2090th%20Street%20-%20Service%20Ln%2C%20New%20Cairo%201%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715284527316!5m2!1sen!2seg" ></iframe>
                 </div>
                 <button className="Donationselect-Donate" onClick={async () => {
-                  const userType = await fetchUser(18);
+                  const userType = await fetchUser(15);
                   if (userType == "Teacher") {
-                    navigate('/pickup');
-                  } else {
                     setMessage(true);
+                  } else {
+                    setErrMessage(true);
                   }
                 }}>
                   Donate
                 </button>
-                {message && <div className="Donationselect-message-div">
+                {errmessage && <div className="Donationselect-message-div">
                   <p className="Donationselect-message"> Cannot donate to this request. Only a teacher is allowed</p>
                 </div>}
+
+
+                {message && <div className="Donationselect-message-div">
+                  <p className="Donationselect-message"> Donation Submitted</p>
+                </div>}
+
               </>
             )}
           </div>
@@ -598,16 +605,22 @@ function Donationselect({role}) {
                   <button className="Donationselect-Donate" onClick={async () => {
                   const userType = await fetchUser(16);
                   if (userType == "Doctor") {
-                    navigate('/pickup');
-                  } else {
                     setMessage(true);
+                  } else {
+                    setErrMessage(true);
                   }
                 }}>
                   Donate
                 </button>
-                {message && <div className="Donationselect-message-div">
+                {errmessage && <div className="Donationselect-message-div">
                   <p className="Donationselect-message"> Cannot donate to this request. Only a teacher is allowed</p>
                 </div>}
+
+
+                {message && <div className="Donationselect-message-div">
+                  <p className="Donationselect-message"> Donation Submitted</p>
+                </div>}
+
               </>
             )}
           </div>
@@ -636,16 +649,22 @@ function Donationselect({role}) {
                 <button className="Donationselect-Donate" onClick={async () => {
                   const userType = await fetchUser(17);
                   if (userType == "Teacher") {
-                    navigate('/pickup');
-                  } else {
                     setMessage(true);
+                  } else {
+                    setErrMessage(true);
                   }
                 }}>
                   Donate
                 </button>
-                {message && <div className="Donationselect-message-div">
+                {errmessage && <div className="Donationselect-message-div">
                   <p className="Donationselect-message"> Cannot donate to this request. Only a doctor is allowed</p>
                 </div>}
+
+
+                {message && <div className="Donationselect-message-div">
+                  <p className="Donationselect-message"> Donation Submitted</p>
+                </div>}
+
               </>
             )}
           </div>
@@ -674,15 +693,21 @@ function Donationselect({role}) {
                 <button className="Donationselect-Donate" onClick={async () => {
                   const userType = await fetchUser(18);
                   if (userType == "Doctor") {
-                    navigate('/pickup');
-                  } else {
+                    // navigate('/pickup');
                     setMessage(true);
+                  } else {
+                    setErrMessage(true);
                   }
                 }}>
                   Donate
                 </button>
-                {message && <div className="Donationselect-message-div">
+                {errmessage && <div className="Donationselect-message-div">
                   <p className="Donationselect-message"> Cannot donate to this request. Only a doctor is allowed</p>
+                </div>}
+
+
+                {message && <div className="Donationselect-message-div">
+                  <p className="Donationselect-message"> Donation Submitted</p>
                 </div>}
 
               </>
