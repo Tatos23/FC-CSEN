@@ -58,7 +58,7 @@ function AdminUsers() {
         setDropdownOpenArea(false);
         setDropdownOpenGovernorate(false);
         setDropdownOpenType(false);
-        setFilter('Organization');
+        setFilter('All');
     }
     const handleUserClick = (user) => {
         setSelectedUser(user);
@@ -146,6 +146,9 @@ function AdminUsers() {
                         )}
                     </div>
                 </div>
+            </div>
+            <div className='admin-users-hint'>
+                <span>Hint: Click on an organization to view more details.</span>
             </div>
             <div className='admin-users-grid'>
                 {currentItems.map((user, index) => {

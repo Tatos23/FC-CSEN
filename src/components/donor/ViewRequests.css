@@ -114,17 +114,19 @@
 }
 
 .view-requests-middleside-button {
-    font-family: poppins, sans-serif;
-    font-size: 100%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 22px;
     border: none;
     color: #2C6B5A;
-    background-color: transparent;
-    width: 100px;
+    background-color:transparent;
+    width: 140px;
     height: 30px;
     transition: background-color 1s;
     margin-top: 15px;
     border-bottom: 1px solid #397e07;
-    width: 100px;
+    position: relative;
+    right: 15%;
 }
 
 .view-requests-middleside-button:hover {
@@ -199,7 +201,7 @@
     /* position: fixed; */
     left: 0;
     right: 0;
-    margin-top: 600px;
+    margin-top: 10%;
     background-color: white;
     height: 500px;
     display: grid;
@@ -289,7 +291,7 @@
 .view-requests-profilebutton {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 0%;
     width: 70px;
     /* Adjust the size as needed */
     height: 70px;
@@ -348,7 +350,7 @@
     width: 80%;
     border: 1px solid #265305;
     overflow-y: auto;
-    height: 500px;
+    height: 390px;
 }
 
 .LR-subSection{
@@ -379,12 +381,15 @@
 
 .categories,
 .subCategories,
-.setSubject,
-.setOrganizationName,
-.setMedicalSpeciality,
+.view-requests-Sub-textarea,
+.view-requests-Org-textarea,
+.view-requests-medicalS-textarea,
 .selectArea,
 .selectGovernorate,
 .view-requests-hospitalName-textarea,
+.view-requests-Age-textarea,
+.view-requests-Medical-use-textarea,
+.view-requests-Blood-type-textarea,
 .selectSeason {
     padding: 10px;
     font-size: 16px;
@@ -399,16 +404,22 @@
 .subCategories:hover,
 .categories:focus,
 .subCategories:focus,
-.setSubject:hover,
-.setSubject:focus,
-.setOrganizationName:hover,
-.setOrganizationName:focus,
-.setMedicalSpeciality:hover,
-.setMedicalSpeciality:focus,
+.view-requests-Sub-textarea:hover,
+.view-requests-Sub-textarea:focus,
+.view-requests-Org-textarea:hover,
+.view-requests-Org-textarea:focus,
+.view-requests-medicalS-textarea:hover,
+.view-requests-medicalS-textarea:focus,
 .selectArea:hover,
 .selectArea:focus,
 .selectGovernorate:hover,
 .selectGovernorate:focus,
+.view-requests-Age-textarea:hover,
+.view-requests-Age-textarea:focus,
+.view-requests-Medical-use-textarea:hover,
+.view-requests-Medical-use-textarea:focus,
+.view-requests-Blood-type-textarea:hover,
+.view-requests-Blood-type-textarea:focus,
 .view-requests-hospitalName-textarea:hover,
 .view-requests-hospitalName-textarea:focus,
 .selectSeason:hover,
@@ -420,8 +431,8 @@
 
 .categories select,
 .subCategories select,
-.setSubject select,
-.setMedicalSpeciality select,
+.view-requests-Sub-textarea select,
+.view-requests-medicalS-textarea select,
 .selectArea select,
 .selectGovernorate select,
 .selectSeason select

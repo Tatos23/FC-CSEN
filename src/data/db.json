@@ -116,7 +116,7 @@
         "subcategory": "medication",
         "quantity": 2,
         "type": "Panadol",
-        "use": "pain-killer",
+        "use": "Pain Killer",
         "picture": "panadol.jpg",
         "id": 11
       },
@@ -126,7 +126,7 @@
         "subcategory": "medication",
         "quantity": 2,
         "type": "Biogen",
-        "use": "stress-relief",
+        "use": "Stress Relief",
         "picture": "stress relief.jpg",
         "id": 12
       },
@@ -137,9 +137,9 @@
         "name": "shandawely",
         "hospitalName": "Alnakhel",
         "bloodType": "A+",
-        "hospitalArea": "maadi",
-        "hospitalAddress": "maadi----",
-        "governorate": "cairo",
+        "hospitalArea": "Maadi",
+        "hospitalAddress": "Maadi----",
+        "governorate": "Cairo",
         "picture": "blooddonation.jpg",
         "hospitalLocation": "googlemarker.png",
         "id": 13
@@ -215,7 +215,7 @@
         "medicalSpecialty": "Psychiatry",
         "caseDescription": "Traumatized Gucian",
         "location": "googlemarker.png",
-        "area": "Nasr-city",
+        "area": "Nasr City",
         "picture": "pshy.png",
         "governorate": "Giza",
         "id": 18
