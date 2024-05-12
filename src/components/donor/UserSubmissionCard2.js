@@ -34,7 +34,7 @@ export default function UserSubmissionCard2({ usersData, setUsersData, user }) {
                 </div>
                 <div className='user-submission-card-right'>
                     <h2>Location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2690.5931365370516!2d-122.3365103073408!3d47.595155314487975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906aa3b9f1182b%3A0xa636cd513bba22dc!2sLumen%20Field!5e0!3m2!1sen!2seg!4v1715458131888!5m2!1sen!2seg" ></iframe>
+                    <iframe  style={{marginRight:"20%"}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2690.5931365370516!2d-122.3365103073408!3d47.595155314487975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906aa3b9f1182b%3A0xa636cd513bba22dc!2sLumen%20Field!5e0!3m2!1sen!2seg!4v1715458131888!5m2!1sen!2seg" ></iframe>
                 </div>
             </div>
             <div className='user-submission-card-footer'>
