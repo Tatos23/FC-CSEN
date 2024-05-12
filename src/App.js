@@ -93,6 +93,7 @@ function App() {
           <Route path="/Representative-document-upload" element={<DocUpload role="Representative" />} />
           <Route path="/profile" element={<OrgProfile />} />
           <Route path="/view-reg-org" element={<ViewRegisteredOrganizations />} />
+          <Route path="/landing" element={<Landing />} />
         </Routes>
       </BrowserRouter>
 
