@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './UserSubmissions.css'
+import './RegisteringUsers.css'
 import { mockUsers } from '../user-submissions-data.js';
 import UserSubmissionCard from '../components/user-submission-card/UserSubmissionCard.js';
 
-function UserSubmissions() {
+function RegisteringUsers() {
     const users = mockUsers.slice();
     const [usersData, setUsersData] = useState(users);
     const [currentPage, setCurrentPage] = useState(1);
@@ -178,4 +178,4 @@ function UserSubmissions() {
     );
 }
 
-export default UserSubmissions;
+export default RegisteringUsers;
