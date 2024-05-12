@@ -1,0 +1,98 @@
+{"users": [
+    { "username": "abdullah",
+      "password": "test",
+      "role": "Admin",
+      "id": 1
+      
+    },
+    { "username": "ahmed",
+      "password": "test1",
+      "role": "Donor",
+      "id": 2
+    },
+    { "username": "adham", 
+      "password": "test2",
+      "role": "Organization Representative",
+      "id": 3
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Organization Representative",
+      "id": 4
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Donor",
+      "id": 5
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Admin",
+      "id": 6
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Admin",
+      "id": 7
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Admin",
+      "id": 8
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Admin",
+      "id": 9
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Admin",
+      "id": 10
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Admin",
+      "id": 11
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Admin",
+      "id": 12
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Admin",
+      "id": 13
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Admin",
+      "id": 14
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Donor",
+      "type": "Teacher",
+      "id": 15
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Donor",
+      "type": "Teacher",
+      "id": 16
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Donor",
+      "type": "Doctor",
+      "id": 17
+    },
+    { "username": "tatos",
+      "password": "0000",
+      "role": "Donor",
+      "type": "Doctor",
+      "id": 18
+    }
+  ]
+}

@@ -53,9 +53,9 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
           
-        <Route index element={<Landing/>} />
+        <Route index element={<RepNot/>} />
             
-          <Route path="/admin-dashboard" element={<AdminDashBoard />} >
+          <Route path="/admin-dashboard" element={<Donationselect />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
             <Route path="registering-users" element={<RegisteringUsers />} />
