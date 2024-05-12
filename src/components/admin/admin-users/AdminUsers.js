@@ -58,7 +58,7 @@ function AdminUsers() {
         setDropdownOpenArea(false);
         setDropdownOpenGovernorate(false);
         setDropdownOpenType(false);
-        setFilter('Organization');
+        setFilter('All');
     }
     const handleUserClick = (user) => {
         setSelectedUser(user);
