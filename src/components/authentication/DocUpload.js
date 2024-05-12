@@ -26,12 +26,21 @@ function DocUpload( { role }) {
         setIsClicked(true);
         setMessage('Your documents have been uploaded successfully, please wait for the verification from the admin.');
         setTimeout(() => {
+<<<<<<< HEAD
+            if(role === "Organization Representative")
+                nav("/representative-login");
+            else if (role === "Donor")
+                nav("/donor-login");
+            else if (role === "Admin"){
+                nav("/admin-login");
+=======
             if(role == "Organisation Representative")
                 nav(`/representative-login`);
             else if (role == "Donor")
                 nav(`/donor-login`);
             else if (role == "Admin"){
                 nav(`/admin-login`);
+>>>>>>> origin
                 console.log("Admin doesnot have an account registration :/");
             }
         }, 3000);

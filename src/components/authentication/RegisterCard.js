@@ -75,7 +75,7 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, donorRole,
                     )
                     }
                     <br />
-                    {role === 'Organisation Representative' &&
+                    {role === 'Organization Representative' &&
                         <>
                             <h1 className="register-title"> Organization Registration </h1>
                             <input type="text" placeholder="Organization Name" className="organizationName-input" required></input>
@@ -83,6 +83,9 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, donorRole,
                             <input type="text" placeholder="Organization Address" className="organizationAddress-input" required></input>
                             <input type="text" placeholder="Organization Area" className="organizationArea-input" required></input>
                             <input type="text" placeholder="Organization Governorate" className="organizationGovernorate-input" required></input>
+                            <input type='url' placeholder="Organization Marker" className="organizationMarker-input" required></input>
+                            
+                            
                             <br/><br/>
                         </>
                     }
