@@ -17,7 +17,7 @@ function ProfileT(){
     }
     const handleButtonDelete = () =>{
       if (window.confirm("Are you sure you want to delete your account?")) {
-          navigate('/home');
+          navigate('/landing');
         }
       }
 

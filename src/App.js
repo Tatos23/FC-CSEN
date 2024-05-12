@@ -53,7 +53,7 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
           
-        <Route index element={<ProfileT/>} />
+        <Route index element={<Landing/>} />
             
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
