@@ -22,14 +22,14 @@ const DropDownProfile = ({role}) => {
     }
 
     const handleButtonClickLogout = () => {
-        navigate('/home');     
+        navigate('/landing');     
     }
 
     return (
         <div className='flex flex-col DropDownProfile'>
             <ul className='flex flex-col gap-4'>
                 <button onClick={() => handleButtonClickProfile('Profile')}>Profile</button>
-                <button onClick={() => handleButtonClickSettings('Settings')}>Settings</button>
+                {/* <button onClick={() => handleButtonClickSettings('Settings')}>Settings</button> */}
                 <button onClick={() => handleButtonClickLogout('Logout')}>Logout</button>
             </ul>
         </div>

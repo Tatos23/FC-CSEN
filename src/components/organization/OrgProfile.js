@@ -16,7 +16,7 @@ function OrgProfile () {
     }
     const handleButtonDelete = () =>{
       if (window.confirm("Are you sure you want to delete your account?")) {
-          navigate('/representative-login');
+        navigate('/landing');
         }
       }
     return (
