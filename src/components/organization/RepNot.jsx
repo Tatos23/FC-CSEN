@@ -37,7 +37,12 @@ const RepNot = () => {
   
   function Liner ({id, text1, text2}) {
     return (
-      <div style={{width:520}} className='bg-gray-200 mr-20 ml-20 rounded-md'>
+     <div>
+      <div>
+        <h2 class="text-2xl font-bold text-green-800">Notifications</h2>
+        <h2 class="text-xl text-green-800 mb-4">Your updates will be displayed here</h2>
+      </div>
+      <div  className='bg-gray-200 mr-20 ml-20 rounded-md'>
         <h2 class="text-2xl font-bold text-green-800">{text1}</h2>
         <br />
         <p class="mt-2 mb-4 text-green-800"> {text2}</p>
@@ -70,7 +75,7 @@ const RepNot = () => {
           </div>
       )}
       </div>
-    
+    </div> 
   );
   }
   return (
@@ -81,9 +86,7 @@ const RepNot = () => {
                 {liner.map(liner => (
                 <Liner key={liner.id} id={liner.id} text1={liner.text1} text2={liner.text2} handleButton={handleForm}/>
                  ))}
-                 <h2 style={{position:'fixed', right:'15%', top:'20%'}} className="text-3xl font-bold text-green-800">This is your notification section </h2> 
-                 <h2 style={{position:'fixed', right:'20%', top:'30%'}} className="text-xl font-bold text-green-800">You will get updates here </h2> 
-
+                
             </div>
         </div>
     </div>

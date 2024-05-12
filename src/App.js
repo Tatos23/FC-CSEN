@@ -59,6 +59,8 @@ function App() {
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
           <Route path="/representative-login" element={<Authentication role="Organization Representative" />} />
+          <Route path="/Organization Representative-document-upload" element={<DocUpload role="Organization Representative" />} />
+          <Route path="/donor-document-upload" element={<DocUpload role="Donor" />} />
           <Route path="home" element={<HomePage />} />
           {/* <Route path="/organization-login" element={<Authentication role="Organization" />} /> */}
           <Route path="/home" element={<HomePage />} />
@@ -84,7 +86,7 @@ function App() {
           <Route path="/org-profile" element={<OrgProfile />} />
           <Route path="/pickup" element={<PickUp />} />
           <Route path="/Donor-document-upload" element={<DocUpload role="Donor" />} />
-          <Route path="/Representative-document-upload" element={<DocUpload role="rep" />} />
+          <Route path="/Representative-document-upload" element={<DocUpload role="Representative" />} />
           <Route path="/profile" element={<OrgProfile />} />
           <Route path="/view-reg-org" element={<ViewRegisteredOrganizations />} />
         </Routes>
