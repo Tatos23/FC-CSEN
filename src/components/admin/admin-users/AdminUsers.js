@@ -74,7 +74,7 @@ function AdminUsers() {
                 <div className='admin-users-showing'>
                     <span>Show: </span>
                     <button className={filter === 'All' ? 'admin-users-selected' : ''} onClick={() => { handleClear(); setFilter('All'); setCurrentPage(1); }}>All</button>
-                    <button className={filter === 'Teachers/Doctors' ? 'admin-users-selected' : ''} onClick={() => { setFilter('Teachers/Doctors'); setCurrentPage(1); handleClear(); }}>Teachers/Doctors</button>
+                    <button className={filter === 'Teachers/Doctors' ? 'admin-users-selected' : ''} onClick={() => { handleClear(); setFilter('Teachers/Doctors'); setCurrentPage(1); }}>Teachers/Doctors</button>
                     <button className={filter === 'Organization' ? 'admin-users-selected' : ''} onClick={() => { setFilter('Organization'); setCurrentPage(1); }}>Organizations</button>
                 </div>
                 <input type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)} />
