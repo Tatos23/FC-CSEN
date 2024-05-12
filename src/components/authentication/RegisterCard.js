@@ -75,7 +75,7 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, donorRole,
                     )
                     }
                     <br />
-                    {role === 'Representative' &&
+                    {role === 'Organisation Representative' &&
                         <>
                             <h1 className="register-title"> Organization Registration </h1>
                             <input type="text" placeholder="Organization Name" className="organizationName-input" required></input>
