@@ -57,7 +57,6 @@
     cursor: pointer;
     font-weight: bold;
     box-shadow: none;
-    padding: 1% 13% 1% 13%;
 }
 
 .register-button:hover {
@@ -169,7 +168,8 @@
 .organizationType-input,
 .organizationAddress-input,
 .organizationArea-input,
-.organizationGovernorate-input {
+.organizationGovernorate-input,
+.organizationMarker-input {
     border-radius: 10px;
     border-color: #74AC4C;
     background-color: white;
