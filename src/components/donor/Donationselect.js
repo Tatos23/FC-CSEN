@@ -54,7 +54,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -88,7 +88,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -123,7 +123,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -157,7 +157,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -189,7 +189,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -223,7 +223,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -257,7 +257,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -289,7 +289,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -321,7 +321,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -353,7 +353,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -385,7 +385,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -417,7 +417,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description">
@@ -449,7 +449,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description" style={{height:"180px"}}>
@@ -473,7 +473,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description" style={{height:"180px"}}>
@@ -497,7 +497,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description" style={{height:"200px"}}>
@@ -520,7 +520,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description" style={{height:"200px"}}>
@@ -542,7 +542,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description"style={{height:"200px"}}>
@@ -568,7 +568,7 @@ function Donationselect() {
               <div className="Donationselect-title">{donation.title}</div>
                 <img
                   className="Donationselect-picture"
-                  src={donation.picture}
+                  src={`/${donation.picture}`}
                   alt="Book"
                 />
                 <div className="Donationselect-description"style={{height:"200px"}}>
