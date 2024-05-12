@@ -11,7 +11,9 @@ const RepNot = () => {
     { id: 1, text1: 'Stationary Request', text2:'Type: Pens   Quantity: 20 '},       
   ]);
   const [module, setModule] = useState([
-    { id: 1, text1: 'Toy Request', text2:'Type: Optimus Prime Figure   Quantity: 5 '},  
+    { id: 1, text1: 'Toy Request', text2:'Type: Optimus Prime Figure   Quantity: 5 '},
+    { id: 2, text1: 'Medical Case Request', text2:'Name: Ahmed Age:44 Male Weight: 70kgs Location: Cairo Address: Sheraton Organization-Name: El-Nozha-Medical Speciality-Required: Cardiology'},
+
   ]);
   
   const handleButtonDon = () =>{
@@ -35,12 +37,11 @@ const RepNot = () => {
     navigate(url);
   }
   const handleButtonIg = (id) =>{
-      if (window.confirm("You will be redirected to the home page as you have no more notifications to view")) {
-        setModule(module.filter(module => module.id !== id));
-        navigate('/org-home');
-      }
-  }
-
+    setModule(module.filter(module => module.id !== id));
+}
+const handleButtonDoc = () =>{
+  window.alert('Doctor Details: \nName: Nezam \nPhone: 0111111555444 \nEmail: Nezam.User@hotmail.com');
+}
   
   
   function Liner ({id, text1, text2}) {
@@ -90,7 +91,7 @@ const RepNot = () => {
         <br />
         <p class="mt-2 mb-4 text-green-800"> {text2}</p>
         <br />
-        <button className="inline-block bg-cyan-500 text-white rounded-lg px-4 py-2 hover:bg-cyan-700 mb-2 " onClick={()=>handleButtonDon()} >View Donor Details</button> 
+        <button className="inline-block bg-cyan-500 text-white rounded-lg px-4 py-2 hover:bg-cyan-700 mb-2 " onClick={()=> (id==1) ? handleButtonDon() : handleButtonDoc()} >View Donor Details</button>
         <br />
         <button className="inline-block bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-700 mr-4 ml-2 mb-2" onClick={()=>handleButtonIg(id)}>Ignore</button>
      </div>
@@ -114,10 +115,11 @@ const RepNot = () => {
                 
             </div>
           </Tab>
-          <Tab label={'Arrived'}>
+          <Tab label={'Completed'}>
           {module.map(module => (
+            <div className='mb-4'>
                 <Module key={module.id} id={module.id} text1={module.text1} text2={module.text2} handleButton={handleButtonIg}/>
-                 ))}
+                </div>))}
           </Tab>
         </Tabs>
         </div>
