@@ -770,14 +770,10 @@ function ViewRequests() {
                                     {selectedCategoryX && (
                                         ['toys', 'medical supplies', 'school supplies', 'food'].includes(selectedCategoryX) && (
                                             <>
-                                            {selectedCategoryX === 'toys' ? (
+                                             
                                                 <label htmlFor='Sub-Category' style={{ display: 'block', fontWeight:'bold' }}>
-                                                    Toy Category:
+                                                {selectedCategoryX.charAt(0).toUpperCase() + selectedCategoryX.slice(1)} Category:
                                                 </label>
-                                            ) : 
-                                            (<label htmlFor='Sub-Category' style={{ display: 'block', fontWeight:'bold' }}>
-                                                    Sub-Category:
-                                            </label>)}
 
                                             <div className='subCategories'>
                                                 
