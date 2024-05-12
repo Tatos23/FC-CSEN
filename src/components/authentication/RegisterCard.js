@@ -132,7 +132,7 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, donorRole,
                     <button className='register-button' onClick={handleRegisterClick}>Register</button>
                     {/* <Link to={`/${role}-document-upload`} className='register-button' >Register</Link> */}
                     <br /><br />
-                    <label className="RegisterCard-verification">You will be redirected to upload verification documents</label>
+                    <label className="RegisterCard-verification">{donorRole !== "Regular" ? "You will be redirected to upload verification documents" : "You will be redirected to login page"}</label>
                     <p className="login-redirect">
                         Already have an account? &nbsp;
                         <a onClick={toggleForm} style={{ cursor: 'pointer' }}>Login</a>
