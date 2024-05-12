@@ -257,5 +257,5 @@ border-bottom:1px solid #74AC4C;
     border-radius: 50%; /* Makes it circular */
     overflow: hidden; /* Clip the image to the circular shape */
     object-fit: cover;
-    margin-right: 2%;
+    margin-right: 1.4%;
 }
