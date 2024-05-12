@@ -50,7 +50,7 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
 
-          <Route index element={<Landing />} />
+          <Route index element={<PickUp/>} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
