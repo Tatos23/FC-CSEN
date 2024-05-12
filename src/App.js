@@ -57,9 +57,9 @@ function App() {
           </Route>
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
-          <Route path="/representative-login" element={<Authentication role="Representative" />} />
+          <Route path="/representative-login" element={<Authentication role="Organization Representative" />} />
           <Route path="home" element={<HomePage />} />
-          <Route path="/organization-login" element={<Authentication role="organization" />} />
+          {/* <Route path="/organization-login" element={<Authentication role="Organization" />} /> */}
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
           <Route path="/donation-select/:id" element={<Donationselect />} />

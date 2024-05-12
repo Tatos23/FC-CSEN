@@ -6,17 +6,20 @@ import { useNavigate } from 'react-router-dom';
 function LoginCard({ isRegistering, toggleForm, showPassword, toggleShowPassword, role }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [loginSuccessful, setLoginSuccessful] = useState(true);
     const navigate = useNavigate();
 
     const users = [
-        { username: 'abdullah', password: 'test' },
+        { username: 'abdullah', password: 'test', role: 'Admin'},
+        { username: 'ahmed', password: 'test1', role: 'Donor' },
+        { username: 'adham', password: 'test2', role: 'Organization Representative'}
         // add more users as needed
     ];
 
     const checkCredentials = () => {
         for (let user of users) {
-            if (user.username === username && user.password === password) {
-                console.log('Login successful');
+            if (user.username === username && user.password === password && user.role === role) {
+                setLoginSuccessful(true);
                 if (role === 'Admin') {
                     navigate('/admin-dashboard');
                     return;
@@ -24,13 +27,14 @@ function LoginCard({ isRegistering, toggleForm, showPassword, toggleShowPassword
                 else if (role === 'Donor') {
                     navigate('/home-donor');
                     return;
-                } else if (role === 'Organization') {
+                } 
+                else if (role === 'Organization Representative') {
                     navigate('/org-home');
                     return;
                 }
             }
         }
-        console.log('Invalid username or password');
+        setLoginSuccessful(false);
     };
 
     return (
@@ -64,6 +68,9 @@ function LoginCard({ isRegistering, toggleForm, showPassword, toggleShowPassword
                             {showPassword ? <FiEye /> : <FiEyeOff />}
                         </i>
                     </div>
+                </div>
+                <div className="login-error">
+                    {loginSuccessful === false && <p className='LoginCard-error-msg'>Invalid username or password</p>}
                 </div>
                 <div className="login-buttons">
                     <button className="login-button" onClick={checkCredentials}> Login </button>
