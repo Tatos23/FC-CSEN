@@ -73,8 +73,8 @@ function AdminUsers() {
             <div className='admin-users-top-bar'>
                 <div className='admin-users-showing'>
                     <span>Show: </span>
-                    <button className={filter === 'All' ? 'admin-users-selected' : ''} onClick={() => { setFilter('All'); setCurrentPage(1); }}>All</button>
-                    <button className={filter === 'Teachers/Doctors' ? 'admin-users-selected' : ''} onClick={() => { setFilter('Teachers/Doctors'); setCurrentPage(1); }}>Teachers/Doctors</button>
+                    <button className={filter === 'All' ? 'admin-users-selected' : ''} onClick={() => { handleClear(); setFilter('All'); setCurrentPage(1); }}>All</button>
+                    <button className={filter === 'Teachers/Doctors' ? 'admin-users-selected' : ''} onClick={() => { setFilter('Teachers/Doctors'); setCurrentPage(1); handleClear(); }}>Teachers/Doctors</button>
                     <button className={filter === 'Organization' ? 'admin-users-selected' : ''} onClick={() => { setFilter('Organization'); setCurrentPage(1); }}>Organizations</button>
                 </div>
                 <input type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)} />
@@ -87,7 +87,7 @@ function AdminUsers() {
                                     {['A1', 'A2', 'A3', 'A4'].map(area => (
                                         <button
                                             key={area}
-                                            className={`user-submissions-dropdown-menu-type ${selectedArea.includes(area) ? 'user-submissions-selected' : ''}`}
+                                            className={`admin-users-dropdown-menu-type ${selectedArea.includes(area) ? 'admin-users-selected' : ''}`}
                                             onClick={() => setSelectedArea(selectedArea.includes(area) ? selectedArea.filter(a => a !== area) : [...selectedArea, area])}
                                         >
                                             {area}
@@ -109,7 +109,7 @@ function AdminUsers() {
                                     {['G1', 'G2', 'G3', 'G4'].map(governorate => (
                                         <button
                                             key={governorate}
-                                            className={`user-submissions-dropdown-menu-type ${selectedGovernorate.includes(governorate) ? 'user-submissions-selected' : ''}`}
+                                            className={`admin-users-dropdown-menu-type ${selectedGovernorate.includes(governorate) ? 'admin-users-selected' : ''}`}
                                             onClick={() => setSelectedGovernorate(selectedGovernorate.includes(governorate) ? selectedGovernorate.filter(g => g !== governorate) : [...selectedGovernorate, governorate])}
                                         >
                                             {governorate}
