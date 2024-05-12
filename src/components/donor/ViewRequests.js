@@ -770,9 +770,15 @@ function ViewRequests() {
                                     {selectedCategoryX && (
                                         ['toys', 'medical supplies', 'school supplies', 'food'].includes(selectedCategoryX) && (
                                             <>
-                                            <label htmlFor='Sub-Category' style={{ display: 'block', fontWeight:'bold' }}>
-                                                    Sub-Category:
+                                            {selectedCategoryX === 'toys' ? (
+                                                <label htmlFor='Sub-Category' style={{ display: 'block', fontWeight:'bold' }}>
+                                                    Toy Category:
                                                 </label>
+                                            ) : 
+                                            (<label htmlFor='Sub-Category' style={{ display: 'block', fontWeight:'bold' }}>
+                                                    Sub-Category:
+                                            </label>)}
+
                                             <div className='subCategories'>
                                                 
                                                 <select value={selectedSubcategory} onChange={handleSubcategoryChange}>
@@ -806,121 +812,157 @@ function ViewRequests() {
                                             </>
                                         )
                                     )}
+                                    {(selectedCategoryX === 'clothes'|| selectedCategoryX === 'medical cases' || selectedCategoryX === 'toys' ) && (
+                                        <>
+                                            <label htmlFor="Gender" style={{ display: 'block', color: '#265305', fontWeight: 'bold'}}>Gender:</label>
+                                            <div className="view-requests-gender-input">
+                                            <label htmlFor="male" style={{color: '#265305', fontWeight: 'normal'}}>
+                                                <input type="checkbox" id="male" name="gender" value="male" checked={gender === 'male'} onChange={handleGenderChange}/>
+                                                Male
+                                            </label>
+                                            <label htmlFor="female" style={{color: '#265305', fontWeight: 'normal'}}>
+                                                <input type="checkbox" id="female" name="gender" value="female" checked={gender === 'female'} onChange={handleGenderChange} />
+                                                Female
+                                            </label>
+                                        </div>
+                                        </>
+                                    )
+                                    
+                                    }
+                                    {selectedCategoryX === 'clothes' && (
+                                        <>
+                                            <label htmlFor="Season" style={{ display: 'block', color: '#265305', fontWeight: 'bold' }}>Season:</label>
+                                            <div className="selectSeason">
+                                                <select value={selectedSeason} onChange={handleSeasonChange}>
+                                                    <option value="Winter">Winter</option>
+                                                    <option value="Spring">Spring</option>
+                                                    <option value="Summer">Summer</option>
+                                                    <option value="Fall">Fall</option>
+                                                    <option value="None">None</option>
+                                                </select>
+                                            </div>
+                                        </>
+                                    )}
+            
                                 
-                                <label htmlFor="Gender" style={{ display: 'block', color: '#265305', fontWeight: 'bold'}}>Gender:</label>
-                                <div className="view-requests-gender-input">
-                                    <label htmlFor="male" style={{color: '#265305', fontWeight: 'normal'}}>
-                                        <input type="checkbox" id="male" name="gender" value="male" checked={gender === 'male'} onChange={handleGenderChange}/>
-                                        Male
-                                    </label>
-                                    <label htmlFor="female" style={{color: '#265305', fontWeight: 'normal'}}>
-                                        <input type="checkbox" id="female" name="gender" value="female" checked={gender === 'female'} onChange={handleGenderChange} />
-                                        Female
-                                    </label>
-                                </div>
-                                <label htmlFor="Season" style={{ display: 'block', color: '#265305', fontWeight: 'bold' }}>Season:</label>
-                                <div className="selectSeason">
-                                    <select value={selectedSeason} onChange={handleSeasonChange}>
-                                        <option value="Winter">Winter</option>
-                                        <option value="Spring">Spring</option>
-                                        <option value="Summer">Summer</option>
-                                        <option value="Fall">Fall</option>
-                                        <option value="None">None</option>
-                                    </select>
-                                </div>
                                 {/* <label htmlFor="Fruit Type" style={{ display: 'block' }}>Fruit Type:</label> */}
-                                <label htmlFor="Hospital Name" style={{ display: 'block', color: '#265305', fontWeight: 'bold'  }}>Hospital Name:</label>
-                                <div className="setHospitalName">
-                                <textarea className='view-requests-hospitalName-textarea' required value={hospitalName} onChange={(e) => setHospitalName(e.target.value)}></textarea>
-                                </div>
-                                <label htmlFor="Governorate" style={{ display: 'block', fontWeight:'bold' }}>Governorate:</label>
-                                <div className="selectGovernorate">
-                                <select value={selectedGovernorate} onChange={handleGovernorateChange}>
-                                    <option value="Alexandria">Alexandria</option>
-                                    <option value="Assiut">Assiut</option>
-                                    <option value="Aswan">Aswan</option>
-                                    <option value="Beheira">Beheira</option>
-                                    <option value="Bani Suef">Bani Suef</option>
-                                    <option value="Cairo">Cairo</option>
-                                    <option value="Daqahliya">Daqahliya</option>
-                                    <option value="Damietta">Damietta</option>
-                                    <option value="Fayyoum">Fayyoum</option>
-                                    <option value="Gharbiya">Gharbiya</option>
-                                    <option value="Giza">Giza</option>
-                                    <option value="Helwan">Helwan</option>
-                                    <option value="Ismailia">Ismailia</option>
-                                    <option value="Kafr El Sheikh">Kafr El Sheikh</option>
-                                    <option value="Luxor">Luxor</option>
-                                    <option value="Marsa Matrouh">Marsa Matrouh</option>
-                                    <option value="Minya">Minya</option>
-                                    <option value="Monofiya">Monofiya</option>
-                                    <option value="New Valley">New Valley</option>
-                                    <option value="North Sinai">North Sinai</option>
-                                    <option value="Port Said">Port Said</option>
-                                    <option value="Qalioubiya">Qalioubiya</option>
-                                    <option value="Qena">Qena</option>
-                                    <option value="Red Sea">Red Sea</option>
-                                    <option value="Sharqiya">Sharqiya</option>
-                                    <option value="Sohag">Sohag</option>
-                                    <option value="South Sinai">South Sinai</option>
-                                    <option value="Suez">Suez</option>
-                                    <option value="Tanta">Tanta</option>
-                                    <option value="None">None</option>
-                                </select>
-                                </div>
-                                <label htmlFor="Area" style={{ display: 'block', fontWeight:'bold' }}>Area:</label>
-                                <div className="selectArea">
-                                    <select value={selectedArea} onChange={handleAreaChange}>
-                                        <option value="Agouza">Agouza</option>
-                                        <option value="Ain El Sira">Ain El Sira</option>
-                                        <option value="Bulaq">Bulaq</option>
-                                        <option value="Citadel">Citadel</option>
-                                        <option value="City of the Dead">City of the Dead</option>
-                                        <option value="Dokki">Dokki</option>
-                                        <option value="Fustat">Fustat</option>
-                                        <option value="Garden City">Garden City</option>
-                                        <option value="Heliopolis">Heliopolis</option>
-                                        <option value="Imbaba">Imbaba</option>
-                                        <option value="Islamic Cairo">Islamic Cairo</option>
-                                        <option value="Katameya">Katameya</option>
-                                        <option value="Khan El-Khalili">Khan El-Khalili</option>
-                                        <option value="Maadi">Maadi</option>
-                                        <option value="Mohandiseen">Mohandiseen</option>
-                                        <option value="Mokattam Hills">Mokattam Hills</option>
-                                        <option value="Nasr City">Nasr City</option>
-                                        <option value="New Cairo">New Cairo</option>
-                                        <option value="Old Cairo">Old Cairo</option>
-                                        <option value="Pyramids area">Pyramids area</option>
-                                        <option value="Ramses">Ramses</option>
-                                        <option value="Al Rehab">Al Rehab</option>
-                                        <option value="Rhoda Island">Rhoda Island</option>
-                                        <option value="Saqqara">Saqqara</option>
-                                        <option value="Sayeda Zeinab">Sayeda Zeinab</option>
-                                        <option value="Shubra">Shubra</option>
-                                        <option value="Tahrir Square">Tahrir Square</option>
-                                        <option value="Zamalek">Zamalek</option>
+                                {selectedCategoryX === 'blood donations' && (
+                                    <>
+                                        <label htmlFor="Hospital Name" style={{ display: 'block', color: '#265305', fontWeight: 'bold'  }}>Hospital Name:</label>
+                                        <div className="setHospitalName">
+                                        <textarea className='view-requests-hospitalName-textarea' required value={hospitalName} onChange={(e) => setHospitalName(e.target.value)}></textarea>
+                                        </div>
+                                    </>
+                                )}
+
+                                {(selectedCategoryX === 'blood donations' || selectedCategoryX === 'teaching posts' || selectedCategoryX === 'medical cases' ) && (
+                                    <>
+                                    <label htmlFor="Governorate" style={{ display: 'block', fontWeight:'bold' }}>Governorate:</label>
+                                    <div className="selectGovernorate">
+                                    <select value={selectedGovernorate} onChange={handleGovernorateChange}>
+                                        <option value="Alexandria">Alexandria</option>
+                                        <option value="Assiut">Assiut</option>
+                                        <option value="Aswan">Aswan</option>
+                                        <option value="Beheira">Beheira</option>
+                                        <option value="Bani Suef">Bani Suef</option>
+                                        <option value="Cairo">Cairo</option>
+                                        <option value="Daqahliya">Daqahliya</option>
+                                        <option value="Damietta">Damietta</option>
+                                        <option value="Fayyoum">Fayyoum</option>
+                                        <option value="Gharbiya">Gharbiya</option>
+                                        <option value="Giza">Giza</option>
+                                        <option value="Helwan">Helwan</option>
+                                        <option value="Ismailia">Ismailia</option>
+                                        <option value="Kafr El Sheikh">Kafr El Sheikh</option>
+                                        <option value="Luxor">Luxor</option>
+                                        <option value="Marsa Matrouh">Marsa Matrouh</option>
+                                        <option value="Minya">Minya</option>
+                                        <option value="Monofiya">Monofiya</option>
+                                        <option value="New Valley">New Valley</option>
+                                        <option value="North Sinai">North Sinai</option>
+                                        <option value="Port Said">Port Said</option>
+                                        <option value="Qalioubiya">Qalioubiya</option>
+                                        <option value="Qena">Qena</option>
+                                        <option value="Red Sea">Red Sea</option>
+                                        <option value="Sharqiya">Sharqiya</option>
+                                        <option value="Sohag">Sohag</option>
+                                        <option value="South Sinai">South Sinai</option>
+                                        <option value="Suez">Suez</option>
+                                        <option value="Tanta">Tanta</option>
                                         <option value="None">None</option>
                                     </select>
-                                </div>
+                                    </div>
+                                    </>
+                                )}
+
+                                {(selectedCategoryX === 'blood donations' || selectedCategoryX === 'teaching posts' || selectedCategoryX === 'medical cases' ) && (
+                                    <>
+                                        <label htmlFor="Area" style={{ display: 'block', fontWeight:'bold' }}>Area:</label>
+                                        <div className="selectArea">
+                                            <select value={selectedArea} onChange={handleAreaChange}>
+                                                <option value="Agouza">Agouza</option>
+                                                <option value="Ain El Sira">Ain El Sira</option>
+                                                <option value="Bulaq">Bulaq</option>
+                                                <option value="Citadel">Citadel</option>
+                                                <option value="City of the Dead">City of the Dead</option>
+                                                <option value="Dokki">Dokki</option>
+                                                <option value="Fustat">Fustat</option>
+                                                <option value="Garden City">Garden City</option>
+                                                <option value="Heliopolis">Heliopolis</option>
+                                                <option value="Imbaba">Imbaba</option>
+                                                <option value="Islamic Cairo">Islamic Cairo</option>
+                                                <option value="Katameya">Katameya</option>
+                                                <option value="Khan El-Khalili">Khan El-Khalili</option>
+                                                <option value="Maadi">Maadi</option>
+                                                <option value="Mohandiseen">Mohandiseen</option>
+                                                <option value="Mokattam Hills">Mokattam Hills</option>
+                                                <option value="Nasr City">Nasr City</option>
+                                                <option value="New Cairo">New Cairo</option>
+                                                <option value="Old Cairo">Old Cairo</option>
+                                                <option value="Pyramids area">Pyramids area</option>
+                                                <option value="Ramses">Ramses</option>
+                                                <option value="Al Rehab">Al Rehab</option>
+                                                <option value="Rhoda Island">Rhoda Island</option>
+                                                <option value="Saqqara">Saqqara</option>
+                                                <option value="Sayeda Zeinab">Sayeda Zeinab</option>
+                                                <option value="Shubra">Shubra</option>
+                                                <option value="Tahrir Square">Tahrir Square</option>
+                                                <option value="Zamalek">Zamalek</option>
+                                                <option value="None">None</option>
+                                            </select>
+                                        </div>
+                                </>
+                                )}
 
                                 {/* <label htmlFor="Hospital Name" style={{ display: 'block', color: '#265305', fontWeight: 'bold'  }}>Hospital Name:</label>
                                 <div className="setHospitalName">
                                 <textarea className='view-requests-hospitalName-textarea' required value={hospitalName} onChange={(e) => setHospitalName(e.target.value)}></textarea>
                                 </div> */}
 
+                                {selectedCategoryX === 'medical cases' && (
+                                    <>
                                     <label htmlFor='Medical Specialty' style={{ display: 'block', fontWeight:'bold' }}>
                                         Medical Specialty:
                                     </label>
                                     <div className='setMedicalSpeciality'>
                                         <textarea className='view-requests-medicalS-textarea'  required value={medicalSpeciality} onChange={(e) => setMedicalSpeciality(e.target.value)}></textarea>
                                     </div>
+                                    </>
+                                )}
 
+                                {selectedCategoryX === 'medical cases' && (
+                                    <>
                                     <label htmlFor='Organization Name' style={{ display: 'block', fontWeight:'bold' }}>
                                         Organization Name:
                                     </label>
                                     <div className='setOrganizationName'>
                                         <textarea className='view-requests-Org-textarea' required value={organizationName} onChange={(e) => setOrganizationName(e.target.value)}></textarea>
                                     </div>
+                                    </>
+                                )}
+
+                                {selectedCategoryX === 'teaching posts' && (
+                                    <>
 
                                     <label htmlFor='Subject' style={{ display: 'block', fontWeight:'bold' }}>
                                         Subject:
@@ -928,27 +970,42 @@ function ViewRequests() {
                                     <div className='setSubject'>
                                         <textarea className='view-requests-Sub-textarea' required value={subject} onChange={(e) => setSubject(e.target.value)}></textarea>
                                     </div>
+                                    </>
+                                )}
 
-                                    <label htmlFor='Age' style={{ display: 'block', fontWeight:'bold' }}>
-                                        Age:
-                                    </label>
-                                    <div className='setAge'>
-                                        <textarea className='view-requests-Age-textarea' required value={age} onChange={(e) => setAge(e.target.value)}></textarea>
-                                    </div>
+                                    {(selectedCategoryX === 'clothes'||selectedCategoryX === 'toys'||selectedCategoryX === 'medical cases') && (
+                                        <>
+                                            <label htmlFor='Age' style={{ display: 'block', fontWeight:'bold' }}>
+                                            Age:
+                                            </label>
+                                            <div className='setAge'>
+                                            <textarea className='view-requests-Age-textarea' required value={age} onChange={(e) => setAge(e.target.value)}></textarea>
+                                            </div>
+                                        </>
+                                    )}
 
-                                    <label htmlFor='Medical-Use' style={{ display: 'block', fontWeight:'bold' }}>
-                                        Medical Use:
-                                    </label>
-                                    <div className='setMedicalUse'>
-                                        <textarea className='view-requests-Medical-use-textarea' required value={medicalUse} onChange={(e) => setMedicalUse(e.target.value)}></textarea>
-                                    </div>
+                                    {selectedSubcategory === 'medication' && (
+                                        <>
+                                        <label htmlFor='Medical-Use' style={{ display: 'block', fontWeight:'bold' }}>
+                                            Medical Use:
+                                        </label>
+                                        <div className='setMedicalUse'>
+                                            <textarea className='view-requests-Medical-use-textarea' required value={medicalUse} onChange={(e) => setMedicalUse(e.target.value)}></textarea>
+                                        </div>
+                                        </>
+                                    )}
 
-                                    <label htmlFor='Blood-Type' style={{ display: 'block', fontWeight:'bold' }}>
-                                        Blood Type:
-                                    </label>
-                                    <div className='setBloodType'>
-                                        <textarea className='view-requests-Blood-type-textarea' required value={bloodT} onChange={(e) => setBloodType(e.target.value)}></textarea>
-                                    </div>
+                                    {selectedCategoryX === 'blood donations' && (
+                                        <>
+
+                                            <label htmlFor='Blood-Type' style={{ display: 'block', fontWeight:'bold' }}>
+                                                Blood Type:
+                                            </label>
+                                            <div className='setBloodType'>
+                                                <textarea className='view-requests-Blood-type-textarea' required value={bloodT} onChange={(e) => setBloodType(e.target.value)}></textarea>
+                                            </div>
+                                        </>
+                                    )}
 
                                 </div>
 
