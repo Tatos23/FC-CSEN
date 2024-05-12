@@ -60,7 +60,8 @@ return(
                 <button className='home-donate-button' onClick={() => handleButtonClickDonations('Donations')} >Donate</button>
             </div>
             <div className='home-middleside'>
-                <button className='home-middleside-button' onClick={() => handleButtonClickHome('Home')} >Home</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickHome('Home')} style={{ marginRight: '10%' }} >Home</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickDonations('Donations')} style={{ marginRight: '1%' }}>Donations</button>
                 <button className='home-middleside-button' onClick={() => handleButtonClickOrganizations('Organizations')} style={{ marginLeft: '10%' }}>Organizations</button>
                 <button className='home-middleside-button' onClick={() => handleButtonClickNotifications1('Notifications')}style={{ marginLeft: '10%' } }>Notifications</button>
 
