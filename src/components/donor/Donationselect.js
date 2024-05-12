@@ -80,7 +80,7 @@ function Donationselect({role}) {
                     +
                   </button>
                 </div>
-                <button className="Donationselect-Donate" onClick={() => navigate('/pickup')}>Donate</button>
+                <button className="Donationselect-Donate" onClick={() => navigate('/pickup') }>Donate</button>
               </>
             )}
           </div>

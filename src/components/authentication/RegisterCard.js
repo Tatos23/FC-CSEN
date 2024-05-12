@@ -118,7 +118,7 @@ function RegisterCard({ toggleForm, showPassword, toggleShowPassword, donorRole,
                             <input type="text" placeholder="Governorate" className="organizationAddress-input" value={organizationAddress} onChange={e => setOrganizationAddress(e.target.value)} required />
                             <input type="text" placeholder="Speciality" className="organizationArea-input" value={organizationArea} onChange={e => setOrganizationArea(e.target.value)} required />
                             <input type="text" placeholder="No.of cases" className="organizationGovernorate-input" value={organizationGovernorate} onChange={e => setOrganizationGovernorate(e.target.value)} required />
-                            {address && <iframe src={address} style={{width:"400px",height:"300px",marginTop:"10px"}} allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>}
+                            {address && <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27634.171656596554!2d31.42260937431642!3d30.029069099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145823c7a34c174b%3A0xf517ebc75190ca14!2spyramids%20for%20real%20estate!5e0!3m2!1sen!2seg!4v1715530298712!5m2!1sen!2seg" style={{width:"400px",height:"300px",marginTop:"10px"}} allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>}
                         </>
                     }
                     <br />
