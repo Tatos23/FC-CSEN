@@ -141,7 +141,7 @@
     border: 2px solid #397e07;
     color: #397e07;
     border-radius: 10px;
-    font-size: 1vw;
+    font-size: 2vh;
     font-weight: 500;
     cursor: pointer;
 
@@ -154,7 +154,7 @@
     background-color: #397e07;
     color: white;
     border-radius: 10px;
-    font-size: 1vw;
+    font-size: 2vh;
     font-weight: 500;
     cursor: pointer;
 }
@@ -187,6 +187,7 @@
     align-items: center;
     padding-top: 2.5%;
     padding-bottom: 2.5;
+    font-size: 0.7vw;
 }
 
 .user-submissions-dropdown-menu-type {
@@ -196,6 +197,7 @@
     border-radius: 10px;
     background-color: white;
     cursor: pointer;
+
 }
 
 .user-submissions-dropdown-menu-types .user-submissions-selected {

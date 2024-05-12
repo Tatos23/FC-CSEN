@@ -31,7 +31,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 1vw;
+    gap: 1.75vh;
 }
 
 .user-submission-card-right {
@@ -76,19 +76,19 @@
 }
 
 .user-submission-card-type {
-    font-size: 2vw;
+    font-size: 4vh;
     font-weight: 700;
 }
 
 .user-submission-card-name {
     padding-left: 1vw;
-    font-size: 1.3vw;
+    font-size: 2.25vh;
     font-weight: 400;
 }
 
 .user-submission-card-info {
     padding-left: 1vw;
-    font-size: 1.3vw;
+    font-size: 2.25vh;
     font-weight: 400;
 }
 

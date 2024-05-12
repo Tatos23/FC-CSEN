@@ -33,8 +33,7 @@ import RepNot from './components/organization/RepNot.jsx';
 import Food from './components/organization/Food.jsx';
 import AdminDashBoard from './components/admin/admin-dashboard/AdminDashBoard.js';
 import AdminUsers from './components/admin/admin-users/AdminUsers.js';
-import UserSubmissions from './components/admin/user-submissions/UserSubmissions.js';
-import Requests from './components/admin/requests/Requests.js';
+import RegisteringUsers from './components/admin/registering-users/RegisteringUsers.js';
 
 
 
@@ -50,8 +49,7 @@ function App() {
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />
-            <Route path="user-submissions" element={<UserSubmissions />} />
-            <Route path="requests" element={<Requests />} />
+            <Route path="registering-users" element={<RegisteringUsers />} />
           </Route>
           <Route path="/admin-login" element={<Authentication role="Admin" />} />
           <Route path="/donor-login" element={<Authentication role="Donor" />} />
