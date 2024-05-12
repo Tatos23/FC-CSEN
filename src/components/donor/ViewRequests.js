@@ -229,6 +229,11 @@ function ViewRequests() {
     const [medicalSpeciality, setMedicalSpeciality] = useState('');
     const [organizationName, setOrganizationName] = useState('');
     const [subject, setSubject] = useState('');
+    const [age, setAge] = useState('');
+    const [medicalUse, setMedicalUse] = useState('');
+    const [bloodT, setBloodType] = useState('');
+
+
 
     const [selectedCategoryX, setSelectedCategoryX] = useState(''); // Initialize with an empty string
     const [selectedSubcategory, setSelectedSubcategory] = useState('');
@@ -603,6 +608,9 @@ function ViewRequests() {
         setSubject('');
         setSelectedCategoryX('None');
         setSelectedSubcategory('None');
+        setAge('');
+        setMedicalUse('');
+        setBloodType('');
         setSearchTerm('');
         fetch('http://localhost:8000/donations')
             .then(res => {
@@ -667,6 +675,16 @@ function ViewRequests() {
                         // Only category is selected
                         filteredDonations = filteredDonations.filter(donation => donation.category === selectedCategoryX);
                     }
+                }
+                if (age != ''){
+                    const intAge = parseInt(age);
+                    filteredDonations = filteredDonations.filter(donation => donation.age === intAge);
+                }
+                if (medicalUse != ''){
+                    filteredDonations = filteredDonations.filter(donation => donation.use === medicalUse);
+                }
+                if (bloodT != ''){
+                    filteredDonations = filteredDonations.filter(donation => donation.bloodType === bloodT);
                 }
                 if (searchTerm) {
                     filteredDonations = filteredDonations.filter(donation => donation.category.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -909,6 +927,27 @@ function ViewRequests() {
                                     </label>
                                     <div className='setSubject'>
                                         <textarea className='view-requests-Sub-textarea' required value={subject} onChange={(e) => setSubject(e.target.value)}></textarea>
+                                    </div>
+
+                                    <label htmlFor='Age' style={{ display: 'block', fontWeight:'bold' }}>
+                                        Age:
+                                    </label>
+                                    <div className='setAge'>
+                                        <textarea className='view-requests-Age-textarea' required value={age} onChange={(e) => setAge(e.target.value)}></textarea>
+                                    </div>
+
+                                    <label htmlFor='Medical-Use' style={{ display: 'block', fontWeight:'bold' }}>
+                                        Medical Use:
+                                    </label>
+                                    <div className='setMedicalUse'>
+                                        <textarea className='view-requests-Medical-use-textarea' required value={medicalUse} onChange={(e) => setMedicalUse(e.target.value)}></textarea>
+                                    </div>
+
+                                    <label htmlFor='Blood-Type' style={{ display: 'block', fontWeight:'bold' }}>
+                                        Blood Type:
+                                    </label>
+                                    <div className='setBloodType'>
+                                        <textarea className='view-requests-Blood-type-textarea' required value={bloodT} onChange={(e) => setBloodType(e.target.value)}></textarea>
                                     </div>
 
                                 </div>
