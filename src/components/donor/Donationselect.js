@@ -7,11 +7,11 @@ function Donationselect({role}) {
   const navigate = useNavigate();
   let { id } = useParams();
   const varID = parseInt(id);
-  console.log(id);
   const [donations, setDonations] = useState([]);
   const [donation, setDonation] = useState({}); // Initialize donation state with an empty object
   const [quantity, setQuantity] = useState(1);
   const [message, setMessage] = useState(false);
+  const [user, setUser] = useState(null);
 
   const handleIncrement = () => {
     if (quantity < donation.quantity) {
@@ -64,6 +64,36 @@ function Donationselect({role}) {
 
       });
   },[id]);
+
+//   const resetStateClothes = () => {
+//     fetch('http://localhost:8000/donations')
+//         .then(res => {
+//             return res.json()
+//         })
+//         .then(data => {
+//             setDonation(data)
+//             const newDonations = data.filter(donations => donations.category == 'clothes');
+//             setDonation(newDonations);
+//         })
+//     setSelectedCategory("Clothes Category")
+// }
+
+  const fetchUser = (id) => {
+    fetch('http://localhost:8001/users')
+      .then(res => {
+        return res.json()
+      })
+      .then(data => {
+        const newUsers = data.filter(users => parseInt(users.id) == id);
+        setUser(newUsers);
+        if (newUsers.length > 0) {
+          console.log(newUsers[0].type);
+          return newUsers[0].type;
+        } else {
+          throw new Error('User not found');
+        }
+      })
+  }
 
 
 
@@ -595,7 +625,7 @@ function Donationselect({role}) {
                 <iframe style={{left:"10%",bottom:"150px"}} className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.768218997515!2d31.284885075550434!3d29.957344874967596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458383f12be6d3d%3A0x3aa0984dd84f3330!2sEl-Nasr%20Rd%2C%20Maadi%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715285509655!5m2!1sen!2seg"></iframe>
                 </div>
 
-                <button className="Donationselect-Donate" onClick={()=>role==='Doctor'?
+                <button className="Donationselect-Donate" onClick={()=>fetchUser(17) == "Doctor"?
                 navigate('/pickup')
                 :
                 setMessage(true)} >
@@ -629,7 +659,7 @@ function Donationselect({role}) {
                   <iframe style={{left:"10%",bottom:"150px"}} className='Donationselect-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.768218997515!2d31.284885075550434!3d29.957344874967596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458383f12be6d3d%3A0x3aa0984dd84f3330!2sEl-Nasr%20Rd%2C%20Maadi%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1715285509655!5m2!1sen!2seg"></iframe>
                 </div>
 
-                <button className="Donationselect-Donate" onClick={()=>role==='Doctor'?
+                <button className="Donationselect-Donate" onClick={()=> fetchUser(18) == "Doctor"?
                 navigate('/pickup')
                 :
                 setMessage(true)} >
