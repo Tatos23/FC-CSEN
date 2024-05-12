@@ -60,14 +60,14 @@ return(
                 <button className='home-donate-button' onClick={() => handleButtonClickDonations('Donations')} >Donate</button>
             </div>
             <div className='home-middleside'>
-                <button className='home-middleside-button' onClick={() => handleButtonClickHome('Home')} style={{ marginRight: '10%' }}>Home</button>
+                <button className='home-middleside-button' onClick={() => handleButtonClickHome('Home')} >Home</button>
                 <button className='home-middleside-button' onClick={() => handleButtonClickOrganizations('Organizations')} style={{ marginLeft: '10%' }}>Organizations</button>
                 <button className='home-middleside-button' onClick={() => handleButtonClickNotifications1('Notifications')}style={{ marginLeft: '10%' } }>Notifications</button>
 
             </div>
             <div className='home-rightside'>
 
-            <button className='home-searchbutton'><img className='home-search-icon'src='searchicon.png' alt='logo'></img></button>
+            
             
             
             {/* <Link to={"/home"} className='singin-up' >Login/Register</Link> */}

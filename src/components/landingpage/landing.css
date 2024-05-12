@@ -104,16 +104,18 @@ object-fit: contain;
 .landing-middleside-button{
     font-family: 'Roboto';
     font-weight: 400;
-     font-size: 18px;
-     border: none;
-     color: #2C6B5A;
-     background-color:transparent;
-     width: 100px;
-     height: 30px;
-     transition: background-color 1s;
-     margin-top: 15px;
+    font-size: 22px;
+    border: none;
+    color: #2C6B5A;
+    background-color:transparent;
+    width: 140px;
+    height: 30px;
+    transition: background-color 1s;
+    margin-top: 15px;
     border-bottom: 1px solid #397e07;
-     width: 100px;
+    position: relative;
+    right: 15%;
+   
 }
 .landing-middleside-button:hover{
     color: #74AC4C;
