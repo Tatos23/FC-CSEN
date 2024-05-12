@@ -39,6 +39,7 @@ import RegisterCard from './components/authentication/RegisterCard.js';
 import Profile from './components/Profile.jsx';
 import OrgProfile from './components/organization/OrgProfile.js';
 import ViewRegisteredOrganizations from './components/donor/ViewRegisteredOrganizations.js';
+import LoginCard from './components/authentication/LoginCard.js';
 
 
 
@@ -50,7 +51,7 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Requests/>} /> */}
 
-          <Route index element={<ViewRequests/>} />
+          <Route index element={<Authentication/>} />
           <Route path="/admin-dashboard" element={<AdminDashBoard />} >
             <Route index element={<AdminHomePage />} />
             <Route path="system-users" element={<AdminUsers />} />

@@ -137,9 +137,9 @@
         "name": "shandawely",
         "hospitalName": "Alnakhel",
         "bloodType": "A+",
-        "hospitalArea": "maadi",
-        "hospitalAddress": "maadi----",
-        "governorate": "cairo",
+        "hospitalArea": "Maadi",
+        "hospitalAddress": "Maadi----",
+        "governorate": "Cairo",
         "picture": "blooddonation.jpg",
         "hospitalLocation": "googlemarker.png",
         "id": 13
@@ -215,7 +215,7 @@
         "medicalSpecialty": "Psychiatry",
         "caseDescription": "Traumatized Gucian",
         "location": "googlemarker.png",
-        "area": "Nasr-city",
+        "area": "Nasr City",
         "picture": "pshy.png",
         "governorate": "Giza",
         "id": 18

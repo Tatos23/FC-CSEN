@@ -33,7 +33,9 @@ function ViewRequests() {
             .then(data => {
                 setDonation(data)
             })
-    }, []);
+            handleButtonClickRemoveFilters();
+    },[]);
+    
 
 
     const navigate = useNavigate();
@@ -576,6 +578,10 @@ function ViewRequests() {
                 // Execute specific code for Zamalek
                 console.log('Zamalek selected');
                 break;
+            case 'Maadi':
+                    // Execute specific code for Zamalek
+                    console.log('Maadi selected');
+                    break;
             default:
                 console.log('Invalid selection');
         }
@@ -597,6 +603,7 @@ function ViewRequests() {
         setSubject('');
         setSelectedCategoryX('None');
         setSelectedSubcategory('None');
+        setSearchTerm('');
         fetch('http://localhost:8000/donations')
             .then(res => {
                 return res.json()
@@ -669,10 +676,12 @@ function ViewRequests() {
                 console.log('Filtered donations final:', filteredDonations);
             });
     }
+
+    
     
     
 
-
+    
 
     return (
         <>
@@ -721,7 +730,7 @@ function ViewRequests() {
                 <div className='view-requests-right'>
                     <div className="search-title">Search</div>
                     <div className="right-subSection-search">
-                        <input className="ViewRequests-search-bar" type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)}/>
+                        <input className="ViewRequests-search-bar" type="text" placeholder="Search..." value = {searchTerm} onChange={e => setSearchTerm(e.target.value)}/>
                     </div>
                     <div className="filter-title">Filter</div>
                         <div className="right-subSection">
@@ -857,6 +866,7 @@ function ViewRequests() {
                                         <option value="Islamic Cairo">Islamic Cairo</option>
                                         <option value="Katameya">Katameya</option>
                                         <option value="Khan El-Khalili">Khan El-Khalili</option>
+                                        <option value="Maadi">Maadi</option>
                                         <option value="Mohandiseen">Mohandiseen</option>
                                         <option value="Mokattam Hills">Mokattam Hills</option>
                                         <option value="Nasr City">Nasr City</option>
