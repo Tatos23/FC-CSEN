@@ -41,6 +41,7 @@ import OrgProfile from './components/organization/OrgProfile.js';
 import ViewRegisteredOrganizations from './components/donor/ViewRegisteredOrganizations.js';
 import LoginCard from './components/authentication/LoginCard.js';
 import DonorNot from './components/donor/DonorNot.js';
+import ProfileT from './components/donor/ProfileT.js';
 
 
 
@@ -87,7 +88,7 @@ function App() {
           <Route path="/org-home" element={<ORHome />} />
           <Route path="/rep-don" element={<RepDon />} />
           <Route path="/rep-notifications" element={<RepNot />} />
-          <Route path="/donor-profile" element={<Profile />} />
+          <Route path="/donor-profile" element={<ProfileT />} />
           <Route path="/org-profile" element={<OrgProfile />} />
           <Route path="/pickup" element={<PickUp />} />
           <Route path="/Donor-document-upload" element={<DocUpload role="Donor" />} />

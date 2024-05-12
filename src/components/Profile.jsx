@@ -1,12 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
 import Header from './donor/Header'
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
+    const navigate = useNavigate();
     const [selectedGender, setSelectedGender] = useState("");
     const handleChange = (event) => {
     setSelectedGender(event.target.value);
   };
+
   return (
     <div>
         <Header loggedIn={true}/>
@@ -54,8 +57,13 @@ const Profile = () => {
                 <input type="text" style={{width:300, alignContent:'center', fontFamily:'Roboto'}} name="gov" className='ml-2 mb-2 mt-2' placeholder='Enter your gov' required/>
                 </label>
                 <br />
+
+                <br />
+                
+
             </div>
             </div>
+
         </div>
     </div>
   )
