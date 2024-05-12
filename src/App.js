@@ -64,11 +64,12 @@ function App() {
           <Route path="/representative-login" element={<Authentication role="Organization Representative" />} />
           <Route path="/Organization Representative-document-upload" element={<DocUpload role="Organization Representative" />} />
           <Route path="/donor-document-upload" element={<DocUpload role="Donor" />} />
-          <Route path="home" element={<HomePage />} />
+          {/* <Route path="home" element={<HomePage />} />
           {/* <Route path="/organization-login" element={<Authentication role="Organization" />} /> */}
           <Route path="/home" element={<HomePage />} />
           <Route path="/home-donor" element={<Home />} />
-          <Route path="/donation-select/:id" element={<Donationselect />} />
+          /* Had to hardcode it to make sure that the correct donor type can donate to the medical case and teaching posts */
+          <Route path="/donation-select/:id" element={<Donationselect role="Doctor"/>} />
           <Route path="/blood" element={<Blood />} />
           <Route path="/book" element={<Book />} />
           <Route path="/view-requests" element={<ViewRequests />} />
