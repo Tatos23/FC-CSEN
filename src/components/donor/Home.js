@@ -90,7 +90,7 @@ return(
 
     {/* tatos */}
        {
-        openProfile && <DropDownProfile/> 
+        openProfile && <DropDownProfile role="Donor"/> 
        
        }
     

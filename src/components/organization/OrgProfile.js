@@ -16,7 +16,6 @@ function OrgProfile () {
     }
     return (
       <div>
-          <OrgTemp />
           <Profile />
           <h1 style={{fontFamily:'Roboto'}}  class="text-Roboto text-2xl font-bold text-green-800">Organization Details</h1>
           <div class="bg-gray-200 rounded-lg mr-20 ml-20 mb-5">

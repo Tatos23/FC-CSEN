@@ -3,6 +3,7 @@
     position: relative;
     background-color: #2C6B5A;
 }
+
 .Donationselect-container{
     background-color: white;
     margin-left: auto;
@@ -12,54 +13,49 @@
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
     margin-top:8px ;
     border-radius: 10px;
-    
 }
+
 .Donationselect-title{
     display: block;
     font-size: 30px;
-   
-
-
-
 }
+
 .Donationselect-picture{
-margin-top: 1px;
-width: 400px;
-height: 260px;
-object-fit: contain;
-margin-left: auto;
-margin-right: auto;
-
+    margin-top: 1px;
+    width: 400px;
+    height: 260px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .Donationselect-description{
-font-size: 20px;
-text-align: left;
-margin-top: 5px;
-margin-left: 2%;
-
-position: relative;
-
-;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 2%;
+    position: relative;
 }
+
 .Donationselect-Quantity{
     color: aliceblue;
     background-color: #74AC4C;
     border-radius: 11px;
     
 }
+
 .Donationselect-counter{
     border-color: #74AC4C;
     width: 200px;
     margin-left: auto;
     margin-right: 10px;
-    
-    
-
 }
+
 .Donationselect-label{
 
     margin-right: 10px;
 }
+
 .Donationselect-increment{
 width: 20px;
 height: 20px;
@@ -71,6 +67,7 @@ padding-bottom: 25px;
 
 
 }
+
 .Donationselect-Donate{
 margin-top: 20px;
 margin-left: 600px;
@@ -82,15 +79,19 @@ font-size: 18px;
 font-family: Roboto;
 font-weight: 400;
 margin-bottom: 20px;
-}.Donationselect-Donate:hover{
+color: white;
+}
+
+.Donationselect-Donate:hover{
     background-color: #265305;
     color: white;
     border:none;
 }
+
 .Donationselect-Donate:active{
     opacity: 0.5;
-
 }
+
 .Donationselect-map{
     margin-left: 50%;
     position: relative;

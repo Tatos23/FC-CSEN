@@ -33,7 +33,7 @@ const DonorNot = () => {
     
     return (
         <div className="DonorNot">
-            <Header loggedIn={true}/>
+            <Header loggedIn={true} role="donor"/>
             <h2 className='DonorNot-title'>Notifications</h2>
             <div className='DonorNot-notifications'>
             {notifications.map(notification => (

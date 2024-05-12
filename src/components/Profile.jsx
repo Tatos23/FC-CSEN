@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import Header from './donor/Header'
+
 const Profile = () => {
     const [selectedGender, setSelectedGender] = useState("");
     const handleChange = (event) => {
@@ -7,6 +9,7 @@ const Profile = () => {
   };
   return (
     <div>
+        <Header loggedIn={true}/>
         <h1 style={{fontFamily:'Roboto'}}  class="text-Roboto text-2xl font-bold text-green-800">Profile</h1>
         <div> 
             <div >

@@ -81,11 +81,12 @@ function App() {
           <Route path="/org-home" element={<ORHome />} />
           <Route path="/rep-don" element={<RepDon />} />
           <Route path="/rep-notifications" element={<RepNot />} />
-          <Route path="/profile" element={<OrgProfile />} />
-          
-
-
-
+          <Route path="/donor-profile" element={<Profile />} />
+          <Route path="/org-profile" element={<OrgProfile />} />
+          <Route path="/pickup" element={<PickUp />} />
+          <Route path="/Donor-document-upload" element={<DocUpload role="Donor" />} />
+          <Route path="/Representative-document-upload" element={<DocUpload role="rep" />} />
+      
         </Routes>
       </BrowserRouter>
 

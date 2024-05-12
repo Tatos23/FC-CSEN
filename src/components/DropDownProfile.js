@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 import './DropDownProfile.css';
 import { useNavigate } from 'react-router-dom';
 
-const DropDownProfile = () => {
+const DropDownProfile = (role) => {
+
+    //role = donor or org or admin
 
     const navigate = useNavigate();
 
@@ -11,7 +13,8 @@ const DropDownProfile = () => {
     //TODO: functionality of the buttons
 
     const handleButtonClickProfile = () => {
-        navigate('/profile');       //TODO: navigate to the correct pages
+        if (role === 'Donor') navigate(`/donor-profile`);       //TODO: navigate to the correct pages
+        else navigate('/org-profile')     //TODO: navigate to the correct pages
     }
 
     const handleButtonClickSettings = () => {
