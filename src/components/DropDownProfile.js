@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './DropDownProfile.css';
 import { useNavigate } from 'react-router-dom';
 
-const DropDownProfile = (role) => {
+const DropDownProfile = ({role}) => {
 
     //role = donor or org or admin
 

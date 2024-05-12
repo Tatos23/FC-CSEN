@@ -26,7 +26,7 @@ function DocUpload({ role }) {
         setIsClicked(true);
         setMessage('Your documents have been uploaded successfully, please wait for the verification from the admin.');
         setTimeout(() => {
-            if (role === "Organization Representative")
+            if(role === "Organization Representative")
                 nav("/representative-login");
             else if (role === "Donor")
                 nav("/donor-login");
