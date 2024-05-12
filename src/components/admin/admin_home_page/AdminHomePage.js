@@ -1,9 +1,5 @@
 import './AdminHomePage.css';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import DropDownProfile from '../../DropDownProfile'; //A role prop was added for the profile navigation, search for occurrences of DropDownProfile in the project's files to understand
-//Also, check the App.js
-
 
 function AdminHomePage() {
 

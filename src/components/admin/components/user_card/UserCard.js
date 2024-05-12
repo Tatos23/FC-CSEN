@@ -6,8 +6,9 @@ const defaultOnClick = () => { };
 export default function UserCard({ usersData, setUsersData, type, name, organizationType, onClick = defaultOnClick }) {
     const isClickable = onClick !== defaultOnClick;
 
-    const handleDeleteClick = () => {
-        const updatedUsersData = usersData.filter(user => user.name !== name);
+    const handleDeleteClick = (event) => {
+        event.stopPropagation();
+        const updatedUsersData = type === 'Donor' ? usersData.filter(user => user.username !== name) : usersData.filter(user => user.name !== name);
         setUsersData(updatedUsersData);
     };
 
