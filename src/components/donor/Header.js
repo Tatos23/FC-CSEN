@@ -15,7 +15,7 @@ function Header({loggedIn, role}){
 
     const[openProfile, setOpenProfile] = useState(false);
     const handleButtonClickNotifications = () => {
-        navigate('/notifications');
+        navigate('/donor-notifications');
     }
     const handleButtonClickHome = () => {
         navigate('/home-donor');
