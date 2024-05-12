@@ -9,21 +9,7 @@ const Profile = () => {
     const handleChange = (event) => {
     setSelectedGender(event.target.value);
   };
-  const handleButtonSave = () =>{
-    if (window.confirm("You will now be redirected to the home page")) {
-        navigate('/home-donor');
-      }
-  }
-const handleButtonDiscard = () =>{
-if (window.confirm("You will now be redirected to the home page")) {
-    navigate('/home-donor');
-  }
-}
-const handleButtonDelete = () =>{
-  if (window.confirm("Are you sure you want to delete your account?")) {
-      navigate('/home');
-    }
-  }
+
   return (
     <div>
         <Header loggedIn={true}/>

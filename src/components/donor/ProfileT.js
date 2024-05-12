@@ -31,7 +31,8 @@ return(
                 <br/>
                 <button className="inline-block bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-700 mr-4 ml-4 mb-5" onClick={()=>handleButtonDelete()} >Delete Account</button>
 
-</div>
+
+ </div>
 )
 
 
