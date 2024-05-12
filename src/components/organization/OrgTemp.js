@@ -75,7 +75,7 @@ return(
         
        <div className='org-temp-nd'>
        </div>
-       {openProfile && <DropDownProfile/> }
+       {openProfile && <DropDownProfile role="org"/> }
     
     </>
 )

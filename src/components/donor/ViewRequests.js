@@ -929,7 +929,7 @@ function ViewRequests() {
 
             {/* tatos */}
             {
-                openProfile && <DropDownProfile />
+                openProfile && <DropDownProfile role="Donor"/>
 
             }
             {/* {

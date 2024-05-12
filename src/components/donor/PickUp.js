@@ -11,7 +11,7 @@ function PickUp (){
 
     return (
         <div className='PickUp'>
-            <Header loggedIn={true}/>
+            <Header loggedIn={true} role="donor"/>
             <div className='PickUp-Container'>
                 <h1 className='PickUp-Title'>Schedule Pick Up Information</h1>
                 <h2 className='PickUp-SubTitle'>Please fill out the following information:</h2>

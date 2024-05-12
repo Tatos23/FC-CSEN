@@ -6,7 +6,7 @@ import DropDownProfile from '../DropDownProfile';
 import userEvent from '@testing-library/user-event';
 import { useNavigate } from 'react-router-dom';
 
-function Header({loggedIn}){
+function Header({loggedIn, role}){
 
     const [isVisible, setIsVisible] = useState(false);
     const navigate = useNavigate();
@@ -55,7 +55,7 @@ function Header({loggedIn}){
 
         </div>
         {
-        openProfile && <DropDownProfile/> 
+        openProfile && <DropDownProfile role={role}/> 
        }
     </>
     );
