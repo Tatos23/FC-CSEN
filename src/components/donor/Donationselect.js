@@ -37,6 +37,8 @@ function Donationselect({role}) {
 
 
   };
+  const [users, setUsers] = useState(null);
+
 
   useEffect(() => {
     fetch('http://localhost:8000/donations')
@@ -47,9 +49,25 @@ function Donationselect({role}) {
         setDonations(data);
         filterItems(data);
         setQuantity(1);
-        
+   
       });
   },[id]);
+
+
+  useEffect(() => {
+    fetch('http://localhost:8001/users')
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setUsers(data);
+
+      });
+  },[id]);
+
+
+
+
 
   switch (parseInt(id)) {
     case 1:
