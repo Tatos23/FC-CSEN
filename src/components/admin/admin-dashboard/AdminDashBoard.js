@@ -2,10 +2,12 @@ import './AdminDashBoard.css';
 import { useLocation, Link, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import { mockUsers } from '../admin-users-data.js';
+import PasswordChange from '../components/password-change/PasswordChange.js';
 
 function AdminDashBoard() {
     const [isVisible, setIsVisible] = useState(false);
     const [openProfile, setOpenProfile] = useState(false);
+    const [isPasswordPopupOpen, setIsPasswordPopupOpen] = useState(false);
 
     const location = useLocation();
 
@@ -36,6 +38,13 @@ function AdminDashBoard() {
                 </div>
                 <div className='admin-dashboard-rightside'>
                     <button className='admin-dashboard-profilebutton' onClick={() => setOpenProfile((prev) => !prev)}><img className='home-profile-icon' src='/profileEnhanced.png' alt='logo'></img></button>
+                    {openProfile && (
+                        <div className='admin-dashboard-profile-dropdown'>
+                            <Link to="/"> <button>Logout</button>
+                            </Link>
+                            <button onClick={() => setIsPasswordPopupOpen(true)}>Change Password</button>
+                        </div>
+                    )}
                 </div>
 
             </header>
@@ -44,8 +53,9 @@ function AdminDashBoard() {
                 <Outlet />
             </main>
 
+            {isPasswordPopupOpen && <PasswordChange onClose={() => setIsPasswordPopupOpen(false)} />}
+
         </div>
     )
 }
 export default AdminDashBoard;
-

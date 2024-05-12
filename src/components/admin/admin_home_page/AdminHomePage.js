@@ -1,7 +1,5 @@
 import './AdminHomePage.css';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import DropDownProfile from '../../DropDownProfile';
 
 function AdminHomePage() {
 
