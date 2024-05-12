@@ -19,6 +19,8 @@ function ViewRequests() {
 
     ] */
 
+    const [searchTerm, setSearchTerm] = useState('');
+
     const [donations, setDonation] = useState(null);
 
     const [selectedCategory, setSelectedCategory] = useState('Select Category ▼'); // Initialize with default text
@@ -659,8 +661,9 @@ function ViewRequests() {
                         filteredDonations = filteredDonations.filter(donation => donation.category === selectedCategoryX);
                     }
                 }
-
-    
+                if (searchTerm) {
+                    filteredDonations = filteredDonations.filter(donation => donation.category.toLowerCase().includes(searchTerm.toLowerCase()));
+                }  
                 // Update the state with the filtered donations
                 setDonation(filteredDonations);
                 console.log('Filtered donations final:', filteredDonations);
@@ -718,7 +721,7 @@ function ViewRequests() {
                 <div className='view-requests-right'>
                     <div className="search-title">Search</div>
                     <div className="right-subSection-search">
-                        <input className="ViewRequests-search-bar" type="text" placeholder="Search..."/>
+                        <input className="ViewRequests-search-bar" type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)}/>
                     </div>
                     <div className="filter-title">Filter</div>
                         <div className="right-subSection">
