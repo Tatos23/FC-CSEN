@@ -885,25 +885,30 @@ function ViewRequests() {
                                     </select>
                                 </div>
 
+                                {/* <label htmlFor="Hospital Name" style={{ display: 'block', color: '#265305', fontWeight: 'bold'  }}>Hospital Name:</label>
+                                <div className="setHospitalName">
+                                <textarea className='view-requests-hospitalName-textarea' required value={hospitalName} onChange={(e) => setHospitalName(e.target.value)}></textarea>
+                                </div> */}
+
                                     <label htmlFor='Medical Specialty' style={{ display: 'block', fontWeight:'bold' }}>
                                         Medical Specialty:
                                     </label>
                                     <div className='setMedicalSpeciality'>
-                                        <textarea required value={medicalSpeciality} onChange={(e) => setMedicalSpeciality(e.target.value)}></textarea>
+                                        <textarea className='view-requests-medicalS-textarea'  required value={medicalSpeciality} onChange={(e) => setMedicalSpeciality(e.target.value)}></textarea>
                                     </div>
 
                                     <label htmlFor='Organization Name' style={{ display: 'block', fontWeight:'bold' }}>
                                         Organization Name:
                                     </label>
                                     <div className='setOrganizationName'>
-                                        <textarea required value={organizationName} onChange={(e) => setOrganizationName(e.target.value)}></textarea>
+                                        <textarea className='view-requests-Org-textarea' required value={organizationName} onChange={(e) => setOrganizationName(e.target.value)}></textarea>
                                     </div>
 
                                     <label htmlFor='Subject' style={{ display: 'block', fontWeight:'bold' }}>
                                         Subject:
                                     </label>
                                     <div className='setSubject'>
-                                        <textarea required value={subject} onChange={(e) => setSubject(e.target.value)}></textarea>
+                                        <textarea className='view-requests-Sub-textarea' required value={subject} onChange={(e) => setSubject(e.target.value)}></textarea>
                                     </div>
 
                                 </div>
